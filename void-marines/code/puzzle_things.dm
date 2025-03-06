@@ -15,7 +15,6 @@
 	icon = 'void-marines/icons/puzzle_things.dmi'
 	icon_state = "panel_keycard"
 	var/list/to_open = list()
-	var/unlock_item = /obj/item/puzzle/keycard
 	var/id_tag
 
 /obj/structure/machinery/door/airlock/puzzle
@@ -31,7 +30,6 @@
 	stat = 0
 	heavy = TRUE
 	masterkey_resist = TRUE
-	openspeed = 8 SECONDS
 	unacidable = TRUE
 
 /obj/structure/machinery/door/airlock/puzzle/Initialize()
@@ -52,10 +50,6 @@
 		for(var/obj/structure/machinery/door/airlock/A in to_open)
 			if(A.locked)
 				A.unlock()
-				A.open()
-				A.lock()
 			else
-				A.unlock()
-				A.close()
 				A.lock()
 		to_chat(user, "You swipe the keycard.")
