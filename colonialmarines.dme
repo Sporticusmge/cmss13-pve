@@ -2590,4 +2590,5 @@
 #include "void-marines\code\layer_shifting.dm"
 #include "void-marines\code\human_hair.dm"
 #include "void-marines\code\light_change.dm"
+#include "void-marines\code\shore_decals.dm"
 // END_INCLUDE
