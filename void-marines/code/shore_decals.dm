@@ -1,4 +1,5 @@
 /obj/effect/decal/shore
+	name = "water"
 	icon = 'void-marines/icons/water_overlay.dmi'
 	layer = TURF_LAYER
 	anchored = TRUE
