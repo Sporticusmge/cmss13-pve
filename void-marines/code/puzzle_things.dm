@@ -53,3 +53,82 @@
 			else
 				A.lock()
 		to_chat(user, "You swipe the keycard.")
+
+//****************
+//***test shit****
+//****************
+
+/obj/structure/machinery/puzzle/keycard_panel/medical
+	name = "Medical Department Keycard Panel"
+	id_tag = "medical"
+
+/obj/structure/machinery/door/airlock/puzzle/medical
+	name = "Medical Department"
+	id_tag = "medical"
+	icon = 'icons/obj/structures/doors/medidoor.dmi'
+
+/obj/item/puzzle/keycard/medical
+	name = "medical keycard"
+	desc = "This feels like it belongs to a door. Judging by the color, this one seems to belong to the medical section."
+	icon_state = "keycard4"
+	unlock_tag = "medical"
+
+/obj/structure/machinery/puzzle/keycard_panel/engineering
+	name = "Engineering Department Keycard Panel"
+	id_tag = "engineering"
+
+/obj/structure/machinery/door/airlock/puzzle/engineering
+	name = "Engineering Department"
+	id_tag = "engineering"
+	icon = 'icons/obj/structures/doors/engidoor.dmi'
+
+/obj/item/puzzle/keycard/engineering
+	name = "engineering keycard"
+	desc = "This feels like it belongs to a door. Judging by the color, this one seems to belong to the engineering section."
+	icon_state = "keycard3"
+	unlock_tag = "engineering"
+
+/obj/structure/machinery/puzzle/keycard_panel/security
+	name = "Security Department Keycard Panel"
+	id_tag = "security"
+
+/obj/structure/machinery/door/airlock/puzzle/security
+	name = "Security Department"
+	id_tag = "security"
+	icon = 'icons/obj/structures/doors/secdoor.dmi'
+
+/obj/item/puzzle/keycard/security
+	name = "security keycard"
+	desc = "This feels like it belongs to a door. Judging by the color, this one seems to belong to the security section."
+	icon_state = "keycard2"
+	unlock_tag = "security"
+
+/obj/structure/machinery/puzzle/keycard_panel/science
+	name = "Science Department Keycard Panel"
+	id_tag = "science"
+
+/obj/structure/machinery/door/airlock/puzzle/science
+	name = "Science Department"
+	id_tag = "science"
+	icon = 'icons/obj/structures/doors/medidoor_plain.dmi'
+
+/obj/item/puzzle/keycard/science
+	name = "science keycard"
+	desc = "This feels like it belongs to a door. Judging by the color, this one seems to belong to the science section."
+	icon_state = "keycard5"
+	unlock_tag = "science"
+
+/obj/structure/machinery/puzzle/keycard_panel/vault
+	name = "High Security Department Keycard Panel"
+	id_tag = "vault"
+
+/obj/structure/machinery/door/airlock/puzzle/vault
+	name = "High Security Department"
+	id_tag = "vault"
+	icon = 'icons/obj/structures/doors/vault.dmi'
+
+/obj/item/puzzle/keycard/vault
+	name = "high Security keycard"
+	desc = "This feels like it belongs to a door. Judging by the color, this one seems to belong to the science section."
+	icon_state = "keycard1"
+	unlock_tag = "vault"

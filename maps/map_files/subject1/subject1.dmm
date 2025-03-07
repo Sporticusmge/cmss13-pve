@@ -485,7 +485,7 @@
 	access = list(6);
 	name = "Alexander Caldwell's holo-badge";
 	registered_name = "Alexander Caldwell";
-	rank = Chief Engineer;
+	rank = ChiefEngineer;
 	gender = "male";
 	faction = "CIV";
 	blood_type = "[O+]"
@@ -1320,6 +1320,13 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"CR" = (
+/obj/structure/machinery/puzzle/keycard_panel/engineering{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/gm/river,
+/area/space)
 "CS" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
@@ -2081,6 +2088,9 @@
 /turf/open/asphalt,
 /area/space)
 "TN" = (
+/obj/structure/machinery/puzzle/keycard_panel/engineering{
+	pixel_y = 27
+	},
 /turf/open/floor/strata{
 	dir = 9;
 	icon_state = "yellow3"
@@ -2190,6 +2200,7 @@
 	},
 /area/space)
 "UU" = (
+/obj/structure/machinery/door/airlock/puzzle/engineering,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "multi_tiles"
@@ -4632,7 +4643,7 @@ Gx
 Gx
 Gx
 Gx
-Gx
+CR
 bM
 Gx
 Gx
