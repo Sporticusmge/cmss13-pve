@@ -2593,4 +2593,5 @@
 #include "void-marines\code\light_change.dm"
 #include "void-marines\code\pixel_shifting.dm"
 #include "void-marines\code\puzzle_things.dm"
+#include "void-marines\code\step_triggers_voidmarines.dm"
 // END_INCLUDE

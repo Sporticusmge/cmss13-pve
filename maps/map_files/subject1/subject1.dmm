@@ -1406,6 +1406,10 @@
 	icon_state = "yellow4"
 	},
 /area/space)
+"uP" = (
+/obj/structure/flora/tree/tree164/vhdtree152,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "ve" = (
 /obj/structure/stairs/perspective/kutjevo,
 /turf/open/floor/plating,
@@ -4973,7 +4977,7 @@ lY
 Hq
 Hq
 Hq
-Hq
+dq
 Hq
 lY
 lY
@@ -5188,7 +5192,7 @@ Hq
 Hq
 Hq
 Hq
-Hq
+dq
 Hq
 Hq
 Hq
@@ -7661,7 +7665,7 @@ lY
 lY
 Hq
 Hq
-Hq
+dq
 Hq
 Hq
 Hq
@@ -9218,7 +9222,7 @@ Ra
 JL
 lF
 Hq
-Hq
+dq
 Hq
 lY
 lY
@@ -9627,7 +9631,7 @@ Hq
 Hq
 Hq
 Hq
-Hq
+dq
 Hq
 lY
 lY
@@ -10761,8 +10765,8 @@ IO
 IO
 IO
 IO
+uP
 Hq
-dq
 IO
 lY
 lY
@@ -12327,7 +12331,7 @@ JL
 lF
 Hq
 Hq
-Hq
+dq
 Hq
 lY
 lY
@@ -15434,7 +15438,7 @@ Ra
 nX
 Hu
 Hq
-Hq
+dq
 lY
 lY
 lY
