@@ -5,10 +5,19 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"aj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/floor/plating/wood_broken6,
+/area/space)
 "as" = (
 /obj/item/clothing/under/colonist/boilersuit/grey,
 /obj/effect/decal/remains/human,
 /turf/open/mars,
+/area/space)
+"at" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/southeast,
 /area/space)
 "aw" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -59,6 +68,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/space)
+"bi" = (
+/obj/structure/largecrate/supply/supplies/water,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/east,
+/area/space)
 "bj" = (
 /obj/structure/curtain/red,
 /turf/open/floor/wood{
@@ -66,6 +80,19 @@
 	},
 /area/space)
 "bk" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/paper/research_notes/unique/tier_one{
+	pixel_y = 8;
+	pixel_x = 6
+	},
+/obj/item/folder/white,
+/obj/item/paper/research_notes/unique/tier_one{
+	pixel_y = 7;
+	pixel_x = -7
+	},
+/obj/item/tool/pen,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_2,
 /turf/open/floor/plating/wood,
 /area/space)
 "bp" = (
@@ -90,6 +117,24 @@
 	},
 /turf/open/gm/river,
 /area/space)
+"bz" = (
+/obj/structure/prop/structure_lattice{
+	dir = 1;
+	health = 300;
+	pixel_y = 7
+	},
+/obj/structure/prop/structure_lattice{
+	dir = 1;
+	layer = 3.1;
+	pixel_y = 20
+	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "vent4";
+	pixel_y = 37
+	},
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
 "bM" = (
 /obj/structure/barricade/handrail/kutjevo,
 /obj/structure/barricade/handrail/kutjevo{
@@ -102,9 +147,13 @@
 /obj/effect/decal/remains/human,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/space)
+"bP" = (
+/turf/open/mars_cave/mars_cave_6,
+/area/space)
 "cj" = (
-/turf/open/floor/strata{
-	icon_state = "yellow3"
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/asphalt/cement{
+	icon_state = "cement1"
 	},
 /area/space)
 "cz" = (
@@ -116,15 +165,43 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"cH" = (
+/obj/item/trash/pistachios{
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/turf/open/mars_cave/mars_cave_11,
+/area/space)
 "cM" = (
 /obj/structure/foamed_metal,
 /turf/open/floor/plating,
 /area/space)
 "cT" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 5;
 	icon_state = "orange_edge"
 	},
+/area/space)
+"cV" = (
+/obj/effect/spawner/random/tool,
+/turf/open/mars/mars_dirt_13,
+/area/space)
+"dd" = (
+/turf/open/mars_cave/mars_dirt_6,
+/area/space)
+"dq" = (
+/obj/structure/flora/tree/tree96/hbtree96{
+	pixel_y = 23
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"dA" = (
+/turf/open/mars/mars_dirt_14,
+/area/space)
+"dB" = (
+/obj/structure/ore_box,
+/turf/open/mars_cave/mars_cave_23,
 /area/space)
 "dM" = (
 /obj/structure/machinery/colony_floodlight,
@@ -133,8 +210,24 @@
 "dS" = (
 /turf/open/floor/plating,
 /area/space)
+"dT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/hotdog{
+	pixel_x = -12;
+	pixel_y = -11
+	},
+/turf/open/floor/strata{
+	icon_state = "floor3"
+	},
+/area/space)
 "ef" = (
 /turf/open/space/basic,
+/area/space)
+"em" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib1"
+	},
+/turf/open/mars,
 /area/space)
 "ew" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -158,12 +251,38 @@
 /obj/effect/spider/stickyweb,
 /turf/open/auto_turf/snow/layer0,
 /area/space)
+"eR" = (
+/obj/item/ore{
+	pixel_x = 13;
+	pixel_y = 12
+	},
+/turf/open/mars_cave/mars_dirt_6,
+/area/space)
 "eW" = (
 /obj/structure/barricade/handrail/kutjevo,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/crushed_cup{
+	pixel_y = 10
+	},
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "orange_icorner"
 	},
+/area/space)
+"ff" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 1
+	},
+/turf/open/asphalt/cement{
+	icon_state = "cement3"
+	},
+/area/space)
+"fi" = (
+/obj/item/ore{
+	pixel_x = 9;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/space)
 "fn" = (
 /obj/structure/cable/heavyduty{
@@ -174,6 +293,18 @@
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
+/area/space)
+"fw" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/mars_cave/mars_cave_18,
+/area/space)
+"fK" = (
+/obj/structure/flora/bush/desert,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "fS" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -203,6 +334,7 @@
 	pixel_x = -1;
 	pixel_y = 3
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "yellow4"
@@ -222,6 +354,8 @@
 /area/space)
 "gg" = (
 /obj/structure/tent/big,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/heavy,
 /turf/open/floor/plating/wood_broken4,
 /area/space)
 "gw" = (
@@ -253,6 +387,18 @@
 	icon_state = "yellow3"
 	},
 /area/space)
+"gI" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood{
+	layer = 3;
+	pixel_x = 24
+	},
+/turf/open/floor/strata{
+	icon_state = "orange_cover"
+	},
+/area/space)
 "gM" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -273,6 +419,7 @@
 /turf/open/floor/plating,
 /area/space)
 "hj" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "yellow4"
@@ -286,6 +433,10 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"hR" = (
+/obj/structure/flora/bush/ausbushes/lavendergrass,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "id" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/space)
@@ -296,10 +447,20 @@
 /turf/open/asphalt,
 /area/space)
 "in" = (
+/obj/effect/decal/cleanable/molten_item,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "blue4"
 	},
+/area/space)
+"ip" = (
+/obj/structure/prop/almayer/missile_tube{
+	desc = "A detached drill arm of a big old Seegson D-602 Mining Robot. Seems to be jury rigged to run without the main robot assembly.";
+	name = "\improper Massive mining drill";
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/mars/mars_dirt_3,
 /area/space)
 "iu" = (
 /obj/structure/machinery/vending/cigarette/colony{
@@ -322,6 +483,7 @@
 	},
 /area/space)
 "iJ" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "yellow3"
@@ -337,6 +499,12 @@
 	pixel_y = 3;
 	pixel_x = -4
 	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 0;
+	pixel_x = 29
+	},
 /turf/open/floor/strata{
 	icon_state = "orange_cover"
 	},
@@ -344,6 +512,21 @@
 "iU" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"iZ" = (
+/obj/structure/surface/table,
+/obj/item/trash/waffles{
+	pixel_y = 7
+	},
+/obj/item/storage/fancy/cigarettes/kpack{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/tool/lighter/zippo{
+	pixel_x = -1;
+	pixel_y = 14
+	},
+/turf/open/mars_cave/mars_cave_7,
 /area/space)
 "jc" = (
 /obj/structure/barricade/handrail/kutjevo,
@@ -357,6 +540,7 @@
 	color = null
 	},
 /obj/structure/machinery/power/apc/no_power/west,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
 /area/space)
 "jl" = (
@@ -369,9 +553,20 @@
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/space)
+"jo" = (
+/obj/item/ore{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
 "jp" = (
 /obj/item/weapon/gun/flamer/unloaded{
 	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/blood{
+	desc = "Watch your step.";
+	icon_state = "gib6"
 	},
 /turf/open/mars,
 /area/space)
@@ -393,6 +588,13 @@
 /obj/structure/girder/reinforced,
 /turf/open/floor/prison/floor_plate,
 /area/space)
+"jE" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/space)
 "jF" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
@@ -400,10 +602,15 @@
 /turf/open/asphalt,
 /area/space)
 "jN" = (
+/obj/effect/decal/cleanable/ash,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "orange_edge"
 	},
+/area/space)
+"jP" = (
+/mob/living/simple_animal/hostile/giant_spider/hunter,
+/turf/open/mars,
 /area/space)
 "jT" = (
 /obj/structure/window/framed/colony/reinforced,
@@ -428,6 +635,7 @@
 /area/space)
 "kj" = (
 /obj/structure/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "yellow3"
 	},
@@ -455,6 +663,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/liquid_fuel,
+/obj/structure/machinery/camera/autoname{
+	dir = 8
+	},
 /turf/open/floor/strata{
 	icon_state = "orange_edge"
 	},
@@ -463,6 +674,7 @@
 /obj/item/stack/rods{
 	amount = 40
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "orange_edge"
@@ -475,7 +687,12 @@
 "kD" = (
 /turf/open/asphalt/cement/cement4,
 /area/space)
+"kK" = (
+/obj/structure/prop/rock/black_ground/dense,
+/turf/open/mars,
+/area/space)
 "kN" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -504,8 +721,12 @@
 /obj/structure/surface/rack{
 	pixel_x = -2
 	},
-/obj/item/weapon/gun/flamer/unloaded{
-	pixel_y = 2
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 14
+	},
+/obj/item/storage/pouch/etool{
+	pixel_y = -2;
+	pixel_x = 1
 	},
 /turf/open/floor/strata{
 	dir = 4;
@@ -524,6 +745,32 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"lu" = (
+/obj/structure/prop/structure_lattice{
+	dir = 4;
+	health = 300;
+	pixel_y = 7
+	},
+/obj/structure/prop/structure_lattice{
+	dir = 4;
+	layer = 3.1;
+	pixel_y = 20
+	},
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/plating/asteroidfloor,
+/area/space)
+"lv" = (
+/obj/item/tool/pickaxe/drill,
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
+"lw" = (
+/turf/open/mars_cave/mars_cave_3,
+/area/space)
+"lx" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/west,
+/area/space)
 "lF" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal4";
@@ -533,6 +780,12 @@
 /turf/open/asphalt,
 /area/space)
 "lR" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	frequency = 1469;
+	name = "General Listening Channel";
+	pixel_y = 30
+	},
 /turf/open/floor/strata{
 	dir = 5;
 	icon_state = "yellow3"
@@ -552,6 +805,8 @@
 	},
 /area/space)
 "ml" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_1,
 /turf/open/floor/plating/wood_broken2,
 /area/space)
 "mo" = (
@@ -585,11 +840,22 @@
 	icon_state = "orange_cover"
 	},
 /area/space)
+"mX" = (
+/obj/item/ore{
+	pixel_x = 12;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/space)
 "nb" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
 	},
 /turf/open/floor/plating,
+/area/space)
+"nd" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/space)
 "ng" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -647,16 +913,66 @@
 	color = "#CC8336";
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "yellow3"
 	},
+/area/space)
+"or" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "yellow4"
+	},
+/area/space)
+"ov" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "yellow3"
+	},
+/area/space)
+"ow" = (
+/obj/item/ore{
+	pixel_y = 8;
+	pixel_x = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/space)
 "oy" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
 	},
 /turf/open/floor/plating,
+/area/space)
+"oH" = (
+/obj/structure/prop/rock/black_ground,
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
+"oQ" = (
+/obj/structure/prop/server_equipment/broken{
+	pixel_y = 0;
+	pixel_x = -3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/floor/plating/wood,
+/area/space)
+"oW" = (
+/obj/item/ore{
+	pixel_x = 9;
+	pixel_y = -4
+	},
+/turf/open/mars/mars_dirt_9,
+/area/space)
+"pg" = (
+/obj/structure/ore_box,
+/turf/open/mars,
+/area/space)
+"pG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata,
 /area/space)
 "pQ" = (
 /obj/structure/stairs/perspective{
@@ -689,9 +1005,22 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/obj/item/tool/carpenters_hammer,
+/obj/item/tool/weldingtool/largetank,
 /obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/strata/green1,
+/area/space)
+"qg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/sosjerky{
+	pixel_x = -12;
+	pixel_y = 17
+	},
 /turf/open/floor/strata{
-	icon_state = "yellow1"
+	icon_state = "green3"
 	},
 /area/space)
 "qs" = (
@@ -708,6 +1037,11 @@
 /obj/item/clothing/mask/cigarette/pipe{
 	pixel_y = 15;
 	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/head/hardhat{
+	pixel_y = 23;
+	pixel_x = 2
 	},
 /turf/open/floor/strata{
 	icon_state = "orange_cover"
@@ -755,9 +1089,16 @@
 	pixel_y = 18;
 	pixel_x = 2
 	},
+/obj/item/book/manual/engineering_guide{
+	pixel_y = 24;
+	pixel_x = 3
+	},
 /turf/open/floor/strata{
 	icon_state = "yellow3"
 	},
+/area/space)
+"ra" = (
+/turf/closed/wall/strata_outpost/reinforced,
 /area/space)
 "rb" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -796,9 +1137,13 @@
 	icon_state = "2-4";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
+/area/space)
+"rs" = (
+/turf/open/mars_cave/mars_cave_10,
 /area/space)
 "rv" = (
 /obj/structure/curtain/black{
@@ -822,6 +1167,15 @@
 /area/space)
 "rA" = (
 /obj/structure/surface/table/almayer,
+/obj/item/frame/toolbox_tiles_sensor,
+/obj/item/device/robotanalyzer{
+	pixel_y = 12;
+	pixel_x = 5
+	},
+/obj/item/robot_parts/arm/l_arm{
+	pixel_y = 8;
+	pixel_x = -12
+	},
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "yellow3"
@@ -842,13 +1196,20 @@
 	icon_state = "2-8";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "yellow4"
 	},
 /area/space)
+"rK" = (
+/obj/effect/spider/cocoon,
+/obj/effect/decal/remains/human,
+/turf/open/mars,
+/area/space)
 "rM" = (
 /obj/structure/prop/rock/black_ground,
+/obj/effect/decal/cleanable/blood,
 /turf/open/mars/mars_dirt_11,
 /area/space)
 "rN" = (
@@ -866,7 +1227,15 @@
 /obj/structure/machinery/vending/snack{
 	pixel_y = 19
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
+/area/space)
+"sg" = (
+/obj/item/weapon/twohanded/folded_metal_chair,
+/turf/open/mars_cave/mars_cave_7,
+/area/space)
+"so" = (
+/turf/open/mars_cave/mars_cave_11,
 /area/space)
 "sr" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -881,6 +1250,7 @@
 /turf/open/asphalt,
 /area/space)
 "st" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "yellow4"
 	},
@@ -892,8 +1262,15 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"sA" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata{
+	icon_state = "orange_edge"
+	},
+/area/space)
 "sJ" = (
 /obj/structure/closet/secure_closet/engineering_chief,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "blue3"
@@ -907,9 +1284,30 @@
 	},
 /turf/closed/wall,
 /area/space)
+"sW" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/mars_cave,
+/area/space)
 "td" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/plating,
+/area/space)
+"tf" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 1
+	},
+/obj/structure/prop/invuln/minecart_tracks/bumper{
+	dir = 2
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/space)
+"tg" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "xgib4"
+	},
+/turf/open/mars,
 /area/space)
 "to" = (
 /obj/effect/decal/cleanable/dirt,
@@ -930,9 +1328,25 @@
 	icon_state = "orange_edge"
 	},
 /area/space)
+"tz" = (
+/obj/item/ore{
+	pixel_x = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/space)
 "tA" = (
 /obj/structure/window/framed/colony/reinforced/hull,
 /turf/open/floor/plating,
+/area/space)
+"tK" = (
+/obj/item/ore{
+	pixel_x = 9;
+	pixel_y = 2
+	},
+/turf/open/mars_cave/mars_dirt_6,
+/area/space)
+"tQ" = (
+/turf/open/mars_cave/mars_dirt_4,
 /area/space)
 "tR" = (
 /obj/structure/bed/chair{
@@ -957,16 +1371,36 @@
 	dir = 1
 	},
 /obj/item/newspaper,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	frequency = 1469;
+	name = "General Listening Channel";
+	pixel_y = 30
+	},
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "green3"
 	},
+/area/space)
+"ux" = (
+/obj/structure/ob_ammo/warhead/nerve{
+	color = "#689F38";
+	name = "\improper 'Hell-Seed' Evolution Compound (G-9E)";
+	desc = "This warhead does not seem to have exploded when it crashed into the ground at first glance, a more detailed external inspection at close range shows that cracks are seen in several places, perhaps the filling of the bomb did not completely leave its casing."
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/space)
+"uD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata,
 /area/space)
 "uL" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "yellow4"
@@ -981,10 +1415,16 @@
 	icon_state = "1-2";
 	color = null
 	},
+/obj/structure/machinery/colony_floodlight_switch{
+	pixel_y = 29
+	},
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "yellow4"
 	},
+/area/space)
+"vD" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/space)
 "vG" = (
 /obj/structure/girder,
@@ -997,6 +1437,33 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"vI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "yellow3"
+	},
+/area/space)
+"vN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "yellow3"
+	},
+/area/space)
+"vP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/kepler/flamehot{
+	pixel_y = 13;
+	pixel_x = 14
+	},
+/turf/open/asphalt/cement{
+	icon_state = "cement1"
+	},
+/area/space)
 "vY" = (
 /obj/structure/largecrate/random/barrel/white,
 /turf/open/asphalt,
@@ -1008,8 +1475,25 @@
 /obj/structure/cable/heavyduty{
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat{
 	icon_state = "marked"
+	},
+/area/space)
+"wo" = (
+/obj/item/ore{
+	pixel_y = 5;
+	pixel_x = -2
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/space)
+"wq" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement{
+	icon_state = "cement3"
 	},
 /area/space)
 "wv" = (
@@ -1020,6 +1504,7 @@
 	icon_state = "0-8";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
@@ -1039,11 +1524,24 @@
 /obj/effect/spider/cocoon,
 /turf/open/mars,
 /area/space)
-"xa" = (
-/turf/open/floor/strata{
-	dir = 4;
-	icon_state = "yellow4"
+"wA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/mecha_part_fabricator{
+	pixel_y = 5;
+	name = "Drone Fabricator"
 	},
+/obj/item/frame/camera{
+	pixel_y = 14;
+	pixel_x = 2
+	},
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "yellow3"
+	},
+/area/space)
+"xa" = (
+/obj/item/clothing/shoes/slippers_worn,
+/turf/open/floor/strata/green4/east,
 /area/space)
 "xd" = (
 /turf/closed/wall/r_wall,
@@ -1066,6 +1564,13 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"xE" = (
+/obj/structure/prop/rock/brown{
+	pixel_y = 10;
+	pixel_x = -6
+	},
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
 "xN" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -10;
@@ -1076,6 +1581,38 @@
 	icon_state = "stop_decal5"
 	},
 /turf/open/asphalt,
+/area/space)
+"xQ" = (
+/obj/item/ore{
+	pixel_x = 9;
+	pixel_y = 13
+	},
+/turf/closed/wall/solaris/rock,
+/area/space)
+"xV" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "orange_edge"
+	},
+/area/space)
+"yd" = (
+/obj/item/storage/bag/ore{
+	pixel_y = 10
+	},
+/obj/item/ore/gold{
+	pixel_y = -5;
+	pixel_x = -3
+	},
+/obj/item/ore/uranium{
+	pixel_y = -7;
+	pixel_x = 9
+	},
+/turf/open/mars_cave/mars_cave_11,
 /area/space)
 "yh" = (
 /obj/structure/platform/kutjevo{
@@ -1095,6 +1632,13 @@
 	icon_state = "marked"
 	},
 /area/space)
+"yq" = (
+/obj/structure/prop/almayer/cannon_cables{
+	name = "\improper Large Cables";
+	pixel_y = 13
+	},
+/turf/open/mars,
+/area/space)
 "ys" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal4";
@@ -1109,12 +1653,20 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"yG" = (
+/obj/structure/flora/tree/tree164/hdtree96{
+	pixel_y = 6;
+	pixel_x = -32
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "yH" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat{
 	icon_state = "marked"
 	},
@@ -1126,6 +1678,24 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"yZ" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/prop/rock/black_ground,
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
+"zr" = (
+/turf/open/mars_cave/mars_cave_5,
+/area/space)
+"zu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/constructable_frame,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "yellow4"
+	},
+/area/space)
 "zz" = (
 /obj/structure/prop/rock/brown{
 	color = "#B16161"
@@ -1133,6 +1703,7 @@
 /turf/open/mars,
 /area/space)
 "zD" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 10;
 	icon_state = "yellow3"
@@ -1141,6 +1712,9 @@
 "zJ" = (
 /obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/plating,
+/area/space)
+"zL" = (
+/turf/open/mars_cave/mars_cave_23,
 /area/space)
 "zR" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -1158,6 +1732,15 @@
 	opacity = 0
 	},
 /turf/open/gm/river,
+/area/space)
+"zY" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement{
+	icon_state = "cement4"
+	},
 /area/space)
 "Ab" = (
 /obj/effect/step_trigger/message{
@@ -1180,6 +1763,11 @@
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	pixel_y = 11
 	},
+/obj/item/stack/cable_coil{
+	icon_state = "coil2";
+	pixel_y = -11;
+	pixel_x = 5
+	},
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "floor_marked"
@@ -1190,6 +1778,20 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
+/area/space)
+"At" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 1
+	},
+/obj/structure/prop/invuln/minecart_tracks/bumper{
+	dir = 1
+	},
+/obj/structure/prop/brazier/torch{
+	pixel_y = 28
+	},
+/turf/open/asphalt/cement{
+	icon_state = "cement3"
+	},
 /area/space)
 "AB" = (
 /obj/structure/barricade/handrail{
@@ -1204,6 +1806,10 @@
 /turf/open/floor/strata{
 	icon_state = "yellow3"
 	},
+/area/space)
+"AG" = (
+/obj/structure/flora/tree/miscflora48/deadwood2,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "AH" = (
 /obj/structure/cable/heavyduty{
@@ -1228,6 +1834,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "yellow3"
@@ -1237,13 +1844,21 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 10;
 	icon_state = "yellow3"
 	},
 /area/space)
+"Ba" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "yellow3"
+	},
+/area/space)
 "Bi" = (
 /obj/item/tool/wrench,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "orange_edge"
@@ -1251,9 +1866,14 @@
 /area/space)
 "BE" = (
 /obj/structure/barricade/handrail,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "green3"
 	},
+/area/space)
+"BM" = (
+/obj/item/ore/diamond,
+/turf/open/mars_cave,
 /area/space)
 "BY" = (
 /obj/structure/machinery/power/smes/buildable,
@@ -1304,6 +1924,16 @@
 /obj/structure/tunnel,
 /turf/open/mars,
 /area/space)
+"CH" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "orange_cover"
+	},
+/area/space)
 "CK" = (
 /mob/living/simple_animal/hostile/giant_spider/nurse,
 /turf/open/mars,
@@ -1319,13 +1949,6 @@
 	pixel_y = -18
 	},
 /turf/open/asphalt,
-/area/space)
-"CR" = (
-/obj/structure/machinery/puzzle/keycard_panel/engineering{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/open/gm/river,
 /area/space)
 "CS" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
@@ -1357,11 +1980,15 @@
 	icon_state = "orange_cover"
 	},
 /area/space)
+"DA" = (
+/turf/open/mars/mars_dirt_12,
+/area/space)
 "DD" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 5;
 	icon_state = "yellow3"
@@ -1395,6 +2022,19 @@
 "Eg" = (
 /turf/closed/wall/rock,
 /area/space)
+"El" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 5
+	},
+/obj/item/trash/raisins{
+	pixel_y = -5;
+	pixel_x = -8
+	},
+/obj/effect/decal/cleanable/generic,
+/turf/open/asphalt/cement{
+	icon_state = "cement2"
+	},
+/area/space)
 "Em" = (
 /turf/open/floor/prison/darkbrown2/east,
 /area/space)
@@ -1403,6 +2043,12 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
+/area/space)
+"Et" = (
+/obj/structure/prop/almayer/computers/sensor_computer3,
+/turf/open/floor/strata{
+	icon_state = "orange_cover"
+	},
 /area/space)
 "EE" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -1424,11 +2070,22 @@
 	icon_state = "yellow3"
 	},
 /area/space)
+"Fs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/floor/asteroidwarning/east,
+/area/space)
 "FA" = (
 /obj/effect/spider/stickyweb{
 	icon_state = "stickyweb2"
 	},
 /turf/open/mars,
+/area/space)
+"FE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement{
+	icon_state = "cement1"
+	},
 /area/space)
 "FX" = (
 /obj/structure/platform/kutjevo,
@@ -1441,8 +2098,8 @@
 /area/space)
 "Gh" = (
 /obj/item/clothing/accessory/storage/owlf_vest,
-/mob/living/simple_animal/hostile/giant_spider/hunter,
 /obj/effect/decal/remains/human,
+/mob/living/simple_animal/hostile/giant_spider/nurse,
 /turf/open/mars,
 /area/space)
 "Gt" = (
@@ -1452,14 +2109,46 @@
 /turf/open/gm/river,
 /area/space)
 "GC" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "green3"
 	},
+/area/space)
+"GE" = (
+/obj/item/ore{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/turf/open/mars/mars_dirt_8,
+/area/space)
+"GG" = (
+/obj/structure/barricade/handrail,
+/obj/item/trash/kepler,
+/obj/item/trash/liquidfood,
+/obj/item/trash/popcorn,
+/obj/item/trash/uscm_mre,
+/obj/item/trash/hotdog,
+/obj/structure/closet/crate/trashcart{
+	layer = 2.97;
+	pixel_y = 9
+	},
+/turf/open/floor/strata{
+	icon_state = "green3"
+	},
+/area/space)
+"GJ" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/space)
 "GS" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
 	pixel_y = 11;
 	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/glass{
+	pixel_y = -15;
+	pixel_x = 5
 	},
 /turf/open/floor/prison{
 	dir = 10;
@@ -1473,6 +2162,9 @@
 	pixel_y = 16
 	},
 /turf/closed/wall/r_wall/unmeltable,
+/area/space)
+"Hk" = (
+/turf/open/mars_cave,
 /area/space)
 "Hq" = (
 /turf/open/auto_turf/strata_grass/layer1,
@@ -1528,10 +2220,19 @@
 	icon_state = "yellow3"
 	},
 /area/space)
+"Ic" = (
+/obj/item/tool/pickaxe,
+/obj/item/ore/gold{
+	pixel_y = -7;
+	pixel_x = 8
+	},
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
 "Im" = (
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "blue3"
@@ -1572,8 +2273,28 @@
 	icon_state = "orange_cover"
 	},
 /area/space)
+"Iv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -9;
+	pixel_y = 13
+	},
+/obj/item/trash/boonie,
+/turf/open/floor/strata{
+	icon_state = "orange_edge"
+	},
+/area/space)
+"ID" = (
+/obj/item/ore{
+	pixel_y = 8;
+	pixel_x = 5
+	},
+/turf/open/mars,
+/area/space)
 "IK" = (
 /obj/item/stack/rods,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
 /area/space)
 "IO" = (
@@ -1613,9 +2334,9 @@
 	},
 /area/space)
 "Jy" = (
-/obj/structure/prop/dam/van{
-	pixel_y = 7;
-	pixel_x = -15
+/obj/structure/prop/dam/truck/mining{
+	pixel_y = 4;
+	pixel_x = -14
 	},
 /turf/open/asphalt,
 /area/space)
@@ -1624,6 +2345,7 @@
 	icon_state = "cocoon_large2"
 	},
 /obj/item/clothing/mask/owlf_mask,
+/obj/effect/decal/remains/human,
 /turf/open/mars,
 /area/space)
 "JG" = (
@@ -1637,6 +2359,9 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"JK" = (
+/turf/open/mars_cave/mars_cave_13,
+/area/space)
 "JL" = (
 /turf/open/asphalt,
 /area/space)
@@ -1646,15 +2371,23 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"JN" = (
+/obj/structure/flora/tree/miscflora48/deadwood1,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "JS" = (
 /obj/structure/bed,
 /obj/structure/sign/poster/io{
 	pixel_y = 33
 	},
+/obj/item/bedsheet/brown,
+/obj/item/storage/photo_album,
+/obj/item/prop/helmetgarb/family_photo,
 /turf/open/floor/strata/fake_wood,
 /area/space)
 "JU" = (
 /obj/structure/machinery/power/apc/no_power/west,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "yellow4"
 	},
@@ -1672,6 +2405,12 @@
 	dir = 8;
 	icon_state = "blue4"
 	},
+/area/space)
+"JX" = (
+/obj/structure/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/open/gm/river,
 /area/space)
 "JZ" = (
 /obj/structure/bed/chair{
@@ -1711,6 +2450,7 @@
 /turf/open/asphalt,
 /area/space)
 "Kv" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "yellow1"
 	},
@@ -1766,6 +2506,19 @@
 "Ll" = (
 /turf/closed/wall/rock/red,
 /area/space)
+"LT" = (
+/obj/effect/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/obj/effect/decal/cleanable/blood{
+	dir = 8;
+	icon_state = "gib6";
+	layer = 4;
+	pixel_x = 12;
+	pixel_y = 3
+	},
+/turf/open/mars,
+/area/space)
 "LX" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -1797,6 +2550,10 @@
 	icon_state = "yellow3"
 	},
 /area/space)
+"Ml" = (
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
 "Mv" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal5";
@@ -1805,14 +2562,43 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"Mw" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 1;
+	pixel_y = 15;
+	layer = 3.1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "orange_edge"
+	},
+/area/space)
 "MI" = (
 /obj/item/clothing/head/owlf_hood,
 /turf/open/mars,
 /area/space)
 "NC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/heavy,
 /turf/open/floor/plating/wood_broken4,
 /area/space)
+"NG" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/plating{
+	icon_state = "gcircuit"
+	},
+/area/space)
 "NI" = (
+/obj/structure/computer3frame{
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_3,
 /turf/open/floor/plating/wood_broken6,
 /area/space)
 "NO" = (
@@ -1830,9 +2616,15 @@
 /turf/open/asphalt,
 /area/space)
 "Oh" = (
-/mob/living/simple_animal/hostile/giant_spider/hunter,
-/obj/effect/spider/stickyweb,
-/turf/open/mars,
+/obj/item/ore{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/space)
+"Oi" = (
+/obj/item/ore,
+/turf/open/mars_cave/mars_dirt_4,
 /area/space)
 "Op" = (
 /obj/structure/barricade/handrail,
@@ -1841,9 +2633,19 @@
 	},
 /area/space)
 "Oq" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 4;
 	icon_state = "blue4"
+	},
+/area/space)
+"OB" = (
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "orange_cover"
 	},
 /area/space)
 "OE" = (
@@ -1869,10 +2671,12 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/strata{
-	icon_state = "yellow1"
+/obj/structure/machinery/light/small/blue{
+	dir = 1
 	},
+/obj/item/storage/toolkit/full,
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/strata/green1,
 /area/space)
 "Pe" = (
 /obj/structure/desertdam/decals/road_stop,
@@ -1884,6 +2688,10 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"Pl" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/space)
 "Pt" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 14;
@@ -1893,6 +2701,11 @@
 /area/space)
 "PB" = (
 /turf/closed/wall,
+/area/space)
+"PG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/strata,
 /area/space)
 "PI" = (
 /obj/structure/blocker/invisible_wall,
@@ -1907,17 +2720,43 @@
 	},
 /turf/open/gm/river,
 /area/space)
+"PU" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/space)
 "PX" = (
 /turf/closed/shuttle{
 	dir = 1;
 	icon_state = "pwall"
 	},
 /area/space)
-"Qq" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/strata{
-	icon_state = "yellow1"
+"Qf" = (
+/obj/structure/prop/invuln/minecart_tracks{
+	dir = 1
 	},
+/obj/structure/closet/crate/miningcar/yellow{
+	layer = 3
+	},
+/turf/open/asphalt/cement{
+	icon_state = "cement3"
+	},
+/area/space)
+"Qg" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/effect/step_trigger/message{
+	message = "You have a bad feeling about this.";
+	name = "You have a bad feeling about this.";
+	once = 0
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/space)
+"Qq" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/obj/item/storage/pouch/tools/full,
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/strata/green1,
 /area/space)
 "QB" = (
 /turf/closed/wall/mineral/bone_resin,
@@ -1930,6 +2769,13 @@
 	pixel_x = -3
 	},
 /turf/open/asphalt,
+/area/space)
+"QJ" = (
+/obj/item/ore{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/turf/open/mars_cave/mars_dirt_6,
 /area/space)
 "QV" = (
 /obj/structure/machinery/power/monitor{
@@ -1947,11 +2793,28 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"Rd" = (
+/obj/structure/prop/almayer/cannon_cable_connector{
+	name = "\improper Control Module";
+	pixel_y = 13
+	},
+/obj/structure/machinery/filtration/console{
+	pixel_y = 0
+	},
+/turf/open/mars,
+/area/space)
 "Rj" = (
 /obj/effect/decal/sand_overlay/sand1{
 	dir = 8
 	},
 /turf/open/mars_cave/mars_dirt_6,
+/area/space)
+"Rn" = (
+/obj/item/ore{
+	pixel_y = 5;
+	pixel_x = -2
+	},
+/turf/open/mars,
 /area/space)
 "Rp" = (
 /obj/structure/stairs{
@@ -1964,11 +2827,51 @@
 /area/space)
 "Ru" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/maint,
 /turf/open/floor/strata{
 	icon_state = "orange_cover"
 	},
 /area/space)
 "RJ" = (
+/turf/open/mars,
+/area/space)
+"RT" = (
+/obj/item/ore{
+	pixel_x = -1
+	},
+/turf/open/mars_cave/mars_dirt_6,
+/area/space)
+"RU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "gcircuit"
+	},
+/area/space)
+"Sb" = (
+/obj/structure/machinery/puzzle/keycard_panel/engineering{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/gm/river,
+/area/space)
+"Sf" = (
+/obj/structure/flora/jungle/vines/light_1,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/southwest,
+/area/space)
+"Si" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/structure/prop/invuln/rope{
+	pixel_y = 25;
+	pixel_x = 8
+	},
+/obj/item/device/flashlight/lantern{
+	pixel_y = 2;
+	pixel_x = 8;
+	anchored = 1;
+	is_on = 1
+	},
 /turf/open/mars,
 /area/space)
 "Sm" = (
@@ -1988,6 +2891,10 @@
 	},
 /turf/open/floor/strata,
 /area/space)
+"So" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/mars_cave/mars_dirt_4,
+/area/space)
 "Sr" = (
 /obj/structure/toilet{
 	dir = 1;
@@ -2003,6 +2910,7 @@
 	pixel_x = -30;
 	pixel_y = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
@@ -2015,6 +2923,7 @@
 	pixel_y = 10;
 	pixel_x = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 6;
 	icon_state = "orange_edge"
@@ -2040,6 +2949,16 @@
 	icon_state = "yellow3"
 	},
 /area/space)
+"SX" = (
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/floor/plating/wood,
+/area/space)
 "Te" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -2050,6 +2969,14 @@
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "yellow4"
+	},
+/area/space)
+"Ty" = (
+/obj/item/weapon/twohanded/sledgehammer,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "orange_edge"
 	},
 /area/space)
 "Tz" = (
@@ -2087,10 +3014,18 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"TM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/telecomms/relay/preset/ice_colony{
+	icon_state = "comm_tower_destroyed"
+	},
+/turf/open/floor/asteroidfloor,
+/area/space)
 "TN" = (
 /obj/structure/machinery/puzzle/keycard_panel/engineering{
 	pixel_y = 27
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 9;
 	icon_state = "yellow3"
@@ -2115,16 +3050,17 @@
 	dir = 8;
 	pixel_y = 8
 	},
+/obj/structure/machinery/camera/autoname{
+	dir = 1;
+	network = list("interrogation")
+	},
 /turf/open/floor/strata{
 	dir = 8;
 	icon_state = "yellow4"
 	},
 /area/space)
 "Uf" = (
-/turf/open/floor/strata{
-	dir = 8;
-	icon_state = "yellow4"
-	},
+/turf/open/floor/strata/green4/west,
 /area/space)
 "Un" = (
 /obj/structure/curtain/black{
@@ -2214,6 +3150,19 @@
 	},
 /turf/open/gm/river,
 /area/space)
+"Vd" = (
+/obj/item/robot_parts/robot_component/diagnosis_unit{
+	pixel_y = 15
+	},
+/turf/open/mars_cave/mars_dirt_6,
+/area/space)
+"Vf" = (
+/obj/structure/prop/rock/brown{
+	color = "#B16161";
+	pixel_x = -3
+	},
+/turf/open/mars,
+/area/space)
 "Vv" = (
 /obj/effect/spider/cocoon,
 /turf/open/mars,
@@ -2227,12 +3176,29 @@
 	pixel_x = 3;
 	pixel_y = 0
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
+/area/space)
+"VF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/dense{
+	icon = 'icons/obj/structures/machinery/big_floodlight.dmi';
+	icon_state = "flood_m_dmg";
+	name = "broken floodlight";
+	pixel_y = 9;
+	desc = "A broken floodlight, it looks like it's going through hard times."
+	},
+/turf/open/asphalt/cement,
 /area/space)
 "VG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2";
 	color = null
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 16
 	},
 /turf/open/floor/strata,
 /area/space)
@@ -2261,6 +3227,7 @@
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "green3"
@@ -2295,6 +3262,13 @@
 	icon_state = "marked"
 	},
 /area/space)
+"Wv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "yellow4"
+	},
+/area/space)
 "WS" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = -10;
@@ -2302,11 +3276,19 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"WW" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/puzzle/keycard/engineering,
+/turf/open/floor/strata{
+	icon_state = "orange_cover"
+	},
+/area/space)
 "WX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
 	color = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
 /area/space)
 "Xj" = (
@@ -2318,6 +3300,9 @@
 	dir = 2
 	},
 /turf/open/mars,
+/area/space)
+"Xm" = (
+/turf/closed/wall/solaris/rock,
 /area/space)
 "Xo" = (
 /obj/structure/window/reinforced/tinted{
@@ -2386,6 +3371,10 @@
 	icon_state = "orange_cover"
 	},
 /area/space)
+"Yj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/green3,
+/area/space)
 "Yl" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -2406,7 +3395,13 @@
 	icon_state = "orange_cover"
 	},
 /area/space)
+"YX" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning/northeast,
+/area/space)
 "Zd" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata{
 	dir = 1;
 	icon_state = "blue3"
@@ -2429,6 +3424,11 @@
 	},
 /turf/open/asphalt,
 /area/space)
+"ZG" = (
+/turf/open/asphalt/cement{
+	icon_state = "cement1"
+	},
+/area/space)
 "ZJ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal10";
@@ -2448,13 +3448,27 @@
 	pixel_x = -11;
 	pixel_y = 3
 	},
+/obj/item/trash/cigbutt{
+	pixel_x = -6;
+	pixel_y = -9
+	},
 /turf/open/floor/strata{
 	icon_state = "floor3"
 	},
 /area/space)
+"ZV" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/asteroidwarning,
+/area/space)
 "ZW" = (
 /obj/item/clothing/shoes/brown,
 /turf/open/mars,
+/area/space)
+"ZY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/floor/plating/wood,
 /area/space)
 
 (1,1,1) = {"
@@ -3089,11 +4103,11 @@ lY
 id
 VU
 Su
-BE
+GG
 JU
-UA
+vI
 AU
-xa
+Wv
 ab
 ab
 Rp
@@ -3108,7 +4122,7 @@ cz
 pQ
 pQ
 rd
-xa
+Wv
 id
 id
 id
@@ -3311,11 +4325,11 @@ lY
 id
 un
 kN
-GC
+qg
 gE
-NO
+RU
 iJ
-Uf
+or
 ab
 ab
 Rp
@@ -3532,11 +4546,11 @@ lY
 lY
 id
 DY
-kN
+dT
 GC
-gE
+ov
 kN
-cj
+Ba
 OK
 Cf
 KD
@@ -3561,7 +4575,7 @@ mU
 ky
 jc
 gS
-UN
+sA
 mw
 sR
 Hb
@@ -3756,9 +4770,9 @@ id
 id
 iu
 BE
-gE
-NO
-cj
+ov
+NG
+Ba
 id
 id
 id
@@ -3773,12 +4787,12 @@ id
 qe
 Xo
 xa
-gE
+ov
 NO
 ma
 xd
 Yl
-tt
+Mw
 QV
 jN
 jc
@@ -3978,7 +4992,7 @@ lY
 id
 sb
 BE
-gE
+ov
 ZT
 kj
 id
@@ -3994,13 +5008,13 @@ lY
 id
 Qq
 ue
-cj
-gE
+Yj
+ov
 IK
 Ju
 xd
 Vw
-UN
+to
 Dc
 bp
 eW
@@ -4643,15 +5657,15 @@ Gx
 Gx
 Gx
 Gx
-CR
+Sb
 bM
-Gx
+JX
 Gx
 Gx
 VT
 Gx
 lY
-TG
+Qg
 lY
 lY
 lY
@@ -4665,9 +5679,9 @@ st
 UA
 UA
 wx
+vI
 UA
-UA
-xa
+zu
 id
 Ll
 Ll
@@ -4881,14 +5895,14 @@ lY
 lY
 id
 Ap
-Jf
-cj
+PG
+Ba
 gE
-Jf
-Jf
+pG
+uD
 WX
 NO
-Jf
+pG
 Cx
 id
 Ll
@@ -5082,9 +6096,9 @@ id
 PB
 lY
 Hq
+GJ
 Hq
-Hq
-Hq
+fK
 lY
 lY
 IO
@@ -5103,9 +6117,9 @@ lY
 id
 id
 xd
-ER
+vN
 Te
-gE
+ov
 NO
 rA
 kS
@@ -5327,7 +6341,7 @@ rG
 xd
 rN
 xd
-gE
+wA
 Jf
 qV
 rg
@@ -5337,8 +6351,8 @@ wv
 id
 Ll
 Ll
-Xl
-Vv
+CK
+rK
 Ll
 Ll
 PX
@@ -5751,10 +6765,10 @@ IO
 IO
 IO
 IO
+fK
 Hq
 Hq
-Hq
-Hq
+GJ
 Hq
 IO
 bj
@@ -5768,7 +6782,7 @@ id
 JS
 XH
 Zd
-Jf
+pG
 UC
 xd
 xd
@@ -5978,7 +6992,7 @@ Hq
 Hq
 Hq
 Hq
-Hq
+Ml
 tr
 tr
 tr
@@ -6195,9 +7209,9 @@ lY
 lY
 lY
 lY
+GJ
 Hq
-Hq
-Hq
+hR
 Hq
 Hq
 lY
@@ -6223,7 +7237,7 @@ Ll
 Ll
 eC
 eC
-RJ
+jP
 Vv
 eC
 Ll
@@ -6438,14 +7452,14 @@ id
 Ll
 Ll
 Ll
-Oh
+eC
 RJ
 FA
 eC
 RJ
 RJ
 RJ
-CK
+RJ
 RJ
 FA
 Ll
@@ -6882,7 +7896,7 @@ Ll
 Ll
 FA
 wy
-RJ
+Xl
 RJ
 jq
 Vv
@@ -7779,7 +8793,7 @@ Ll
 Ll
 Vv
 eC
-FA
+LT
 Ll
 Ll
 id
@@ -7953,14 +8967,14 @@ dS
 dS
 dS
 dS
-dS
-dS
-dS
-dS
-dS
-dS
-dS
-dS
+xd
+xd
+xd
+xd
+xd
+xd
+xd
+xd
 xd
 xd
 id
@@ -7968,13 +8982,13 @@ id
 qt
 lY
 Hq
+lY
+lY
+lY
+lY
 Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
+lY
+lY
 Hq
 Hq
 Hq
@@ -8174,14 +9188,14 @@ dS
 dS
 dS
 dS
-dS
-dS
-dS
-dS
-dS
-dS
-dS
-dS
+xd
+xd
+kU
+kU
+kU
+kU
+xd
+kU
 id
 id
 id
@@ -8192,11 +9206,11 @@ lY
 lY
 lY
 lY
-Hq
-Hq
-Hq
-Hq
-Hq
+lY
+lY
+lY
+lY
+lY
 lY
 lY
 Hq
@@ -8396,17 +9410,17 @@ Hq
 Hq
 Hq
 Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-lY
-lY
+xd
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kU
 PB
 PB
 PB
@@ -8417,9 +9431,9 @@ lY
 lY
 lY
 lY
-Hq
-Hq
-Hq
+lY
+lY
+lY
 lY
 Hq
 Ra
@@ -8615,35 +9629,35 @@ Hq
 Hq
 Hq
 Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
+lY
+lY
+lY
+lY
+kU
+kU
+kU
+kU
+tr
+kU
+kU
+kU
+kU
+kU
 lY
 lY
 lY
 lY
 lY
 lY
-Hq
+lY
+lY
+lY
+Oh
+mX
 lY
 lY
 lY
 lY
-lY
-lY
-Hq
-Hq
-Hq
 Ra
 JL
 lF
@@ -8667,7 +9681,7 @@ lY
 lY
 lY
 lY
-lY
+Ll
 id
 Yg
 id
@@ -8836,36 +9850,36 @@ lY
 Hq
 Hq
 Hq
-Hq
-Hq
-Hq
-lY
-Hq
-Hq
-lY
-lY
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-lY
-lY
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
 lY
 lY
 lY
 lY
+kU
+kU
+kU
+kU
+tr
+bi
+tr
+kU
+kU
+bz
+zL
+IO
+IO
 Hq
 Hq
 Hq
+Hq
+Hq
+Hq
+IO
+fi
+ux
+fi
+lY
+lY
+lY
 Ra
 nX
 lF
@@ -8889,7 +9903,7 @@ Hq
 lY
 lY
 lY
-lY
+Ll
 id
 Sm
 id
@@ -9058,36 +10072,36 @@ lY
 Hq
 Hq
 Hq
-Hq
-lY
-Hq
-lY
-Hq
-Hq
 lY
 lY
-lY
-lY
-lY
-Hq
-Hq
-Hq
-lY
-lY
-NC
-bk
-Hq
+kU
+kU
+kU
+kU
+kU
+kU
+sg
+lw
+sW
+Hk
+lw
+Hk
+so
+IO
 IO
 IO
 Hq
+IO
+IO
+yG
 Hq
-Hq
+IO
+wo
+ow
+vD
 lY
 lY
 lY
-Hq
-Hq
-Hq
 Ra
 JL
 lF
@@ -9109,9 +10123,9 @@ Hq
 Hq
 Hq
 Hq
-Hq
 lY
 lY
+Ll
 id
 id
 id
@@ -9280,36 +10294,36 @@ Hq
 Hq
 Hq
 lY
-Hq
-lY
-Hq
 lY
 lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-bk
-ml
-Hq
+kU
+kU
+kU
+kU
+kU
+kU
+iZ
+zr
+El
+wq
+wq
+ff
+Qf
+tf
+IO
+IO
+IO
+IO
 IO
 IO
 Hq
-Hq
-Hq
+IO
+IO
+vD
+tz
 lY
 lY
 lY
-Hq
-Hq
-Hq
 Ra
 nX
 lF
@@ -9331,10 +10345,10 @@ Hq
 Hq
 lY
 lY
-Hq
-Hq
 lY
 lY
+Ll
+Ll
 Ll
 Ll
 PX
@@ -9498,40 +10512,40 @@ lY
 lY
 lY
 lY
+lY
+lY
+lY
+lY
+lY
+kU
+kU
+kU
+BM
+yd
+kU
+kU
+fw
+cH
+zY
+VF
+kU
+kU
+kU
+lY
+IO
+IO
+IO
+IO
+IO
+IO
+IO
 Hq
-Hq
-Hq
+IO
+IO
 lY
 lY
 lY
 lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-lY
-lY
-lY
-Hq
-Hq
-Hq
 Ra
 JL
 lF
@@ -9553,8 +10567,8 @@ Hq
 Hq
 lY
 lY
-Hq
-Hq
+lY
+lY
 lY
 lY
 lY
@@ -9724,36 +10738,36 @@ lY
 lY
 lY
 lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
+kU
+kU
+kU
+At
+wq
+wq
+wq
+wq
+wq
+ff
+jE
+kU
+kU
+kU
 lY
 lY
 lY
 lY
 Hq
-Hq
-Hq
-Hq
+IO
+IO
+IO
 IO
 Hq
-Hq
+dq
+IO
 lY
 lY
 lY
-Hq
-Hq
+lY
 Ra
 nX
 lF
@@ -9776,8 +10790,8 @@ Hq
 Hq
 lY
 lY
-Hq
-Hq
+lY
+lY
 lY
 lY
 lY
@@ -9941,41 +10955,41 @@ lY
 lY
 lY
 lY
+Ll
+Ll
+Ll
+Ll
+lY
+kU
+kU
+kU
+kU
+kU
+dB
+ZG
+vP
+FE
+cj
+kU
+kU
+kU
+kU
 lY
 lY
 lY
 lY
 lY
-lY
-ef
-ef
-ef
-ef
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-lY
-Hq
-Hq
-Hq
+IO
+IO
+IO
 IO
 Hq
 Hq
 lY
 lY
 lY
-Hq
-Hq
+lY
+lY
 Ra
 JL
 lF
@@ -10159,45 +11173,45 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
 lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+rs
+bP
+zL
+kU
+kU
+kU
+kU
 lY
 lY
 lY
 Hq
-Hq
-Hq
-Hq
-Hq
-Hq
-Hq
+IO
+IO
+IO
+IO
 Hq
 IO
 lY
 lY
 lY
 lY
-Hq
-Hq
+lY
+lY
 Ra
 nX
 lF
@@ -10381,45 +11395,45 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+Ll
+Ll
+Ll
+Ll
+Xm
+Xm
+Ll
+Ll
+Ll
+Ll
+Ll
+kU
+kU
+kU
+kU
+JK
+kU
+kU
+kU
+kU
 lY
 lY
 lY
-lY
-lY
-lY
-lY
-lY
-lY
-Hq
-Hq
 Hq
 IO
 IO
-Hq
+IO
 lY
-Hq
-Hq
+Pl
+iU
 Hq
 IO
 IO
 lY
 lY
 lY
-Hq
+lY
 Ra
 JL
 lF
@@ -10603,27 +11617,27 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Ll
+Xm
+Xm
+Xm
+Xm
+Ll
+Ll
+Ll
+Ll
+Ll
+tr
+kU
+xE
+tQ
+oH
+kU
+kU
 lY
 lY
 lY
@@ -10633,9 +11647,9 @@ IO
 IO
 Hq
 lY
-Hq
-Hq
-IO
+Pl
+iU
+nd
 lY
 Hq
 IO
@@ -10825,39 +11839,39 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+Xm
+Xm
+Ll
+Si
+Vf
+Ll
+Ll
+yZ
+tQ
+lv
+tQ
+kU
+kU
+kU
 lY
 lY
 Hq
-Hq
-IO
-IO
-Hq
-Hq
-lY
-lY
 Hq
 IO
+IO
+Hq
+yG
+lY
+lY
+TG
+PU
 lY
 lY
 lY
@@ -11047,27 +12061,27 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+RT
+dd
+GE
+RJ
+RJ
+cV
+tQ
+tQ
+tQ
+tQ
+kU
+kU
+kU
+kU
 lY
 lY
 Hq
@@ -11078,9 +12092,9 @@ Hq
 lY
 lY
 lY
-Hq
-Hq
-Hq
+Tz
+gM
+iU
 lY
 lY
 lY
@@ -11269,41 +12283,41 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+xQ
+eR
+ip
+yq
+Rd
+dA
+tQ
+tQ
+kU
+kU
+kU
+kU
+kU
+kU
 lY
 Hq
-Hq
+dq
 IO
 IO
 Hq
 Hq
 lY
 lY
-Hq
-Hq
-IO
-IO
-Hq
+lx
+Sf
+Pl
+nd
+Tz
 lY
 lY
 lY
@@ -11491,27 +12505,27 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+tK
+Vd
+oW
+RJ
+Ll
+Ll
+So
+tQ
+jo
+kU
+kU
+kU
+kU
+kU
 lY
 Hq
 Hq
@@ -11521,8 +12535,8 @@ Hq
 lY
 lY
 lY
-Hq
-Hq
+TM
+ZV
 Hq
 IO
 lY
@@ -11713,26 +12727,26 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+Xm
+QJ
+Ll
+Ll
+Ll
+Ll
+Ll
+Oi
+Ic
+kU
+kU
+kU
+kU
 lY
 lY
 lY
@@ -11742,11 +12756,11 @@ IO
 Hq
 lY
 lY
+YX
+Fs
+at
 Hq
-Hq
-Hq
-Hq
-Hq
+gM
 lY
 lY
 Hq
@@ -11935,40 +12949,40 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Xm
+Xm
+Xm
+Xm
+Ll
+Ll
+Ll
+Ll
+Ll
+dA
+DA
+Ll
+kU
+kU
+kU
+kU
 lY
 lY
 lY
 Hq
 IO
 IO
-Hq
+JN
 lY
 lY
 NI
-bk
+SX
 gg
-Hq
-Hq
+gM
+gM
 lY
 lY
 lY
@@ -12157,26 +13171,26 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
-lY
-lY
-lY
+Ll
+Ll
+Ll
+Xm
+Xm
+Ll
+Ll
+Ll
+Ll
+kK
+RJ
+RJ
+Ll
+Ll
+Ll
+kU
+kU
+kU
 lY
 lY
 Hq
@@ -12187,10 +13201,10 @@ Hq
 lY
 lY
 bk
-NI
-bk
-Hq
-Hq
+aj
+ZY
+Tz
+iU
 lY
 lY
 Hq
@@ -12379,40 +13393,40 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
-lY
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+lu
+Rn
+em
+RJ
+Ll
+Ll
+Ll
+Ll
 lY
 lY
 lY
 lY
 Hq
-Hq
+AG
 IO
 IO
 Hq
 Hq
 lY
 lY
-bk
+oQ
 ml
 NC
-Hq
-Hq
+gM
+Tz
 lY
 lY
 lY
@@ -12601,23 +13615,23 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
 lY
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+ID
+RJ
+RJ
+Ll
+Ll
+Ll
+Ll
+Ll
 lY
 lY
 lY
@@ -12631,11 +13645,11 @@ Hq
 lY
 lY
 Hq
-Hq
-Hq
-Hq
-Hq
-Hq
+iU
+iU
+iU
+Tz
+Tz
 lY
 lY
 Hq
@@ -12823,40 +13837,40 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
 lY
 lY
+lY
+lY
+lY
+lY
+Ll
+Ll
+Ll
+tg
+RJ
+pg
+Ll
+Ll
+Ll
+Ll
 lY
 lY
 lY
 Hq
 Hq
-Hq
+dq
 Hq
 IO
 IO
 Hq
 Hq
-Hq
+dq
 lY
 lY
-Hq
+iU
 lY
 lY
-Hq
+gM
 lY
 lY
 lY
@@ -13046,19 +14060,19 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+lY
+lY
+Ll
+Ll
+Ll
+ra
+OB
+gI
+Ll
+Ll
+Ll
 lY
 lY
 lY
@@ -13270,17 +14284,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+Ll
+Ll
+ra
+Et
+Ty
+to
+WW
+ra
+Ll
 lY
 lY
 lY
@@ -13325,7 +14339,7 @@ lY
 lY
 lY
 lY
-Hq
+lY
 Hq
 Hq
 Hq
@@ -13492,17 +14506,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+Ll
+Ll
+ra
+CH
+xV
+Iv
+ra
+ra
+Ll
 lY
 lY
 lY
@@ -13549,7 +14563,7 @@ lY
 lY
 lY
 lY
-Hq
+lY
 Hq
 Hq
 lY
@@ -13714,17 +14728,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+Ll
+Ll
+Ll
+Ll
+ra
+ra
+ra
+Ll
+Ll
 lY
 lY
 lY
@@ -13936,17 +14950,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
 lY
 lY
 lY
@@ -14158,17 +15172,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+lY
+Ll
+Ll
+Ll
+Ll
+Ll
+Ll
+lY
+lY
 lY
 lY
 lY
@@ -14380,17 +15394,17 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
 lY
 lY
 lY
@@ -14603,16 +15617,16 @@ ef
 ef
 ef
 ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
+lY
 lY
 lY
 lY
