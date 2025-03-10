@@ -7080,7 +7080,7 @@
 /turf/open/floor/warnwhite/southwest,
 /area/lv624/lazarus/fitness)
 "eDy" = (
-/obj/structure/flora/bush/ausbushes/genericbush,
+/obj/structure/flora/bush/ausbushes/,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_jungle)
 "eDS" = (
