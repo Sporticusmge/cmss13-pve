@@ -1,30 +1,24 @@
-/datum/fluff_email/komana
+/datum/fluff_email/rover
 
-/datum/fluff_email/komana/wipp
-	title = "RE: I want out."
+/datum/fluff_email/rover/uppmission
+	title = "Operation Red Dawn"
 	entry_text = {"<html>
-					Okay, yep, I know what you're saying. Stilettos aren't safe, you want out of my sharp stick business,
-					and sooner or later we're going to get hung upside down from our ankles by the MPs, stuffed in a freezer
-					in the lower decks, and tossed to the nearest military tribunal in a sack in six to eight weeks.
+					Well, surprisingly, our operation to find the lost Red Dawn ship was surprisingly successful.
+					According to intelligence, we were able to find out that their ship was lost in an unknown sector of ########.
+					We were tasked with finding this ship and finding out how it ended up here in strict secrecy.
 					<br>
 					<br>
-					Maybe that reserve grunt in Echo Company just about gutted himself with one of our blades in his bunk,
-					and maybe one of them accidently got flashed in front of one of the officers during a 'disagreement',
-					but neither of those things are 'explicitly' OUR faults.
+					When we found it, we were a little shocked by the fact that it was mostly undamaged and had not yet drifted into any of the nearby planets.
+					With the help of spacesuits, we were able to get inside, and to be honest, it was the strangest thing in my entire life.
 					<br>
 					<br>
-					I know you could just as easily fashion your
-					metalworking equipment towards making canteens for PFC Marshall's little business, or helping those jackass
-					flyboys spruce up their tin cans, but you need to realize we occupy a market nobody else on the ship is filling.
-					We'll talk about it when we're next woken for shore leave in a month, but I personally think you're making a huge
-					mistake trying to opt out.
-					<br>
-					<br>
-					I know a dozen men in the battalion who claim your stilettos pulled them out of trouble.
-					Doesn't matter if they're being used to open MREs in a jam, or save one of our guys from some yokel colonist
-					with a carving knife, we're doing more than just lining our pockets- we're doing a service for the men of the corps.
-					<br>
-					<br>
-					Keep that in mind.
+					Everyone on the ship was dead, not a single living soul.
+					The corridors were littered with just corpses or what was left of them, it was just a real bloodbath.
+					We couldn't even really find out what happened to them,
+					because there was absolutely nothing in the system logs or personal journals, ABSOLUTELY NOTHING.
+					We think that this is possibly some kind of space disease?
+					I don't know, I want to think it was an illness, because no normal person would do something like that to their fellow soldiers.
 				</html>
 				"}
+
+/datum/fluff_email/komana
