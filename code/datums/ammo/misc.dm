@@ -71,7 +71,6 @@
 
 /datum/ammo/flamethrower/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator)
 	var/datum/reagent/napalm/chemical = GLOB.chemical_reagents_list[flamer_reagent_id]
-	bullet_light_color = chemical.burncolor
 	icon_state = chemical.flame_particle_icon
 	particle_icon_state = chemical.flame_particle_icon
 
