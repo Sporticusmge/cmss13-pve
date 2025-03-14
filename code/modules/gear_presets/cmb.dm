@@ -77,7 +77,7 @@
 		if(1 to 3)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/CMB, WEAR_JACKET)
 		if(4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/lamp, WEAR_JACKET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
 
 	switch(choice)
 		if(1 to 6)

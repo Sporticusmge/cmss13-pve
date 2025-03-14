@@ -847,3 +847,29 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	accuracy_mult = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+
+// L54
+
+/obj/item/weapon/gun/pistol/l54
+	name = "\improper L54 service pistol"
+	desc = "Standard issue semi-automatic service pistol of the NSPA. Chambered in 9mm, it is comparable to the popular M4A3 pistol utilized by the USCM."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "l54"
+	item_state = "l54"
+	fire_sound = "vp70"
+	current_mag = /obj/item/ammo_magazine/pistol/l54
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
+	attachable_allowed = null
+
+/obj/item/weapon/gun/pistol/l54/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17)
+
+/obj/item/weapon/gun/pistol/l54/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT

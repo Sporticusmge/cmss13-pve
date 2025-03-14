@@ -361,3 +361,18 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "skorpion" //PLACEHOLDER
 	gun_type = /obj/item/weapon/gun/pistol/skorpion
 	max_rounds = 20
+
+// L54
+
+/obj/item/ammo_magazine/pistol/l54
+	name = "\improper L54 magazine (9mm)"
+	desc = "A pistol magazine."
+	caliber = "9mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "l54"
+	max_rounds = 12
+	w_class = SIZE_SMALL
+	default_ammo = /datum/ammo/bullet/pistol
+	gun_type = /obj/item/weapon/gun/pistol/l54
+	ammo_band_icon = "+m4a3_band"
+	ammo_band_icon_empty = "+m4a3_band_e"
