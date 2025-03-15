@@ -43,10 +43,10 @@
 		I.pixel_y -= 3
 		overlays += I
 
-/obj/item/weapon/gun/flamer/drg_driller_flamer/get_fire_sound()
+/*/obj/item/weapon/gun/flamer/drg_driller_flamer/get_fire_sound()
 	var/list/fire_sounds = list(
 							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_1.ogg',
 							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_2.ogg',
 							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_3.ogg',
 							'void-marines/sound/drg/FlameThrowerFireTailCombinedB_4.ogg')
-	return pick(fire_sounds)
+	return pick(fire_sounds)*/

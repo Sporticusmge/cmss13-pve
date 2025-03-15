@@ -611,10 +611,11 @@
 
 //==================PLU Lamp Rig==================\\
 
-/obj/item/clothing/suit/storage/marine/veteran/lamp
+/obj/item/clothing/suit/marine/lamp
 	name = "\improper PLU lamp rig"
 	icon_state = "lamp_rig"
 	desc = "A lightweight rig designed to support a shoulder lamp."
+	flags_atom = NO_SNOW_TYPE
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST
 	flags_cold_protection = BODY_FLAG_CHEST
@@ -623,11 +624,10 @@
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
+	armor_bomb = CLOTHING_ARMOR_NONE
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
-	storage_slots = 1
 	time_to_unequip = 10
 	time_to_equip = 10
 
