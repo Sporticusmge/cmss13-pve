@@ -125,6 +125,139 @@
 			SEND_SOUND(player, sound('sound/effects/adminhelp_new.ogg'))
 		message_admins("[usr] вернул в игру [player.ckey]. Увы и ах!")
 
+/client/proc/play_server_sound()
+	set category = "Game Master.Extras"
+	set name = "Music Player"
+	if(!check_rights())
+		return
+
+	var/list/categories = list("Боевая", "Спокойная", "Напряжённая", "Пугающая", "Финальная", "Смешная")
+
+	var/list/combat_music = list('music_player/-DARKTIDE- Disposal Unit.mp3',
+								'music_player/-DARKTIDE- Auspex.mp3',
+								'music_player/-DARKTIDE- Broadcast.mp3',
+								'music_player/-DARKTIDE- Immortal.mp3',
+								'music_player/-DARKTIDE- Interference.mp3',
+								'music_player/-DARKTIDE- Nightsider.mp3',
+								'music_player/-DARKTIDE- Reality Slipping.mp3',
+								'music_player/-DARKTIDE- Transit Horde.mp3',
+								'music_player/-DARKTIDE- Warp Traveller.mp3',
+
+								'music_player/-QM- Eanna (PH2).mp3',
+								'music_player/-QM- Phase 3.mp3',
+								'music_player/-QM- Trailer Theme.mp3',
+
+								'music_player/-AC- Zero.mp3',
+
+								'music_player/-HD- Bug Planet.mp3',
+
+								'music_player/-BOLGARICH- Running Out.mp3',
+								'music_player/-BOLGARICH- Taypan.mp3',
+								'music_player/-BOLGARICH- Colonial Marines.ogg',
+
+								'music_player/-L4D2- Tank At The Concert.mp3',
+								'music_player/-L4D2- Gas Can Of Victory.mp3',
+
+								'music_player/-DRG- A Distant Terror.mp3',
+								'music_player/-DRG- Dance of the Dreadnought.mp3',
+								'music_player/-DRG- Theyre Here!.mp3',
+
+								'music_player/-HALFLIFE- Anti-Citizen.mp3',
+								'music_player/-HALFLIFE- Hostiles.mp3',
+								'music_player/-HALFLIFE- CP Violation.mp3',
+
+								'music_player/-CYBERPUNK- Cyberninja.mp3',
+								'music_player/-CYBERPUNK- Patri(di)ots.mp3',
+								'music_player/-CYBERPUNK- Wushu Dolls.mp3',)
+
+	var/list/chill_music = list('music_player/-QM- Space Theme.mp3',
+								'music_player/-QM- Emerald Empire(PH1).mp3',
+
+								'music_player/-ALIENS- Combat Drop.mp3',
+								'music_player/-ALIENS- Hypersleep.mp3',
+
+								'music_player/-DARKTIDE- Mourningstar.mp3',
+								'music_player/-DARKTIDE- Transmission.mp3',
+
+								'music_player/-DRG- Deep Dive.mp3',
+								'music_player/-DRG- Lost.mp3',
+
+								'music_player/-HALO- Heretic.mp3',
+								'music_player/-HALO- Peril.mp3',
+
+								'music_player/-RIMWORLD- Chaos Bringer.mp3',
+
+								'music_player/-XCOM- Briefing 1.mp3',
+								'music_player/-XCOM- Defend.mp3',
+								'music_player/-XCOM- Geoscape 1.mp3',)
+
+	var/list/nervous_music = list('music_player/-DRG- Karls End.mp3',
+								'music_player/-DRG- The Shadows are Moving.mp3',
+								'music_player/-DRG- Fighting the Shadows.mp3',
+
+								'music_player/-XCOM- Hidden Movement.mp3',
+
+								'music_player/-QM- Carceri(PH1).mp3',
+								'music_player/-QM- Phase 1.mp3',
+
+								'music_player/-ALIENS- Its Here.mp3',
+								'music_player/-ALIENS- LV 426.mp3',
+								'music_player/-ALIENS- Sevastopol.mp3',
+								'music_player/-ALIENS- Transit.mp3',
+
+								'music_player/-L4D2- Cold Stream.mp3',
+								'music_player/-L4D2- Death Is A Carousel.mp3',
+								'music_player/-L4D2- Died On The Bayou.mp3',
+								'music_player/-L4D2- Left For Dead V1.mp3',
+
+								'music_player/-DARKTIDE- Atoma Prime.mp3',
+								'music_player/-DARKTIDE- Escaping.mp3',
+								'music_player/-DARKTIDE- Debriefing.mp3',
+								'music_player/-DARKTIDE- Late Night Entertainment.mp3',)
+
+	var/list/scary_music = list('music_player/-L4D2- Witch Alert.mp3',
+
+								'music_player/-ALIENS- LV 426.mp3',
+								'music_player/-ALIENS- The Emptiness.mp3',
+								'music_player/-ALIENS- The Escape.mp3',
+								'music_player/-ALIENS- The Shadow.mp3',
+								'music_player/-ALIENS- The Wait.mp3',
+								'music_player/-ALIENS- Derelict Approach.mp3',
+
+								'music_player/-DARKTIDE- Prison Break.mp3')
+
+	var/list/ending_music = list('music_player/-L4D2- Skin On Our Teeth.mp3',
+								'music_player/-BOLGARICH- Burn The Hive.mp3',
+								'music_player/-BOLGARICH- Xeno Major.mp3',
+								'music_player/-HALFLIFE- Forget About Freeman.mp3',
+								'music_player/-DRG- Horrors of Hoxxes.mp3',
+								'music_player/-DRG- RUN!.mp3',
+								'music_player/-UNK- Last Hope.mp3')
+
+	var/list/funny_music = list()
+
+	var/melody = null
+	var/music_group = tgui_input_list(usr, "Выберите подходящую категорию!", "Список", categories)
+	switch(music_group)
+		if("Боевая")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", combat_music)
+		if("Спокойная")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", chill_music)
+		if("Напряжённая")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", nervous_music)
+		if("Пугающая")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", scary_music)
+		if("Финальная")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", ending_music)
+		if("Смешная")
+			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", funny_music)
+
+	if(!melody)
+		return
+
+	for(var/mob/target as anything in GLOB.mob_list)
+		playsound_client(target.client, melody, vol = 50, vol_cat = VOLUME_ADM)
+
 //	var/client/player = target
 //	if(player == null)
 //	var/client/player = tgui_input_list(usr, "Выберите игрока, что будет исключен/включен.", "Blacklist", GLOB.clients)
@@ -137,6 +270,7 @@
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/disallow_to_join)
 		add_verb(src, /client/proc/allow_to_join)
+		add_verb(src, /client/proc/play_server_sound)
 		add_verb(src, /client/proc/gm_lighting) //RU-PVE
 
 /client/remove_admin_verbs()
@@ -144,6 +278,7 @@
 	remove_verb(src, list(
 		/client/proc/disallow_to_join,
 		/client/proc/allow_to_join,
+		/client/proc/play_server_sound,
 		/client/proc/gm_lighting,
 	))
 

@@ -420,6 +420,51 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_speed = 9
 
+/obj/item/weapon/knife/marine/marsoc //literally oneshots people
+	desc = "A standard issue USCMC fighting knife developed by the Kershaw-Gerber company, a subsidiary of Armat Battlefield Systems. Neatly fits into boot-mounted holsters, and can - in emergencies - be utilized to dig out shrapnel. It's also pretty sharp."
+	var/usage_cooldown = 100
+	var/used = FALSE
+
+/obj/item/weapon/knife/marine/marsoc/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/item/weapon/knife/marine/marsoc/get_examine_text(mob/user)
+	. = ..()
+	if(used)
+		. += SPAN_GREEN("Another death blow will be enabled in: [usage_cooldown] seconds.")
+
+/obj/item/weapon/knife/marine/marsoc/process()
+	if(used && usage_cooldown > 0)
+		usage_cooldown -= 1
+
+	if(usage_cooldown <= 0)
+		used = FALSE
+		usage_cooldown = 100
+
+/obj/item/weapon/knife/marine/marsoc/attack(mob/living/M, mob/living/user)
+	if(used)
+		to_chat(user, SPAN_NOTICE("You need to wait for [usage_cooldown] seconds, before you will be able to use it again!"))
+		return FALSE
+	if(!used && istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = M
+		var/obj/limb/head/head = H.get_limb("head")
+		if(head)
+			playsound(loc, hitsound, 25, 1)
+			user.visible_message(SPAN_DANGER("[user] slices [H]'s throat with a [src]!"))
+			H.apply_damage(80, BRUTE, "head")
+			H.death(create_cause_data("existing"), TRUE)
+			H.pulse = PULSE_NONE
+			used = TRUE
+			return TRUE
+		else
+			to_chat(user, SPAN_NOTICE("[H] doesn't have head!"))
+			return FALSE
+	else
+		to_chat(user, SPAN_NOTICE("You can't waste it on animal!"))
+		return FALSE
+
+
 /obj/item/weapon/knife/marine/kabar
 	name = "\improper KA-BAR utility knife"
 	icon_state = "knife_kabar"

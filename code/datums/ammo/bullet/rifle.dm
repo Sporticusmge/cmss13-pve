@@ -239,6 +239,9 @@
 		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
+/datum/ammo/bullet/rifle/heavy/heap/sniper/marsoc
+	damage = 150
+
 /datum/ammo/bullet/rifle/heavy/incendiary
 	name = "incendiary sniper bullet"
 	damage_type = BRUTE
