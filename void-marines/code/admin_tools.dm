@@ -143,6 +143,10 @@
 								'music_player/-DARKTIDE- Transit Horde.mp3',
 								'music_player/-DARKTIDE- Warp Traveller.mp3',
 
+								'music_player/-QM- Eanna (PH2).mp3',
+								'music_player/-QM- Phase 3.mp3',
+								'music_player/-QM- Trailer Theme.mp3',
+
 								'music_player/-AC- Zero.mp3',
 
 								'music_player/-HD- Bug Planet.mp3',
@@ -152,7 +156,19 @@
 								'music_player/-BOLGARICH- Colonial Marines.ogg',
 
 								'music_player/-L4D2- Tank At The Concert.mp3',
-								'music_player/-L4D2- Gas Can Of Victory.mp3')
+								'music_player/-L4D2- Gas Can Of Victory.mp3',
+
+								'music_player/-DRG- A Distant Terror.mp3',
+								'music_player/-DRG- Dance of the Dreadnought.mp3',
+								'music_player/-DRG- Theyre Here!.mp3',
+
+								'music_player/-HALFLIFE- Anti-Citizen.mp3',
+								'music_player/-HALFLIFE- Hostiles.mp3',
+								'music_player/-HALFLIFE- CP Violation.mp3',
+
+								'music_player/-CYBERPUNK- Cyberninja.mp3',
+								'music_player/-CYBERPUNK- Patri(di)ots.mp3',
+								'music_player/-CYBERPUNK- Wushu Dolls.mp3',)
 
 	var/list/chill_music = list('music_player/-QM- Space Theme.mp3',
 								'music_player/-QM- Emerald Empire(PH1).mp3',
@@ -175,17 +191,48 @@
 								'music_player/-XCOM- Defend.mp3',
 								'music_player/-XCOM- Geoscape 1.mp3',)
 
-	var/list/nervous_music = list('music_player/-DRG- Karl´s End.mp3',
+	var/list/nervous_music = list('music_player/-DRG- Karls End.mp3',
+								'music_player/-DRG- The Shadows are Moving.mp3',
+								'music_player/-DRG- Fighting the Shadows.mp3',
+
 								'music_player/-XCOM- Hidden Movement.mp3',
+
+								'music_player/-QM- Carceri(PH1).mp3',
+								'music_player/-QM- Phase 1.mp3',
+
+								'music_player/-ALIENS- Its Here.mp3',
+								'music_player/-ALIENS- LV 426.mp3',
+								'music_player/-ALIENS- Sevastopol.mp3',
+								'music_player/-ALIENS- Transit.mp3',
 
 								'music_player/-L4D2- Cold Stream.mp3',
 								'music_player/-L4D2- Death Is A Carousel.mp3',
 								'music_player/-L4D2- Died On The Bayou.mp3',
-								'music_player/-L4D2- Left For Dead V1.mp3',)
+								'music_player/-L4D2- Left For Dead V1.mp3',
 
-	var/list/scary_music = list('music_player/-L4D2- Witch Alert.mp3')
+								'music_player/-DARKTIDE- Atoma Prime.mp3',
+								'music_player/-DARKTIDE- Escaping.mp3',
+								'music_player/-DARKTIDE- Debriefing.mp3',
+								'music_player/-DARKTIDE- Late Night Entertainment.mp3',)
 
-	var/list/ending_music = list('music_player/-L4D2- Skin On Our Teeth.mp3')
+	var/list/scary_music = list('music_player/-L4D2- Witch Alert.mp3',
+
+								'music_player/-ALIENS- LV 426.mp3',
+								'music_player/-ALIENS- The Emptiness.mp3',
+								'music_player/-ALIENS- The Escape.mp3',
+								'music_player/-ALIENS- The Shadow.mp3',
+								'music_player/-ALIENS- The Wait.mp3',
+								'music_player/-ALIENS- Derelict Approach.mp3',
+
+								'music_player/-DARKTIDE- Prison Break.mp3')
+
+	var/list/ending_music = list('music_player/-L4D2- Skin On Our Teeth.mp3',
+								'music_player/-BOLGARICH- Burn The Hive.mp3',
+								'music_player/-BOLGARICH- Xeno Major.mp3',
+								'music_player/-HALFLIFE- Forget About Freeman.mp3',
+								'music_player/-DRG- Horrors of Hoxxes.mp3',
+								'music_player/-DRG- RUN!.mp3',
+								'music_player/-UNK- Last Hope.mp3')
 
 	var/list/funny_music = list()
 
