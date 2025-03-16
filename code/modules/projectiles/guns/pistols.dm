@@ -600,6 +600,8 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
+/obj/item/weapon/gun/pistol/vp78/tactical
+	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/reflex)
 
 //-------------------------------------------------------
 /*

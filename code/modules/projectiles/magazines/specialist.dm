@@ -15,6 +15,10 @@
 	ammo_band_icon = "+m42c_band"
 	ammo_band_icon_empty = "+m42c_band_e"
 
+/obj/item/ammo_magazine/sniper/marsoc
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/sniper/marsoc
+	max_rounds = 8
+
 /obj/item/ammo_magazine/sniper/basic
 	name = "\improper M42A magazine (10x28mm)"
 	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
