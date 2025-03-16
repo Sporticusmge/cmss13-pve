@@ -21,6 +21,57 @@
 				</html>
 				"}
 
+/datum/fluff_email/canyon32b
+
+/datum/fluff_email/canyon32b/ce
+	title = "My dream job."
+	entry_text = {"<html>
+					This was the best assignment of my life!
+					Working here is a complete miracle, I can easily lie around for the whole day and do nothing.
+					Sometimes there are problems, of course, but they are mere trifles.
+					<br>
+					<br>
+					Sometimes, of course, I am worried about these energy consumption figures for the laboratories,
+					well, they consume too much, are they making some kind of super weapon there to destroy planets?
+					<br>
+					<br>
+					Anyway , these species in ###### are simply lovely, although the bugs are a pain,
+					my boys use some sprays against them that management they give us for free!
+					It would be nice to somehow make friends with these eggheads in order to knock out some scientific tricks against them.
+				</html>
+				"}
+
+/datum/fluff_email/canyon32b/lab
+	title = "Xenomorph Research Report"
+	entry_text = {"<html>
+					Date: ######
+					<br>
+					Research Facility: ######
+					<br>
+					Subject: Behavioral and Biological Analysis of Xenomorph Specimens
+					<br>
+					<br>
+					<b>Summary</b>
+					Recent studies conducted on live and preserved Xenomorph specimens have yielded significant insights into their biological structure, adaptive capabilities, and behavioral patterns.
+					Despite the inherent dangers of containment, controlled observation has provided valuable data for potential applications in bioengineering, military defense, and xenobiology.
+					<br>
+					<br>
+					<b>Physiology and Adaptations</b>
+					Xenomorphs exhibit an exoskeletal structure composed of an unknown yet highly durable chitinous material, providing both flexibility and resistance to extreme environmental conditions.
+					Their rapid cellular regeneration and acidic blood serve as natural defense mechanisms, rendering them highly resilient to conventional weaponry.
+					<br>
+					<br>
+					<b>Lifecycle and Reproductive Process</b>
+					Egg samples confirm the presence of a parasitic larval stage known as the Facehugger.
+					Upon successful implantation in a host organism, the gestating embryo undergoes accelerated development before emerging and maturing into an adult Xenomorph within hours.
+					Variations in host species influence the final morphology of the resulting creature.
+					<b>Conclusion</b>
+					Xenomorphs remain one of the most dangerous extraterrestrial lifeforms encountered.
+					Further study is required to unlock their full potential, though ethical and security concerns remain paramount.
+					Continued research must be conducted under the strictest safety protocols to mitigate risk to personnel and facility integrity.
+				</html>
+				"}
+
 //idk where to put it but let it be here
 
 /obj/item/paper/rover/diagnostics_log
