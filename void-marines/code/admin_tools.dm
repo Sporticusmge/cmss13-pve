@@ -252,11 +252,15 @@
 		if("Смешная")
 			melody = tgui_input_list(usr, "Выберите трэк, который хотите проиграть!", "Список", funny_music)
 
+	var/volume_number = tgui_input_number(usr, "Громкость музыки!", "Насколько вы любите игроков?", 50, integer_only = TRUE)
+
 	if(!melody)
 		return
+	if(!volume_number)
+		volume_number = 50
 
 	for(var/mob/target as anything in GLOB.mob_list)
-		playsound_client(target.client, melody, vol = 50, vol_cat = VOLUME_ADM)
+		playsound_client(target.client, melody, vol = volume_number, vol_cat = VOLUME_AMB)
 
 //	var/client/player = target
 //	if(player == null)
