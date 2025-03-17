@@ -1109,14 +1109,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = 0;
-	pixel_y = 8
-	},
-/obj/item/reagent_container/food/snacks/meatpizzaslice{
-	pixel_x = -10;
-	pixel_y = 19
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "fy" = (
@@ -1711,14 +1703,6 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = 3;
-	pixel_y = -14
-	},
-/obj/item/reagent_container/food/drinks/bottle/vermouth{
-	pixel_x = -4;
-	pixel_y = 3
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "jc" = (
@@ -2051,16 +2035,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
-"kT" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_4"
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/briefing)
 "kX" = (
 /obj/structure/supply_drop/echo,
 /obj/structure/platform{
@@ -2630,10 +2604,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/item/trash/cigbutt{
-	pixel_x = -7;
-	pixel_y = -9
-	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "oF" = (
@@ -2726,26 +2696,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/prop/invuln{
-	desc = "Oh my god, someone spilled alcohol on the table and now it doesn't work, how did this happen?";
-	icon = 'icons/obj/structures/props/almayer_props96.dmi';
-	icon_state = "maptable";
-	name = "map table";
-	light_color = "#DAE2FF";
-	layer = 2.8
-	},
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = 0;
-	pixel_y = 10
-	},
-/obj/item/reagent_container/food/drinks/bottle/whiskey{
-	pixel_x = 13;
-	pixel_y = 31
-	},
-/obj/item/reagent_container/food/snacks/meatpizzaslice{
-	pixel_x = 14;
-	pixel_y = 8
-	},
+/obj/structure/machinery/prop/almayer/CICmap/table,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "oY" = (
@@ -2760,9 +2711,6 @@
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomittox_2"
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
@@ -2937,8 +2885,7 @@
 /area/golden_arrow/supply)
 "ql" = (
 /obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "reqbeltdown"
+	dir = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
@@ -3057,22 +3004,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
-"rr" = (
-/obj/item/clothing/suit/storage/snow_suit/liaison,
-/obj/item/clothing/suit/storage/snow_suit/liaison,
-/obj/item/clothing/suit/storage/snow_suit/liaison,
-/obj/item/clothing/suit/storage/bomber/alt,
-/obj/item/clothing/suit/storage/jacket/marine/bomber,
-/obj/item/clothing/suit/storage/jacket/marine/bomber/grey,
-/obj/item/clothing/suit/storage/jacket/marine/bomber/red,
-/obj/item/clothing/suit/storage/jacket/marine/corporate,
-/obj/item/clothing/suit/storage/jacket/marine/corporate/black,
-/obj/item/clothing/suit/storage/jacket/marine/corporate/blue,
-/obj/item/clothing/suit/storage/jacket/marine/corporate/formal,
-/obj/item/clothing/suit/storage/jacket/marine/corporate/brown,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "ru" = (
 /obj/structure/sign/banners/colonial_marines_flag_worn{
 	pixel_y = 28;
@@ -3332,25 +3263,6 @@
 "sL" = (
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
-"sM" = (
-/obj/item/storage/backpack/satchel/black,
-/obj/item/storage/backpack/satchel/black,
-/obj/item/storage/backpack/satchel/black,
-/obj/item/storage/backpack/satchel/blue,
-/obj/item/storage/backpack/satchel/blue,
-/obj/item/storage/backpack/satchel/blue,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/item/storage/backpack/satchel,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "sO" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -3655,18 +3567,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
-"ur" = (
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/item/attachable/suppressor,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "us" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/skills{
@@ -3697,9 +3597,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "uz" = (
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_3"
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "uB" = (
@@ -3781,13 +3678,6 @@
 /obj/vehicle/powerloader,
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/hangar)
-"uQ" = (
-/obj/structure/machinery/conveyor{
-	dir = 8;
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/supply)
 "uS" = (
 /obj/item/folder/black_random{
 	pixel_x = -9;
@@ -3874,11 +3764,10 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "vp" = (
-/obj/structure/plasticflaps,
 /obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "reqbeltdown"
+	dir = 8
 	},
+/obj/structure/plasticflaps,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
 "vq" = (
@@ -4385,10 +4274,6 @@
 	icon_state = "SW-out";
 	pixel_x = -1
 	},
-/obj/item/trash/popcorn{
-	pixel_x = -14;
-	pixel_y = 9
-	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/briefing)
 "yM" = (
@@ -4413,15 +4298,6 @@
 	pixel_y = 16
 	},
 /turf/open/floor/almayer/test_floor5,
-/area/golden_arrow/supply)
-"yP" = (
-/obj/item/clothing/head/fez,
-/obj/item/clothing/head/flatcap,
-/obj/item/clothing/head/beaverhat,
-/obj/item/clothing/head/bowlerhat,
-/obj/item/clothing/head/bowler,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
 "yR" = (
 /obj/structure/cable/heavyduty{
@@ -4458,23 +4334,6 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"zb" = (
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/item/weapon/gun/pistol/vp78,
-/obj/structure/closet/crate,
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "zi" = (
 /obj/structure/machinery/body_scanconsole{
 	pixel_y = 6;
@@ -4645,10 +4504,6 @@
 /area/golden_arrow/hangar)
 "zT" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
-/obj/item/trash/pistachios{
-	pixel_x = 12;
-	pixel_y = -16
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "zV" = (
@@ -5303,21 +5158,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/golden_arrow/squad_one)
-"DW" = (
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/obj/item/reagent_container/food/drinks/bottle/gin{
-	pixel_x = 16;
-	pixel_y = 28
-	},
-/obj/item/reagent_container/food/snacks/grown/bluetomato{
-	pixel_x = 10;
-	pixel_y = 20
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "Eb" = (
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
@@ -5466,15 +5306,13 @@
 /area/golden_arrow/hangar)
 "EM" = (
 /obj/structure/machinery/conveyor{
-	dir = 9;
-	id = "reqbeltdown"
+	dir = 10
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
 "EN" = (
 /obj/structure/machinery/conveyor{
-	dir = 1;
-	id = "reqbeltup"
+	dir = 1
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
@@ -5559,10 +5397,6 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/squad_one)
 "FH" = (
-/obj/item/trash/semki{
-	pixel_x = -16;
-	pixel_y = 4
-	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "FI" = (
@@ -5587,18 +5421,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/golden_arrow/engineering)
-"FK" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = -8;
-	pixel_y = -4
-	},
-/obj/item/reagent_container/food/drinks/bottle/tequila{
-	pixel_x = -7;
-	pixel_y = 14
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "FM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -5718,10 +5540,6 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/item/trash/crushed_cup{
-	pixel_x = -12;
-	pixel_y = 3
-	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "GB" = (
@@ -5827,12 +5645,6 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"Hj" = (
-/obj/structure/machinery/conveyor_switch{
-	id = "reqbeltdown"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "Hn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5971,23 +5783,12 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"Io" = (
-/obj/structure/machinery/conveyor{
-	dir = 5;
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "Ip" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
-	},
-/obj/item/trash/kepler{
-	pixel_x = 2;
-	pixel_y = 15
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/briefing)
@@ -6080,23 +5881,16 @@
 	light_color = "#dae2ff";
 	light_power = 0.7
 	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "map";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = 10
+	},
 /obj/item/reagent_container/food/drinks/coffeecup{
 	pixel_x = 16;
 	pixel_y = -2
-	},
-/obj/structure/prop/invuln{
-	desc = "You press the power button and watch. You watch for a long time. For some reason the display doesn't turn on, you don't understand why, the bottle of alcohol standing on top of the monitor doesn't bother you at all.";
-	icon = 'icons/obj/structures/machinery/computer.dmi';
-	icon_state = "map";
-	name = "Tactical Map Display";
-	light_color = "#DAE2FF";
-	layer = 2.97;
-	pixel_y = 10
-	},
-/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
-	pixel_x = 3;
-	pixel_y = 24;
-	anchored = 1
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
@@ -6283,13 +6077,6 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
-"JG" = (
-/obj/structure/machinery/conveyor{
-	dir = 2;
-	id = "reqbeltdown"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "JI" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/almayer/plate,
@@ -6310,18 +6097,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/synthcloset)
-"JQ" = (
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/item/storage/pouch/magazine/pistol/large/vp78,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "JU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/double/blue{
@@ -6339,7 +6114,6 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/item/trash/cigbutt,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/briefing)
 "JZ" = (
@@ -6431,10 +6205,6 @@
 /area/golden_arrow/hangar)
 "KA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/trash/raisins{
-	pixel_x = -13;
-	pixel_y = 18
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "KC" = (
@@ -6599,31 +6369,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
-"LC" = (
-/obj/item/clothing/under/lawyer/blue,
-/obj/item/clothing/under/lawyer/bluesuit,
-/obj/item/clothing/under/liaison_suit,
-/obj/item/clothing/under/liaison_suit/blazer,
-/obj/item/clothing/under/liaison_suit/formal,
-/obj/item/clothing/under/liaison_suit/charcoal,
-/obj/item/clothing/under/liaison_suit/orange,
-/obj/item/clothing/under/liaison_suit/khaki,
-/obj/item/clothing/under/lawyer/red,
-/obj/item/clothing/under/lawyer/purpsuit,
-/obj/item/clothing/under/lawyer/oldman,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/shoes/laceup,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "LH" = (
 /turf/open/floor/almayer/plating,
 /area/golden_arrow/squad_one)
@@ -6813,9 +6558,6 @@
 "MR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomittox_2"
-	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "MT" = (
@@ -6841,9 +6583,8 @@
 	icon_state = "NE-out";
 	pixel_x = 1
 	},
+/obj/structure/largecrate/random/case/double,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/trashcart,
-/obj/item/storage/bag/trash,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/engineering)
 "Nc" = (
@@ -6869,8 +6610,7 @@
 /area/golden_arrow/cryo_cells)
 "Nl" = (
 /obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "reqbeltdown"
+	dir = 8
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
@@ -6896,7 +6636,6 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/item/trash/cigbutt,
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/briefing)
 "NA" = (
@@ -6941,20 +6680,6 @@
 "NL" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"NM" = (
-/obj/structure/machinery/conveyor{
-	dir = 8;
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
-"NT" = (
-/obj/structure/machinery/conveyor{
-	dir = 10;
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "NX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/power/apc/almayer/north,
@@ -7019,16 +6744,6 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
-"Oe" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_2"
-	},
-/turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/briefing)
 "On" = (
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
@@ -7520,17 +7235,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating,
 /area/golden_arrow/engineering)
-"RK" = (
-/obj/item/reagent_container/food/drinks/plasticcup{
-	pixel_x = 8;
-	pixel_y = 3
-	},
-/obj/item/reagent_container/food/drinks/cans/waterbottle{
-	pixel_x = -2;
-	pixel_y = -11
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "RN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7894,10 +7598,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/item/trash/cigbutt{
-	pixel_x = 7;
-	pixel_y = 16
-	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "TC" = (
@@ -8208,14 +7908,6 @@
 "Vj" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
-"Vn" = (
-/obj/structure/plasticflaps,
-/obj/structure/machinery/conveyor{
-	dir = 8;
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "Vs" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -8423,12 +8115,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/hangar)
-"Wy" = (
-/obj/structure/machinery/conveyor_switch{
-	id = "reqbeltup"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "WC" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/engineering)
@@ -8638,13 +8324,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"XK" = (
-/obj/structure/machinery/conveyor{
-	dir = 6;
-	id = "reqbeltdown"
-	},
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "XL" = (
 /obj/structure/platform{
 	dir = 8;
@@ -8898,10 +8577,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/trash/sosjerky{
-	pixel_x = 17;
-	pixel_y = -16
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "Zg" = (
@@ -8924,18 +8599,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
-"Zm" = (
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/item/storage/belt/gun/m4a3/vp78,
-/obj/structure/closet/crate,
-/turf/open/floor/almayer/plating/northeast,
-/area/golden_arrow/supply)
 "Zo" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -12760,7 +12423,7 @@ WJ
 ys
 kX
 cE
-uQ
+ql
 ek
 ql
 BJ
@@ -12862,7 +12525,7 @@ nx
 ys
 ys
 ys
-Vn
+vp
 ys
 vp
 ys
@@ -12964,7 +12627,7 @@ Nt
 TX
 Sn
 ys
-NM
+Nl
 ys
 Nl
 ys
@@ -13066,7 +12729,7 @@ nx
 TX
 Sn
 ys
-NM
+Nl
 ys
 Nl
 ys
@@ -13168,7 +12831,7 @@ Sn
 Sn
 Sn
 ys
-NM
+Nl
 ys
 Nl
 ys
@@ -13270,12 +12933,12 @@ Sn
 ys
 ys
 ys
-NM
+Nl
 ys
 Nl
 ys
-ys
-ys
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -13370,14 +13033,14 @@ Sn
 Sn
 Sn
 ys
-Io
 EN
-NT
-ys
+EN
 EM
-JG
-XK
+EN
+EM
 ys
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -13472,14 +13135,14 @@ Sn
 Sn
 Sn
 ys
-NM
 ys
 ys
 ys
 ys
 ys
-Nl
 ys
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -13573,15 +13236,15 @@ Sn
 Sn
 Sn
 Sn
-ys
-NM
-ur
-Zm
-zb
-Wy
-Hj
-Nl
-ys
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -13675,15 +13338,15 @@ Sn
 Sn
 Sn
 Sn
-ys
-NM
-JQ
-sM
-yP
-rr
-LC
-Nl
-ys
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -13777,15 +13440,15 @@ Sn
 Sn
 Sn
 Sn
-ys
-ys
-ys
-ys
-ys
-ys
-ys
-ys
-ys
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
+Sn
 Sn
 Sn
 Sn
@@ -16751,7 +16414,7 @@ Pw
 uz
 Nv
 JE
-kT
+JE
 JW
 FV
 xk
@@ -16852,8 +16515,8 @@ Pm
 NY
 FH
 Ip
-RK
-DW
+mN
+mN
 oW
 Gy
 UR
@@ -16955,9 +16618,9 @@ Zl
 MR
 by
 iW
-FK
+Zl
 fw
-Oe
+Gy
 hz
 wy
 jD

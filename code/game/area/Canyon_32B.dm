@@ -120,23 +120,3 @@
 
 /area/canyon32B/exterior/south/bar
 	name = "Canyon 32B - Bar Parking Lot"
-
-/area/canyon32B/interior/bunker/lab
-	name = "Laboratory"
-	icon_state = "purple"
-
-/area/canyon32B/interior/bunker/lab/telecomm
-	name = "Telecomms Room"
-	icon_state = "tcomsatcham"
-
-/area/canyon32B/interior/bunker/lab/toilet
-	name = "Toilet"
-	icon_state = "yellow"
-
-/area/canyon32B/interior/bunker/lab/xeno
-	name = "Xenomorphic Research"
-	icon_state = "purple"
-
-/area/canyon32B/interior/bunker/lab/sec
-	name = "Security Checkpoint"
-	icon_state = "security"

@@ -1,16 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ad" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 8
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
-"ae" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "ag" = (
 /obj/structure/bed/chair{
 	pixel_x = -15;
@@ -35,9 +23,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/hallway)
-"al" = (
-/turf/closed/wall/r_wall/biodome,
-/area/canyon32B/interior/bunker/lab/sec)
 "am" = (
 /obj/structure/filingcabinet/medical{
 	pixel_y = 17;
@@ -77,21 +62,11 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"as" = (
-/turf/open/floor/corsat/omega,
-/area/canyon32B/interior/bunker/lab)
-"av" = (
-/turf/open/floor/corsat/red/north,
-/area/canyon32B/interior/bunker/lab/xeno)
 "aw" = (
 /obj/structure/curtain/red,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/overwatch)
-"ax" = (
-/obj/structure/machinery/door/window/brigdoor/eastright,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "aA" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -100,9 +75,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"aB" = (
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "aD" = (
 /obj/structure/machinery/sentry_holder{
 	dir = 4;
@@ -116,7 +88,7 @@
 "aG" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -168,11 +140,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/mess)
-"aX" = (
-/obj/structure/surface/rack,
-/obj/item/device/binoculars,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "aZ" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/cable/heavyduty,
@@ -193,13 +160,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
-"bf" = (
-/obj/structure/sign/poster/clf{
-	pixel_x = 0;
-	pixel_y = 34
-	},
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/canyon32B/interior/bunker/lab/sec)
 "bj" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -221,61 +181,21 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/hallway)
-"bp" = (
-/obj/structure/machinery/vending/cola,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
 "by" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/hallway)
-"bz" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/door/window/westright{
-	dir = 2;
-	layer = 2.9
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"bB" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 2
-	},
-/obj/structure/machinery/light/small{
-	dir = 2
-	},
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
 "bC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"bD" = (
-/obj/structure/bed/chair{
-	pixel_x = 5;
-	pixel_y = 8
-	},
-/obj/structure/sign/safety/high_voltage{
-	pixel_x = 8;
-	pixel_y = 31
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"bF" = (
-/obj/structure/bed/sofa/vert/grey/bot,
-/turf/open/floor/whiteyellow/southeast,
-/area/lv624/lazarus/engineering)
 "bH" = (
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"bI" = (
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "bP" = (
 /obj/structure/flora/bush/snow{
 	icon_state = "snowbush_2"
@@ -295,27 +215,9 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/checkpoint)
-"bV" = (
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
-"bW" = (
-/obj/structure/flora/bush/ausbushes/var3/sunnybush,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "bY" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/engineering/power)
-"cd" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
-"ci" = (
-/turf/open/floor/darkbrowncorners2/east,
-/area/lv624/lazarus/engineering)
-"ck" = (
-/obj/structure/bed/sofa/vert/grey/top,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab)
 "co" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -329,17 +231,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"cp" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 8;
-	id = "labsec";
-	name = "Security'"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "cr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
@@ -365,11 +256,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/engineering/power)
-"cy" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hos,
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "cz" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -382,10 +268,6 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/exterior/south/bar)
-"cC" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
-/area/lv624/lazarus/landing_zones/lz2)
 "cE" = (
 /obj/structure/machinery/door_control{
 	id = "Pillbox Alpha";
@@ -395,21 +277,6 @@
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
-"cP" = (
-/obj/structure/showcase{
-	icon_state = "broadcast receiver";
-	name = "Subspace Receiver"
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"cQ" = (
-/obj/structure/surface/rack,
-/obj/item/moneybag,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
 "cS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -481,9 +348,6 @@
 "dq" = (
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/north)
-"ds" = (
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
 "du" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -491,11 +355,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/hallway)
-"dv" = (
-/obj/item/ammo_magazine/smg/nailgun,
-/obj/structure/machinery/light,
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
 "dw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -503,13 +362,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/unloading)
-"dD" = (
-/obj/structure/flora/jungle/vines/light_3,
-/turf/closed/wall/strata_ice/jungle,
-/area/lv624/lazarus/landing_zones/lz2)
-"dH" = (
-/turf/open/floor/corsat/red/northeast,
-/area/canyon32B/interior/bunker/lab/xeno)
 "dI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -527,32 +379,6 @@
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/unloading)
-"dJ" = (
-/obj/structure/machinery/blackbox_recorder,
-/obj/item/prop/almayer/flight_recorder/colony{
-	pixel_x = 0;
-	pixel_y = 13;
-	name = "\improper CIR-60 information recorder"
-	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8;
-	light_range = 3
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"dM" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue/east,
-/area/lv624/lazarus/engineering)
 "dN" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /obj/structure/pipes/vents/scrubber,
@@ -602,21 +428,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/unloading)
-"dY" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	name = "Airlock Security";
-	req_one_access = null
-	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 4;
-	id = "XenoControl"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
-"dZ" = (
-/obj/structure/machinery/door/window/brigdoor/eastleft,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "eb" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
@@ -645,10 +456,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/hallway)
-"ef" = (
-/obj/item/ammo_magazine/smg/mp5,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "eh" = (
 /obj/structure/prop/structure_lattice{
 	density = 0;
@@ -685,19 +492,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"es" = (
-/obj/structure/bed/alien,
-/turf/open/floor/almayer/research/containment/entrance/west,
-/area/canyon32B/interior/bunker/lab/sec)
-"ex" = (
-/obj/structure/machinery/door/poddoor/two_tile/vertical/open{
-	id = "secright"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
-"eC" = (
-/turf/open/floor/corsat/theta,
-/area/canyon32B/interior/bunker/lab)
 "eF" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -708,41 +502,9 @@
 "eI" = (
 /turf/open/asphalt/cement/cement15,
 /area/canyon32B/exterior/south)
-"eQ" = (
-/obj/structure/bed/sofa/vert/grey,
-/turf/open/floor/whiteyellow/east,
-/area/lv624/lazarus/engineering)
-"eT" = (
-/obj/structure/machinery/shower{
-	dir = 8
-	},
-/obj/structure/machinery/light/small{
-	dir = 2
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/canyon32B/interior/bunker/lab/toilet)
 "eY" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/entrance)
-"ff" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1;
-	light_range = 3
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
-"fj" = (
-/obj/structure/machinery/computer/secure_data{
-	dir = 4
-	},
-/obj/structure/surface/table/reinforced/black,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"fk" = (
-/turf/closed/wall/mineral/bone_resin,
-/area/canyon32B/interior/bunker/lab/xeno)
 "fm" = (
 /obj/structure/pipes/vents/pump{
 	pixel_y = -16
@@ -777,31 +539,6 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/engineering)
-"fF" = (
-/obj/structure/machinery/shower{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/canyon32B/interior/bunker/lab/toilet)
-"fG" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"fH" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"fJ" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/obj/structure/flora/jungle/vines/light_3,
-/turf/open/floor/warning/southeast,
-/area/lv624/lazarus/landing_zones/lz2)
 "fK" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -809,9 +546,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering)
-"fM" = (
-/turf/open/floor/whitebluecorner/east,
-/area/lv624/lazarus/engineering)
 "fT" = (
 /obj/structure/machinery/vending/cigarette{
 	pixel_x = 7;
@@ -854,32 +588,18 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/storage)
-"ga" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "gc" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/bunks)
-"gf" = (
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/canyon32B/interior/bunker/lab/sec)
 "gk" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south/bar)
-"gr" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
 "gs" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = 14;
@@ -910,22 +630,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/overwatch)
-"gA" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/tea{
-	pixel_x = 0;
-	pixel_y = -2
-	},
-/obj/item/reagent_container/food/drinks/tea{
-	pixel_x = 8;
-	pixel_y = 7
-	},
-/obj/item/reagent_container/food/drinks/tea{
-	pixel_x = -10;
-	pixel_y = 5
-	},
-/turf/open/floor/almayer/research/containment/corner/north,
-/area/canyon32B/interior/bunker/lab/sec)
 "gE" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/processor{
@@ -969,23 +673,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/bunks)
-"gM" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	access_modified = 1;
-	name = "Telecommunications";
-	dir = 1;
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 1;
-	id = "Telecommunications";
-	name = "\improper Telecommunications"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"gP" = (
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/engineering)
 "gT" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/reagent_container/glass/rag{
@@ -1013,17 +700,14 @@
 /area/canyon32B/interior/bunker/mess)
 "hc" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/colony{
-	req_one_access = null
+	req_one_access = null;
+	req_access = list(9)
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering)
-"hf" = (
-/obj/structure/bed/chair/comfy/beige,
-/turf/open/floor/whiteyellowcorner/east,
-/area/lv624/lazarus/engineering)
 "hi" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1035,13 +719,6 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/hallway)
-"hj" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "hk" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -1066,12 +743,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
-"hq" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_10_1"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "ht" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/unloading)
@@ -1129,18 +800,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"hQ" = (
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
-"hV" = (
-/obj/structure/machinery/power/apc/almayer/west,
-/turf/open/floor/corsat/red/west,
-/area/canyon32B/interior/bunker/lab/xeno)
-"hX" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/door/window/brigdoor/southleft,
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "ia" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1171,10 +830,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
-"ih" = (
-/obj/structure/machinery/floodlight/landing,
-/turf/open/floor/mech_bay_recharge_floor/shuttle_landing_lights,
-/area/lv624/lazarus/landing_zones/lz2)
 "il" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -1204,20 +859,6 @@
 "ir" = (
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/unloading)
-"is" = (
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"it" = (
-/obj/structure/sink{
-	dir = 1;
-	pixel_y = -10
-	},
-/obj/structure/mirror{
-	pixel_x = 29;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/research/containment/corner2,
-/area/canyon32B/interior/bunker/lab/sec)
 "ix" = (
 /obj/structure/prop/brazier/campfire{
 	fuel_stage_time = 60000
@@ -1235,30 +876,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"iz" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/ammo_magazine/smg/mp5,
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/engineering)
-"iA" = (
-/obj/item/stack/sheet/wood{
-	amount = 2
-	},
-/turf/open/floor/warning/northeast,
-/area/lv624/lazarus/landing_zones/lz2)
-"iB" = (
-/obj/structure/toilet{
-	dir = 2;
-	pixel_y = 14
-	},
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 8
-	},
-/area/canyon32B/interior/bunker/lab/sec)
-"iD" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
 "iH" = (
 /obj/structure/closet/secure_closet{
 	pixel_x = -8;
@@ -1266,15 +883,6 @@
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/overwatch)
-"iM" = (
-/turf/open/floor/almayer/dark_sterile,
-/area/canyon32B/interior/bunker/lab/xeno)
-"iT" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plating/platebot,
-/area/lv624/lazarus/engineering)
 "iV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -1298,12 +906,6 @@
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/exterior/checkpoint)
-"je" = (
-/obj/effect/decal/cleanable/blood/xeno{
-	icon_state = "xgib2"
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "jf" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -1311,24 +913,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/checkpoint)
-"jp" = (
-/obj/structure/bed/sofa/vert/grey/bot,
-/obj/structure/machinery/light/double/blue,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab)
-"jr" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/crowbar,
-/obj/item/reagent_container/spray/cleaner,
-/turf/open/floor/whiteyellow/northwest,
-/area/lv624/lazarus/engineering)
-"js" = (
-/obj/structure/bookcase/manuals/medical,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteyellow/southeast,
-/area/lv624/lazarus/engineering)
 "jt" = (
 /obj/item/paper_bin/uscm{
 	pixel_x = -6;
@@ -1346,17 +930,13 @@
 "ju" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/detainment)
-"jC" = (
-/obj/structure/machinery/power/apc/almayer/south,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
 "jE" = (
 /obj/structure/window/framed/wood,
 /turf/open/floor/wood,
@@ -1368,26 +948,11 @@
 /obj/structure/cable/heavyduty,
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/bunks)
-"jH" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "XenoControl";
-	name = "Entrance"
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "jN" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/overwatch)
-"jS" = (
-/obj/structure/flora/jungle/vines/light_3,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
-"jV" = (
-/turf/open/floor/whiteyellowcorner/north,
-/area/lv624/lazarus/engineering)
 "jX" = (
 /obj/structure/machinery/power/smes/buildable{
 	pixel_y = 16;
@@ -1422,10 +987,6 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/bunks)
-"kc" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
 "ks" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -1433,32 +994,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/entrance)
-"kv" = (
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
-"kw" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Workshop Storage";
-	req_access_txt = "100";
-	req_one_access = null
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
-"ky" = (
-/turf/open/floor/almayer/research/containment/floor2,
-/area/canyon32B/interior/bunker/lab/sec)
-"kA" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/computer/communications/simple{
-	pixel_y = 3;
-	dir = 8
-	},
-/obj/item/reagent_container/glass/beaker{
-	pixel_x = -7;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "kD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -1466,17 +1001,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/hallway)
-"kG" = (
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"kH" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_6_1"
-	},
-/obj/item/ammo_magazine/smg/mp5,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "kN" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -1491,10 +1015,6 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/north)
-"kP" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "kR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1518,19 +1038,6 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/engineering)
-"kV" = (
-/obj/item/fuel_cell/used,
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
-"lb" = (
-/turf/open/floor/corsat/red,
-/area/canyon32B/interior/bunker/lab/xeno)
-"lc" = (
-/obj/docking_port/stationary/marine_dropship/lz2{
-	name = "Corporate Dome"
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "ld" = (
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/south/bar)
@@ -1556,9 +1063,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering/power)
-"ln" = (
-/turf/closed/wall/r_wall/biodome,
-/area/canyon32B/interior/bunker/lab)
 "lo" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/dirt,
@@ -1605,32 +1109,6 @@
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/interior/bunker/entrance)
-"lE" = (
-/obj/structure/showcase,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
-"lF" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
-"lG" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	layer = 3.3;
-	pixel_y = 0
-	},
-/turf/open/floor/darkbrown2/northeast,
-/area/lv624/lazarus/engineering)
 "lJ" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -1708,9 +1186,6 @@
 	},
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/south)
-"mg" = (
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
 "mi" = (
 /obj/structure/surface/rack,
 /obj/item/stack/sheet/metal/large_stack,
@@ -1724,10 +1199,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering)
-"ml" = (
-/obj/structure/machinery/camera/autoname/lz_camera,
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "mt" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -1738,21 +1209,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/bathroom)
-"mu" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
-	req_access = null
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
-"mx" = (
-/turf/open/floor/plating/asteroidwarning/southwest,
-/area/lv624/lazarus/landing_zones/lz2)
-"my" = (
-/obj/structure/barricade/metal{
-	health = 250
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "mA" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -1760,14 +1216,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"mB" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Engineering Dome";
-	req_one_access = null;
-	dir = 4
-	},
-/turf/open/floor/delivery,
-/area/lv624/lazarus/engineering)
 "mE" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -1779,7 +1227,7 @@
 "mF" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -1794,13 +1242,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/gatehouse/northern)
-"mM" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	layer = 3.33
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "mN" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
@@ -1811,14 +1252,6 @@
 	},
 /turf/open/auto_turf/ice/layer1,
 /area/canyon32B/OOB)
-"mP" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	layer = 3.33;
-	pixel_y = 2
-	},
-/turf/open/floor/darkbrown2/southeast,
-/area/lv624/lazarus/engineering)
 "mT" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -1830,12 +1263,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/gatehouse/northern)
-"mU" = (
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
 "mV" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/cable/heavyduty{
@@ -1850,17 +1277,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/hallway)
-"na" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_y = -25;
-	id = "cell3";
-	name = "cell3"
-	},
-/turf/open/floor/corsat/red/west,
-/area/canyon32B/interior/bunker/lab/sec)
-"nc" = (
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "nd" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -1868,12 +1284,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
-"nf" = (
-/turf/open/floor/corsat/red/east,
-/area/canyon32B/interior/bunker/lab/sec)
-"ni" = (
-/turf/closed/wall/r_wall/unmeltable,
-/area/lv624/lazarus/engineering)
 "nn" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -1899,9 +1309,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/storage)
-"nv" = (
-/turf/open/floor/whitebluecorner/west,
-/area/lv624/lazarus/engineering)
 "nw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/southeast,
@@ -1909,21 +1316,6 @@
 "ny" = (
 /turf/open/floor/wood,
 /area/canyon32B/exterior/south/bar)
-"nE" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/paper_bin/wy{
-	pixel_y = 8
-	},
-/obj/item/tool/pen/clicky,
-/turf/open/floor/whitebluecorner,
-/area/lv624/lazarus/engineering)
-"nH" = (
-/obj/structure/closet/secure_closet/brig/prisoner{
-	pixel_y = 20;
-	req_one_access = null
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "nK" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -1966,28 +1358,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
-"nX" = (
-/obj/structure/lz_sign/lazarus_sign{
-	layer = 4
-	},
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
-"nZ" = (
-/obj/structure/window_frame/colony/reinforced,
-/obj/item/shard,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
-"oa" = (
-/turf/open/floor/plating/platebot,
-/area/lv624/lazarus/engineering)
-"oc" = (
-/obj/item/ammo_magazine/smg/nailgun,
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
-"od" = (
-/obj/structure/window_frame/colony/reinforced,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
 "oe" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -2012,48 +1382,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/exterior/checkpoint)
-"oj" = (
-/obj/structure/machinery/landinglight/ds2/delayone{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"om" = (
-/turf/open/floor/almayer/research/containment/corner/east,
-/area/canyon32B/interior/bunker/lab/sec)
-"oo" = (
-/turf/open/floor/corsat/red/east,
-/area/canyon32B/interior/bunker/lab/xeno)
-"op" = (
-/obj/structure/filingcabinet{
-	pixel_x = 14;
-	pixel_y = 19
-	},
-/obj/structure/machinery/disposal{
-	pixel_x = -5;
-	pixel_y = 4
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/xeno)
 "oq" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/mess)
-"or" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/engineering)
-"os" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 8
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"ot" = (
-/turf/closed/wall/resin{
-	hivenumber = "xeno_hive_tamed"
-	},
-/area/canyon32B/interior/bunker/lab/xeno)
 "ow" = (
 /obj/structure/platform/kutjevo{
 	dir = 8;
@@ -2078,13 +1410,6 @@
 "oD" = (
 /turf/open/asphalt/cement/cement12,
 /area/canyon32B/exterior/north)
-"oE" = (
-/obj/structure/machinery/power/smes/buildable{
-	capacity = 1e+006;
-	dir = 1
-	},
-/turf/open/floor/plating/platebot,
-/area/lv624/lazarus/engineering)
 "oJ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -2112,6 +1437,20 @@
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/south/bar)
 "oQ" = (
+/obj/item/storage/box/explosive_mines{
+	pixel_y = -1;
+	pixel_x = 3
+	},
+/obj/item/storage/box/explosive_mines{
+	pixel_y = -4;
+	pixel_x = -5;
+	layer = 3.03
+	},
+/obj/item/storage/box/explosive_mines{
+	pixel_x = 6;
+	pixel_y = -7;
+	layer = 3.04
+	},
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
 	pixel_y = 26
@@ -2120,8 +1459,11 @@
 	dir = 1;
 	light_color = "#dae2ff"
 	},
-/obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/ap,
+/obj/item/storage/box/explosive_mines{
+	pixel_x = -1;
+	pixel_y = 8;
+	layer = 3.05
+	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/armory)
 "oS" = (
@@ -2158,62 +1500,10 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"oV" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_y = 0
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"oW" = (
-/obj/item/storage/firstaid/adv/empty,
-/obj/structure/machinery/door_control{
-	id = "secure_outer_blast";
-	name = "Secure Outer Doors";
-	pixel_x = 25;
-	pixel_y = -5
-	},
-/obj/structure/phone_base/colony_net{
-	phone_category = "Lazarus Landing";
-	phone_color = "blue";
-	phone_id = "Corporate Office";
-	pixel_y = 24
-	},
-/turf/open/floor/whiteyellow/northeast,
-/area/lv624/lazarus/engineering)
-"oY" = (
-/obj/item/device/radio/intercom{
-	pixel_x = -30;
-	pixel_y = -1
-	},
-/obj/structure/machinery/door_control{
-	pixel_x = 0;
-	pixel_y = -23;
-	name = "Telecommunications"
-	},
-/turf/open/floor/corsat/sigma,
-/area/canyon32B/interior/bunker/lab)
 "pa" = (
 /obj/item/stack/sheet/wood/large_stack,
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
-"pd" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Robotics Dome";
-	req_one_access = null
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"pi" = (
-/obj/item/weapon/gun/smg/nailgun,
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
-"pk" = (
-/obj/effect/decal/cleanable/blood{
-	icon_state = "csplatter3"
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "pl" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -2251,44 +1541,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
-"ps" = (
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
-"pt" = (
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
-/obj/structure/mirror{
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
-/area/canyon32B/interior/bunker/lab/sec)
-"pC" = (
-/obj/structure/sign/banners/twe_worn{
-	pixel_x = 1;
-	pixel_y = -30
-	},
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/canyon32B/interior/bunker/lab/sec)
-"pD" = (
-/obj/structure/flora/jungle/vines/light_3,
-/turf/open/gm/grass/grass2,
-/area/lv624/lazarus/landing_zones/lz2)
-"pL" = (
-/obj/structure/machinery/vending/security,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"pP" = (
-/obj/structure/machinery/computer/telecomms/server{
-	pixel_y = 16
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "pT" = (
 /obj/structure/surface/rack,
 /obj/item/storage/belt/utility/full{
@@ -2302,11 +1554,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/storage)
-"pU" = (
-/obj/effect/decal/cleanable/blood,
-/obj/structure/bed/roller,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "qa" = (
 /obj/structure/barricade/snow{
 	dir = 1
@@ -2342,13 +1589,6 @@
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/entrance)
-"qp" = (
-/turf/closed/wall/r_wall/unmeltable,
-/area/lv624/lazarus/landing_zones/lz2)
-"qz" = (
-/obj/structure/machinery/landinglight/ds2/delayone,
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "qB" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -2396,10 +1636,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/mess)
-"qI" = (
-/obj/structure/flora/jungle/vines/heavy,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "qO" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -2410,11 +1646,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/gatehouse/northern)
-"qP" = (
-/turf/closed/wall/resin/membrane{
-	hivenumber = "xeno_hive_tamed"
-	},
-/area/canyon32B/interior/bunker/lab/xeno)
 "qQ" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/reagent_container/food/drinks/milk,
@@ -2428,12 +1659,6 @@
 /obj/item/reagent_container/food/snacks/meat,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
-"qT" = (
-/obj/structure/machinery/landinglight/ds2{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "qW" = (
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/unloading)
@@ -2450,29 +1675,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/unloading)
-"ri" = (
-/turf/open/floor/plating/asteroidwarning/west,
-/area/lv624/lazarus/landing_zones/lz2)
-"rj" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue/northeast,
-/area/lv624/lazarus/engineering)
-"rk" = (
-/obj/structure/filingcabinet/disk{
-	pixel_x = -7;
-	pixel_y = 16
-	},
-/obj/structure/filingcabinet{
-	pixel_x = 8;
-	pixel_y = 16
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "rn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -2491,12 +1693,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"ry" = (
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "rC" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
@@ -2518,28 +1714,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/engineering)
-"rL" = (
-/obj/structure/bookcase{
-	density = 0;
-	icon_state = "book-5";
-	pixel_y = 18;
-	can_block_movement = 0;
-	opacity = 0
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "rM" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/armory)
-"rO" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 8;
-	id = "garage_lv";
-	name = "\improper Garage"
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "rR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/warning_stripes{
@@ -2548,38 +1726,9 @@
 	},
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/interior/bunker/entrance)
-"rT" = (
-/obj/effect/spawner/gibspawner/human,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"rV" = (
-/turf/open/floor/almayer/research/containment/corner1,
-/area/canyon32B/interior/bunker/lab/sec)
 "rW" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/storage)
-"rX" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/smg/m39/elite{
-	pixel_y = -8
-	},
-/obj/item/weapon/gun/smg/m39/elite,
-/obj/item/weapon/gun/smg/m39/elite{
-	pixel_y = 9
-	},
-/turf/open/floor/almayer/edge/north,
-/area/canyon32B/interior/bunker/armory)
-"sc" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	dir = 1;
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/shutters{
-	dir = 1;
-	id = "cell3"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "se" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/food/snacks/soylentgreen{
@@ -2592,47 +1741,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
-"sf" = (
-/obj/item/stack/sheet/wood{
-	amount = 2
-	},
-/turf/open/floor/warning/north,
-/area/lv624/lazarus/landing_zones/lz2)
-"sg" = (
-/turf/open/floor/plating/asteroidwarning/southeast,
-/area/lv624/lazarus/landing_zones/lz2)
-"sj" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/disk{
-	icon_state = "datadisk5";
-	pixel_x = -7;
-	pixel_y = -3
-	},
-/obj/item/disk{
-	icon_state = "disk_4";
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/disk{
-	icon_state = "disk_8";
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/disk{
-	icon_state = "disk_13";
-	pixel_x = 17;
-	pixel_y = 7
-	},
-/obj/item/paper/research_notes/unique/tier_five{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/paper/research_notes/unique/tier_three{
-	pixel_x = 12;
-	pixel_y = 3
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "sm" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = list();
@@ -2650,7 +1758,8 @@
 "su" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 4;
-	req_one_access = null
+	req_one_access = null;
+	req_access = list(9)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2664,25 +1773,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/detainment)
 "sB" = (
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/south/bar)
-"sJ" = (
-/obj/structure/filingcabinet/filingcabinet,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"sK" = (
-/obj/structure/machinery/landinglight/ds2/delaythree,
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"sL" = (
-/obj/item/weapon/twohanded/fireaxe,
-/turf/open/floor/darkbrowncorners2/west,
-/area/lv624/lazarus/engineering)
 "sO" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
@@ -2717,39 +1814,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/hallway)
-"tb" = (
-/obj/structure/bed/chair{
-	pixel_x = 2;
-	pixel_y = 19
-	},
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_3"
-	},
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"tc" = (
-/obj/item/weapon/gun/smg/mp5,
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_3_1"
-	},
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"te" = (
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
 "ti" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/storage)
-"tk" = (
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "tm" = (
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/south)
@@ -2757,23 +1827,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
-"ts" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
-/area/lv624/lazarus/landing_zones/lz2)
-"tt" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/firstaid/adv{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/storage/firstaid/adv,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
-"tx" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "tD" = (
 /obj/structure/bed/chair/office/light,
 /obj/structure/machinery/power/apc/almayer/north,
@@ -2796,21 +1849,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/armory)
-"tJ" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/east,
-/area/lv624/lazarus/landing_zones/lz2)
-"tK" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	dir = 1;
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/shutters{
-	dir = 2;
-	id = "cell1"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "tP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/east,
@@ -2834,17 +1872,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"tW" = (
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"uf" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/pole/fancy_cane,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "ug" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -2888,13 +1915,6 @@
 "uv" = (
 /turf/open/asphalt/cement/cement4,
 /area/canyon32B/exterior/north)
-"uw" = (
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"ux" = (
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
 "uy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -2902,17 +1922,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/canyon32B/interior/bunker/unloading)
-"uz" = (
-/obj/structure/machinery/door_control{
-	pixel_x = 30;
-	pixel_y = 0;
-	id = "labsec"
-	},
-/obj/structure/closet/secure_closet/guncabinet/riot_control{
-	req_access = null
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
 "uD" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -2920,25 +1929,10 @@
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/armory)
-"uK" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4;
-	light_range = 3
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/canyon32B/interior/bunker/lab/xeno)
-"uM" = (
-/obj/structure/machinery/landinglight/ds2/delayone{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "uO" = (
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
@@ -2962,24 +1956,6 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"uU" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	dir = 1;
-	name = "\improper Corporation Office";
-	req_access_txt = "100"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"uV" = (
-/turf/open/floor/corsat/red,
-/area/canyon32B/interior/bunker/lab/sec)
-"uY" = (
-/obj/item/ammo_magazine/smg/nailgun,
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
 "vf" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8;
@@ -2995,10 +1971,6 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/hallway)
-"vj" = (
-/obj/item/storage/fancy/cigarettes/emeraldgreen,
-/turf/open/floor/whitebluecorner/east,
-/area/lv624/lazarus/engineering)
 "vk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3009,52 +1981,12 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/unloading)
-"vm" = (
-/obj/structure/bed/alien,
-/turf/open/floor/almayer/research/containment/floor2/west,
-/area/canyon32B/interior/bunker/lab/sec)
-"vp" = (
-/obj/effect/decal/cleanable/blood/xeno{
-	icon_state = "xgib6"
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"vt" = (
-/turf/closed/wall,
-/area/lv624/lazarus/engineering)
-"vz" = (
-/obj/structure/flora/bush/ausbushes/var3/brflowers,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
-"vB" = (
-/obj/effect/decal/cleanable/blood/xeno{
-	icon_state = "xgibmid1"
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "vD" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
-"vF" = (
-/obj/structure/flora/jungle/vines/light_3,
-/obj/item/stack/sheet/wood{
-	amount = 2
-	},
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
-"vI" = (
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
-"vK" = (
-/obj/structure/toilet{
-	dir = 1;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/research/containment/corner/east,
-/area/canyon32B/interior/bunker/lab/sec)
 "vN" = (
 /obj/structure/barricade/snow{
 	dir = 4
@@ -3066,16 +1998,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"vU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/sign/safety/airlock{
-	pixel_y = 1;
-	pixel_x = -20
-	},
-/turf/open/floor/almayer/edge/west,
-/area/canyon32B/interior/bunker/hallway)
 "wc" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -3103,21 +2025,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/north)
-"wi" = (
-/obj/item/tool/crowbar,
-/obj/structure/sign/safety/high_voltage{
-	pixel_x = 8;
-	pixel_y = 31
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"wj" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
 "wp" = (
 /obj/structure/pipes/vents/scrubber{
 	pixel_y = 0;
@@ -3141,22 +2048,10 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/detainment)
-"wr" = (
-/obj/structure/machinery/door/poddoor/two_tile/vertical/secure{
-	id = "secleft"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "wt" = (
 /obj/structure/prop/brazier/frame/full/campfire/smolder,
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/north)
-"wu" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "casing_9_1"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "ww" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -3168,26 +2063,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/armory)
-"wy" = (
-/obj/item/stack/sheet/wood{
-	amount = 2
-	},
-/obj/structure/flora/jungle/vines/heavy,
-/turf/open/floor/warning/northeast,
-/area/lv624/lazarus/landing_zones/lz2)
 "wz" = (
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/checkpoint)
-"wD" = (
-/obj/structure/machinery/atm{
-	name = "Weyland-Yutani Automatic Teller Machine";
-	pixel_y = 30
-	},
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
-"wE" = (
-/turf/open/floor/warning/northwest,
-/area/lv624/lazarus/landing_zones/lz2)
 "wJ" = (
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/gatehouse/northern)
@@ -3195,57 +2073,6 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
-"wL" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_y = -25;
-	id = "cell4"
-	},
-/turf/open/floor/corsat/red/east,
-/area/canyon32B/interior/bunker/lab/sec)
-"wP" = (
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"wT" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "XenoWindowControl";
-	name = "Observation Shutters";
-	use_power = 0
-	},
-/obj/structure/window/framed/corsat/research,
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
-"xa" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/structure/window/reinforced/toughened{
-	dir = 4
-	},
-/obj/item/reagent_container/food/snacks/donut{
-	pixel_x = 2;
-	pixel_y = 0
-	},
-/obj/item/reagent_container/food/snacks/donut{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
-"xc" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/restraint/adjustable/cable/white{
-	pixel_y = 4
-	},
-/obj/item/restraint/adjustable/cable/white,
-/turf/open/floor/whiteyellow,
-/area/lv624/lazarus/engineering)
-"xe" = (
-/obj/docking_port/stationary/marine_dropship{
-	name = "Forest"
-	},
-/turf/open/auto_turf/snow/layer3,
-/area/canyon32B/exterior/south)
 "xf" = (
 /turf/closed/wall/shiva/ice,
 /area/canyon32B/OOB)
@@ -3260,31 +2087,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
-"xi" = (
-/obj/structure/window/framed/corsat/research,
-/turf/open/floor/almayer/dark_sterile,
-/area/canyon32B/interior/bunker/lab/xeno)
-"xl" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	dir = 1;
-	name = "\improper Workshop Storage";
-	req_access_txt = "100";
-	req_one_access = null
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"xp" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"xq" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "xs" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 4;
@@ -3296,18 +2098,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
-"xw" = (
-/obj/structure/surface/table,
-/obj/structure/machinery/computer/shuttle/dropship/flight/lz2,
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
-"xy" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "xC" = (
 /obj/structure/closet/secure_closet,
 /obj/structure/machinery/light/double/blue{
@@ -3317,14 +2107,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/bunks)
-"xD" = (
-/obj/structure/window_frame/colony,
-/obj/item/shard,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
-"xJ" = (
-/turf/open/floor/corsat/red/west,
-/area/canyon32B/interior/bunker/lab/sec)
 "xL" = (
 /obj/structure/barricade/snow{
 	dir = 4
@@ -3372,13 +2154,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"xM" = (
-/obj/structure/sink{
-	dir = 1;
-	pixel_y = -10
-	},
-/turf/open/floor/almayer/research/containment/corner/north,
-/area/canyon32B/interior/bunker/lab/sec)
 "xN" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -3446,19 +2221,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/detainment)
-"yf" = (
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = -8;
-	pixel_y = 16
-	},
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = 8;
-	pixel_y = 16
-	},
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
 "yg" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	dir = 1;
@@ -3485,14 +2247,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/north)
-"yp" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Engineering Dome";
-	req_one_access = null;
-	dir = 1
-	},
-/turf/open/floor/delivery,
-/area/lv624/lazarus/engineering)
 "yq" = (
 /obj/structure/flora/tree/pine,
 /turf/open/snow/layer2,
@@ -3508,17 +2262,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"yu" = (
-/obj/structure/showcase,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue/northeast,
-/area/lv624/lazarus/engineering)
 "yv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -3543,10 +2286,6 @@
 "yI" = (
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"yJ" = (
-/obj/effect/spawner/gibspawner/human,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "yM" = (
 /turf/open/auto_turf/snow/layer2,
 /area/canyon32B/exterior/checkpoint)
@@ -3566,21 +2305,10 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"yQ" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/whiteyellow/southwest,
-/area/lv624/lazarus/engineering)
 "yR" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/ice/layer0,
 /area/canyon32B/OOB)
-"yV" = (
-/obj/structure/machinery/vending/cola,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
 "yW" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -3594,7 +2322,7 @@
 "yY" = (
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -3628,15 +2356,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/north)
-"zo" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	access_modified = 1;
-	name = "Telecommunications";
-	dir = 8;
-	req_access = null
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "zr" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -3645,19 +2364,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"zt" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/showcase,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/southwest,
-/area/lv624/lazarus/engineering)
 "zu" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -3676,12 +2382,6 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/storage)
-"zB" = (
-/obj/structure/machinery/landinglight/ds2{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "zE" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/bunks)
@@ -3689,13 +2389,6 @@
 /obj/structure/flora/tree/pine,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"zO" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 8;
-	name = "Bathroom"
-	},
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
 "zR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -3738,18 +2431,6 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/detainment)
-"An" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
-/area/canyon32B/interior/bunker/lab/sec)
-"Ao" = (
-/obj/structure/surface/rack,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/item/clothing/shoes/laceup,
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
 "As" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3768,15 +2449,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
-"AC" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/south,
-/area/lv624/lazarus/landing_zones/lz2)
-"AD" = (
-/obj/structure/flora/jungle/vines/light_2,
-/obj/structure/flora/jungle/vines/heavy,
-/turf/closed/wall/r_wall/unmeltable,
-/area/lv624/lazarus/engineering)
 "AE" = (
 /obj/structure/barricade/snow,
 /obj/item/snowball{
@@ -3812,19 +2484,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"AP" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/showcase,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue,
-/area/lv624/lazarus/engineering)
 "AQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/firstaid/regular{
@@ -3838,60 +2497,12 @@
 /obj/item/reagent_container/food/snacks/bloodsoup,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"AR" = (
-/obj/item/device/assembly/voice,
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
-"AT" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/east,
-/area/lv624/lazarus/engineering)
-"Bf" = (
-/obj/structure/toilet{
-	dir = 1;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/research/containment/corner4,
-/area/canyon32B/interior/bunker/lab/sec)
-"Bg" = (
-/obj/structure/barricade/metal/wired{
-	dir = 8
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "Bi" = (
 /obj/structure/barricade/snow{
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"Bj" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_y = 30
-	},
-/obj/item/stack/rods,
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"Bm" = (
-/obj/structure/machinery/door_control/brbutton{
-	pixel_x = -6;
-	pixel_y = 26;
-	id = "secleft";
-	name = "left"
-	},
-/obj/structure/machinery/door_control/brbutton{
-	pixel_x = 7;
-	pixel_y = 26;
-	id = "secright";
-	name = "right"
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
 "Br" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
@@ -3899,13 +2510,6 @@
 "Bt" = (
 /turf/open/asphalt/cement/cement9,
 /area/canyon32B/exterior/north)
-"Bu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/darkbrown2/northwest,
-/area/lv624/lazarus/engineering)
 "By" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3928,17 +2532,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/bunks)
-"BC" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4
-	},
-/turf/open/floor/corsat/omega,
-/area/canyon32B/interior/bunker/lab/xeno)
-"BD" = (
-/obj/structure/flora/jungle/vines/light_3,
-/obj/structure/fence,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "BE" = (
 /obj/structure/machinery/medical_pod/bodyscanner{
 	pixel_y = 6
@@ -3949,16 +2542,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
-"BF" = (
-/obj/item/prop/alien/hugger,
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
-"BG" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
 "BK" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2;
@@ -4010,29 +2593,16 @@
 "BS" = (
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	dir = 1;
-	req_access = null
+	req_access = list(9)
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/entrance)
-"BY" = (
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/landing_zones/lz2)
 "Cc" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/unloading)
-"Cg" = (
-/obj/structure/barricade/metal{
-	dir = 8;
-	health = 70
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Ci" = (
-/turf/open/floor/whiteyellowcorner/east,
-/area/lv624/lazarus/engineering)
 "Cr" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/overwatch)
@@ -4068,14 +2638,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
-"CB" = (
-/obj/structure/machinery/door_control{
-	id = "garage_lv";
-	name = "Garage Shutters";
-	pixel_y = -28
-	},
-/turf/open/floor/plating/asteroidwarning,
-/area/lv624/lazarus/landing_zones/lz2)
 "CC" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 4
@@ -4085,26 +2647,6 @@
 "CF" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/bathroom)
-"CG" = (
-/obj/structure/mirror{
-	desc = "Do you remember who you are?";
-	icon_state = "mirror_broke";
-	name = "broken mirror";
-	pixel_y = 0;
-	pixel_x = -30
-	},
-/turf/open/floor/almayer/research/containment/corner3,
-/area/canyon32B/interior/bunker/lab/sec)
-"CH" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/computer/custom_email{
-	dir = 4;
-	pixel_y = 1;
-	pixel_x = 1;
-	email_list = list(/datum/fluff_email/canyon32b/ce)
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "CK" = (
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
@@ -4114,7 +2656,16 @@
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/mess)
 "CN" = (
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 3;
+	pixel_y = 10
+	},
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/largecrate/supply/explosives/grenades/less{
+	pixel_y = 19;
+	pixel_x = 2
+	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
@@ -4147,18 +2698,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/unloading)
-"Do" = (
-/obj/structure/window/framed/colony/reinforced/hull,
-/obj/structure/flora/jungle/vines/light_1,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
 "Ds" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/ammo/m41a,
-/obj/structure/largecrate/supply/ammo/m41a{
-	pixel_x = 4;
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 3;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/storage)
 "DA" = (
@@ -4168,12 +2714,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south/bar)
-"DC" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "DF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -4184,19 +2724,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/engineering/power)
-"DL" = (
-/obj/effect/decal/cleanable/blood{
-	icon_state = "csplatter5"
-	},
-/obj/structure/machinery/light/small{
-	dir = 2
-	},
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
-"DM" = (
-/obj/item/fuel_cell/used,
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
 "DN" = (
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
@@ -4222,35 +2749,10 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/armory)
-"Ed" = (
-/obj/structure/machinery/computer/cameras{
-	dir = 4;
-	network = list("gamma")
-	},
-/obj/item/tool/stamp/clown{
-	pixel_x = -4;
-	pixel_y = 17
-	},
-/obj/structure/surface/table/reinforced/black,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
-"Ef" = (
-/turf/open/floor/corsat/red/north,
-/area/canyon32B/interior/bunker/lab/sec)
 "Eg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/bunks)
-"Ei" = (
-/obj/structure/machinery/landinglight/ds2{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"Ek" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
-/area/lv624/lazarus/landing_zones/lz2)
 "Ep" = (
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/checkpoint)
@@ -4261,29 +2763,12 @@
 	},
 /turf/open/auto_turf/snow/layer2,
 /area/canyon32B/exterior/north)
-"Es" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	id = "XenoWindowControl";
-	name = "Observation Shutters";
-	use_power = 0;
-	dir = 4
-	},
-/obj/structure/window/framed/corsat/research,
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Et" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/prison/floor_marked,
 /area/canyon32B/interior/bunker/unloading)
-"Ew" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1;
-	name = "Bathroom"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/toilet)
 "Ez" = (
 /obj/item/folded_tent/big{
 	pixel_x = 12;
@@ -4299,15 +2784,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/bunks)
-"EC" = (
-/obj/structure/machinery/photocopier{
-	pixel_y = 12
-	},
-/obj/structure/sign/poster/music{
-	pixel_x = -27
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
 "EE" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
@@ -4327,16 +2803,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
-"EH" = (
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
-"EK" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/research_and_development,
-/obj/item/book/manual/medical_diagnostics_manual,
-/obj/item/book/manual/security_space_law,
-/turf/open/floor/whiteblue/northeast,
-/area/lv624/lazarus/engineering)
 "EL" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 1
@@ -4349,9 +2815,6 @@
 "EO" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/northern)
-"EQ" = (
-/turf/open/floor/corsat/red/southwest,
-/area/canyon32B/interior/bunker/lab/xeno)
 "ES" = (
 /obj/structure/barricade/snow{
 	dir = 1
@@ -4362,13 +2825,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"EV" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Engineering Dome";
-	req_one_access = null
-	},
-/turf/open/floor/delivery,
-/area/lv624/lazarus/engineering)
 "Fa" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer/dark_sterile,
@@ -4397,17 +2853,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/overwatch)
-"Fj" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/door/window/brigdoor/southright{
-	req_access = null
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
-"Fk" = (
-/obj/structure/closet/toolcloset,
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
 "Fm" = (
 /obj/structure/bedsheetbin{
 	pixel_y = -1;
@@ -4434,25 +2879,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"Fv" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/fancy/cigarettes/laika{
-	pixel_x = 4;
-	pixel_y = 11
-	},
-/obj/item/prop/magazine/book/uppbooklet{
-	pixel_y = 5;
-	pixel_x = -4;
-	layer = 2.9
-	},
-/obj/item/clothing/head/uppcap/ushanka{
-	layer = 3.6;
-	pixel_x = 6;
-	pixel_y = -2;
-	anchored = 1
-	},
-/turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
-/area/canyon32B/interior/bunker/lab/sec)
 "Fy" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 4;
@@ -4464,32 +2890,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
-"FD" = (
-/turf/open/floor/plating/asteroidwarning/east,
-/area/lv624/lazarus/landing_zones/lz2)
-"FE" = (
-/obj/structure/barricade/metal/wired{
-	health = 300
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"FG" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	dir = 1;
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/shutters{
-	dir = 2;
-	id = "cell2"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
-"FJ" = (
-/obj/structure/machinery/landinglight/ds2/delayone{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "FK" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/machinery/space_heater/radiator/red{
@@ -4506,16 +2906,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"FR" = (
-/obj/structure/surface/table,
-/obj/item/storage/beer_pack,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"FW" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/folder/black_random,
-/turf/open/floor/whiteblue,
-/area/lv624/lazarus/engineering)
 "Ge" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -4536,12 +2926,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/mess)
-"Gr" = (
-/obj/structure/machinery/puzzle/keycard_panel/science{
-	pixel_y = 27
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab)
 "Gt" = (
 /obj/structure/barricade/snow{
 	dir = 1
@@ -4554,21 +2938,6 @@
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/engineering)
-"Gx" = (
-/obj/structure/machinery/door_control{
-	pixel_x = 0;
-	pixel_y = 29;
-	id = "Telecommunications";
-	name = "Telecommunications"
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"Gy" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/flashlight/lamp,
-/obj/structure/machinery/light/double/blue,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "GA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -4590,24 +2959,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/unloading)
-"GB" = (
-/obj/structure/surface/table{
-	icon_state = "flip0";
-	dir = 8
-	},
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
-"GD" = (
-/obj/structure/machinery/door/airlock/almayer/secure{
-	req_access = null;
-	dir = 1
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab)
-"GF" = (
-/obj/item/puzzle/keycard/science,
-/turf/open/floor/whiteblue/west,
-/area/lv624/lazarus/engineering)
 "GK" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4;
@@ -4618,25 +2969,12 @@
 "GU" = (
 /turf/open/asphalt/cement/cement1,
 /area/canyon32B/exterior/north)
-"GV" = (
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
-"Ha" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/xeno_tag_case/full,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "He" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
-"Hm" = (
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 8
-	},
-/area/canyon32B/interior/bunker/lab/sec)
 "Hn" = (
 /obj/structure/barricade/snow,
 /obj/item/snowball{
@@ -4654,26 +2992,6 @@
 "Hu" = (
 /turf/open/floor/shiva/radiator_tile2,
 /area/canyon32B/exterior/checkpoint)
-"Hv" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
-"HA" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/device/flashlight/lamp{
-	pixel_x = -7;
-	pixel_y = 15
-	},
-/obj/item/ashtray/glass,
-/obj/item/clothing/mask/cigarette,
-/obj/item/clothing/mask/cigarette{
-	pixel_x = 6;
-	pixel_y = 12
-	},
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/engineering)
 "HI" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -4716,12 +3034,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/north)
-"HM" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 8
-	},
-/turf/open/floor/corsat/omega,
-/area/canyon32B/interior/bunker/lab/xeno)
 "HN" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/prison/floor_marked,
@@ -4750,9 +3062,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
-"HR" = (
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/xeno)
 "HW" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -4761,9 +3070,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Ic" = (
-/turf/open/floor/whiteyellowcorner,
-/area/lv624/lazarus/engineering)
 "Ie" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/cameras{
@@ -4795,9 +3101,6 @@
 "Ij" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/mess)
-"Im" = (
-/turf/open/floor/plating/asteroidwarning,
-/area/lv624/lazarus/landing_zones/lz2)
 "In" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -4837,17 +3140,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/unloading)
-"Is" = (
-/obj/structure/sign/safety/commline_connection{
-	pixel_x = 14;
-	pixel_y = -28
-	},
-/obj/structure/sign/safety/fibre_optics{
-	pixel_y = -28;
-	pixel_x = 2
-	},
-/turf/open/floor/corsat/sigma,
-/area/canyon32B/interior/bunker/lab)
 "Iu" = (
 /obj/item/snowball{
 	pixel_y = -7;
@@ -4855,12 +3147,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"Iv" = (
-/obj/effect/alien/weeds/node{
-	hivenumber = "xeno_hive_tamed"
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Iw" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
@@ -4914,32 +3200,6 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/unloading)
-"IC" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"IE" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/lv624/lazarus/engineering)
-"IK" = (
-/obj/item/explosive/grenade/incendiary,
-/obj/item/weapon/gun/flamer,
-/obj/structure/closet/secure_closet/guncabinet{
-	name = "specimen control cabinet";
-	req_access = null
-	},
-/turf/open/floor/almayer/dark_sterile,
-/area/canyon32B/interior/bunker/lab/xeno)
-"IN" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"IO" = (
-/turf/open/floor/warning/north,
-/area/lv624/lazarus/landing_zones/lz2)
 "IP" = (
 /obj/structure/machinery/vending/cola{
 	pixel_y = 25;
@@ -4956,33 +3216,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/mess)
-"IQ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/suit/xenos,
-/obj/item/clothing/head/xenos,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "IS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/armory)
-"IT" = (
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"IW" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "XenoWindowControl";
-	name = "Window Shutters"
-	},
-/obj/structure/machinery/computer/station_alert{
-	pixel_x = 16;
-	pixel_y = 0
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Jb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/southeast,
@@ -5002,10 +3241,10 @@
 	pixel_y = -1;
 	pixel_x = -5
 	},
-/obj/structure/largecrate/supply/supplies/plasteel{
-	pixel_x = -1;
-	pixel_y = 17;
-	layer = 3.1
+/obj/structure/largecrate/supply/supplies/mre{
+	layer = 3.1;
+	pixel_y = 15;
+	pixel_x = -5
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/storage)
@@ -5016,23 +3255,6 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/overwatch)
-"Jr" = (
-/obj/structure/largecrate/random,
-/obj/item/storage/fancy/crayons{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
-"Jt" = (
-/obj/item/storage/firstaid/toxin/empty,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Jx" = (
-/obj/structure/bed/chair/office/light,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/whiteblue,
-/area/lv624/lazarus/engineering)
 "JA" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -5041,11 +3263,6 @@
 /obj/structure/coatrack,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"JE" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hos,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "JH" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -5074,20 +3291,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/mess)
-"Kc" = (
-/obj/structure/machinery/door/airlock/puzzle/science,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab)
 "Kg" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/west,
-/area/lv624/lazarus/landing_zones/lz2)
-"Kj" = (
-/obj/structure/machinery/light{
-	dir = 8
+/obj/item/snowball{
+	pixel_y = 11;
+	pixel_x = 11
 	},
-/turf/open/floor/whiteyellowcorner/west,
-/area/lv624/lazarus/engineering)
+/obj/item/prop/tableflag/uscm{
+	pixel_x = -16;
+	pixel_y = 20
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "Kl" = (
 /obj/structure/closet/secure_closet,
 /obj/structure/machinery/light/double/blue{
@@ -5121,28 +3335,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/bunks)
-"Ks" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "casing_1_1"
-	},
-/obj/item/ammo_magazine/smg/mp5,
-/obj/structure/barricade/wooden{
-	dir = 1;
-	pixel_y = 7
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Kw" = (
-/obj/item/stack/rods,
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
-"KA" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1;
-	name = "\improper Corporate Liaison"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "KF" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -5170,17 +3362,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/armory)
-"KN" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	locked = 1;
-	name = "\improper Corporate Liaison"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"KP" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/r_wall/unmeltable,
-/area/lv624/lazarus/engineering)
 "KW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -5189,13 +3370,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/bunks)
 "KX" = (
-/obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41a/elite{
-	pixel_y = -4
-	},
-/obj/item/weapon/gun/rifle/m41a/elite{
-	pixel_y = 1
-	},
+/obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/armory)
 "Lc" = (
@@ -5212,15 +3387,6 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/canyon32B/interior/bunker/medbay)
-"Li" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 4
-	},
-/obj/structure/machinery/light/small/blue{
-	dir = 8
-	},
-/turf/open/floor/corsat/red/northwest,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Lq" = (
 /obj/structure/barricade/snow{
 	dir = 8
@@ -5252,13 +3418,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"Lv" = (
-/obj/structure/machinery/power/apc/no_power/east,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/turf/open/floor/darkbrown2/east,
-/area/lv624/lazarus/engineering)
 "Lw" = (
 /obj/item/snowball{
 	pixel_y = 11;
@@ -5306,19 +3465,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
-"LG" = (
-/obj/item/stack/rods,
-/obj/item/shard,
-/turf/open/floor/whiteyellow/east,
-/area/lv624/lazarus/engineering)
-"LI" = (
-/obj/structure/machinery/door_control/brbutton{
-	pixel_y = 25;
-	id = "cell1";
-	name = "cell1"
-	},
-/turf/open/floor/corsat/red/west,
-/area/canyon32B/interior/bunker/lab/sec)
 "LP" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -5335,9 +3481,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/overwatch)
-"LR" = (
-/turf/closed/wall/r_wall/biodome,
-/area/canyon32B/interior/bunker/lab/toilet)
 "LY" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -5379,24 +3522,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/bathroom)
-"Mg" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -11
-	},
-/obj/structure/mirror{
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
-"Mh" = (
-/obj/structure/surface/table/reinforced/prison,
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/engineering)
 "Ml" = (
 /obj/structure/machinery/cm_vending/sorted/boozeomat{
 	pixel_y = 25;
@@ -5406,45 +3531,8 @@
 	dir = 8;
 	pixel_x = -11
 	},
-/obj/item/reagent_container/glass/bucket/mopbucket,
-/obj/item/tool/mop,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Mp" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/whitebluecorner/north,
-/area/lv624/lazarus/engineering)
-"Mr" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 3
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Mt" = (
-/obj/effect/decal/cleanable/blood{
-	icon_state = "csplatter6"
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"Mv" = (
-/obj/structure/machinery/door/window/northleft{
-	pixel_y = 17
-	},
-/obj/structure/machinery/shower{
-	dir = 8;
-	pixel_y = -4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/canyon32B/interior/bunker/lab/toilet)
-"Mw" = (
-/obj/structure/surface/rack,
-/obj/item/storage/donut_box/empty,
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "Mx" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
@@ -5454,9 +3542,7 @@
 /area/canyon32B/exterior/north)
 "MB" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
-	dir = 1;
-	req_one_access = null;
-	req_access = null
+	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
@@ -5471,17 +3557,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
-"MI" = (
-/obj/structure/machinery/vending/snack,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/whiteblue/southwest,
-/area/lv624/lazarus/engineering)
-"MJ" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/north,
-/area/lv624/lazarus/landing_zones/lz2)
 "MN" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -5509,13 +3584,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"MX" = (
-/obj/structure/machinery/vending/cigarette,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/engineering)
 "MZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -5527,13 +3595,6 @@
 	},
 /turf/open/floor/almayer/edge/southeast,
 /area/canyon32B/interior/bunker/armory)
-"Na" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Corporation Dome";
-	req_access_txt = "100"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "Ne" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/engineering)
@@ -5543,19 +3604,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
-"Ni" = (
-/turf/open/floor/darkbrowncorners2,
-/area/lv624/lazarus/engineering)
-"Nj" = (
-/obj/structure/machinery/fuelcell_recycler/full,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"Nk" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_9_1"
-	},
-/turf/open/floor/whiteyellow,
-/area/lv624/lazarus/engineering)
 "Nm" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
@@ -5566,17 +3614,6 @@
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/northern)
-"Np" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/folder/white{
-	pixel_y = 8
-	},
-/obj/item/folder/yellow{
-	pixel_y = 4
-	},
-/obj/item/folder/red,
-/turf/open/floor/whiteyellow/east,
-/area/lv624/lazarus/engineering)
 "Nt" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -5605,13 +3642,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"Nu" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/obj/structure/flora/jungle/vines/heavy,
-/turf/open/floor/warning/east,
-/area/lv624/lazarus/landing_zones/lz2)
 "Nx" = (
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
@@ -5620,9 +3650,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/plate,
 /area/canyon32B/interior/bunker/entrance)
-"Ny" = (
-/turf/open/floor/whitebluecorner/north,
-/area/lv624/lazarus/engineering)
 "NA" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/medbay)
@@ -5634,21 +3661,6 @@
 /obj/structure/pipes/vents/scrubber/no_boom,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/storage)
-"NF" = (
-/turf/closed/wall/r_wall/biodome,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"NG" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 1;
-	id = "XenoControl"
-	},
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	name = "Airlock Security";
-	dir = 1;
-	req_one_access = null
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/canyon32B/interior/bunker/lab/xeno)
 "NH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5659,19 +3671,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/engineering/power)
-"NI" = (
-/obj/structure/safe{
-	spawnkey = 0
-	},
-/obj/item/coin/diamond,
-/obj/item/m_gift,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc,
-/obj/item/storage/fancy/cigar,
-/turf/open/floor/whiteyellow/northeast,
-/area/lv624/lazarus/engineering)
 "NJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -5684,46 +3683,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"NN" = (
-/obj/effect/decal/cleanable/blood{
-	icon_state = "csplatter2"
-	},
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/darkbrown2/west,
-/area/lv624/lazarus/engineering)
 "NO" = (
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
-"NP" = (
-/turf/open/floor/darkbrowncorners2/north,
-/area/lv624/lazarus/engineering)
-"NS" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/disk/nuclear{
-	pixel_x = 8;
-	pixel_y = 7
-	},
-/obj/item/disk/botany{
-	pixel_x = -8;
-	pixel_y = 1
-	},
-/obj/item/disk{
-	icon_state = "disk_15";
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/item/paper/research_notes/unique/tier_one{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/item/paper/research_notes/unique/tier_four{
-	pixel_x = -9;
-	pixel_y = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "NW" = (
 /obj/structure/barricade/snow{
 	dir = 1
@@ -5737,14 +3699,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"NY" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 1;
-	pixel_x = 16;
-	pixel_y = 15
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "NZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -5770,10 +3724,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/bathroom)
-"Od" = (
-/obj/structure/machinery/vending/cigarette/colony,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
 "Oe" = (
 /obj/structure/machinery/vending/cigarette{
 	pixel_y = 25;
@@ -5816,10 +3766,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
-"Ox" = (
-/obj/structure/barricade/metal/wired,
-/turf/open/floor/whiteblue/southwest,
-/area/lv624/lazarus/engineering)
 "OA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5832,10 +3778,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/east,
 /area/canyon32B/interior/bunker/hallway)
-"OD" = (
-/obj/item/shard,
-/turf/open/floor/whiteyellow/southwest,
-/area/lv624/lazarus/engineering)
 "OF" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -5845,30 +3787,6 @@
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/canyon32B/interior/bunker/mess)
-"OG" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"OH" = (
-/obj/structure/bed/chair/comfy/blue{
-	dir = 4
-	},
-/obj/item/device/radio/intercom{
-	pixel_x = 0;
-	pixel_y = 31
-	},
-/obj/item/reagent_container/food/drinks/bottle/cognac{
-	pixel_x = 10;
-	pixel_y = 17
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
-"OI" = (
-/obj/structure/window_frame/colony,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
 "OJ" = (
 /obj/structure/ladder{
 	id = "Reactor West"
@@ -5914,13 +3832,6 @@
 "OX" = (
 /turf/open/asphalt/cement/cement12,
 /area/canyon32B/exterior/south)
-"Pa" = (
-/obj/structure/closet/secure_closet/brig/prisoner{
-	pixel_y = 0;
-	req_one_access = null
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "Pe" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -5949,12 +3860,6 @@
 /obj/structure/flora/bush/snow,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"Pv" = (
-/obj/structure/mineral_door/resin{
-	hivenumber = "xeno_hive_tamed"
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Pw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -5967,18 +3872,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/unloading)
-"Pz" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"PC" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	locked = 1;
-	name = "\improper Corporation Dome";
-	req_access_txt = "100"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "PF" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "Northern Gate";
@@ -6000,19 +3893,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"PI" = (
-/obj/structure/bed/chair{
-	dir = 8;
-	pixel_x = 5;
-	pixel_y = 8
-	},
-/obj/effect/decal/cleanable/vomit{
-	icon_state = "vomit_4";
-	pixel_x = -15;
-	pixel_y = 2
-	},
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
 "PL" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -6033,10 +3913,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"PO" = (
-/obj/structure/flora/jungle/vines/heavy,
-/turf/closed/wall/r_wall/unmeltable,
-/area/lv624/lazarus/engineering)
 "PP" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -6044,42 +3920,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/hallway)
-"PS" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/paper_bin/wy{
-	pixel_y = 8
-	},
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/red/clicky{
-	pixel_y = 6
-	},
-/turf/open/floor/whiteyellow/northeast,
-/area/lv624/lazarus/engineering)
-"PU" = (
-/obj/item/shard,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"PW" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/whiteyellowcorner/west,
-/area/lv624/lazarus/engineering)
 "PX" = (
 /obj/structure/bed/chair,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/mess)
-"PY" = (
-/obj/item/ammo_magazine/smg/mp5,
-/obj/item/ammo_magazine/smg/mp5,
-/turf/open/floor/whiteblue/northwest,
-/area/lv624/lazarus/engineering)
-"Qf" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1;
-	locked = 1;
-	name = "\improper Storage Room"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "Qg" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -6111,13 +3955,6 @@
 "Qi" = (
 /turf/open/auto_turf/ice/layer0,
 /area/canyon32B/OOB)
-"Qj" = (
-/turf/closed/wall/r_wall/biodome,
-/area/canyon32B/interior/bunker/lab/xeno)
-"Qn" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Qs" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -6125,10 +3962,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/checkpoint)
-"Qt" = (
-/obj/structure/machinery/light/double/blue,
-/turf/open/floor/corsat/red/southeast,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Qw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6141,21 +3974,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/unloading)
-"QA" = (
-/obj/item/ammo_magazine/smg/mp5,
-/obj/item/weapon/gun/smg/mp5,
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"QB" = (
-/turf/open/gm/dirtgrassborder/west,
-/area/lv624/lazarus/landing_zones/lz2)
-"QC" = (
-/obj/structure/showcase{
-	icon_state = "processor";
-	name = "Processor Unit"
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "QF" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
@@ -6167,14 +3985,6 @@
 /obj/structure/machinery/space_heater,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"QH" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Garage";
-	req_access_txt = "100";
-	req_one_access = null
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "QM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6192,20 +4002,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"QS" = (
-/obj/structure/machinery/door/window/northright{
-	pixel_y = 17
-	},
-/obj/structure/machinery/shower{
-	dir = 4;
-	pixel_y = -4
-	},
-/obj/item/tool/soap{
-	pixel_x = 4;
-	pixel_y = -10
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/canyon32B/interior/bunker/lab/toilet)
 "QX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -6219,22 +4015,10 @@
 "Rc" = (
 /turf/open/auto_turf/snow/layer2,
 /area/canyon32B/exterior/south)
-"Rh" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/shovel/etool/folded,
-/obj/item/tool/soap/deluxe{
-	pixel_x = 4;
-	pixel_y = 13
-	},
-/turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/lazarus/engineering)
 "Ri" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Rl" = (
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
 "Rm" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6255,10 +4039,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/detainment)
-"Rs" = (
-/obj/structure/machinery/r_n_d/bioprinter,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Rt" = (
 /obj/structure/sink{
 	pixel_y = 24;
@@ -6312,15 +4092,6 @@
 	},
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/south)
-"Rw" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8;
-	light_range = 3
-	},
-/turf/open/floor/almayer/research/containment/entrance/west,
-/area/canyon32B/interior/bunker/lab/sec)
 "RE" = (
 /obj/structure/blocker/invisible_wall{
 	name = "fog";
@@ -6336,9 +4107,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/canyon32B/exterior/checkpoint)
-"RJ" = (
-/turf/open/floor/whiteyellow/west,
-/area/lv624/lazarus/engineering)
 "RL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6393,10 +4161,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"Sf" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
-/area/lv624/lazarus/landing_zones/lz2)
 "Sh" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
@@ -6408,14 +4172,6 @@
 /obj/structure/flora/tree/pine,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/south)
-"Sn" = (
-/obj/structure/machinery/colony_floodlight,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
-"Ss" = (
-/obj/structure/bed/sofa/vert/grey/top,
-/turf/open/floor/whiteyellow/east,
-/area/lv624/lazarus/engineering)
 "Sv" = (
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/entrance)
@@ -6456,9 +4212,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south/bar)
-"SF" = (
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
 "SM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -6470,31 +4223,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/medbay)
-"SR" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/open/floor/whiteblue/southeast,
-/area/lv624/lazarus/engineering)
 "SS" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	network = list("Checkpoint Four Camera Network");
 	dir = 4
 	},
-/obj/structure/largecrate/supply/supplies/sandbags,
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/storage)
-"ST" = (
-/obj/structure/barricade/wooden{
-	dir = 1;
-	pixel_y = 7
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
 "SX" = (
 /obj/structure/machinery/power/smes/buildable{
 	pixel_y = 16;
@@ -6506,34 +4242,6 @@
 "SY" = (
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/mess)
-"SZ" = (
-/obj/structure/machinery/door_control{
-	id = "garage_lv";
-	name = "Garage Shutters";
-	pixel_x = -28
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"Td" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/paper_bin{
-	pixel_x = 4;
-	pixel_y = 9
-	},
-/obj/item/tool/pen,
-/obj/item/ashtray/bronze{
-	pixel_x = -8;
-	pixel_y = 3
-	},
-/obj/item/trash/cigbutt/cigarbutt{
-	pixel_x = -3;
-	pixel_y = 15
-	},
-/obj/structure/machinery/light/small/blue{
-	dir = 2
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "Tf" = (
 /obj/structure/machinery/autodoc_console{
 	pixel_y = 6
@@ -6544,10 +4252,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/medbay)
-"Tg" = (
-/obj/effect/acid_hole,
-/turf/closed/wall/r_wall,
-/area/lv624/lazarus/engineering)
 "Tl" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/gatehouse/southern)
@@ -6612,36 +4316,16 @@
 "TE" = (
 /turf/open/asphalt/cement/cement2,
 /area/canyon32B/exterior/south)
-"TF" = (
-/obj/structure/window/framed/colony/reinforced,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
 "TG" = (
 /turf/open/auto_turf/ice/layer1,
 /area/canyon32B/interior/overhang)
-"TJ" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/clothing/under/liaison_suit/blue,
-/turf/open/floor/whiteyellow/southeast,
-/area/lv624/lazarus/engineering)
-"TK" = (
-/obj/structure/machinery/door_control/brbutton{
-	pixel_y = 25;
-	id = "cell2";
-	name = "cell2"
-	},
-/turf/open/floor/corsat/red/east,
-/area/canyon32B/interior/bunker/lab/sec)
 "TL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/supplies/metal{
-	pixel_x = -9;
-	pixel_y = 0
+/obj/structure/largecrate/supply/supplies/mre{
+	layer = 3.1;
+	pixel_y = -1;
+	pixel_x = -14
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/storage)
 "TQ" = (
@@ -6654,18 +4338,14 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/storage)
-"TS" = (
-/obj/item/prop/alien/hugger,
-/obj/structure/bed/stool,
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "TT" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/southern)
 "TU" = (
-/turf/closed/wall/strata_ice/jungle,
-/area/lv624/lazarus/landing_zones/lz2)
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/almayer/edge/north,
+/area/canyon32B/interior/bunker/armory)
 "TW" = (
 /obj/structure/machinery/shower{
 	pixel_y = 16
@@ -6680,29 +4360,9 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering/power)
-"TZ" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -11
-	},
-/obj/structure/mirror{
-	desc = "Do you remember who you are?";
-	icon_state = "mirror_broke";
-	name = "broken mirror";
-	pixel_y = 0;
-	pixel_x = -30
-	},
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
 "Uc" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/hallway)
-"Uf" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 2
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "Ui" = (
 /turf/open/asphalt/cement/cement3,
 /area/canyon32B/exterior/south)
@@ -6716,30 +4376,17 @@
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/pillbox_alpha)
-"Um" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/item/fuel_cell/used,
-/turf/open/floor/darkbrown2/northeast,
-/area/lv624/lazarus/engineering)
 "Uo" = (
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Uq" = (
-/turf/open/floor/plating/asteroidwarning/north,
-/area/lv624/lazarus/landing_zones/lz2)
-"Uw" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 4
+/obj/item/snowball{
+	pixel_y = -4;
+	pixel_x = 7
 	},
-/turf/open/floor/corsat/red/east,
-/area/canyon32B/interior/bunker/lab/sec)
-"Ux" = (
-/obj/structure/largecrate/random,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
+/obj/item/prop/tableflag/uscm2{
+	pixel_x = 16;
+	pixel_y = 20
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/canyon32B/exterior/south)
 "UG" = (
 /obj/structure/closet/secure_closet{
 	pixel_y = -1;
@@ -6775,42 +4422,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/northeast,
 /area/canyon32B/interior/bunker/detainment)
-"UO" = (
-/obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "UR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/entrance)
-"UU" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/tableflag/uscm{
-	pixel_x = 6;
-	pixel_y = 8
-	},
-/obj/item/storage/box/uscm_mre{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/turf/open/floor/almayer/research/containment/corner{
-	dir = 8
-	},
-/area/canyon32B/interior/bunker/lab/sec)
 "UX" = (
 /obj/structure/flora/bush/snow,
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/north)
-"Vb" = (
-/obj/structure/window/framed/colony,
-/turf/open/floor/plating,
-/area/lv624/lazarus/engineering)
-"Vd" = (
-/obj/item/bananapeel,
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
 "Vi" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/effect/decal/cleanable/dirt,
@@ -6843,26 +4464,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"Vn" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/structure/window/reinforced/toughened{
-	dir = 4
-	},
-/obj/structure/machinery/computer/custom_email{
-	dir = 8;
-	pixel_x = -3;
-	pixel_y = -13
-	},
-/obj/item/storage/donut_box{
-	pixel_x = -2;
-	pixel_y = 13
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
-"Vr" = (
-/obj/structure/machinery/photocopier,
-/turf/open/floor/whiteblue/southwest,
-/area/lv624/lazarus/engineering)
 "Vt" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -6933,15 +4534,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"Vv" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_9_1"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"VA" = (
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "VC" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4;
@@ -7027,12 +4619,6 @@
 	id = "Bunker Outer";
 	req_access = list(9)
 	},
-/obj/structure/machinery/door_control/brbutton/alt{
-	pixel_x = 11;
-	pixel_y = 11;
-	id = "lab";
-	name = "super secret button"
-	},
 /turf/open/floor/almayer/edge/northwest,
 /area/canyon32B/interior/bunker/overwatch)
 "VU" = (
@@ -7062,12 +4648,6 @@
 	},
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Wb" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
-	pixel_x = 29
-	},
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
 "Wg" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -7077,27 +4657,15 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/overwatch)
-"Wj" = (
-/obj/structure/fence,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "Wo" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge,
 /area/canyon32B/interior/bunker/detainment)
-"Wp" = (
-/obj/structure/machinery/power/terminal{
-	dir = 1
-	},
-/turf/open/floor/plating/platebot,
-/area/lv624/lazarus/engineering)
-"Wr" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
 "Wu" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	req_access = list(9)
+	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/bunks)
@@ -7108,43 +4676,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/canyon32B/interior/bunker/mess)
-"Ww" = (
-/obj/structure/surface/table,
-/obj/item/reagent_container/food/drinks/cans/aspen{
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/item/reagent_container/food/drinks/cans/aspen{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/reagent_container/food/drinks/cans/aspen{
-	pixel_x = 11;
-	pixel_y = 9
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
 "Wy" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ashtray/plastic,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"Wz" = (
-/obj/structure/toilet{
-	dir = 8;
-	pixel_x = 0;
-	pixel_y = 7
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/corsat/whitebluefull/southwest,
-/area/canyon32B/interior/bunker/lab/toilet)
-"WB" = (
-/obj/structure/machinery/power/reactor/colony,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
 "WC" = (
 /obj/structure/machinery/power/reactor{
 	require_fusion_cell = 0;
@@ -7223,28 +4760,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/canyon32B/interior/bunker/bathroom)
-"WS" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/open/floor/whiteblue/southwest,
-/area/lv624/lazarus/engineering)
-"WW" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/computer/custom_email{
-	dir = 8;
-	pixel_y = 7;
-	email_list = list(/datum/fluff_email/canyon32b/lab)
-	},
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	pixel_x = 15;
-	pixel_y = 2
-	},
-/turf/open/floor/corsat/red/north,
-/area/canyon32B/interior/bunker/lab/xeno)
 "WZ" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -7264,11 +4779,6 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/mess)
-"Xe" = (
-/obj/structure/coatrack,
-/obj/structure/machinery/power/apc/almayer/east,
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "Xf" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -7278,40 +4788,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/checkpoint)
-"Xl" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab)
-"Xn" = (
-/obj/structure/machinery/power/monitor{
-	name = "Main Power Grid Monitoring"
-	},
-/turf/open/floor/vault2/west,
-/area/lv624/lazarus/engineering)
-"Xr" = (
-/obj/structure/bed/chair/wheelchair{
-	dir = 4
-	},
-/obj/structure/machinery/light,
-/turf/open/floor/greengrid,
-/area/lv624/lazarus/engineering)
-"Xt" = (
-/obj/structure/machinery/vending/coffee,
-/turf/open/floor/whiteblue/northeast,
-/area/lv624/lazarus/engineering)
-"Xu" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	dir = 1;
-	req_access = null
-	},
-/obj/structure/machinery/door/poddoor/shutters{
-	dir = 1;
-	id = "cell4"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/sec)
 "Xw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -7353,10 +4829,6 @@
 /obj/structure/bed/stool,
 /turf/open/floor/wood,
 /area/canyon32B/interior/bar)
-"XI" = (
-/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "XN" = (
 /obj/structure/barricade/snow{
 	dir = 8
@@ -7404,25 +4876,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/canyon32B/exterior/south)
-"XT" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/paper_bin/wy{
-	pixel_x = 7;
-	pixel_y = 9
-	},
-/obj/item/tool/pen{
-	pixel_x = -6;
-	pixel_y = 0
-	},
-/obj/item/tool/pen{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/canyon32B/interior/bunker/lab/sec)
 "XV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -7430,22 +4883,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/canyon32B/interior/bunker/unloading)
-"XW" = (
-/obj/structure/surface/table{
-	icon_state = "flip0";
-	dir = 8
-	},
-/turf/open/floor/darkbrown2/north,
-/area/lv624/lazarus/engineering)
-"XZ" = (
-/obj/item/ammo_casing/bullet{
-	icon_state = "cartridge_3_1"
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/engineering)
-"Yf" = (
-/turf/closed/wall/r_wall,
-/area/lv624/lazarus/engineering)
 "Yi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -7461,37 +4898,6 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/canyon32B/interior/bunker/entrance)
-"Yo" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4;
-	light_range = 3
-	},
-/turf/open/floor/almayer/research/containment/floor2/west,
-/area/canyon32B/interior/bunker/lab/sec)
-"Yr" = (
-/obj/structure/machinery/landinglight/ds2,
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"Yt" = (
-/obj/structure/flora/jungle/vines/heavy,
-/turf/closed/wall/strata_ice/jungle,
-/area/lv624/lazarus/landing_zones/lz2)
-"Yv" = (
-/obj/effect/decal/cleanable/blood{
-	icon_state = "csplatter5"
-	},
-/obj/item/prop/alien/hugger,
-/turf/open/floor/dark,
-/area/lv624/lazarus/engineering)
-"Yz" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	name = "Telecommunications";
-	dir = 8
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/lab/telecomm)
 "YC" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 1;
@@ -7523,29 +4929,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/canyon32B/exterior/checkpoint)
-"YR" = (
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab)
-"YY" = (
-/obj/structure/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = "lab"
-	},
-/turf/open/floor/corsat/marked,
-/area/canyon32B/interior/bunker/hallway)
-"YZ" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = -15;
-	pixel_y = 13
-	},
-/obj/structure/machinery/light,
-/turf/open/floor/darkbrown2,
-/area/lv624/lazarus/engineering)
-"Za" = (
-/turf/open/floor/plating/asteroidwarning/northeast,
-/area/lv624/lazarus/landing_zones/lz2)
 "Zb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -7554,10 +4937,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/canyon32B/interior/gatehouse/pillbox_bravo)
-"Zc" = (
-/obj/structure/machinery/r_n_d/organic_analyzer,
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/xeno)
 "Zf" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/canyon32B/interior/bunker/detainment)
@@ -7585,10 +4964,6 @@
 	},
 /turf/open/floor/almayer,
 /area/canyon32B/interior/bunker/engineering/power)
-"Zx" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
-/area/lv624/lazarus/landing_zones/lz2)
 "Zy" = (
 /obj/structure/machinery/vending/cigarette{
 	pixel_x = 4;
@@ -7617,26 +4992,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/canyon32B/interior/bunker/entrance)
-"ZD" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo,
-/turf/open/floor/plating,
-/area/lv624/lazarus/landing_zones/lz2)
-"ZF" = (
-/obj/structure/surface/rack,
-/obj/item/storage/donut_box,
-/obj/item/storage/donut_box{
-	pixel_x = 0;
-	pixel_y = 9
-	},
-/obj/item/storage/donut_box{
-	pixel_x = 0;
-	pixel_y = 19
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 8
-	},
-/turf/open/floor/corsat/plate,
-/area/canyon32B/interior/bunker/lab/sec)
 "ZG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -7707,10 +5062,6 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/canyon32B/interior/bunker/entrance)
-"ZY" = (
-/obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 
 (1,1,1) = {"
 xf
@@ -68384,7 +65735,7 @@ CK
 CK
 CK
 CK
-xe
+CK
 CK
 CK
 CK
@@ -78152,10 +75503,10 @@ xf
 xf
 xf
 xf
-al
-al
-al
-al
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -78653,12 +76004,12 @@ xf
 xf
 xf
 xf
-al
-al
-Mw
-ZF
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -79155,12 +76506,12 @@ xf
 xf
 xf
 xf
-al
-LI
-xJ
-xJ
-na
-al
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -79653,20 +77004,20 @@ xf
 xf
 xf
 xf
-al
-al
-al
-al
-al
-TK
-nf
-Uw
-wL
-al
-al
-al
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -80155,20 +77506,20 @@ xf
 xf
 xf
 xf
-al
-Fv
-es
-om
-al
-dZ
-Vn
-xa
-ax
-al
-pt
-Rw
-Bf
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -80657,20 +78008,20 @@ xf
 xf
 xf
 xf
-al
-gf
-ky
-gf
-tK
-uw
-uw
-uw
-uw
-sc
-gf
-ky
-pC
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -81159,20 +78510,20 @@ xf
 xf
 xf
 xf
-al
-iB
-Yo
-it
-al
-nc
-uw
-uw
-nc
-al
-Hm
-vm
-gA
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -81661,20 +79012,20 @@ xf
 xf
 xf
 xf
-al
-al
-al
-al
-al
-nH
-uw
-uw
-Pa
-al
-al
-al
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -82163,20 +79514,20 @@ xf
 xf
 xf
 xf
-al
-An
-es
-CG
-al
-Hv
-uw
-uw
-Uf
-al
-pt
-Rw
-vK
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -82665,20 +80016,20 @@ xf
 xf
 xf
 xf
-al
-bf
-ky
-gf
-FG
-uw
-uw
-uw
-uw
-Xu
-gf
-ky
-gf
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -83167,20 +80518,20 @@ xf
 xf
 xf
 xf
-al
-iB
-Yo
-xM
-al
-nc
-uw
-uw
-nc
-al
-UU
-vm
-rV
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -83669,20 +81020,20 @@ xf
 xf
 xf
 xf
-al
-al
-al
-al
-al
-nH
-uw
-uw
-Pa
-al
-al
-al
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -84173,14 +81524,14 @@ xf
 xf
 xf
 xf
-al
-al
-al
-al
-hQ
-wr
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -84674,15 +82025,15 @@ xf
 xf
 xf
 xf
-al
-al
-fj
-Ed
-al
-Ef
-uV
-cd
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -85176,15 +82527,15 @@ xf
 xf
 xf
 xf
-al
-XT
-os
-uw
-hX
-Ef
-uV
-Gy
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -85677,16 +83028,16 @@ xf
 xf
 xf
 xf
-al
-al
-Bm
-uw
-uw
-Fj
-Ef
-uV
-cd
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -86164,12 +83515,6 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-fk
 xf
 xf
 xf
@@ -86179,16 +83524,22 @@ xf
 xf
 xf
 xf
-al
-pL
-uw
-sJ
-sJ
-al
-Ef
-uV
-al
-al
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -86665,37 +84016,37 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-fk
-fk
-fk
-Qj
-Qj
-Qj
-Qj
-Qj
-Qj
-Qj
-Qj
-al
-uz
-jC
-al
-al
-al
-hQ
-ex
-al
-LR
-LR
-LR
-LR
-LR
-LR
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -87167,37 +84518,37 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-GV
-GV
-GV
-ot
-GV
-GV
-GV
-GV
-Qj
-GV
-GV
-GV
-Qj
-al
-al
-cp
-al
-as
-ad
-ps
-ps
-ln
-Mg
-TZ
-EH
-QS
-fF
-LR
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -87668,38 +85019,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-Iv
-GV
-ot
-GV
-Iv
-GV
-GV
-GV
-GV
-Iv
-GV
-Qj
 xf
-ln
-ff
-GD
-ps
-ps
-ps
-ps
-Ew
-EH
-ux
-EH
-Mv
-eT
-LR
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -88170,38 +85521,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-GV
-GV
-ot
-GV
-GV
-GV
-GV
-Qj
-GV
-GV
-GV
-Qj
-Qj
-Qj
-mu
-Qj
-as
-ps
-YR
-YR
-ln
-zO
-LR
-LR
-LR
-LR
-LR
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -88671,37 +86022,37 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-ot
-Pv
-ot
-ot
-Pv
-ot
-GV
-Iv
-Qj
-Qj
-Es
-Qj
-Qj
-Li
-hV
-EQ
-Qj
-Wr
-ps
-ck
-jp
-ln
-Wz
-NF
-dJ
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -89173,38 +86524,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-GV
-GV
-GV
-GV
-GV
-qP
-GV
-GV
-Qj
-HM
-GV
-Rs
-Qj
-WW
-op
-lb
-Qj
-Xl
-ps
-YR
-YR
-ln
-NF
-NF
-zo
-NF
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -89675,38 +87026,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-GV
-GV
-GV
-Iv
-GV
-GV
-GV
-qP
-GV
-GV
-wT
-IW
-NY
-GV
-Qn
-av
-HR
-lb
-xi
-ps
-ps
-ps
-ps
-oY
-NF
-Gx
-tk
-aX
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -90177,38 +87528,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-GV
-Iv
-GV
-GV
-GV
-Iv
-GV
-qP
-Iv
-GV
-wT
-jH
-GV
-GV
-ds
-av
-HR
-lb
-xi
-ps
-ps
-ps
-ps
-ps
-gM
-tk
-tk
-Td
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -90679,38 +88030,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-GV
-GV
-GV
-GV
-GV
-qP
-GV
-GV
-Qj
-BC
-GV
-Zc
-Qj
-dH
-oo
-Qt
-Qj
-Od
-ps
-ps
-ps
-Is
-NF
-Xe
-tk
-JE
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -91181,38 +88532,38 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-ot
-Pv
-ot
-ot
-Pv
-ot
-GV
-GV
-Qj
-Qj
-dY
-Qj
-Qj
-Qj
-Ha
-IQ
-Qj
-ln
-bp
-ps
-BG
-NF
-NF
-NF
-Yz
-NF
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -91684,37 +89035,37 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-GV
-GV
-ot
-GV
-GV
-GV
-Iv
-NG
-iM
-iM
-iM
-Qj
-Qj
-Qj
-Qj
-Qj
-ln
-ln
-Gr
-ln
-NF
-NF
-rk
-tk
-sj
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -92186,37 +89537,37 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-GV
-Iv
-GV
-ot
-GV
-Iv
-GV
-GV
-Qj
-uK
-IK
-IK
-Qj
 xf
 xf
 xf
 xf
-ln
-ln
-Kc
-ln
-NF
-OH
-tk
-tk
-NS
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -92689,36 +90040,36 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-GV
-GV
-GV
-ot
-GV
-GV
-GV
-Qj
-Qj
-Qj
-Qj
-Qj
-Qj
 xf
 xf
 xf
 xf
-ln
-ln
-Gr
-ln
-NF
-kA
-cP
-QC
-NF
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -93191,17 +90542,17 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-fk
-fk
-fk
-Qj
-Qj
-Qj
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 Ne
 Ne
 Ne
@@ -93211,15 +90562,15 @@ xf
 xf
 xf
 xf
-ln
-eC
-YR
-eC
-NF
-NF
-NF
-NF
-NF
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 gV
 gV
 gV
@@ -93694,12 +91045,12 @@ xf
 xf
 xf
 xf
-fk
-fk
-fk
-fk
-fk
-fk
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -93714,9 +91065,9 @@ Uc
 Uc
 Uc
 Uc
-YY
-YY
-YY
+Uc
+Uc
+Uc
 Uc
 Uc
 Uc
@@ -94219,7 +91570,7 @@ fV
 fV
 PP
 PP
-vU
+fV
 eF
 PP
 PP
@@ -98734,7 +96085,7 @@ xf
 xf
 xf
 Lx
-rX
+TU
 sT
 DW
 tF
@@ -127908,7 +125259,7 @@ CK
 CK
 ES
 Iu
-Lw
+Kg
 Hn
 CK
 CK
@@ -134024,15 +131375,15 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -134508,33 +131859,33 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-TU
-pD
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -135010,34 +132361,34 @@ xf
 xf
 xf
 xf
-TU
-TU
-jS
-TU
-TU
-TU
-TU
-jS
-TU
-TU
-TU
-qI
-qI
-TU
-TU
-TU
-TU
-qI
-TU
-qp
-vF
-wy
-Nu
-fJ
-vF
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -135512,38 +132863,38 @@ xf
 xf
 xf
 xf
-TU
-jS
-VA
-VA
-bW
-VA
-jS
-jS
-VA
-VA
-jS
-qI
-jS
-jS
-VA
-VA
-jS
-jS
-jS
-Wj
-ga
-jS
-jS
-VA
-VA
-BD
-jS
-TU
-TU
-TU
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -136014,38 +133365,38 @@ xf
 xf
 xf
 xf
-TU
-VA
-ih
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-Kg
-ih
-Kg
-Kg
-Kg
-QB
-QB
-QB
-QB
-QB
-Kg
-Kg
-qp
-qp
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -136516,38 +133867,38 @@ xf
 xf
 xf
 xf
-TU
-jS
-MJ
-Uq
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-ri
-mx
-ih
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -136944,7 +134295,7 @@ CK
 CK
 PH
 Se
-Lu
+Uo
 AE
 CK
 CK
@@ -137018,38 +134369,38 @@ xf
 xf
 xf
 xf
-TU
-jS
-MJ
-Uq
-Rl
-DC
-ae
-zB
-oj
-DC
-ae
-zB
-oj
-DC
-ae
-zB
-oj
-DC
-ae
-zB
-oj
-DC
-ae
-zB
-oj
-DC
-Rl
-Rl
-Im
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -137520,38 +134871,38 @@ xf
 xf
 xf
 xf
-TU
-VA
-MJ
-Uq
-qz
-Rl
-ml
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-ml
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-ml
-Rl
-fG
-Rl
-Im
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -138021,39 +135372,39 @@ xf
 xf
 xf
 xf
-TU
-dD
-VA
-MJ
-Uq
-Yr
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-qT
-Rl
-Im
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -138523,39 +135874,39 @@ xf
 xf
 xf
 xf
-TU
-qI
-jS
-MJ
-Uq
-sK
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-uM
-Rl
-Im
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -139025,39 +136376,39 @@ xf
 xf
 xf
 xf
-TU
-TU
-jS
-MJ
-Uq
-ZD
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-xq
-Rl
-Im
-wE
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -139527,39 +136878,39 @@ xf
 xf
 xf
 xf
-TU
-TU
-VA
-MJ
-Uq
-qz
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-fG
-Rl
-Im
-sf
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -140029,39 +137380,39 @@ xf
 xf
 xf
 xf
-TU
-jS
-VA
-MJ
-Uq
-Yr
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-lc
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-qT
-Rl
-Im
-sf
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -140531,39 +137882,39 @@ xf
 xf
 xf
 xf
-TU
-qI
-jS
-MJ
-Uq
-sK
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-uM
-Rl
-Im
-IO
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -141033,39 +138384,39 @@ xf
 xf
 xf
 xf
-TU
-TU
-jS
-MJ
-Uq
-ZD
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-xq
-Rl
-Im
-iA
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -141535,39 +138886,39 @@ xf
 xf
 xf
 xf
-TU
-jS
-VA
-MJ
-Uq
-qz
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-fG
-Rl
-Im
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -142037,39 +139388,39 @@ xf
 xf
 xf
 xf
-TU
-VA
-VA
-MJ
-Uq
-Yr
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-qT
-Rl
-Im
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -142539,39 +139890,39 @@ xf
 xf
 xf
 xf
-TU
-jS
-VA
-MJ
-Uq
-sK
-Rl
-ml
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-ml
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-Rl
-ml
-Rl
-uM
-Rl
-Im
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -143041,39 +140392,39 @@ xf
 xf
 xf
 xf
-Yt
-qI
-jS
-MJ
-Uq
-Rl
-xp
-FJ
-Ei
-OG
-xp
-FJ
-Ei
-OG
-xp
-FJ
-Ei
-OG
-xp
-FJ
-Ei
-OG
-xp
-FJ
-Ei
-OG
-xp
-Rl
-Rl
-Im
-qp
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -143543,39 +140894,39 @@ xf
 xf
 xf
 xf
-TU
-jS
-VA
-MJ
-Za
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-FD
-sg
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -144045,39 +141396,39 @@ xf
 xf
 xf
 xf
-TU
-qI
-jS
-ih
-SF
-SF
-SF
-ts
-tJ
-tJ
-tJ
-tJ
-tJ
-ih
-xw
-SF
-SF
-SF
-SF
-SF
-SF
-SF
-Uq
-BY
-Im
-SF
-SF
-SF
-SF
-SF
-ih
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -144546,40 +141897,40 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-jS
-MJ
-SF
-SF
-SF
-AC
-VA
-VA
-VA
-VA
-VA
-MJ
-nX
-SF
-SF
-SF
-SF
-SF
-SF
-SF
-Uq
-BY
-Im
-SF
-qp
-qp
-qp
-qp
-qp
-qp
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -145048,40 +142399,40 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-MJ
-SF
-SF
-SF
-AC
-ZY
-VA
-VA
-UO
-VA
-MJ
-SF
-SF
-SF
-SF
-ts
-tJ
-tJ
-cC
-Uq
-BY
-Im
-qp
-qp
-TU
-TU
-TU
-TU
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -145550,43 +142901,43 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-MJ
-SF
-SF
-SF
-AC
-VA
-VA
-VA
-VA
-VA
-Zx
-cC
-SF
-SF
-SF
-AC
-kP
-VA
-MJ
-Uq
-BY
-CB
-Yf
-Yf
-Yf
-Yf
-Yf
-Yf
-Yf
-TU
-TU
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -146051,44 +143402,44 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-TU
-ni
-Vb
-EV
-Vb
-vt
-VA
-VA
-vz
-VA
-VA
-VA
-MJ
-SF
-SF
-SF
-AC
-Sn
-ZY
-Yf
-rO
-rO
-rO
-Yf
-tW
-is
-is
-tW
-Yf
-Yf
-Yf
-ni
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -146553,44 +143904,44 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-ni
-ni
-ni
-XW
-vB
-bV
-vt
-Vb
-xD
-Vb
-vt
-ZY
-VA
-MJ
-SF
-SF
-SF
-AC
-XI
-VA
-Yf
-is
-is
-is
-SZ
-is
-is
-is
-is
-Yf
-Fk
-gr
-Jr
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -147055,44 +144406,44 @@ xf
 xf
 xf
 xf
-TU
-ni
-oE
-Wp
-oa
-vt
-wi
-bI
-DL
-vt
-xy
-hj
-xy
-Vb
-VA
-VA
-MJ
-SF
-SF
-SF
-AC
-VA
-VA
-Yf
-is
-is
-is
-is
-is
-is
-is
-is
-xl
-kv
-kv
-kv
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -147557,45 +144908,45 @@ xf
 xf
 xf
 xf
-TU
-ni
-iT
-oa
-oa
-yp
-IT
-yJ
-bV
-yp
-Yv
-rT
-PU
-OI
-VA
-VA
-MJ
-SF
-SF
-SF
-AC
-VA
-ZY
-Yf
-is
-wP
-is
-is
-wP
-Wb
-is
-IN
-Yf
-Rh
-lF
-kv
-ni
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -148057,47 +145408,47 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-ni
-oE
-Wp
-oa
-vt
-Bj
-bI
-GB
-vt
-kG
-PU
-Mt
-xD
-VA
-VA
-MJ
-SF
-SF
-SF
-Ek
-Kg
-Yf
-Yf
-Yf
-Yf
-Yf
-Yf
-Yf
-Yf
-QH
-Yf
-Yf
-Yf
-Yf
-kw
-ni
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -148559,47 +145910,47 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-ni
-vt
-Vb
-vt
-vt
-fH
-bI
-dv
-vt
-vt
-mB
-vt
-vt
-vt
-Kg
-Sf
-SF
-SF
-SF
-SF
-SF
-Yf
-yV
-or
-iz
-MI
-Yf
-lE
-Ny
-Bg
-nv
-zt
-Yf
-wD
-gP
-Ox
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -149061,47 +146412,47 @@ xf
 xf
 xf
 xf
-TU
-ni
-WB
-Bu
-NN
-kV
-te
-te
-NP
-TS
-sL
-te
-pi
-te
-uY
-kc
-Vb
-SF
-SF
-SF
-SF
-SF
-Vd
-SF
-PC
-ST
-wu
-tx
-Uo
-Na
-Uo
-Uo
-QA
-pU
-hq
-Na
-Uo
-tx
-my
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -149563,47 +146914,47 @@ xf
 xf
 xf
 xf
-TU
-ni
-WB
-wj
-bI
-yJ
-Nj
-vp
-bI
-Xn
-yJ
-pk
-IC
-bI
-je
-bI
-yp
-SF
-SF
-SF
-SF
-SF
-SF
-SF
-Uo
-Uo
-tx
-Uo
-Uo
-Uo
-Ks
-tx
-Uo
-ef
-Uo
-Uo
-Uo
-Uo
-FE
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -150065,47 +147416,47 @@ xf
 xf
 xf
 xf
-TU
-ni
-WB
-Um
-AR
-vI
-Kw
-DM
-ci
-bI
-Ni
-vI
-oc
-vI
-mU
-iD
-Vb
-SF
-SF
-SF
-SF
-SF
-SF
-SF
-Tg
-rj
-AT
-AT
-MX
-Yf
-yu
-fM
-Uo
-Uo
-AP
-Yf
-Xt
-dM
-Mh
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -150567,47 +147918,47 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-ni
-vt
-Vb
-vt
-vt
-tb
-Ww
-YZ
-vt
-vt
-pd
-vt
-ni
-ni
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-ni
-ni
-ni
-Yf
-Yf
-Yf
-Yf
-Yf
-Uo
-uU
-Yf
-Yf
-Yf
-Yf
-ni
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -151069,47 +148420,47 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-ni
-oE
-Wp
-oa
-vt
-bD
-FR
-PI
-vt
-EC
-aB
-CH
-ni
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-ni
-Yf
-yf
-GF
-Vr
-TF
-Uo
-tx
-WS
-Yf
-cQ
-cQ
-ni
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -151573,21 +148924,6 @@ xf
 xf
 xf
 xf
-TU
-ni
-iT
-oa
-oa
-yp
-oV
-mM
-bB
-vt
-pP
-BF
-IE
-ni
-TU
 xf
 xf
 xf
@@ -151595,22 +148931,37 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-PY
-Ny
-kH
-Jx
-bz
-Uo
-XZ
-Uo
-Qf
-mg
-Xr
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -152075,21 +149426,6 @@ xf
 xf
 xf
 xf
-TU
-ni
-oE
-Wp
-oa
-vt
-lG
-Lv
-mP
-vt
-rL
-ry
-cy
-ni
-TU
 xf
 xf
 xf
@@ -152097,22 +149433,37 @@ xf
 xf
 xf
 xf
-TU
-ni
-Ao
-Mp
-tc
-tx
-FW
-TF
-Uo
-tx
-SR
-Yf
-tt
-Ux
-ni
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -152577,21 +149928,6 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-ni
-TU
 xf
 xf
 xf
@@ -152599,22 +149935,37 @@ xf
 xf
 xf
 xf
-TU
-ni
-EK
-vj
-Uo
-nE
-HA
-Yf
-Uo
-uU
-Yf
-Yf
-Yf
-ni
-KP
-Yt
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -153079,21 +150430,6 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
-TU
 xf
 xf
 xf
@@ -153101,22 +150437,37 @@ xf
 xf
 xf
 xf
-TU
-ni
-Yf
-Yf
-KN
-Yf
-Yf
-Yf
-Cg
-tx
-Kj
-RJ
-yQ
-Do
-Yt
-Yt
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -153585,13 +150936,6 @@ xf
 xf
 xf
 xf
-TU
-TU
-TU
-TU
-TU
-TU
-TU
 xf
 xf
 xf
@@ -153603,21 +150947,28 @@ xf
 xf
 xf
 xf
-TU
-ni
-jr
-jV
-Uo
-PW
-OD
-od
-Uo
-Pz
-Vv
-Uo
-xc
-Do
-Yt
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -154105,21 +151456,21 @@ xf
 xf
 xf
 xf
-TU
-ni
-NI
-Ci
-Pz
-Mr
-Nk
-nZ
-Uo
-Uo
-Jt
-Ic
-TJ
-Do
-Yt
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -154607,21 +151958,21 @@ xf
 xf
 xf
 xf
-TU
-ni
-ni
-oW
-hf
-uf
-Uo
-KA
-tx
-Uo
-Ic
-js
-PO
-AD
-Yt
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -155109,21 +152460,21 @@ xf
 xf
 xf
 xf
-TU
-Yt
-ni
-ni
-PS
-Np
-LG
-TF
-Ss
-eQ
-bF
-PO
-PO
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -155612,19 +152963,19 @@ xf
 xf
 xf
 xf
-Yt
-Yt
-ni
-Do
-Do
-Do
-ni
-Do
-Do
-Do
-PO
-TU
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
@@ -156115,17 +153466,17 @@ xf
 xf
 xf
 xf
-Yt
-Yt
-Yt
-Yt
-Yt
-Yt
-Yt
-Yt
-Yt
-Yt
-TU
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
+xf
 xf
 xf
 xf
