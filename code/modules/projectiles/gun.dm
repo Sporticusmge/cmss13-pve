@@ -40,6 +40,9 @@
 	flags_item = TWOHANDED
 	light_system = DIRECTIONAL_LIGHT
 
+	///Sound to play when first firing the gun
+	var/initiate_sound = null
+
 	///A custom mouse pointer icon to use when wielded
 	var/mouse_pointer = 'icons/effects/mouse_pointer/rifle_mouse.dmi'
 
@@ -2125,6 +2128,8 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		display_ammo()
 		return TRUE
 	SEND_SIGNAL(src, COMSIG_GUN_FIRE)
+	if(initiate_sound)
+		playsound(get_turf(src), initiate_sound, 50)
 	return TRUE
 
 /// Wrapper proc for the autofire subsystem to ensure the important args aren't null

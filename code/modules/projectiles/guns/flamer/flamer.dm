@@ -408,7 +408,6 @@
 	P.hit_effect_color = flamer_reagent.burncolor
 	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
 	var/turf/user_turf = get_turf(user)
-	playsound(user_turf, get_fire_sound(), 50, TRUE)
 
 /obj/item/weapon/gun/flamer/unloaded
 	current_mag = null
