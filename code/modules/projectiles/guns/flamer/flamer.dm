@@ -407,7 +407,6 @@
 	P.color = flamer_reagent.color
 	P.hit_effect_color = flamer_reagent.burncolor
 	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
-	var/turf/user_turf = get_turf(user)
 
 /obj/item/weapon/gun/flamer/unloaded
 	current_mag = null
