@@ -3622,6 +3622,10 @@
 /turf/open/floor/asteroid
 	icon_state = "asteroid"
 
+/turf/open/floor/asteroid/asteroid_dark
+	icon_state = "asteroid"
+	color = "#888844"
+
 /turf/open/floor/asteroidfloor/north
 	dir = NORTH
 

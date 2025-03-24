@@ -42,6 +42,7 @@
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
 #define MAP_LV522_CHANCES_CLAIM_LUKES_LANDING "LV-522 Chances Claim & Lukes Landing"
+#define MAP_LV295_BLACKSITE "LV295 Blacksite"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
 #define MAP_CANYON_32B "Canyon 32B"
 
@@ -388,6 +389,8 @@
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
 #define WALL_AICORE "aiwall"
+#define WALL_UPP_GREEN "uppwall_interior"
+#define WALL_UPP_GREY "uppwall_interior"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
