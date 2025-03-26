@@ -2631,6 +2631,7 @@
 #include "void-marines\code\jetpack.dm"
 #include "void-marines\code\layer_shifting.dm"
 #include "void-marines\code\light_change.dm"
+#include "void-marines\code\meme_operations.dm"
 #include "void-marines\code\pixel_shifting.dm"
 #include "void-marines\code\puzzle_things.dm"
 #include "void-marines\code\playable_factions\DRG_squad\basics.dm"
