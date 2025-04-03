@@ -5,13 +5,11 @@
 	},
 /area/shuttle/escape_pod)
 "f" = (
-/turf/open/shuttle/escapepod{
-	icon_state = "floor12"
-	},
+/turf/open/shuttle/escapepod/floor0/north,
 /area/shuttle/escape_pod)
 "g" = (
 /obj/structure/machinery/cryopod/evacuation,
-/turf/open/shuttle/escapepod,
+/turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
 "n" = (
 /turf/closed/shuttle/escapepod{
@@ -49,9 +47,7 @@
 	},
 /area/shuttle/escape_pod)
 "P" = (
-/turf/open/shuttle/escapepod{
-	icon_state = "floor11"
-	},
+/turf/open/shuttle/escapepod/west,
 /area/shuttle/escape_pod)
 "Q" = (
 /turf/closed/shuttle/escapepod{
@@ -62,18 +58,14 @@
 /obj/structure/machinery/computer/shuttle/escape_pod_panel{
 	pixel_x = 30
 	},
-/turf/open/shuttle/escapepod{
-	icon_state = "floor2"
-	},
+/turf/open/shuttle/escapepod/floor0/west,
 /area/shuttle/escape_pod)
 "T" = (
 /obj/structure/machinery/door/airlock/evacuation{
 	dir = 2;
 	name = "\improper Evacuation Airlock PU-6"
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/shuttle/escape_pod)
 "U" = (
 /obj/docking_port/mobile/crashable/escape_shuttle/s,
@@ -87,7 +79,7 @@
 	pixel_x = 8;
 	pixel_y = 28
 	},
-/turf/open/shuttle/escapepod,
+/turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
 
 (1,1,1) = {"

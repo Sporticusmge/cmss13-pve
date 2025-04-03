@@ -14,26 +14,17 @@
 	id = "slz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva{
-	dir = 1
-	},
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "j" = (
-/turf/open/floor/shiva{
-	dir = 1
-	},
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "l" = (
-/turf/open/floor/shiva{
-	dir = 1;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/shiva/multi_tiles/north,
 /area/shiva/exterior/lz2_fortress)
 "m" = (
 /obj/structure/foamed_metal,
-/turf/open/floor/shiva{
-	dir = 1
-	},
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "o" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -47,9 +38,7 @@
 	id = "sslz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva{
-	icon_state = "radiator_tile"
-	},
+/turf/open/floor/shiva/radiator_tile,
 /area/shiva/exterior/lz2_fortress)
 "r" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -61,9 +50,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/shiva/exterior/lz2_fortress)
 "t" = (
-/turf/open/floor/shiva{
-	icon_state = "floor3"
-	},
+/turf/open/floor/shiva/floor3,
 /area/shiva/exterior/lz2_fortress)
 "w" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -75,9 +62,7 @@
 	id = "slz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva{
-	icon_state = "radiator_tile"
-	},
+/turf/open/floor/shiva/radiator_tile,
 /area/shiva/exterior/lz2_fortress)
 "z" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -107,27 +92,21 @@
 	pixel_x = 12;
 	pixel_y = 25
 	},
-/turf/open/floor/shiva{
-	icon_state = "radiator_tile"
-	},
+/turf/open/floor/shiva/radiator_tile,
 /area/shiva/exterior/lz2_fortress)
 "Q" = (
 /obj/structure/machinery/door_control{
 	id = "sslz_shutters";
 	pixel_x = -22
 	},
-/turf/open/floor/shiva{
-	dir = 1
-	},
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "T" = (
 /obj/structure/machinery/door_control{
 	id = "sslz_shutters";
 	pixel_x = 25
 	},
-/turf/open/floor/shiva{
-	icon_state = "radiator_tile"
-	},
+/turf/open/floor/shiva/radiator_tile,
 /area/shiva/exterior/lz2_fortress)
 "V" = (
 /turf/open/auto_turf/snow/layer2,
@@ -137,9 +116,7 @@
 	id = "sslz_shutters";
 	pixel_x = 25
 	},
-/turf/open/floor/shiva{
-	dir = 1
-	},
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 
 (1,1,1) = {"

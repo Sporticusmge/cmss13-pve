@@ -14,6 +14,7 @@
 	throw_speed = SPEED_VERY_FAST
 	unacidable = TRUE
 	flags_atom = FPRINT|CONDUCT
+	antigrief_protection = TRUE
 	allowed_sensors = list(/obj/item/device/assembly/prox_sensor)
 	max_container_volume = 120
 	reaction_limits = list( "max_ex_power" = 105, "base_ex_falloff" = 60, "max_ex_shards" = 32,
@@ -71,7 +72,12 @@
 	if(active || user.action_busy)
 		return
 
-	user.visible_message(SPAN_NOTICE("[user] starts deploying [src]."), \
+	if(antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(src, user))
+		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from planting!"))
+		msg_admin_niche("[key_name(user)] attempted to plant \a [name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
+		return
+
+	user.visible_message(SPAN_NOTICE("[user] starts deploying [src]."),
 		SPAN_NOTICE("You start deploying [src]."))
 	if(!do_after(user, 40, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 		user.visible_message(SPAN_NOTICE("[user] stops deploying [src]."), \
@@ -120,10 +126,10 @@
 					SPAN_WARNING("You stop disarming [src]."))
 				return
 			if(user.faction != iff_signal) //ow!
-				if(prob(75))
+				if(prob(5))
 					triggered = TRUE
 					if(tripwire)
-						var/direction = reverse_dir[src.dir]
+						var/direction = GLOB.reverse_dir[src.dir]
 						var/step_direction = get_step(src, direction)
 						tripwire.forceMove(step_direction)
 					prime()
@@ -197,7 +203,7 @@
 		return
 	if(L.stat == DEAD)
 		return
-	if(L.get_target_lock(iff_signal) || isrobot(L))
+	if(L.get_target_lock(iff_signal))
 		return
 	if(HAS_TRAIT(L, TRAIT_ABILITY_BURROWED))
 		return
@@ -241,7 +247,7 @@
 	//We move the tripwire randomly in either of the four cardinal directions
 	triggered = TRUE
 	if(tripwire)
-		var/direction = pick(cardinal)
+		var/direction = pick(GLOB.cardinals)
 		var/step_direction = get_step(src, direction)
 		tripwire.forceMove(step_direction)
 	prime()
@@ -266,6 +272,8 @@
 
 /obj/effect/mine_tripwire/Destroy()
 	if(linked_claymore)
+		if(linked_claymore.tripwire == src)
+			linked_claymore.tripwire = null
 		linked_claymore = null
 	. = ..()
 
@@ -309,9 +317,95 @@
 	map_deployed = TRUE
 
 /obj/item/explosive/mine/custom
-	name = "Custom mine"
+	name = "custom mine"
 	desc = "A custom chemical mine built from an M20 casing."
 	icon_state = "m20_custom"
 	customizable = TRUE
 	matter = list("metal" = 3750)
 	has_blast_wave_dampener = TRUE
+
+/obj/item/explosive/mine/sharp
+	name = "\improper P9 SHARP explosive dart"
+	desc = "An experimental P9 SHARP proximity triggered explosive dart designed by Armat Systems for use by the United States Colonial Marines. This one has full 360 detection range."
+	icon_state = "sonicharpoon_g"
+	angle = 360
+	var/disarmed = FALSE
+	var/explosion_size = 200
+	var/explosion_falloff = 100
+
+/obj/item/explosive/mine/sharp/check_for_obstacles(mob/living/user)
+	return FALSE
+
+/obj/item/explosive/mine/sharp/attackby(obj/item/W, mob/user)
+	return
+
+/obj/item/explosive/mine/sharp/set_tripwire()
+	if(!active && !tripwire)
+		for(var/direction in CARDINAL_ALL_DIRS)
+			var/tripwire_loc = get_turf(get_step(loc,direction))
+			tripwire = new(tripwire_loc)
+			tripwire.linked_claymore = src
+			active = TRUE
+
+/obj/item/explosive/mine/sharp/prime(mob/user)
+	set waitfor = 0
+	if(!cause_data)
+		cause_data = create_cause_data(initial(name), user)
+	cell_explosion(loc, explosion_size, explosion_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, CARDINAL_ALL_DIRS, cause_data)
+	playsound(loc, 'sound/weapons/gun_sharp_explode.ogg', 45)
+	qdel(src)
+
+/obj/item/explosive/mine/sharp/disarm()
+	anchored = FALSE
+	active = FALSE
+	triggered = FALSE
+	icon_state = base_icon_state + "_disarmed"
+	QDEL_NULL(tripwire)
+	disarmed = TRUE
+	add_to_garbage(src)
+
+/obj/item/explosive/mine/sharp/attack_self(mob/living/user)
+	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/sharp/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
+		iff_signal = user.faction
+
+	cause_data = create_cause_data(initial(name), user)
+	if(user)
+		user.drop_inv_item_on_ground(src)
+	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
+	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/sharp/attack_alien()
+	if(disarmed)
+		..()
+	else
+		return
+/obj/item/explosive/mine/sebb
+	name = "\improper G2 Electroshock grenade"
+	icon_state = "grenade_sebb_planted"
+	desc = "A G2 electroshock grenade planted as a landmine."
+	pixel_y = -5
+	anchored = TRUE // this is supposed to be planeted already when spawned
+
+/obj/item/explosive/mine/sebb/disarm()
+	. = ..()
+	new /obj/item/explosive/grenade/sebb(get_turf(src))
+	qdel(src)
+
+/obj/item/explosive/mine/sebb/prime()
+	new /obj/item/explosive/grenade/sebb/primed(get_turf(src))
+	qdel(src)
+
+/obj/item/explosive/mine/sebb/active
+	icon_state = "grenade_sebb_planted_active"
+	base_icon_state = "grenade_sebb"
+	map_deployed = TRUE

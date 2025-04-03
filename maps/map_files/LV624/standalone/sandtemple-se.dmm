@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/gm/dirt,
+/area/lv624/ground/jungle/south_east_jungle)
+"ab" = (
+/obj/effect/landmark/lizard_spawn,
+/turf/open/floor/sandstone/runed,
+/area/lv624/ground/jungle/south_east_jungle)
 "al" = (
 /obj/structure/flora/jungle/vines/light_2,
 /obj/structure/flora/jungle/vines/heavy,
@@ -317,7 +325,7 @@ Wt
 gU
 Xz
 Xy
-Xl
+aa
 Xl
 Xl
 Ze
@@ -347,7 +355,7 @@ Tl
 aK
 Wl
 yg
-Xy
+ab
 Xl
 br
 EZ

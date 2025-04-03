@@ -14,9 +14,7 @@
 /obj/structure/machinery/computer/shuttle/escape_pod_panel{
 	pixel_y = 30
 	},
-/turf/open/shuttle/escapepod{
-	icon_state = "floor7"
-	},
+/turf/open/shuttle/escapepod/floor2,
 /area/shuttle/escape_pod)
 "g" = (
 /turf/closed/shuttle/escapepod,
@@ -27,18 +25,14 @@
 	},
 /area/shuttle/escape_pod)
 "j" = (
-/turf/open/shuttle/escapepod{
-	icon_state = "floor9"
-	},
+/turf/open/shuttle/escapepod/floor0,
 /area/shuttle/escape_pod)
 "k" = (
 /obj/structure/machinery/door/airlock/evacuation{
 	dir = 2;
 	name = "\improper Evacuation Airlock PU-3"
 	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/shuttle/escape_pod)
 "l" = (
 /turf/closed/shuttle/escapepod{
@@ -52,7 +46,7 @@
 /area/shuttle/escape_pod)
 "H" = (
 /obj/structure/machinery/cryopod/evacuation,
-/turf/open/shuttle/escapepod,
+/turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
 "L" = (
 /turf/closed/shuttle/escapepod{
@@ -68,14 +62,12 @@
 /obj/structure/machinery/cryopod/evacuation,
 /obj/structure/sign/safety/cryo{
 	pixel_x = 8;
-	pixel_y = -35
+	pixel_y = -28
 	},
-/turf/open/shuttle/escapepod,
+/turf/open/shuttle/escapepod/floor4,
 /area/shuttle/escape_pod)
 "W" = (
-/turf/open/shuttle/escapepod{
-	icon_state = "floor8"
-	},
+/turf/open/shuttle/escapepod/east,
 /area/shuttle/escape_pod)
 "Y" = (
 /turf/closed/shuttle/escapepod{

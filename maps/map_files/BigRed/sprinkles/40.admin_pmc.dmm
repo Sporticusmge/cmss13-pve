@@ -1,4 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/open/floor/darkred2,
+/area/bigredv2/outside/admin_building)
 "ab" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/admin_building)
@@ -19,40 +22,30 @@
 /turf/open/floor/plating,
 /area/bigredv2/outside/admin_building)
 "ay" = (
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "aG" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "darkredcorners2"
-	},
+/turf/open/floor/darkredcorners2,
 /area/bigredv2/outside/admin_building)
 "aH" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor{
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2,
 /area/bigredv2/outside/admin_building)
 "aT" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "bf" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "bh" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -61,24 +54,24 @@
 /obj/structure/machinery/door/airlock/almayer/command/colony{
 	name = "\improper Operations Office"
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "bp" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor,
 /area/bigredv2/outside/admin_building)
 "br" = (
-/turf/open/floor{
-	icon_state = "darkred2"
+/obj/structure/window/framed/solaris/reinforced,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "Operations";
+	name = "\improper Operations Shutters"
 	},
+/turf/open/floor/plating,
 /area/bigredv2/outside/admin_building)
 "bv" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "bH" = (
 /obj/structure/machinery/light{
@@ -87,9 +80,7 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "gib6"
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "dh" = (
 /obj/structure/surface/table,
@@ -105,10 +96,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/west,
 /area/bigredv2/outside/admin_building)
 "eo" = (
 /obj/item/ammo_magazine/rifle{
@@ -116,39 +104,25 @@
 	pixel_x = -9;
 	pixel_y = 7
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "fp" = (
 /obj/item/ammo_magazine/rifle{
 	current_rounds = 0
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "fN" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/landmark/crap_item,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
-/area/bigredv2/outside/admin_building)
-"gq" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/carpet,
+/turf/open/floor/darkred2/west,
 /area/bigredv2/outside/admin_building)
 "gw" = (
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "gW" = (
 /obj/structure/barricade/sandbags/wired,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
 "kM" = (
 /obj/structure/barricade/metal/wired{
@@ -157,34 +131,25 @@
 /obj/item/ammo_magazine/pistol/rubber{
 	current_rounds = 0
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "lX" = (
 /obj/structure/machinery/door/airlock/almayer/command/colony{
 	dir = 1;
 	name = "\improper Operations Meeting Room"
 	},
-/turf/open/floor{
-	icon_state = "delivery"
-	},
+/turf/open/floor/delivery,
 /area/bigredv2/outside/admin_building)
 "nK" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkredcorners2"
-	},
+/turf/open/floor/darkredcorners2/west,
 /area/bigredv2/outside/admin_building)
 "oa" = (
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "os" = (
 /obj/item/ammo_magazine/rifle/rubber{
@@ -203,24 +168,17 @@
 /turf/open/floor/plating,
 /area/bigredv2/outside/admin_building)
 "oS" = (
-/turf/open/floor{
-	dir = 10;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/southwest,
 /area/bigredv2/outside/admin_building)
 "rE" = (
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "so" = (
 /obj/item/ammo_magazine/rifle/rubber{
 	current_rounds = 0;
 	pixel_y = 11
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "sE" = (
 /obj/structure/flora/jungle/plantbot1{
@@ -242,17 +200,13 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "ub" = (
 /obj/structure/barricade/metal/wired{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "uC" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -272,9 +226,7 @@
 	pixel_x = 14;
 	pixel_y = 17
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "wc" = (
 /obj/structure/bed/chair/comfy/blue{
@@ -283,15 +235,12 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "yP" = (
 /obj/effect/spawner/random/toolbox,
 /obj/structure/platform_decoration,
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "yZ" = (
 /obj/structure/bed/chair/comfy/blue{
@@ -304,16 +253,14 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "Ad" = (
 /obj/item/ammo_box/magazine/ext{
 	num_of_magazines = 1
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "Bh" = (
 /obj/item/ammo_magazine/rifle/rubber{
@@ -332,15 +279,10 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "CP" = (
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
 "FV" = (
 /obj/structure/bed/chair/comfy/blue{
@@ -351,27 +293,20 @@
 "Gj" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/barricade/sandbags/wired,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/west,
 /area/bigredv2/outside/admin_building)
 "GJ" = (
 /obj/structure/barricade/metal/wired{
 	dir = 4;
 	icon_state = "metal_2"
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "Ho" = (
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "Ja" = (
 /obj/item/ammo_magazine/rifle/rubber{
@@ -383,34 +318,21 @@
 /area/bigredv2/outside/admin_building)
 "Kv" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/west,
 /area/bigredv2/outside/admin_building)
 "NJ" = (
 /obj/structure/platform,
 /obj/structure/flora/jungle/planttop1{
 	pixel_y = 10
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "NT" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor{
-	icon_state = "dark"
-	},
-/area/bigredv2/outside/admin_building)
-"NU" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "Oe" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -424,18 +346,13 @@
 	dir = 4
 	},
 /obj/item/storage/toolbox/syndicate,
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
 "Ps" = (
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "Qa" = (
 /obj/item/ammo_magazine/pistol/rubber{
@@ -451,19 +368,13 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 4;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
 "RV" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/turf/open/floor{
-	dir = 8;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/west,
 /area/bigredv2/outside/admin_building)
 "Tq" = (
 /obj/item/device/radio/intercom{
@@ -472,10 +383,7 @@
 	name = "General Listening Channel";
 	pixel_x = 30
 	},
-/turf/open/floor{
-	dir = 6;
-	icon_state = "darkred2"
-	},
+/turf/open/floor/darkred2/southeast,
 /area/bigredv2/outside/admin_building)
 "TP" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -501,26 +409,13 @@
 /obj/item/ammo_box/magazine/m4a3{
 	num_of_magazines = 2
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
-/area/bigredv2/outside/admin_building)
-"UJ" = (
-/obj/item/weapon/gun/rifle/m41a/corporate{
-	current_mag = /obj/item/ammo_magazine/rifle/rubber;
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. It seems to be pretty battered and broken up.";
-	name = "battered M41A pulse rifle MK2";
-	pixel_x = 4
-	},
-/turf/open/floor/carpet,
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "UP" = (
 /obj/item/ammo_magazine/pistol/rubber{
 	current_rounds = 0
 	},
-/turf/open/floor{
-	icon_state = "wood"
-	},
+/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 "Vm" = (
 /obj/structure/bed/chair/comfy/black,
@@ -536,9 +431,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
 "Yi" = (
 /obj/structure/surface/table,
@@ -559,10 +452,10 @@ ab
 ab
 "}
 (2,1,1) = {"
-br
+aa
 ac
 bH
-NU
+rE
 so
 rE
 fp
@@ -571,7 +464,7 @@ Ad
 ab
 "}
 (3,1,1) = {"
-br
+aa
 aj
 Bh
 Qa
@@ -583,7 +476,7 @@ vO
 bp
 "}
 (4,1,1) = {"
-br
+aa
 aj
 Vm
 Yi
@@ -595,9 +488,9 @@ rE
 eo
 "}
 (5,1,1) = {"
-br
+aa
 ae
-UJ
+gw
 yZ
 gw
 yZ
@@ -609,7 +502,7 @@ rE
 (6,1,1) = {"
 ay
 lX
-gq
+gw
 WM
 uC
 Ja
@@ -619,7 +512,7 @@ rE
 UP
 "}
 (7,1,1) = {"
-br
+aa
 ae
 GJ
 ub
@@ -631,7 +524,7 @@ rE
 rE
 "}
 (8,1,1) = {"
-br
+aa
 ae
 ae
 ad

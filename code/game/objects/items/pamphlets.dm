@@ -80,11 +80,11 @@
 		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
 		return
 
-	var/obj/item/card/id/ID = user.wear_id
-	if(!istype(ID)) //not wearing an ID
+	var/obj/item/card/id/ID = user.get_idcard()
+	if(!ID) //not wearing an ID
 		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
 		return FALSE
-	if(ID.registered_ref != WEAKREF(user))
+	if(!ID.check_biometrics(user))
 		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
 		return FALSE
 
@@ -95,7 +95,7 @@
 	user.rank_fallback = "ass"
 	user.hud_set_squad()
 
-	var/obj/item/card/id/ID = user.wear_id
+	var/obj/item/card/id/ID = user.get_idcard()
 	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Spotter")
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Spotter")
 
@@ -166,7 +166,20 @@
 	desc = "This pamphlet was designed for Intelligence Officers operating on Earth to interact with the local populaces of the Latin American states, but only for IOs who managed to sleep through Dialects and Mannerisms Class."
 	trait = /datum/character_trait/language/spanish
 
+/obj/item/pamphlet/language/filipino
+	name = "Simples phrases in Filipino"
+	desc = "This pamphlet teaches you Filipino."
+	trait = /datum/character_trait/language/filipino
 
+/obj/item/pamphlet/language/french
+	name = "Simples phrases in French"
+	desc = "This pamphlet teaches you French."
+	trait = /datum/character_trait/language/french
+
+/obj/item/pamphlet/language/portuguese
+	name = "Simples phrases in Portuguese."
+	desc = "This pamphlet teaches you Portuguese."
+	trait = /datum/character_trait/language/portuguese
 
 //Restricted languages, spawnable for events.
 

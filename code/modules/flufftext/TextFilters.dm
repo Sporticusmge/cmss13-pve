@@ -7,7 +7,7 @@
 	var/newphrase=""
 	var/newletter=""
 	while(counter>=1)
-		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
+		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
 			if(lowertext(newletter)=="o") newletter="u"
 			if(lowertext(newletter)=="s") newletter="ch"
@@ -30,10 +30,10 @@
 
 	var/list/unstuttered_words = split_phrase.Copy()
 	var/i = rand(1,3)
-	if(stunned) i = split_phrase.len
+	if(stunned) i = length(split_phrase)
 	for(,i > 0,i--) //Pick a few words to stutter on.
 
-		if (!unstuttered_words.len)
+		if (!length(unstuttered_words))
 			break
 		var/word = pick(unstuttered_words)
 		unstuttered_words -= word //Remove from unstuttered words so we don't stutter it again.
