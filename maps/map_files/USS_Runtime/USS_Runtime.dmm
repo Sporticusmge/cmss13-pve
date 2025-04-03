@@ -17,6 +17,10 @@
 /obj/effect/landmark/start/requisition,
 /turf/open/floor/almayer/plating,
 /area/event)
+"f" = (
+/obj/effect/landmark/start/pilot/cas_pilot,
+/turf/open/floor/almayer/plating,
+/area/event)
 "h" = (
 /obj/effect/landmark/start/police,
 /turf/open/floor/almayer/plating,
@@ -95,10 +99,6 @@
 /area/event)
 "L" = (
 /obj/effect/landmark/start/researcher,
-/turf/open/floor/almayer/plating,
-/area/event)
-"M" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
 /turf/open/floor/almayer/plating,
 /area/event)
 "N" = (
@@ -229,7 +229,7 @@ a
 A
 l
 L
-M
+f
 b
 b
 b
