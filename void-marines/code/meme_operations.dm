@@ -655,12 +655,24 @@
 
 //SPECIES CODE
 #define SPECIES_MECHA "Mech"
+#define SPECIES_MECHALESS "Mecha"
 
 /obj/effect/temp_visual/dir_setting/bloodsplatter/mech
 	splatter_type = "csplatter"
 	color = COLOR_OIL
 
 /mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
+	. = ..(mapload, new_species)
+
+/mob/living/carbon/human/mech/attack_hand(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/pilot = user
+	if(pilot)
+		if(do_after(pilot, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY))
+			pilot.forceMove(src)
+			src.ckey = pilot.ckey
+
+/mob/living/carbon/human/mech/less/Initialize(mapload, new_species = SPECIES_MECHALESS)
 	. = ..(mapload, new_species)
 
 /datum/species/mech
@@ -689,7 +701,7 @@
 	blood_color = COLOR_OIL
 	uses_skin_color = FALSE
 	speech_sounds = list()
-	speech_chance = 100
+	speech_chance = 0
 
 	has_organ = list(
 		"heart" = /datum/internal_organ/heart/prosthetic,
@@ -711,7 +723,7 @@
 	slowdown = -0.5
 	total_health = 500
 
-	brute_mod = 0.3
+	brute_mod = 0.2
 	burn_mod = 0.1
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/mech
@@ -729,6 +741,21 @@
 	H.gender = PLURAL
 
 	return ..()
+
+/datum/species/mech/handle_death(mob/living/carbon/human/H, gibbed)
+	. = ..()
+	for(var/mob/living/carbon/human/pilot in H.contents)
+		pilot.forceMove(get_turf(H))
+
+/datum/species/mech/less
+	group = SPECIES_MECHALESS
+	name = SPECIES_MECHALESS
+
+	slowdown = -0.5
+	total_health = 300
+
+	brute_mod = 0.6
+	burn_mod = 0.1
 
 /obj/item/weapon/gun/drg_scout_assault/mech
 	name = "\improper Assault Rifle"
@@ -789,6 +816,15 @@
 	assignment = "Mech"
 	rank = "Mech"
 
+/datum/equipment_preset/mech/load_name(mob/living/carbon/human/new_human, randomise)
+	. = ..()
+	var/new_name = "MECHANIZED UNIT ([rand(1, 9)][rand(1, 9)][rand(1, 9)])"
+	new_human.change_real_name(new_human, new_name)
+
+/datum/equipment_preset/mech/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.set_species(SPECIES_MECHA)
+	new_human.body_type = "mech"
+
 /datum/equipment_preset/mech/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_COLONIAL_ALL)
@@ -813,3 +849,6 @@
 	assignment = "Mech"
 	rank = "Mech"
 
+/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.set_species(SPECIES_MECHALESS)
+	new_human.body_type = "mech"
