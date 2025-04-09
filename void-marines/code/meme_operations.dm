@@ -747,7 +747,7 @@
 	. = ..()
 	for(var/mob/living/carbon/human/pilot in H.contents)
 		pilot.forceMove(get_turf(H))
-		pilot.ckey = src.ckey
+		pilot.ckey = H.ckey
 
 /datum/species/mech/less
 	group = SPECIES_MECHALESS
