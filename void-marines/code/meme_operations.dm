@@ -663,6 +663,7 @@
 
 /mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
 	. = ..(mapload, new_species)
+	pixel_x = -32
 
 /mob/living/carbon/human/mech/attack_hand(mob/user)
 	. = ..()
@@ -746,6 +747,7 @@
 	. = ..()
 	for(var/mob/living/carbon/human/pilot in H.contents)
 		pilot.forceMove(get_turf(H))
+		pilot.ckey = src.ckey
 
 /datum/species/mech/less
 	group = SPECIES_MECHALESS
