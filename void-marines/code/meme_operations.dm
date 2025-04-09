@@ -650,3 +650,166 @@
 /obj/item/device/flashlight/lantern/fantasy
 	icon = 'void-marines/icons/lifeweb/lighting.dmi'
 	icon_state = "lamp"
+
+// MECHA COMBAT
+
+//SPECIES CODE
+#define SPECIES_MECHA "Mech"
+
+/obj/effect/temp_visual/dir_setting/bloodsplatter/mech
+	splatter_type = "csplatter"
+	color = COLOR_OIL
+
+/mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
+	. = ..(mapload, new_species)
+
+/datum/species/mech
+	group = SPECIES_MECHA
+	name = SPECIES_MECHA
+	icobase = 'void-marines/icons/mech_medium.dmi'
+	deform = 'void-marines/icons/mech_medium.dmi'
+	eyes = "blank_s"
+	mob_flags = KNOWS_TECHNOLOGY
+	flags = NO_BREATHE|NO_CLONE_LOSS|NO_BLOOD|NO_POISON|IS_SYNTHETIC|NO_CHEM_METABOLIZATION|NO_NEURO
+	insulated = TRUE
+	pain_type = /datum/pain/xeno
+	unarmed_type = /datum/unarmed_attack/punch/synthetic
+	secondary_unarmed_type = /datum/unarmed_attack/punch/synthetic
+	death_message = "lets out a blip as it collapses and stops moving..."
+	knock_down_reduction = 5
+	stun_reduction = 5
+	gibbed_anim = "gibbed-m"
+	dusted_anim = "dust-m"
+	mob_inherent_traits = list(
+		TRAIT_EMOTE_CD_EXEMPT,
+		TRAIT_YAUTJA_TECH,
+		TRAIT_FOREIGN_BIO,
+		TRAIT_SUPER_STRONG
+	)
+	blood_color = COLOR_OIL
+	uses_skin_color = FALSE
+	speech_sounds = list()
+	speech_chance = 100
+
+	has_organ = list(
+		"heart" = /datum/internal_organ/heart/prosthetic,
+		"brain" = /datum/internal_organ/brain/prosthetic,
+		)
+
+	inherent_verbs = list(
+		/mob/living/carbon/human/proc/toggle_inherent_nightvison
+	)
+
+	cold_level_1 = -1
+	cold_level_2 = -1
+	cold_level_3 = -1
+
+	heat_level_1 = 500
+	heat_level_2 = 1000
+	heat_level_3 = 2000
+
+	slowdown = -0.5
+	total_health = 500
+
+	brute_mod = 0.3
+	burn_mod = 0.1
+
+	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/mech
+
+/datum/species/mech/apply_signals(mob/living/carbon/human/H)
+	RegisterSignal(H, COMSIG_HUMAN_IMPREGNATE, PROC_REF(cancel_impregnate), TRUE)
+
+/datum/species/mech/proc/cancel_impregnate(datum/source)
+	SIGNAL_HANDLER
+	return COMPONENT_NO_IMPREGNATE
+
+/datum/species/mech/handle_post_spawn(mob/living/carbon/human/H)
+	H.universal_speak = TRUE
+	H.universal_understand = TRUE
+	H.gender = PLURAL
+
+	return ..()
+
+/obj/item/weapon/gun/drg_scout_assault/mech
+	name = "\improper Assault Rifle"
+	desc = "A dependable, hefty weapon."
+
+	icon = 'void-marines/icons/mecha_equipment_64x32.dmi'
+	icon_state = "assaultrifle"
+	item_state = "assaultrifle_inhand"
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		)
+
+	current_mag = /obj/item/ammo_magazine/rifle/drg_scout_assault/mech
+
+/obj/item/ammo_magazine/rifle/drg_scout_assault/mech
+	name = "\improper Magazine (10x24mm)"
+	desc = "A 10x24mm assault rifle magazine."
+	icon = 'void-marines/icons/mecha_ammo.dmi'
+	icon_state = "lightcannon_ammo"
+	item_state = "generic_mag"
+	max_rounds = 300
+	gun_type = /obj/item/weapon/gun/drg_scout_assault/mech
+
+/obj/item/weapon/gun/drg_engineer_shotgun/mech
+	name = "\improper Autoshotgun"
+	desc = "The primary weapon for the Breaching Mechs."
+	icon = 'void-marines/icons/mecha_equipment_64x32.dmi'
+	icon_state = "rpg"
+	item_state = "rpg_inhand"
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		)
+
+	current_mag = /obj/item/ammo_magazine/drg_engineer_shotgun/mech
+
+	starting_attachment_types = list()
+	attachable_allowed = list()
+
+/obj/item/ammo_magazine/drg_engineer_shotgun/mech
+	name = "\improper buckshot drum (12g)"
+	desc = "A 12g automatic shotgun drum magazine."
+	icon = 'void-marines/icons/mecha_ammo.dmi'
+	icon_state = "grenadelauncher_ammo"
+	gun_type = /obj/item/weapon/gun/drg_engineer_shotgun/mech
+	max_rounds = 100
+
+/datum/equipment_preset/mech
+	name = " MECH | Bluefor"
+	faction = FACTION_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/lanyard
+	skills = /datum/skills/civilian/survivor
+
+	languages = list(LANGUAGE_ENGLISH)
+
+	assignment = "Mech"
+	rank = "Mech"
+
+/datum/equipment_preset/mech/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_COLONIAL_ALL)
+
+/datum/equipment_preset/mech/load_gear(mob/living/carbon/human/new_human)
+	var/pick_gun = pick(1,2)
+	switch(pick_gun)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/drg_scout_assault/mech, WEAR_R_HAND)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/drg_engineer_shotgun/mech, WEAR_R_HAND)
+
+/datum/equipment_preset/mech/red
+	name = " MECH | Redfor"
+	faction = FACTION_INSURRECTIONUA
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/lanyard
+	skills = /datum/skills/civilian/survivor
+
+	languages = list(LANGUAGE_ENGLISH)
+
+	assignment = "Mech"
+	rank = "Mech"
+
