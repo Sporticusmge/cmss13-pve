@@ -583,7 +583,8 @@
 
 			. = TRUE
 		else if(L.body_position != LYING_DOWN)
-			animatation_displace_reset(L)
+			if(!istype(L, /mob/living/carbon/human/mech))
+				animatation_displace_reset(L)
 			if(ammo.sound_miss) playsound_client(L.client, ammo.sound_miss, get_turf(L), 75, TRUE)
 			if(COOLDOWN_FINISHED(L, shot_cooldown))
 				L.visible_message(SPAN_AVOIDHARM("[src] misses [L]!"),

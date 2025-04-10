@@ -73,6 +73,9 @@ Verbs related to getting fucking jacked, bro
 	if(is_mob_incapacitated())
 		return FALSE
 
+	if(istype(src, /mob/living/carbon/human/mech/))
+		return FALSE
+
 	if(!resting || buckled)
 		to_chat(src, SPAN_WARNING("How do you think you'll be able to do a pushup standing up? Get down to the floor!"))
 		return FALSE

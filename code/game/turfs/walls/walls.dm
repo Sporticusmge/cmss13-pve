@@ -603,6 +603,9 @@
 	if(!ishuman(dropping))
 		return
 
+	if(istype(dropping, /mob/living/carbon/human/mech/))
+		return
+
 	if(dropping != user)
 		return
 	var/mob/living/carbon/hiding_human = dropping

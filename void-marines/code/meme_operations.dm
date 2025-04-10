@@ -661,20 +661,30 @@
 	splatter_type = "csplatter"
 	color = COLOR_OIL
 
-/mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
-	. = ..(mapload, new_species)
-	pixel_x = -32
+/mob/living/carbon/human/mech/Initialize(mapload)
+	. = ..(mapload, SPECIES_MECHA)
+
+/mob/living/carbon/human/mech/
 
 /mob/living/carbon/human/mech/attack_hand(mob/user)
 	. = ..()
 	var/mob/living/carbon/human/pilot = user
-	if(pilot)
-		if(do_after(pilot, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY))
+	if(istype(pilot, /mob/living/carbon/human/mech/))
+		return FALSE
+
+	if(do_after(pilot, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY))
+		for(var/mob/living/carbon/human/occupant in contents)
+			occupant.forceMove(get_turf(src))
+			occupant.ckey = src.ckey
+
+		spawn(0.2 SECONDS)
 			pilot.forceMove(src)
 			src.ckey = pilot.ckey
 
-/mob/living/carbon/human/mech/less/Initialize(mapload, new_species = SPECIES_MECHALESS)
-	. = ..(mapload, new_species)
+		return TRUE
+
+/mob/living/carbon/human/mech/less/Initialize(mapload)
+	. = ..(mapload, SPECIES_MECHALESS)
 
 /datum/species/mech
 	group = SPECIES_MECHA
@@ -685,7 +695,8 @@
 	mob_flags = KNOWS_TECHNOLOGY
 	flags = NO_BREATHE|NO_CLONE_LOSS|NO_BLOOD|NO_POISON|IS_SYNTHETIC|NO_CHEM_METABOLIZATION|NO_NEURO
 	insulated = TRUE
-	pain_type = /datum/pain/xeno
+	pain_type = /datum/pain/human_hero
+	stamina_type = /datum/stamina/none
 	unarmed_type = /datum/unarmed_attack/punch/synthetic
 	secondary_unarmed_type = /datum/unarmed_attack/punch/synthetic
 	death_message = "lets out a blip as it collapses and stops moving..."
@@ -722,7 +733,7 @@
 	heat_level_3 = 2000
 
 	slowdown = -0.5
-	total_health = 500
+	total_health = 1000
 
 	brute_mod = 0.2
 	burn_mod = 0.1
@@ -741,6 +752,9 @@
 	H.universal_understand = TRUE
 	H.gender = PLURAL
 
+	H.mob_size = MOB_SIZE_BIG
+	H.pixel_x = -32
+
 	return ..()
 
 /datum/species/mech/handle_death(mob/living/carbon/human/H, gibbed)
@@ -754,7 +768,7 @@
 	name = SPECIES_MECHALESS
 
 	slowdown = -0.5
-	total_health = 300
+	total_health = 500
 
 	brute_mod = 0.6
 	burn_mod = 0.1
@@ -809,29 +823,67 @@
 /datum/equipment_preset/mech
 	name = " MECH | Bluefor"
 	faction = FACTION_MARINE
+	faction_group = (FACTION_MARINE)
 	flags = EQUIPMENT_PRESET_EXTRA
-	idtype = /obj/item/card/id/lanyard
-	skills = /datum/skills/civilian/survivor
+	idtype = null
+	skills = /datum/skills/synthetic
 
 	languages = list(LANGUAGE_ENGLISH)
 
 	assignment = "Mech"
 	rank = "Mech"
 
-/datum/equipment_preset/mech/load_name(mob/living/carbon/human/new_human, randomise)
-	. = ..()
+/datum/equipment_preset/mech/load_id(mob/living/carbon/human/mech/new_human)
+	new_human.faction = faction
+	new_human.faction_group = faction_group
+
+/datum/equipment_preset/mech/load_name(mob/living/carbon/human/mech/new_human, randomise)
 	var/new_name = "MECHANIZED UNIT ([rand(1, 9)][rand(1, 9)][rand(1, 9)])"
 	new_human.change_real_name(new_human, new_name)
 
-/datum/equipment_preset/mech/load_race(mob/living/carbon/human/new_human, client/mob_client)
-	new_human.set_species(SPECIES_MECHA)
-	new_human.body_type = "mech"
+/datum/equipment_preset/mech/load_race(mob/living/carbon/human/mech/new_human, client/mob_client, late_join)
+	var/mob/living/carbon/human/mech/M = new /mob/living/carbon/human/mech(new_human.loc)
+
+	if(!new_human.mind)
+		new_human.mind_initialize()
+
+	new_human.mind.transfer_to(M, TRUE)
+
+	QDEL_IN(new_human, 0.3 SECONDS)
+
+	M.set_species(SPECIES_MECHA)
+	M.body_type = "mech"
+
+	var/random_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+	M.color = random_color
+
+	spawn(0.4 SECONDS)
+
+		load_name(M, mob_client)
+		load_skills(M, mob_client)
+		load_languages(M, mob_client)
+		load_id(M, mob_client)
+		load_gear(M, mob_client)
+		load_status(M, mob_client)
+
+		load_traits(M, mob_client)
+
+		M.assigned_equipment_preset = src
+
+		M.regenerate_icons()
+
+		handle_late_join(M, late_join)
+
+		M.hud_set_squad()
+		M.add_to_all_mob_huds()
+
+	return TRUE
 
 /datum/equipment_preset/mech/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_COLONIAL_ALL)
 
-/datum/equipment_preset/mech/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/mech/load_gear(mob/living/carbon/human/mech/new_human)
 	var/pick_gun = pick(1,2)
 	switch(pick_gun)
 		if(1)
@@ -842,6 +894,7 @@
 /datum/equipment_preset/mech/red
 	name = " MECH | Redfor"
 	faction = FACTION_INSURRECTIONUA
+	faction_group = (FACTION_INSURRECTIONUA)
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/lanyard
 	skills = /datum/skills/civilian/survivor
@@ -851,6 +904,45 @@
 	assignment = "Mech"
 	rank = "Mech"
 
-/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/new_human, client/mob_client)
-	new_human.set_species(SPECIES_MECHALESS)
-	new_human.body_type = "mech"
+/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/mech/less/new_human, client/mob_client, late_join)
+	var/mob/living/carbon/human/mech/less/M = new /mob/living/carbon/human/mech/less(new_human.loc)
+
+	if(!new_human.mind)
+		new_human.mind_initialize()
+
+	new_human.mind.transfer_to(M, TRUE)
+
+	QDEL_IN(new_human, 0.3 SECONDS)
+
+	M.set_species(SPECIES_MECHALESS)
+	M.body_type = "mech"
+
+	var/random_color = pick("#555555","#633c3c","#635438","#855235")
+	M.color = random_color
+
+	spawn(0.4 SECONDS)
+
+		load_name(M, mob_client)
+		load_skills(M, mob_client)
+		load_languages(M, mob_client)
+		load_id(M, mob_client)
+		load_gear(M, mob_client)
+		load_status(M, mob_client)
+
+		load_traits(M, mob_client)
+
+		M.assigned_equipment_preset = src
+
+		M.regenerate_icons()
+
+		handle_late_join(M, late_join)
+
+		M.hud_set_squad()
+		M.add_to_all_mob_huds()
+
+		M.AddComponent(/datum/component/human_ai)
+
+		var/datum/human_ai_brain/ai_brain = M.get_ai_brain()
+		if(ai_brain)
+			ai_brain.appraise_inventory()
+	return TRUE

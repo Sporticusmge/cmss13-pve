@@ -23,6 +23,8 @@
 	if(.)
 		return
 	var/mob/M = user.mob
+	if(istype(M, /mob/living/carbon/human/mech/))
+		return
 	if(M)
 		M.shifting = TRUE
 	return TRUE
@@ -32,12 +34,16 @@
 	if(.)
 		return
 	var/mob/M = user.mob
+	if(istype(M, /mob/living/carbon/human/mech/))
+		return
 	if(M)
 		M.shifting = FALSE
 	return TRUE
 
 /// code
 /mob/proc/unpixel_shift()
+	if(istype(src, /mob/living/carbon/human/mech/))
+		return
 	if(is_shifted)
 		is_shifted = FALSE
 		pixel_x = 0
@@ -46,6 +52,9 @@
 
 /mob/proc/pixel_shift(direction)
 	if(anchored || is_mob_incapacitated())
+		return FALSE
+
+	if(istype(src, /mob/living/carbon/human/mech/))
 		return FALSE
 
 	is_shifted = TRUE
