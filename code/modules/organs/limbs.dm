@@ -97,8 +97,12 @@
 	if(mob_owner)
 		owner = mob_owner
 
-	wound_overlay = image('icons/mob/humans/dam_human.dmi', "grayscale_0", -DAMAGE_LAYER)
-	wound_overlay.color = owner?.species.blood_color
+	if(istype(owner, /mob/living/carbon/human/mech/))
+		wound_overlay = image('void-marines/icons/mech_dam.dmi', "grayscale_0", -DAMAGE_LAYER)
+		wound_overlay.color = "#ffffff"
+	else
+		wound_overlay = image('icons/mob/humans/dam_human.dmi', "grayscale_0", -DAMAGE_LAYER)
+		wound_overlay.color = owner?.species.blood_color
 
 	burn_overlay = image('icons/mob/humans/dam_human.dmi', "burn_0", -DAMAGE_LAYER)
 

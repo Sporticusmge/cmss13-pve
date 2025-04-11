@@ -654,17 +654,25 @@
 // MECHA COMBAT
 
 //SPECIES CODE
-#define SPECIES_MECHA "Mech"
-#define SPECIES_MECHALESS "Mecha"
 
 /obj/effect/temp_visual/dir_setting/bloodsplatter/mech
 	splatter_type = "csplatter"
 	color = COLOR_OIL
 
-/mob/living/carbon/human/mech/Initialize(mapload)
-	. = ..(mapload, SPECIES_MECHA)
+/mob/living/carbon/human/mech
+	var/mech_name
+	var/datum/action/minimap/marine/minimap_type = /datum/action/minimap/marine
 
-/mob/living/carbon/human/mech/
+/mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
+	. = ..(mapload, new_species)
+
+	var/datum/action/minimap/mini = new minimap_type
+	mini.give_to(src, mini)
+
+/mob/living/carbon/human/mech/Life(delta_time)
+	. = ..()
+	if(pixel_x != -32)
+		pixel_x = -32
 
 /mob/living/carbon/human/mech/attack_hand(mob/user)
 	. = ..()
@@ -680,11 +688,25 @@
 		spawn(0.2 SECONDS)
 			pilot.forceMove(src)
 			src.ckey = pilot.ckey
+			if(!mech_name)
+				var/mech_name = tgui_input_text(src, "Enter the name of your mecha.", title = "Name")
+				src.real_name = mech_name
+				src.name = mech_name
 
 		return TRUE
 
-/mob/living/carbon/human/mech/less/Initialize(mapload)
-	. = ..(mapload, SPECIES_MECHALESS)
+/mob/living/carbon/human/mech/light/Initialize(mapload, new_species = SPECIES_MECHA_LIGHT)
+	. = ..(mapload, new_species)
+	var/special_overlay = image('void-marines/icons/mecha_ability_overlays.dmi', icon_state = "booster_active", pixel_x = 10)
+	overlays += special_overlay
+
+/mob/living/carbon/human/mech/heavy/Initialize(mapload, new_species = SPECIES_MECHA_HEAVY)
+	. = ..(mapload, new_species)
+	var/special_overlay = image('void-marines/icons/mech_core_overlays.dmi', icon_state = "assaultarmor")
+	overlays += special_overlay
+
+/mob/living/carbon/human/mech/less/Initialize(mapload, new_species = SPECIES_MECHA_ENEMY)
+	. = ..(mapload, new_species)
 
 /datum/species/mech
 	group = SPECIES_MECHA
@@ -708,7 +730,8 @@
 		TRAIT_EMOTE_CD_EXEMPT,
 		TRAIT_YAUTJA_TECH,
 		TRAIT_FOREIGN_BIO,
-		TRAIT_SUPER_STRONG
+		TRAIT_SUPER_STRONG,
+		TRAIT_LEADERSHIP
 	)
 	blood_color = COLOR_OIL
 	uses_skin_color = FALSE
@@ -748,6 +771,9 @@
 	return COMPONENT_NO_IMPREGNATE
 
 /datum/species/mech/handle_post_spawn(mob/living/carbon/human/H)
+	give_action(H, /datum/action/innate/message_squad/mech)
+	give_action(H, /datum/action/human_action/activable/mech_repair)
+	give_action(H, /datum/action/human_action/activable/eject)
 	H.universal_speak = TRUE
 	H.universal_understand = TRUE
 	H.gender = PLURAL
@@ -763,9 +789,57 @@
 		pilot.forceMove(get_turf(H))
 		pilot.ckey = H.ckey
 
+/datum/species/mech/light
+	group = SPECIES_MECHA_LIGHT
+	name = SPECIES_MECHA_LIGHT
+
+	slowdown = -1.5
+	total_health = 600
+
+	brute_mod = 0.4
+	burn_mod = 0.2
+
+/datum/species/mech/light/handle_post_spawn(mob/living/carbon/human/H)
+	give_action(H, /datum/action/innate/message_squad/mech)
+	give_action(H, /datum/action/human_action/activable/mech_repair)
+	give_action(H, /datum/action/human_action/activable/eject)
+	give_action(H, /datum/action/human_action/activable/mech_boost)
+	H.universal_speak = TRUE
+	H.universal_understand = TRUE
+	H.gender = PLURAL
+
+	H.mob_size = MOB_SIZE_BIG
+	H.pixel_x = -32
+
+	return ..()
+
+/datum/species/mech/heavy
+	group = SPECIES_MECHA_HEAVY
+	name = SPECIES_MECHA_HEAVY
+
+	slowdown = 2
+	total_health = 2000
+
+	brute_mod = 0.1
+	burn_mod = 0.1
+
+/datum/species/mech/heavy/handle_post_spawn(mob/living/carbon/human/H)
+	give_action(H, /datum/action/innate/message_squad/mech)
+	give_action(H, /datum/action/human_action/activable/mech_repair)
+	give_action(H, /datum/action/human_action/activable/eject)
+	give_action(H, /datum/action/human_action/activable/mech_shield)
+	H.universal_speak = TRUE
+	H.universal_understand = TRUE
+	H.gender = PLURAL
+
+	H.mob_size = MOB_SIZE_BIG
+	H.pixel_x = -32
+
+	return ..()
+
 /datum/species/mech/less
-	group = SPECIES_MECHALESS
-	name = SPECIES_MECHALESS
+	group = SPECIES_MECHA_ENEMY
+	name = SPECIES_MECHA_ENEMY
 
 	slowdown = -0.5
 	total_health = 500
@@ -787,6 +861,12 @@
 
 	current_mag = /obj/item/ammo_magazine/rifle/drg_scout_assault/mech
 
+/obj/item/weapon/gun/drg_scout_assault/mech/set_gun_config_values()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
+	recoil = RECOIL_OFF
+
 /obj/item/ammo_magazine/rifle/drg_scout_assault/mech
 	name = "\improper Magazine (10x24mm)"
 	desc = "A 10x24mm assault rifle magazine."
@@ -794,6 +874,7 @@
 	icon_state = "lightcannon_ammo"
 	item_state = "generic_mag"
 	max_rounds = 300
+	w_class = SIZE_SMALL
 	gun_type = /obj/item/weapon/gun/drg_scout_assault/mech
 
 /obj/item/weapon/gun/drg_engineer_shotgun/mech
@@ -812,137 +893,89 @@
 	starting_attachment_types = list()
 	attachable_allowed = list()
 
+/obj/item/weapon/gun/drg_engineer_shotgun/mech/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_10
+	recoil = RECOIL_AMOUNT_TIER_5
+
 /obj/item/ammo_magazine/drg_engineer_shotgun/mech
 	name = "\improper buckshot drum (12g)"
 	desc = "A 12g automatic shotgun drum magazine."
 	icon = 'void-marines/icons/mecha_ammo.dmi'
 	icon_state = "grenadelauncher_ammo"
 	gun_type = /obj/item/weapon/gun/drg_engineer_shotgun/mech
+	w_class = SIZE_SMALL
 	max_rounds = 100
 
-/datum/equipment_preset/mech
-	name = " MECH | Bluefor"
-	faction = FACTION_MARINE
-	faction_group = (FACTION_MARINE)
-	flags = EQUIPMENT_PRESET_EXTRA
-	idtype = null
-	skills = /datum/skills/synthetic
+/obj/item/weapon/gun/drg_gunner_minigun/mech
+	name = "\improper Powered Chaingun"
+	desc = "What's more effective than bullets? A whole LOT of bullets."
 
-	languages = list(LANGUAGE_ENGLISH)
+	icon = 'void-marines/icons/mecha_equipment_64x32.dmi'
+	icon_state = "minigun"
+	item_state = "minigun_inhand"
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		)
 
-	assignment = "Mech"
-	rank = "Mech"
+	current_mag = /obj/item/ammo_magazine/drg_gunner_minigun/mech
+	aim_slowdown = SLOWDOWN_ADS_SUPERWEAPON
 
-/datum/equipment_preset/mech/load_id(mob/living/carbon/human/mech/new_human)
-	new_human.faction = faction
-	new_human.faction_group = faction_group
+/obj/item/weapon/gun/drg_gunner_minigun/mech/set_gun_config_values()
+	set_fire_delay(FIRE_DELAY_TIER_12)
 
-/datum/equipment_preset/mech/load_name(mob/living/carbon/human/mech/new_human, randomise)
-	var/new_name = "MECHANIZED UNIT ([rand(1, 9)][rand(1, 9)][rand(1, 9)])"
-	new_human.change_real_name(new_human, new_name)
+/obj/item/ammo_magazine/drg_gunner_minigun/mech
+	name = "\improper drum (20mm)"
+	icon = 'void-marines/icons/mecha_ammo.dmi'
+	icon_state = "minigun_ammo"
+	item_state = "generic_mag"
+	w_class = SIZE_MEDIUM
+	max_rounds = 5000
+	gun_type = /obj/item/weapon/gun/drg_gunner_minigun/mech
+	ammo_band_icon = null
+	ammo_band_icon_empty = null
 
-/datum/equipment_preset/mech/load_race(mob/living/carbon/human/mech/new_human, client/mob_client, late_join)
-	var/mob/living/carbon/human/mech/M = new /mob/living/carbon/human/mech(new_human.loc)
+/obj/item/weapon/sword/mech
+	name = "Mech Sword"
+	desc = "An weapon, made by best USCM engineers"
+	icon = 'void-marines/icons/mecha_equipment_64x32.dmi'
+	icon_state = "blade"
+	item_state = "blade_inhand"
+	item_icons = list(
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		)
+	force = 100
+	flags_equip_slot = SLOT_WAIST|SLOT_BACK
+	throwforce = 50
+	sharp = IS_SHARP_ITEM_SIMPLE
+	edge = 1
+	w_class = SIZE_LARGE
+	hitsound = 'sound/weapons/Egloves.ogg'
+	attack_verb = list("attacked", "slashed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 2
 
-	if(!new_human.mind)
-		new_human.mind_initialize()
+/obj/item/clothing/under/rank/mech
+	name = "youshouldntseethis"
+	desc = "REPORT!!!"
+	icon = 'void-marines/icons/mech_dam.dmi'
+	icon_state = "lol"
+	item_state = "lol"
+	worn_state = "lol"
+	item_icons = list(
+		WEAR_BODY = 'void-marines/icons/mech_dam.dmi'
+	)
 
-	new_human.mind.transfer_to(M, TRUE)
+/obj/item/tank/jetpack/mech
+	icon = 'void-marines/icons/mech_equipment.dmi'
+	icon_state = "mech_missile_pod"
+	item_state =  "tfoot_gas"
+	item_icons = list(
+		WEAR_BACK = 'void-marines/icons/mech_core_overlays.dmi'
+		)
 
-	QDEL_IN(new_human, 0.3 SECONDS)
-
-	M.set_species(SPECIES_MECHA)
-	M.body_type = "mech"
-
-	var/random_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.color = random_color
-
-	spawn(0.4 SECONDS)
-
-		load_name(M, mob_client)
-		load_skills(M, mob_client)
-		load_languages(M, mob_client)
-		load_id(M, mob_client)
-		load_gear(M, mob_client)
-		load_status(M, mob_client)
-
-		load_traits(M, mob_client)
-
-		M.assigned_equipment_preset = src
-
-		M.regenerate_icons()
-
-		handle_late_join(M, late_join)
-
-		M.hud_set_squad()
-		M.add_to_all_mob_huds()
-
-	return TRUE
-
-/datum/equipment_preset/mech/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_COLONIAL_ALL)
-
-/datum/equipment_preset/mech/load_gear(mob/living/carbon/human/mech/new_human)
-	var/pick_gun = pick(1,2)
-	switch(pick_gun)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/drg_scout_assault/mech, WEAR_R_HAND)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/drg_engineer_shotgun/mech, WEAR_R_HAND)
-
-/datum/equipment_preset/mech/red
-	name = " MECH | Redfor"
-	faction = FACTION_INSURRECTIONUA
-	faction_group = (FACTION_INSURRECTIONUA)
-	flags = EQUIPMENT_PRESET_EXTRA
-	idtype = /obj/item/card/id/lanyard
-	skills = /datum/skills/civilian/survivor
-
-	languages = list(LANGUAGE_ENGLISH)
-
-	assignment = "Mech"
-	rank = "Mech"
-
-/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/mech/less/new_human, client/mob_client, late_join)
-	var/mob/living/carbon/human/mech/less/M = new /mob/living/carbon/human/mech/less(new_human.loc)
-
-	if(!new_human.mind)
-		new_human.mind_initialize()
-
-	new_human.mind.transfer_to(M, TRUE)
-
-	QDEL_IN(new_human, 0.3 SECONDS)
-
-	M.set_species(SPECIES_MECHALESS)
-	M.body_type = "mech"
-
-	var/random_color = pick("#555555","#633c3c","#635438","#855235")
-	M.color = random_color
-
-	spawn(0.4 SECONDS)
-
-		load_name(M, mob_client)
-		load_skills(M, mob_client)
-		load_languages(M, mob_client)
-		load_id(M, mob_client)
-		load_gear(M, mob_client)
-		load_status(M, mob_client)
-
-		load_traits(M, mob_client)
-
-		M.assigned_equipment_preset = src
-
-		M.regenerate_icons()
-
-		handle_late_join(M, late_join)
-
-		M.hud_set_squad()
-		M.add_to_all_mob_huds()
-
-		M.AddComponent(/datum/component/human_ai)
-
-		var/datum/human_ai_brain/ai_brain = M.get_ai_brain()
-		if(ai_brain)
-			ai_brain.appraise_inventory()
-	return TRUE
+/obj/item/parachute/mech
+	icon = 'void-marines/icons/mech_equipment.dmi'
+	icon_state = "mecha_drill_loader"
