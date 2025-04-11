@@ -25,7 +25,7 @@
 
 /turf/open/space/Initialize(mapload, ...)
 	. = ..()
-	if(!istype(src, /turf/open/space/transit))
+	if(!istype(src, /turf/open/space/transit) || !istype(src, /turf/open/space/moving))
 		icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 /turf/open/space/attack_hand(mob/user)
@@ -154,3 +154,6 @@
 			spawn (0)
 				if ((A && A.loc))
 					A.loc.Entered(A)
+
+/turf/open/space/moving
+	icon_state = "speedspace_ns_1"
