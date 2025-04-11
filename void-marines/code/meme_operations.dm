@@ -675,25 +675,49 @@
 		pixel_x = -32
 
 /mob/living/carbon/human/mech/attack_hand(mob/user)
-	. = ..()
 	var/mob/living/carbon/human/pilot = user
-	if(istype(pilot, /mob/living/carbon/human/mech/))
-		return FALSE
+	if(!istype(pilot))
+		return ..()
+
+	if(stat == DEAD)
+		return
+
+	. = ..()
+	if(pilot.mob_size < MOB_SIZE_BIG)
+		if(pilot.a_intent == INTENT_GRAB || pilot.a_intent == INTENT_DISARM)
+			return FALSE
+	else
+		return .
 
 	if(do_after(pilot, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY))
 		for(var/mob/living/carbon/human/occupant in contents)
 			occupant.forceMove(get_turf(src))
 			occupant.ckey = src.ckey
+			if(!occupant.client)
+				var/ai_brain = src.GetComponent(/datum/component/human_ai)
+				QDEL_NULL(ai_brain)
 
 		spawn(0.2 SECONDS)
 			pilot.forceMove(src)
 			src.ckey = pilot.ckey
-			if(!mech_name)
-				var/mech_name = tgui_input_text(src, "Enter the name of your mecha.", title = "Name")
+			faction = pilot.faction
+			if(!client)
+				AddComponent(/datum/component/human_ai)
+				get_ai_brain().appraise_inventory()
+			else if(!mech_name)
+				var/new_name = tgui_input_text(src, "Enter the name of your mecha.", title = "Name")
+				if(!new_name)
+					return
+				src.mech_name = new_name
 				src.real_name = mech_name
 				src.name = mech_name
 
 		return TRUE
+
+/mob/living/carbon/human/mech/can_be_pulled_by(mob/M)
+	. = ..()
+	if(M.mob_size < MOB_SIZE_BIG)
+		return FALSE
 
 /mob/living/carbon/human/mech/light/Initialize(mapload, new_species = SPECIES_MECHA_LIGHT)
 	. = ..(mapload, new_species)
@@ -705,7 +729,7 @@
 	var/special_overlay = image('void-marines/icons/mech_core_overlays.dmi', icon_state = "assaultarmor")
 	overlays += special_overlay
 
-/mob/living/carbon/human/mech/less/Initialize(mapload, new_species = SPECIES_MECHA_ENEMY)
+/mob/living/carbon/human/mech/enemy/Initialize(mapload, new_species = SPECIES_MECHA_ENEMY)
 	. = ..(mapload, new_species)
 
 /datum/species/mech
@@ -979,3 +1003,55 @@
 /obj/item/parachute/mech
 	icon = 'void-marines/icons/mech_equipment.dmi'
 	icon_state = "mecha_drill_loader"
+
+/obj/structure/machinery/computer/mech_selection
+	name = "mech requisition"
+	icon_state = "robot"
+	density = TRUE
+
+	var/radius = 4
+	var/list/previous_users = list()
+
+/obj/structure/machinery/computer/mech_selection/attack_hand(mob/living/user)
+	if(user in previous_users)
+		to_chat(user, SPAN_WARNING("Ты не можешь выбрать больше одного меха."))
+		return
+
+	. = ..()
+
+	var/mech_selection = tgui_alert(user, "What type of mech you want to select?", "Mech selection", list("Medium", "Heavy", "Light"))
+	if(!mech_selection)
+		return
+
+	var/mech_type
+	switch(mech_selection)
+		if("Medium")
+			mech_type = /datum/equipment_preset/mech
+		if("Heavy")
+			mech_type = /datum/equipment_preset/mech/heavy
+		if("Light")
+			mech_type = /datum/equipment_preset/mech/light
+
+	var/turf/target = get_random_turf_in_range_unblocked(loc, radius, 2)
+	var/obj/structure/droppod/equipment/mech/droppod = new(target, mech_type)
+
+	droppod.drop_time = 3 SECONDS
+	droppod.launch(target)
+
+	playsound(target, 'sound/effects/alert.ogg', 75)
+	previous_users += user
+
+/obj/structure/droppod/equipment/mech
+	var/mech_type
+
+/obj/structure/droppod/equipment/mech/spawn_equipment(mech_type)
+	equipment_to_spawn = new /mob/living/carbon/human/mech(src)
+	src.mech_type = mech_type
+	return equipment_to_spawn
+
+/obj/structure/droppod/equipment/mech/move_equipment()
+	..()
+	arm_equipment(equipment_to_spawn, mech_type)
+
+	playsound(loc, 'sound/mecha/powerup.ogg', 100, FALSE)
+	addtimer(CALLBACK(loc, GLOBAL_PROC_REF(playsound), loc, 'sound/mecha/nominal.ogg', 100, FALSE), 3 SECONDS)

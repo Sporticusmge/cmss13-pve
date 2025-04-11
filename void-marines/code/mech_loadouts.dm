@@ -1,5 +1,5 @@
 /datum/equipment_preset/mech
-	name = " MECH | Bluefor"
+	name = "MECH | Bluefor"
 	faction = FACTION_MARINE
 	faction_group = (FACTION_MARINE)
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -74,7 +74,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/drg_engineer_shotgun/mech, WEAR_R_HAND)
 
 /datum/equipment_preset/mech/heavy
-	name = " HEAVY MECH | Bluefor"
+	name = "HEAVY MECH | Bluefor"
 	faction = FACTION_MARINE
 	faction_group = (FACTION_MARINE)
 
@@ -201,7 +201,7 @@
 
 
 /datum/equipment_preset/mech/red
-	name = " MECH | Redfor"
+	name = "MECH | Redfor"
 	faction = FACTION_INSURRECTIONUA
 	faction_group = (FACTION_INSURRECTIONUA)
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -213,8 +213,11 @@
 	assignment = "Mech"
 	rank = "Mech"
 
-/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/mech/less/new_human, client/mob_client, late_join)
-	var/mob/living/carbon/human/mech/less/M = new /mob/living/carbon/human/mech/less(new_human.loc)
+/datum/equipment_preset/mech/red/load_race(mob/living/carbon/human/mech/enemy/new_human, client/mob_client, late_join)
+	var/mob/living/carbon/human/mech/enemy/M = new /mob/living/carbon/human/mech/enemy(new_human.loc)
+
+	M.faction = FACTION_INSURRECTIONUA
+	M.faction_group = (FACTION_INSURRECTIONUA)
 
 	if(!new_human.mind)
 		new_human.mind_initialize()

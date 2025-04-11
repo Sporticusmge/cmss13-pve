@@ -5,7 +5,11 @@
 
 	cooldown = 2 SECONDS
 
-/datum/action/human_action/activable/eject/use_ability(atom/A)
+/datum/action/human_action/activable/eject/action_activate()
+	SHOULD_CALL_PARENT(FALSE)
+	if(!ishuman(owner))
+		return
+
 	if(!can_use_action() || !action_cooldown_check())
 		return
 
@@ -93,9 +97,9 @@
 
 /mob/living/carbon/human/mech/heavy/bullet_act(obj/projectile/P)
 	if(in_defensive_state)
-		create_shrapnel(get_turf(src), 6, null, null, /datum/ammo/bullet/shrapnel/light, create_cause_data(src.name, src), TRUE)
+		create_shrapnel(get_turf(src), 8, null, null, /datum/ammo/bullet/shrapnel/light, create_cause_data(src.name, src), TRUE)
 		shield_charge -= 5
-		return
+		return TRUE
 	..()
 
 /datum/action/human_action/activable/mech_shield
@@ -105,7 +109,8 @@
 
 	cooldown = 1 MINUTES
 
-/datum/action/human_action/activable/mech_shield/use_ability(atom/A)
+/datum/action/human_action/activable/mech_shield/action_activate()
+	SHOULD_CALL_PARENT(FALSE)
 	if(!can_use_action() || !action_cooldown_check())
 		return
 
@@ -129,7 +134,8 @@
 
 	return ..()
 
-/datum/action/human_action/activable/mech_shield/proc/remove_shield(mob/living/carbon/human/mech/heavy/X)
+/datum/action/human_action/activable/mech_shield/proc/remove_shield()
+	var/mob/living/carbon/human/mech/heavy/X = owner
 	X.in_defensive_state = FALSE
 	X.shield_charge = 500
 	X.remove_filter("shield_outline")
@@ -143,7 +149,8 @@
 
 	cooldown = 1 MINUTES
 
-/datum/action/human_action/activable/mech_boost/use_ability(atom/A)
+/datum/action/human_action/activable/mech_boost/action_activate()
+	SHOULD_CALL_PARENT(FALSE)
 	if(!can_use_action() || !action_cooldown_check())
 		return
 
@@ -167,7 +174,8 @@
 
 	return ..()
 
-/datum/action/human_action/activable/mech_boost/proc/remove_boost(mob/living/carbon/human/mech/light/X)
+/datum/action/human_action/activable/mech_boost/proc/remove_boost()
+	var/mob/living/carbon/human/mech/light/X = owner
 	X.species.slowdown = -1.5
 	X.remove_filter("boost_outline")
 
@@ -181,7 +189,9 @@
 	cooldown = 1 MINUTES
 	var/uses = 5
 
-/datum/action/human_action/activable/mech_repair/use_ability(atom/A)
+
+/datum/action/human_action/activable/mech_repair/action_activate()
+	SHOULD_CALL_PARENT(FALSE)
 	if(!can_use_action() || !action_cooldown_check() || uses <= 0)
 		return
 

@@ -381,6 +381,10 @@
 			now_pushing = FALSE
 			return
 
+	if(L.mob_size - mob_size > 2)
+		now_pushing = FALSE
+		return
+
 	if(!L.buckled && !L.anchored)
 		var/mob_swap
 		//the puller can always swap with its victim if on grab intent
