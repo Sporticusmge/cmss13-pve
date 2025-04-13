@@ -32,9 +32,6 @@
 	M.set_species(SPECIES_MECHA)
 	M.body_type = "mech"
 
-	var/random_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.color = random_color
-
 	spawn(0.4 SECONDS)
 
 		load_name(M, mob_client)
@@ -95,9 +92,6 @@
 	M.set_species(SPECIES_MECHA_HEAVY)
 	M.body_type = "mech"
 
-	var/random_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.color = random_color
-
 	spawn(0.4 SECONDS)
 
 		load_name(M, mob_client)
@@ -153,9 +147,6 @@
 
 	M.set_species(SPECIES_MECHA_LIGHT)
 	M.body_type = "mech"
-
-	var/random_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.color = random_color
 
 	spawn(0.4 SECONDS)
 
@@ -228,9 +219,6 @@
 
 	M.set_species(SPECIES_MECHA_ENEMY)
 	M.body_type = "mech"
-
-	var/random_color = pick("#555555","#633c3c","#635438","#855235")
-	M.color = random_color
 
 	spawn(0.4 SECONDS)
 

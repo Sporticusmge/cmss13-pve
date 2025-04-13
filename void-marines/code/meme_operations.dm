@@ -661,6 +661,8 @@
 
 /mob/living/carbon/human/mech
 	var/mech_name
+	var/armor_color = "#ffffff"
+	var/player_painted = FALSE
 	var/datum/action/minimap/marine/minimap_type = /datum/action/minimap/marine
 
 /mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
@@ -711,8 +713,35 @@
 				src.mech_name = new_name
 				src.real_name = mech_name
 				src.name = mech_name
+				if(!player_painted)
+					armor_color = input(src, "Please select the color to paint your mech.", "Armor Color") as color|null
+					player_painted = TRUE
+					update_color_overlays()
 
 		return TRUE
+
+/mob/living/carbon/human/mech/proc/update_color_overlays()
+	remove_overlay(ARMOR_COLOR_LAYER)
+
+	var/list/color_overlays = list()
+	for(var/obj/limb/part as anything in limbs)
+		if(part.status & LIMB_DESTROYED)
+			continue
+
+		color_overlays += part.get_color_overlays()
+
+	overlays_standing[ARMOR_COLOR_LAYER] = color_overlays
+
+	apply_overlay(ARMOR_COLOR_LAYER)
+
+/obj/limb/proc/get_color_overlays()
+	. = list()
+
+	var/mob/living/carbon/human/mech/M = owner
+
+	color_overlay.icon_state = "[icon_name]_colored"
+	color_overlay.color = M.armor_color
+	. += color_overlay
 
 /mob/living/carbon/human/mech/can_be_pulled_by(mob/M)
 	. = ..()
@@ -805,6 +834,10 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
+	var/mob/living/carbon/human/mech/M = H
+	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+	M.update_color_overlays()
+
 	return ..()
 
 /datum/species/mech/handle_death(mob/living/carbon/human/H, gibbed)
@@ -835,6 +868,10 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
+	var/mob/living/carbon/human/mech/M = H
+	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+	M.update_color_overlays()
+
 	return ..()
 
 /datum/species/mech/heavy
@@ -859,6 +896,10 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
+	var/mob/living/carbon/human/mech/M = H
+	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+	M.update_color_overlays()
+
 	return ..()
 
 /datum/species/mech/less
@@ -870,6 +911,20 @@
 
 	brute_mod = 0.6
 	burn_mod = 0.1
+
+/datum/species/mech/less/handle_post_spawn(mob/living/carbon/human/H)
+	H.universal_speak = TRUE
+	H.universal_understand = TRUE
+	H.gender = PLURAL
+
+	H.mob_size = MOB_SIZE_BIG
+	H.pixel_x = -32
+
+	var/mob/living/carbon/human/mech/M = H
+	M.armor_color = pick("#555555","#633c3c","#635438","#855235")
+	M.update_color_overlays()
+
+	return ..()
 
 /obj/item/weapon/gun/drg_scout_assault/mech
 	name = "\improper Assault Rifle"

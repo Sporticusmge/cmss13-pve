@@ -154,7 +154,7 @@
 #define GAUSSIAN_BLUR(filter_size) filter(type="blur", size=filter_size)
 
 //some colors coming from _math.dm
-
+ 
 #define COLOR_ORANGE "#FF9900"
 #define COLOR_OIL "#030303"
 

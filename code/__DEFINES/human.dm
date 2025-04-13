@@ -116,6 +116,7 @@
 
 //Human Overlays Indexes used in update_icons/////////
 #define BODYPARTS_LAYER 42
+#define ARMOR_COLOR_LAYER 41
 #define DAMAGE_LAYER 41
 
 #define UNDERWEAR_LAYER 40

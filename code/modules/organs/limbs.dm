@@ -58,6 +58,8 @@
 	var/image/wound_overlay //Used to save time redefining it every wound update. Doesn't remember anything but the most recently used icon state.
 	var/image/burn_overlay //Ditto but for burns.
 
+	var/image/color_overlay // For Mechs
+
 	var/splint_icon_amount = 1
 	var/bandage_icon_amount = 1
 
@@ -98,6 +100,9 @@
 		owner = mob_owner
 
 	if(istype(owner, /mob/living/carbon/human/mech/))
+		var/mob/living/carbon/human/mech/colored = owner
+		color_overlay = image('void-marines/icons/mech_medium.dmi', "[icon_name]_colored", -ARMOR_COLOR_LAYER)
+		color_overlay.color = colored.armor_color
 		wound_overlay = image('void-marines/icons/mech_dam.dmi', "grayscale_0", -DAMAGE_LAYER)
 		wound_overlay.color = "#ffffff"
 	else
