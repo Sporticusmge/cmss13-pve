@@ -117,6 +117,9 @@ There are several things that need to be remembered:
 	appearance_flags |= KEEP_TOGETHER // sanity
 
 	update_damage_overlays()
+	if(istype(src, /mob/living/carbon/human/mech))
+		var/mob/living/carbon/human/mech/M = src
+		M.update_color_overlays()
 
 	var/list/needs_update = list()
 	for(var/obj/limb/part as anything in limbs)
@@ -170,7 +173,7 @@ There are several things that need to be remembered:
 
 		damage_overlays += part.get_damage_overlays()
 
-	overlays_standing[DAMAGE_LAYER] = damage_overlays
+	overlays_standing[DAMAGE_LAYER] += damage_overlays
 
 	apply_overlay(DAMAGE_LAYER)
 

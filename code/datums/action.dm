@@ -18,6 +18,9 @@
 	/// A signal on the mob that will cause the action to activate
 	var/listen_signal
 
+	var/have_info = FALSE
+	var/info = "none"
+
 /datum/action/New(Target, override_icon_state)
 	target = Target
 	button = new

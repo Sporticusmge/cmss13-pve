@@ -659,11 +659,19 @@
 	splatter_type = "csplatter"
 	color = COLOR_OIL
 
+/obj/item/device/motiondetector/sg/mech
+	icon = 'void-marines/icons/armored/hardpoint_modules.dmi'
+	icon_state = "warray"
+	detector_range = 10
+
+	var/mob/living/carbon/human/mech/linked_mech
+
 /mob/living/carbon/human/mech
 	var/mech_name
 	var/armor_color = "#ffffff"
 	var/player_painted = FALSE
 	var/datum/action/minimap/marine/minimap_type = /datum/action/minimap/marine
+	var/obj/item/device/motiondetector/sg/mech/md
 
 /mob/living/carbon/human/mech/Initialize(mapload, new_species = SPECIES_MECHA)
 	. = ..(mapload, new_species)
@@ -714,11 +722,115 @@
 				src.real_name = mech_name
 				src.name = mech_name
 				if(!player_painted)
-					armor_color = input(src, "Please select the color to paint your mech.", "Armor Color") as color|null
+
+					var/painting_mode = tgui_alert(src, "Do you want deep or simple customisation?", "Painting Mode", list("Simple", "Deep"))
+					switch(painting_mode)
+						if("Simple")
+							armor_color = input(src, "Please select the color to paint your mech.", "Armor Color") as color|null
+							player_painted = TRUE
+
+							for(var/obj/limb/part as anything in limbs)
+								if(part.status & LIMB_DESTROYED)
+									continue
+								part.plate_color = armor_color
+
+							update_color_overlays()
+						if("Deep")
+							deep_coloring()
+
+				var/support_module = tgui_alert(src, "Choose Additional Module", "Modification", list("Sensor Array", "Air-Dump"))
+				switch(support_module)
+					if("Sensor Array")
+						md = new(src)
+						md = new(src)
+						md.linked_mech = src
+						md.iff_signal = LAZYACCESS(faction_group, 1)
+						md.toggle_active(null, FALSE)
+					if("Air-Dump")
+						give_action(src, /datum/action/human_action/activable/mech_thow)
+		return TRUE
+
+/mob/living/carbon/human/mech/proc/deep_coloring()
+	var/list/parts_list = list("Head", "Torso", "Left Arm", "Right Arm", "Legs")
+
+	var/part = tgui_input_list(src, "What part you want to color?", "Painting Mode", parts_list)
+	switch(part)
+		if("Head")
+			var/part_color = input(src, "Please select the color to paint your head.", "Armor Color") as color|null
+			var/obj/limb/head/head = get_limb("head")
+			if(head)
+				head.plate_color = part_color
+			var/continue_painting = tgui_alert(src, "Do you want to continue?", "Painting Mode", list("Yes", "No"))
+			switch(continue_painting)
+				if("Yes")
+					deep_coloring()
+					return TRUE
+				if("No")
 					player_painted = TRUE
 					update_color_overlays()
-
-		return TRUE
+					return TRUE
+		if("Torso")
+			var/part_color = input(src, "Please select the color to paint your head.", "Armor Color") as color|null
+			var/obj/limb/chest/chest = get_limb("chest")
+			if(chest)
+				chest.plate_color = part_color
+			var/continue_painting = tgui_alert(src, "Do you want to continue?", "Painting Mode", list("Yes", "No"))
+			switch(continue_painting)
+				if("Yes")
+					deep_coloring()
+					return TRUE
+				if("No")
+					player_painted = TRUE
+					update_color_overlays()
+					return TRUE
+		if("Legs")
+			var/part_color = input(src, "Please select the color to paint your head.", "Armor Color") as color|null
+			var/obj/limb/leg/r_leg/r_leg = get_limb("r_leg")
+			var/obj/limb/leg/l_leg/l_leg = get_limb("l_leg")
+			if(r_leg && l_leg)
+				r_leg.plate_color = part_color
+				l_leg.plate_color = part_color
+			var/continue_painting = tgui_alert(src, "Do you want to continue?", "Painting Mode", list("Yes", "No"))
+			switch(continue_painting)
+				if("Yes")
+					deep_coloring()
+					return TRUE
+				if("No")
+					player_painted = TRUE
+					update_color_overlays()
+					return TRUE
+		if("Right Arm")
+			var/part_color = input(src, "Please select the color to paint your head.", "Armor Color") as color|null
+			var/obj/limb/arm/r_arm/r_arm = get_limb("r_arm")
+			var/obj/limb/hand/r_hand/r_hand = get_limb("r_hand")
+			if(r_arm && r_hand)
+				r_arm.plate_color = part_color
+				r_hand.plate_color = part_color
+			var/continue_painting = tgui_alert(src, "Do you want to continue?", "Painting Mode", list("Yes", "No"))
+			switch(continue_painting)
+				if("Yes")
+					deep_coloring()
+					return TRUE
+				if("No")
+					player_painted = TRUE
+					update_color_overlays()
+					return TRUE
+		if("Left Arm")
+			var/part_color = input(src, "Please select the color to paint your head.", "Armor Color") as color|null
+			var/obj/limb/arm/l_arm/l_arm = get_limb("l_arm")
+			var/obj/limb/hand/l_hand/l_hand = get_limb("l_hand")
+			if(l_arm && l_hand)
+				l_arm.plate_color = part_color
+				l_hand.plate_color = part_color
+			var/continue_painting = tgui_alert(src, "Do you want to continue?", "Painting Mode", list("Yes", "No"))
+			switch(continue_painting)
+				if("Yes")
+					deep_coloring()
+					return TRUE
+				if("No")
+					player_painted = TRUE
+					update_color_overlays()
+					return TRUE
 
 /mob/living/carbon/human/mech/proc/update_color_overlays()
 	remove_overlay(ARMOR_COLOR_LAYER)
@@ -730,17 +842,15 @@
 
 		color_overlays += part.get_color_overlays()
 
-	overlays_standing[ARMOR_COLOR_LAYER] = color_overlays
+	overlays_standing[ARMOR_COLOR_LAYER] += color_overlays
 
 	apply_overlay(ARMOR_COLOR_LAYER)
 
 /obj/limb/proc/get_color_overlays()
 	. = list()
 
-	var/mob/living/carbon/human/mech/M = owner
-
 	color_overlay.icon_state = "[icon_name]_colored"
-	color_overlay.color = M.armor_color
+	color_overlay.color = plate_color
 	. += color_overlay
 
 /mob/living/carbon/human/mech/can_be_pulled_by(mob/M)
@@ -760,6 +870,11 @@
 
 /mob/living/carbon/human/mech/enemy/Initialize(mapload, new_species = SPECIES_MECHA_ENEMY)
 	. = ..(mapload, new_species)
+
+/datum/unarmed_attack/punch/heavy_mech
+	attack_verb = list("punch","clock","slugg","bludgeon","maul")
+	attack_sound = 'sound/weapons/synthpunch1.ogg'
+	damage = 100
 
 /datum/species/mech
 	group = SPECIES_MECHA
@@ -834,10 +949,6 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
-	var/mob/living/carbon/human/mech/M = H
-	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.update_color_overlays()
-
 	return ..()
 
 /datum/species/mech/handle_death(mob/living/carbon/human/H, gibbed)
@@ -868,10 +979,6 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
-	var/mob/living/carbon/human/mech/M = H
-	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.update_color_overlays()
-
 	return ..()
 
 /datum/species/mech/heavy
@@ -884,6 +991,9 @@
 	brute_mod = 0.1
 	burn_mod = 0.1
 
+	unarmed_type = /datum/unarmed_attack/punch/heavy_mech
+	secondary_unarmed_type = /datum/unarmed_attack/punch/heavy_mech
+
 /datum/species/mech/heavy/handle_post_spawn(mob/living/carbon/human/H)
 	give_action(H, /datum/action/innate/message_squad/mech)
 	give_action(H, /datum/action/human_action/activable/mech_repair)
@@ -895,10 +1005,6 @@
 
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
-
-	var/mob/living/carbon/human/mech/M = H
-	M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
-	M.update_color_overlays()
 
 	return ..()
 
@@ -920,22 +1026,20 @@
 	H.mob_size = MOB_SIZE_BIG
 	H.pixel_x = -32
 
-	var/mob/living/carbon/human/mech/M = H
-	M.armor_color = pick("#555555","#633c3c","#635438","#855235")
-	M.update_color_overlays()
-
 	return ..()
 
 /obj/item/weapon/gun/drg_scout_assault/mech
 	name = "\improper Assault Rifle"
 	desc = "A dependable, hefty weapon."
 
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_AMMO_COUNTER|GUN_ONE_HAND_WIELDED
+
 	icon = 'void-marines/icons/mecha_equipment_64x32.dmi'
 	icon_state = "assaultrifle"
 	item_state = "assaultrifle_inhand"
 	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
-		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons_l.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons_r.dmi'
 		)
 
 	current_mag = /obj/item/ammo_magazine/rifle/drg_scout_assault/mech
@@ -945,6 +1049,9 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_8
 	recoil = RECOIL_OFF
+	recoil_unwielded = RECOIL_OFF
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_NONE
 
 /obj/item/ammo_magazine/rifle/drg_scout_assault/mech
 	name = "\improper Magazine (10x24mm)"
@@ -963,8 +1070,8 @@
 	icon_state = "rpg"
 	item_state = "rpg_inhand"
 	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
-		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons_l.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons_r.dmi'
 		)
 
 	current_mag = /obj/item/ammo_magazine/drg_engineer_shotgun/mech
@@ -995,8 +1102,8 @@
 	icon_state = "minigun"
 	item_state = "minigun_inhand"
 	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
-		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons_l.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons_r.dmi'
 		)
 
 	current_mag = /obj/item/ammo_magazine/drg_gunner_minigun/mech
@@ -1023,8 +1130,8 @@
 	icon_state = "blade"
 	item_state = "blade_inhand"
 	item_icons = list(
-		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons.dmi',
-		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons.dmi'
+		WEAR_L_HAND = 'void-marines/icons/mech_core_weapons_l.dmi',
+		WEAR_R_HAND = 'void-marines/icons/mech_core_weapons_r.dmi'
 		)
 	force = 100
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK

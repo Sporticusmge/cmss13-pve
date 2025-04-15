@@ -1,8 +1,14 @@
+/atom/movable/screen/action_button/MouseEntered(location, control, params)
+	if(source_action.have_info)
+		openToolTip(usr, src, params, content = source_action.info)
+
 /datum/action/human_action/activable/eject
 	name = "Pilot Ejection"
 	icon_file = 'icons/mob/hud/actions.dmi'
 	action_icon_state = "cancel_view"
 
+	have_info = TRUE
+	info = "Кнопка, отвечающая за выброс пилота из меха!"
 	cooldown = 2 SECONDS
 
 /datum/action/human_action/activable/eject/action_activate()
@@ -36,6 +42,8 @@
 // MESSAGE SYSTEM
 
 /datum/action/innate/message_squad/mech
+	have_info = TRUE
+	info = "Кнопка, отвечающая за связь с другими членами вашей команды!"
 
 /datum/action/innate/message_squad/mech/action_activate()
 	SHOULD_CALL_PARENT(FALSE)
@@ -107,6 +115,8 @@
 	icon_file = 'icons/mob/hud/actions.dmi'
 	action_icon_state = "accuracy_improvement"
 
+	have_info = TRUE
+	info = "Кнопка, включающая отражающий щит. На промежуток тридцати секунд, вы станете фактически неуязвимы для всех атак дальнего типа."
 	cooldown = 1 MINUTES
 
 /datum/action/human_action/activable/mech_shield/action_activate()
@@ -147,6 +157,8 @@
 	icon_file = 'icons/mob/hud/actions.dmi'
 	action_icon_state = "accuracy_improvement"
 
+	have_info = TRUE
+	info = "Кнопка, разогревающая ваши бустеры для создания дополнительного рывка. Позволит передвигаться быстрее некоторое время."
 	cooldown = 1 MINUTES
 
 /datum/action/human_action/activable/mech_boost/action_activate()
@@ -167,7 +179,7 @@
 
 	enter_cooldown()
 
-	X.species.slowdown = -3
+	X.speed = -3
 	X.balloon_alert_to_viewers("*engines lit!*")
 	X.add_filter("boost_outline", 1, list("type" = "outline", "color" = "#f33100", "size" = 1))
 	addtimer(CALLBACK(src, PROC_REF(remove_boost)), 15 SECONDS)
@@ -176,19 +188,81 @@
 
 /datum/action/human_action/activable/mech_boost/proc/remove_boost()
 	var/mob/living/carbon/human/mech/light/X = owner
-	X.species.slowdown = -1.5
+	X.speed = initial(X.speed)
 	X.remove_filter("boost_outline")
+
+// Throwing Shit
+
+/datum/action/human_action/activable/mech_thow
+	name = "Air-Bomb"
+	icon_file = 'void-marines/icons/armored/hardpoint_modules.dmi'
+	action_icon_state = "APC uninstalled empty flare launcher"
+
+	have_info = TRUE
+	info = "Кнопка, запускающая процесс выдува. Воздушные потоки отталкивают всех стоящих рядом существ."
+	cooldown = 1 MINUTES
+
+/datum/action/human_action/activable/mech_thow/action_activate()
+	SHOULD_CALL_PARENT(FALSE)
+	if(!can_use_action() || !action_cooldown_check())
+		return
+
+	var/mob/living/carbon/human/mech/X = owner
+
+	to_chat(X, SPAN_XENODANGER("You starting to prepare your engines..."))
+
+	if(!do_after(X, 1 SECONDS, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
+		to_chat(X, SPAN_XENODANGER("You stop emptying your tanks."))
+		return
+
+	if(!can_use_action() || !action_cooldown_check())
+		return
+
+	enter_cooldown()
+
+	var/list/escape_route = list()
+
+	for(var/turf/E in oview(7,X))
+		if(E.density)
+			continue
+		escape_route += E
+
+	X.balloon_alert_to_viewers("*air out!*")
+	for(var/mob/living/T in oview(2,X))
+		var/turf/targ = get_step(T, X.dir)
+		X.flick_attack_overlay(T, "disarm")
+		T.throw_atom(targ, 4, SPEED_FAST, X, 1)
+
+	spawn(2 SECONDS)
+		playsound(X, 'sound/items/jetpack_sound.ogg', 45, TRUE)
+		var/turf/escape = pick(escape_route)
+		var/obj/effect/warning/hover/warning = new(escape)
+		RegisterSignal(X, COMSIG_CLIENT_MOB_MOVE, PROC_REF(disable_flying_movement))
+		X.throw_atom(escape, 5, SPEED_FAST, launch_type = HIGH_LAUNCH)
+		UnregisterSignal(X, COMSIG_CLIENT_MOB_MOVE)
+		qdel(warning)
+
+	return ..()
+
+/datum/action/human_action/activable/mech_thow/proc/disable_flying_movement(mob/living/carbon/human/user)
+	SIGNAL_HANDLER
+	return COMPONENT_OVERRIDE_MOVE
 
 // Repair
 
 /datum/action/human_action/activable/mech_repair
 	name = "Combat Repair"
-	icon_file = 'icons/mob/hud/actions.dmi'
-	action_icon_state = "accuracy_improvement"
+	icon_file = 'void-marines/icons/armored/hardpoint_modules.dmi'
+	action_icon_state = "medical_interior"
 
 	cooldown = 1 MINUTES
-	var/uses = 5
+	var/uses = 8
+	have_info = TRUE
+	info = "Запускает процесс полевого ремонта. Запасы ваших ресурсов крайне ограничены, вы можете совершить лишь ... починок."
 
+/datum/action/human_action/activable/mech_repair/New(Target, override_icon_state)
+	. = ..()
+	info = "Запускает процесс полевого ремонта. Запасы ваших ресурсов крайне ограничены, вы можете совершить лишь [uses] починок."
 
 /datum/action/human_action/activable/mech_repair/action_activate()
 	SHOULD_CALL_PARENT(FALSE)

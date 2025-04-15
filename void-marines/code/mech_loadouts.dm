@@ -38,7 +38,6 @@
 		load_skills(M, mob_client)
 		load_languages(M, mob_client)
 		load_id(M, mob_client)
-		load_gear(M, mob_client)
 		load_status(M, mob_client)
 
 		load_traits(M, mob_client)
@@ -51,6 +50,17 @@
 
 		M.hud_set_squad()
 		M.add_to_all_mob_huds()
+
+		M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+
+		for(var/obj/limb/part as anything in M.limbs)
+			if(part.status & LIMB_DESTROYED)
+				continue
+			part.plate_color = M.armor_color
+
+		M.update_color_overlays()
+
+		load_gear(M, mob_client)
 
 	return TRUE
 
@@ -98,7 +108,6 @@
 		load_skills(M, mob_client)
 		load_languages(M, mob_client)
 		load_id(M, mob_client)
-		load_gear(M, mob_client)
 		load_status(M, mob_client)
 
 		load_traits(M, mob_client)
@@ -111,6 +120,17 @@
 
 		M.hud_set_squad()
 		M.add_to_all_mob_huds()
+
+		M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+
+		for(var/obj/limb/part as anything in M.limbs)
+			if(part.status & LIMB_DESTROYED)
+				continue
+			part.plate_color = M.armor_color
+
+		M.update_color_overlays()
+
+		load_gear(M, mob_client)
 
 	return TRUE
 
@@ -154,7 +174,6 @@
 		load_skills(M, mob_client)
 		load_languages(M, mob_client)
 		load_id(M, mob_client)
-		load_gear(M, mob_client)
 		load_status(M, mob_client)
 
 		load_traits(M, mob_client)
@@ -167,6 +186,17 @@
 
 		M.hud_set_squad()
 		M.add_to_all_mob_huds()
+
+		M.armor_color = pick("#40493c","#3f475a","#837e53","#994b0c")
+
+		for(var/obj/limb/part as anything in M.limbs)
+			if(part.status & LIMB_DESTROYED)
+				continue
+			part.plate_color = M.armor_color
+
+		M.update_color_overlays()
+
+		load_gear(M, mob_client)
 
 	return TRUE
 
@@ -226,7 +256,6 @@
 		load_skills(M, mob_client)
 		load_languages(M, mob_client)
 		load_id(M, mob_client)
-		load_gear(M, mob_client)
 		load_status(M, mob_client)
 
 		load_traits(M, mob_client)
@@ -239,6 +268,17 @@
 
 		M.hud_set_squad()
 		M.add_to_all_mob_huds()
+
+		M.armor_color = pick("#555555","#633c3c","#635438","#855235")
+
+		for(var/obj/limb/part as anything in M.limbs)
+			if(part.status & LIMB_DESTROYED)
+				continue
+			part.plate_color = M.armor_color
+
+		M.update_color_overlays()
+
+		load_gear(M, mob_client)
 
 		M.AddComponent(/datum/component/human_ai)
 

@@ -59,6 +59,7 @@
 	var/image/burn_overlay //Ditto but for burns.
 
 	var/image/color_overlay // For Mechs
+	var/plate_color
 
 	var/splint_icon_amount = 1
 	var/bandage_icon_amount = 1
@@ -387,6 +388,9 @@
 	SEND_SIGNAL(src, COMSIG_LIMB_TAKEN_DAMAGE, is_ff, previous_brute, previous_burn)
 	owner.updatehealth()
 	owner.update_damage_overlays()
+	if(istype(owner, /mob/living/carbon/human/mech))
+		var/mob/living/carbon/human/mech/M = owner
+		M.update_color_overlays()
 	start_processing()
 
 ///Special delimbs for different limbs
@@ -681,6 +685,9 @@ This function completely restores a damaged organ to perfect condition.
 	// sync the organ's damage with its wounds
 	update_damages()
 	owner.update_damage_overlays()
+	if(istype(owner, /mob/living/carbon/human/mech))
+		var/mob/living/carbon/human/mech/M = owner
+		M.update_color_overlays()
 	if(wound_disappeared)
 		owner.update_med_icon()
 		remove_wound_bleeding()
