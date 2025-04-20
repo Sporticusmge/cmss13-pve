@@ -13409,7 +13409,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/gear/sea,
+/obj/structure/machinery/cm_vending/gear/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "feZ" = (
@@ -19562,8 +19562,8 @@
 /area/almayer/living/cryo_cells)
 "hqk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /obj/item/book/manual/chef_recipes,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 15;
@@ -23405,8 +23405,8 @@
 /area/almayer/shipboard/navigation)
 "iMN" = (
 /obj/structure/machinery/power/apc/power/east,
-/obj/item/storage/box/nade_box/tear_gas,
-/obj/item/storage/box/nade_box/tear_gas{
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -24330,9 +24330,9 @@
 /area/almayer/hallways/lower/vehiclehangar)
 "jdy" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
@@ -27950,8 +27950,8 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "kuU" = (
@@ -28826,7 +28826,7 @@
 /area/almayer/hallways/upper/aft_hallway)
 "kKB" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/effect/spawner/random/tool,
 /obj/item/tool/hand_labeler,
 /obj/item/clipboard,
@@ -36463,7 +36463,7 @@
 	pixel_x = 4;
 	pixel_y = 15
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 2
 	},
@@ -47295,8 +47295,8 @@
 /area/almayer/maint/hull/upper/u_a_p)
 "rOF" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/almayer,
 /area/almayer/living/cafeteria_officer)
 "rOQ" = (
@@ -48502,7 +48502,7 @@
 /turf/open/floor/almayer,
 /area/almayer/hallways/lower/port_midship_hallway)
 "sqv" = (
-/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/machinery/cm_vending/clothing/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "sqB" = (
