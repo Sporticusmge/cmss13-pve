@@ -38,6 +38,10 @@ map desert_dam
 	minplayers 130
 endmap
 
+map hybrisa_dam
+	minplayers 130
+endmap
+
 map ice_colony_v1
 	minplayers 130
 endmap
