@@ -146,6 +146,7 @@
 	plane = DISPLACEMENT_PLATE_RENDER_LAYER
 	pixel_x = -496
 	pixel_y = -496
+	vis_flags = 0
 
 /obj/effect/shield/Initialize(mapload, radius = 3, easing_type = SINE_EASING|EASE_OUT, y_offset, x_offset)
 	. = ..()
