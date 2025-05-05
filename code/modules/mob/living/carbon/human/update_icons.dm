@@ -776,18 +776,26 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 	apply_overlay(FIRE_LAYER)
 
 
-/mob/living/carbon/human/proc/update_effects()
+/mob/living/carbon/human/proc/update_effects(layer_override = FALSE)
 	remove_overlay(EFFECTS_LAYER)
 
-	var/image/I
+	var/mutable_appearance/I
 	for(var/datum/effects/E in effects_list)
 		if(E.icon_path && E.mob_icon_state_path)
 			if(!I)
-				I = image("icon" = E.icon_path, "icon_state" = E.mob_icon_state_path, "layer"= -EFFECTS_LAYER)
+				I = mutable_appearance("icon" = E.icon_path, "icon_state" = E.mob_icon_state_path, "layer"= (layer_override ? layer_override : -EFFECTS_LAYER))
 			else
-				I.overlays += image("icon" = E.icon_path, "icon_state" = E.mob_icon_state_path, "layer"= -EFFECTS_LAYER)
+				I.overlays += mutable_appearance("icon" = E.icon_path, "icon_state" = E.mob_icon_state_path, "layer"= (layer_override ? layer_override : -EFFECTS_LAYER))
 	if(!I)
 		return
+	if(body_position == LYING_DOWN)
+		switch(transform.b)
+			if(1) //uh I have no idea how matricies work
+				I.transform = I.transform.Turn(270)
+				I.transform = I.transform.Translate(-4, 0)
+			if(-1) //but I noticed these values were unique between the laying directions :0)
+				I.transform = I.transform.Turn(90)
+				I.transform = I.transform.Translate(4, 0)
 	overlays_standing[EFFECTS_LAYER] = I
 	apply_overlay(EFFECTS_LAYER)
 

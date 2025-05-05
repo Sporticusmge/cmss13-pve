@@ -640,9 +640,16 @@
 	baseturfs = /turf/open/gm/river
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
+	layer = UNDER_TURF_LAYER -0.03
 
 /turf/open/gm/river/pool
 	fishing_allowed = 0
+
+/turf/open/gm/river/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -8)
 
 /turf/open/gm/river/Initialize(mapload, ...)
 	. = ..()
@@ -659,9 +666,9 @@
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
-	else
+/*	else
 		name = default_name
-		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER,"dir" = dir)
+		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER,"dir" = dir)*/
 
 /turf/open/gm/river/ex_act(severity)
 	if(covered & severity >= EXPLOSION_THRESHOLD_LOW)
@@ -829,6 +836,12 @@
 	icon_state = "beach"
 	baseturfs = /turf/open/gm/coast
 	supports_surgery = FALSE
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/coast/Entered(atom/movable/A)
+	. = ..()
+	if(ishuman(A))
+		A.AddComponent(/datum/component/turf_overlay_effect, src.type, -2)
 
 /turf/open/gm/coast/north
 
@@ -882,6 +895,10 @@
 	is_groundmap_turf = FALSE // Not real ground
 	fishing_allowed = TRUE
 
+/turf/open/gm/riverdeep/Entered(atom/movable/A)
+	. = ..()
+	if(ishuman(A))
+		A.AddComponent(/datum/component/turf_overlay_effect, src.type, -16)
 
 /turf/open/gm/riverdeep/Initialize(mapload, ...)
 	. = ..()

@@ -179,6 +179,12 @@
 	icon_state = "shore1"
 	var/toxic = 0
 	supports_surgery = FALSE
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/desert/desert_shore/Entered(atom/movable/A)
+	. = ..()
+	if(ishuman(A))
+		A.AddComponent(/datum/component/turf_overlay_effect, src.type, -2)
 
 /turf/open/desert/desert_shore/update_icon()
 	..()
@@ -352,6 +358,13 @@
 /turf/open/gm/river/desert/shallow
 	icon_state = "shallow"
 	icon_overlay = "_shallow"
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/river/desert/shallow/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -8)
 
 /turf/open/gm/river/desert/shallow/covered
 	covered = TRUE
@@ -367,6 +380,13 @@
 /turf/open/gm/river/desert/shallow_edge
 	icon_state = "shallow_edge"
 	icon_overlay = "shallow_edge_overlay"
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/river/desert/shallow_edge/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -12)
 
 /turf/open/gm/river/desert/shallow_edge/southwest
 	dir = SOUTHWEST
@@ -409,6 +429,13 @@
 /turf/open/gm/river/desert/shallow_corner
 	icon_state = "shallow_c"
 	icon_overlay = "shallow_c_overlay"
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/river/desert/shallow_corner/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -12)
 
 /turf/open/gm/river/desert/shallow_corner/covered
 	covered = TRUE
@@ -428,6 +455,13 @@
 /turf/open/gm/river/desert/deep
 	icon_state = "deep"
 	icon_overlay = "_deep"
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/river/desert/deep/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -16)
 
 /turf/open/gm/river/desert/deep/no_slowdown
 	base_river_slowdown = 0

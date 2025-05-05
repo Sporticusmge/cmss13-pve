@@ -694,6 +694,13 @@
 	else
 		apply_transform(base.Turn(visual_angle), UPDATE_TRANSFORM_ANIMATION_TIME)
 
+/mob/living/carbon/human/update_transform(instant_update = FALSE)
+	..()
+
+	for(var/datum/effects/turf_overlay_effect/hooplah in effects_list)
+		update_effects()
+		var/turf/gotten_turf = get_turf(src)
+		gotten_turf.Entered(src, loc)
 
 // legacy procs
 /mob/living/put_in_l_hand(obj/item/W)
