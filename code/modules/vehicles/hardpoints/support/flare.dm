@@ -31,6 +31,8 @@
 		"8" = list(20, -6)
 	)
 
+	firing_smoke = FALSE
+
 	scatter = 6
 	fire_delay = 3.0 SECONDS
 
