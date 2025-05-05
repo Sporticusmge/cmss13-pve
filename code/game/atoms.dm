@@ -850,3 +850,6 @@ Parameters are passed from New.
 /atom/Exited(atom/movable/AM, direction)
 	SEND_SIGNAL(src, COMSIG_ATOM_EXITED, AM, direction)
 
+///Adds the debris element for projectile impacts
+/atom/proc/add_debris_element()
+	AddElement(/datum/element/debris, null, -40, 8, 0.7)
