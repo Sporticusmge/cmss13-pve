@@ -98,7 +98,7 @@
 	return shoot_to_kill
 
 /datum/human_ai_faction/twerebel
-	faction = FACTION_INSURRECTIONTWE
+	faction = FACTION_TWE_REBEL
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
@@ -126,7 +126,6 @@
 		"ATTACK!",
 		"Charge!",
 		"CHARGE!",
-		"Die with freedom!",
 		"NO MERCY!",
 		"No mercy!",
 		"NO QUARTER!",
@@ -156,7 +155,7 @@
 		"MOTHERFUCKER!",
 		"DAMN IT!",
 		"WE'RE HURT!",
-		"THEY GOT THEM-- IT GO UNPAID FOR!",
+		"THEY GOT THEM-- IT WON'T GO UNPAID FOR!",
 		"YOU'LL PAY, MOTHERFUCKER!",
 		"YOU'LL PAY, ASSHOLE!",
 		"THEY'RE DOWN!",
@@ -182,10 +181,29 @@
 		"DEFEND THE DREAM!",
 		"DEFEND THE REVOLUTION!",
 	)
-
-
+	reload_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Swapping magazines!",
+		"Swapping mags!",
+		"Changing magazines!",
+		"Changing mags!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME!",
+		"I HAVE TO RELOAD!",
+	)
+	reload_internal_mag_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME, RELOADING!",
+		"COVER ME!",
+		"I HAVE TO RELOAD!",
+	)
 /datum/human_ai_faction/uarebels
-	faction = FACTION_INSURRECTIONUA
+	faction = FACTION_UA_REBEL
 	friendly_factions = list(
 		FACTION_COLONIST,
 	)
@@ -283,7 +301,8 @@
 		"We're clear! Sound off!",
 		"Oorah.",
 		"Oo- fuckin'- 'rah.",
-		"Ho- fuckin' -ah.",
+		"Hooah.",
+		"Hoo'- fuckin' -ah.",
 		"I got mine...",
 		"And that's how you water the tree of liberty.",
 		"I need a break...",
@@ -350,15 +369,95 @@
 		"FREEDOM!",
 		"FREEDOM FOREVER!",
 		"THUS ALWAYS TO TYRANTS!",
+		"THUS ALWAYS, COCKSUCKERS!",
 		"ALL THREATS; FOREIGN *AND* DOMESTIC!",
+	)
+
+/datum/human_ai_faction/ua_colonial_forces //CMB & UACG mostly
+	faction = FACTION_MARSHAL
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_COLONIST,
+		FACTION_MARINE,
+		FACTION_WY,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_TWE,
+		FACTION_UPP,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Woah, woah!",
+		"Taking fire!",
+		"Shots fired!",
+		"Unit taking fire!",
+		"Don't do it!",
+		"Shit! Shots fired!",
+		"Gun! Gun!",
+		"Time to cowboy up!",
+		"You're gonna wish you stayed at home.",
+		"Never should have come here!",
+	)
+	exit_combat_lines = list(
+		"Sweep and clear.",
+		"Stay sharp.",
+		"Make sure that's the last of them",
+		"Stay sharp!",
+		"Glad that's done with...",
+		"I need a smoke...",
+		"Is that all of them?",
+		"What the hell am I doing here...",
+		"Clear? We clear? Sound off!",
+		"Jesus Christ...",
+		"Put 'em on safe and let them hang, guys.",
+	)
+	squad_member_death_lines = list(
+		"Man down!",
+		"We got a man down here!",
+		"Shit! They're wasted!",
+		"Oh shit, shit, shit...",
+		"Get back! Get back!",
+		"I got a bad feeling about this...",
+		"Shit! This can't be happening...",
+		"They're down, get a medic up here now!",
+		"Oh fuck! It's fucked!",
+		"This was just supposed to be civil disturbances!",
+		"Jesus, I didn't sign up for this!",
+		"Oh god... What am I gonna tell their family..?",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"I'm out!",
+		"Cover me, down to harsh language here!",
+		"New mag going in.",
+		"Changing mag!",
+		"I'm dry! Reloading!",
+		"Reloadi- Oops, dropped my mag there.",
+		"Dammit, I'm dry!",
+		"Should've spent more time on the range..!",
+	)
+	grenade_thrown_lines = list(
+		"Grenade!",
+		"Throwing grenade!",
+		"Frag, frag!",
+		"Banger, out!",
+		"Suck on this!",
+		"Hope I don't blow myself up with this!",
 	)
 
 /datum/human_ai_faction/uscm
 	faction = FACTION_MARINE
 	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_COLONIST,
 	)
 	neutral_factions = list(
+		FACTION_MARSHAL,
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_FREELANCER,
@@ -552,17 +651,428 @@
 		"CORPSMAN!",
 		"I'M FUBAR, MAN!",
 	)
-/datum/human_ai_faction/upp
-	faction = FACTION_UPP
+
+/datum/human_ai_faction/usa
+	faction = FACTION_ARMY
 	friendly_factions = list(
+		FACTION_MARINE,
+		FACTION_NAVY,
 		FACTION_COLONIST,
 	)
 	neutral_factions = list(
+		FACTION_MARSHAL,
+		FACTION_TWE,
+		FACTION_WY,
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_UPP,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"CONTACT!",
+		"Contact!",
+		"I GOT CONTACT!",
+		"SHIT- CONTACT!",
+		"CONTACT, FRONT!",
+		"WE GOT CONTACT!",
+		"Look alive!",
+		"GUNS UP!",
+		"There!",
+		"Over there!",
+		"OPEN FIRE!",
+		"Open fire!",
+		"ENGAGE!",
+		"Engage!",
+		"Weapons free!",
+		"WEAPONS FREE!",
+		"Weapons hot!",
+		"Wipe 'em out!",
+		"Light 'em up!",
+		"Drop 'em!",
+		"Cut 'em down!",
+		"Bring 'em down!",
+		"Fuck 'em up!",
+		"WASTE THE MOTHERFUCKERS!",
+		"Kill that fucker!",
+		"Ice that fucker!",
+		"Eat shit!",
+		"Get some!",
+		"GET SOME!",
+		"GET SOME, MOTHERFUCKER!",
+		"*warcry",
+		"KILL! KILL! KILL!",
+		"KILL!",
+		"COME AND GET SOME, MOTHERFUCKER!",
+		"Let's rock!",
+		"LET'S ROCK!",
+		"ROCK OUT, MOTHERFUCKERS!",
+		"X-RAY!",
+		"X-RAY SPOTTED!",
+		"TANGO!",
+		"TANGO SPOTTED!",
+		"Bring it!",
+		"BRING IT!",
+		"Bring it on, BRING IT ON!",
+		"ENEMY ON APPROACH!",
+		"MAKE MY DAY, BITCH!",
+		"MAKE MY DAY, MOTHERFUCKER!",
+		"ACTIVITY!",
+		"Company!",
+		"COMPANY!",
+	)
+	exit_combat_lines = list(
+		"CEASE FIRE!",
+		"Cease fire!",
+		"Cease your fire!",
+		"Hold your fire!",
+		"HOLD FIRE!",
+		"We're clear!",
+		"We clear?",
+		"Looks clear!",
+		"CLEAR!",
+		"Clear!",
+		"Keep your eyes peeled!",
+		"Might be more- Keep your eyes peeled.",
+		"Might be more- Don't get too comfortable.",
+		"Stay quiet.",
+		"Stay sharp.",
+		"Stay sharp!",
+		"Check your vitals.",
+		"We're clear! Take a breather!",
+		"We're clear! Sound off!",
+		"Hooah.",
+		"Hoo- fuckin'- 'ah.",
+		"I got mine...",
+		"Another day in the Uncle Sam's service...",
+		"I need a break...",
+		"Need a fuckin' smoke after that...",
+		"Need a fuckin' cigarette after that...",
+		"Need a fuckin' shot after that...",
+		"See the universe they said, meet interesting people...",
+		"SNAFU...",
+		"Situation normal; all fucked up...",
+		"This, is fucking FUBAR, man...",
+		"Never gets easier...",
+		"Holy Mary, mother of God pray for us sinners...",
+		"Hail Mary, full of grace...",
+		"Our Father, who art in heaven...",
+	)
+	squad_member_death_lines = list(
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"WE'RE TAKING HITS HERE!",
+		"THEY GOT THEM-- RETURN THE FUCKING FAVOUR!",
+		"YOU'LL FUCKIN' PAY, MOTHERFUCKER!",
+		"YOU'LL FUCKIN' PAY, ASSHOLE!",
+		"THEY'RE DOWN!",
+		"THEY'RE DEAD!",
+		"THEY GOT THEM!",
+		"THEY'RE HIT BAD!",
+		"THEY'RE FUCKIN' DEAD, MAN! THEY'RE FUCKIN' DEAD!",
+		"GOD DAMN IT, WHY YOU?",
+		"CORPSMAN, GET THE FUCK OVER HERE!",
+		"GET DOC OVER HERE!",
+		"DOC!",
+		"CORPSMAN!",
+		"DEVIL DOG DOWN!",
+		"MARINE DOWN!",
+		"MERCIFUL CHRIST!",
+		"SWEET JESUS!",
+		"MARY, MOTHER OF GOD!",
+		"JESUS CHRIST!",
+		"NO- NO, NOT LIKE THIS, MAN!",
+		"DON'T YOU FUCKIN' DIE ON ME, MOTHERFUCKER- STAY ALIVE!",
+		"THEY FUCKIN' KILLED THEM!",
+		"FUBAR, MAN!",
+	)
+	reload_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Swapping magazines!",
+		"Swapping mags!",
+		"Changing magazines!",
+		"Changing mags!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME!",
+		"RED! RED!-- GREEN!",
+		"I'M RED!",
+		"RED!",
+	)
+	reload_internal_mag_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER MY FUCKIN' ASS, RELOADING!",
+		"COVER ME!",
+		"RED! RED!-- GREEN!",
+		"I'M RED!",
+		"I NEED A FUCKING SPEEDLOADER- CHRIST!",
+		"RED!",
+	)
+	grenade_thrown_lines = list(
+		"GRENADE!",
+		"THROWING GRENADE!",
+		"GRENADE, GET CLEAR!",
+		"GRENADE OUT!",
+		"CLEAR OUT, GRENADE!",
+		"'NADE OUT!",
+		"TOSSIN' A NADE!",
+		"TOSSIN' A GRENADE!",
+		"EAT IT, FUCKER!",
+		"RETURN TO SENDER!",
+		"DELIVERY, MOTHERFUCKER!",
+		"*warcry",
+	)
+	need_healing_lines = list(
+		"FUCK ME!",
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"JESUS CHRIST!",
+		"BLEEDING!",
+		"MOTHER OF GOD-- NO!",
+		"I'M TAKING HITS HERE!",
+		"I'M HIT!",
+		"I'M HURT!",
+		"INJECTOR GOING IN!",
+		"INJECTOR IN!",
+		"I NEED GAUZE!",
+		"SOMEONE PATCH THIS FUCKING HOLE!",
+		"NEED MORPHINE!",
+		"NEED MORPHINE!",
+		"MEDIC, GET THE FUCK OVER HERE!",
+		"GET DOC OVER HERE!",
+		"DOC!",
+		"MEDIC!",
+		"I'M FUBAR, MAN!",
+	)
+
+/datum/human_ai_faction/usasf
+	faction = FACTION_NAVY
+	friendly_factions = list(
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_COLONIST,
+	)
+	neutral_factions = list(
+		FACTION_MARSHAL,
+		FACTION_TWE,
+		FACTION_WY,
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_UPP,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"CONTACT!",
+		"Contact!",
+		"I GOT CONTACT!",
+		"SHIT- CONTACT!",
+		"CONTACT, FRONT!",
+		"WE GOT CONTACT!",
+		"Look alive!",
+		"GUNS UP!",
+		"There!",
+		"Over there!",
+		"OPEN FIRE!",
+		"Open fire!",
+		"ENGAGE!",
+		"Engage!",
+		"Weapons free!",
+		"WEAPONS FREE!",
+		"Weapons hot!",
+		"Wipe 'em out!",
+		"Light 'em up!",
+		"Drop 'em!",
+		"Cut 'em down!",
+		"Bring 'em down!",
+		"Fuck 'em up!",
+		"WASTE THE MOTHERFUCKERS!",
+		"Kill that fucker!",
+		"Ice that fucker!",
+		"Eat shit!",
+		"Get some!",
+		"GET SOME!",
+		"GET SOME, MOTHERFUCKER!",
+		"*warcry",
+		"KILL! KILL! KILL!",
+		"KILL!",
+		"COME AND GET SOME, MOTHERFUCKER!",
+		"Let's rock!",
+		"LET'S ROCK!",
+		"ROCK OUT, MOTHERFUCKERS!",
+		"X-RAY!",
+		"X-RAY SPOTTED!",
+		"TANGO!",
+		"TANGO SPOTTED!",
+		"Bring it!",
+		"BRING IT!",
+		"Bring it on, BRING IT ON!",
+		"ENEMY ON APPROACH!",
+		"MAKE MY DAY, BITCH!",
+		"MAKE MY DAY, MOTHERFUCKER!",
+		"ACTIVITY!",
+		"Company!",
+		"COMPANY!",
+	)
+	exit_combat_lines = list(
+		"CEASE FIRE!",
+		"Cease fire!",
+		"Cease your fire!",
+		"Hold your fire!",
+		"HOLD FIRE!",
+		"We're clear!",
+		"We clear?",
+		"Looks clear!",
+		"CLEAR!",
+		"Clear!",
+		"Keep your eyes peeled!",
+		"Might be more- Keep your eyes peeled.",
+		"Might be more- Don't get too comfortable.",
+		"Stay quiet.",
+		"Stay sharp.",
+		"Stay sharp!",
+		"Check your vitals.",
+		"We're clear! Take a breather!",
+		"We're clear! Sound off!",
+		"Hooyah.",
+		"Hoo- fuckin'- 'yah.",
+		"I got mine...",
+		"I need a break...",
+		"Need a fuckin' smoke after that...",
+		"Need a fuckin' cigarette after that...",
+		"Need a fuckin' shot after that...",
+		"See the universe they said, meet interesting people...",
+		"SNAFU...",
+		"Situation normal; all fucked up...",
+		"This, is fucking FUBAR, man...",
+		"Never gets easier...",
+		"Holy Mary, mother of God pray for us sinners...",
+		"Hail Mary, full of grace...",
+		"Our Father, who art in heaven...",
+	)
+	squad_member_death_lines = list(
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"WE'RE TAKING HITS HERE!",
+		"THEY GOT THEM-- RETURN THE FUCKING FAVOUR!",
+		"YOU'LL FUCKIN' PAY, MOTHERFUCKER!",
+		"YOU'LL FUCKIN' PAY, ASSHOLE!",
+		"THEY'RE DOWN!",
+		"THEY'RE DEAD!",
+		"THEY GOT THEM!",
+		"THEY'RE HIT BAD!",
+		"THEY'RE FUCKIN' DEAD, MAN! THEY'RE FUCKIN' DEAD!",
+		"GOD DAMN IT, WHY YOU?",
+		"CORPSMAN, GET THE FUCK OVER HERE!",
+		"GET DOC OVER HERE!",
+		"DOC!",
+		"CORPSMAN!",
+		"DEVIL DOG DOWN!",
+		"MARINE DOWN!",
+		"MERCIFUL CHRIST!",
+		"SWEET JESUS!",
+		"MARY, MOTHER OF GOD!",
+		"JESUS CHRIST!",
+		"NO- NO, NOT LIKE THIS, MAN!",
+		"DON'T YOU FUCKIN' DIE ON ME, MOTHERFUCKER- STAY ALIVE!",
+		"THEY FUCKIN' KILLED THEM!",
+		"FUBAR, MAN!",
+	)
+	reload_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Swapping magazines!",
+		"Swapping mags!",
+		"Changing magazines!",
+		"Changing mags!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME!",
+		"RED! RED!-- GREEN!",
+		"I'M RED!",
+		"RED!",
+	)
+	reload_internal_mag_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER MY FUCKIN' ASS, RELOADING!",
+		"COVER ME!",
+		"RED! RED!-- GREEN!",
+		"I'M RED!",
+		"I NEED A FUCKING SPEEDLOADER- CHRIST!",
+		"RED!",
+	)
+	grenade_thrown_lines = list(
+		"GRENADE!",
+		"THROWING GRENADE!",
+		"GRENADE, GET CLEAR!",
+		"GRENADE OUT!",
+		"CLEAR OUT, GRENADE!",
+		"'NADE OUT!",
+		"TOSSIN' A NADE!",
+		"TOSSIN' A GRENADE!",
+		"EAT IT, FUCKER!",
+		"RETURN TO SENDER!",
+		"DELIVERY, MOTHERFUCKER!",
+		"*warcry",
+	)
+	need_healing_lines = list(
+		"FUCK ME!",
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"JESUS CHRIST!",
+		"BLEEDING!",
+		"MOTHER OF GOD-- NO!",
+		"I'M TAKING HITS HERE!",
+		"I'M HIT!",
+		"I'M HURT!",
+		"INJECTOR GOING IN!",
+		"INJECTOR IN!",
+		"I NEED GAUZE!",
+		"SOMEONE PATCH THIS FUCKING HOLE!",
+		"NEED MORPHINE!",
+		"NEED MORPHINE!",
+		"CORPSMAN, GET THE FUCK OVER HERE!",
+		"GET DOC OVER HERE!",
+		"DOC!",
+		"CORPSMAN!",
+		"I'M FUBAR, MAN!",
+	)
+
+/datum/human_ai_faction/upp
+	faction = FACTION_UPP
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_MARINE,
+		FACTION_COLONIST,
+	)
+	neutral_factions = list(
+		FACTION_TWE,
+		FACTION_WY,
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
 		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_MERCENARY,
-		FACTION_TWE,
 		FACTION_SURVIVOR,
 	)
 	enter_combat_lines = list(
@@ -706,17 +1216,22 @@
 		"COVER ME!",
 	)
 
-/datum/human_ai_faction/wy
-	faction = FACTION_WY
+/datum/human_ai_faction/upp
+	faction = FACTION_UPP
 	friendly_factions = list(
 		FACTION_COLONIST,
 		FACTION_PMC,
 		FACTION_TWE,
 		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
 		FACTION_CONTRACTOR,
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
 		FACTION_MERCENARY,
 	)
 
@@ -994,35 +1509,5 @@
 		"This is for you...!",
 	)
 
-/datum/human_ai_faction/skeletons
-	faction = FACTION_UNDEAD
-	friendly_factions = list(
-		FACTION_XENOMORPH,
-	)
-	enter_combat_lines = list(
-		"Ж И В Ы Е...",
-		"Я   В А С   Ч У Ю...",
-		"В А М   Н Е   С Б Е Ж А Т Ь...",
-		"Я   У П О К О Ю   В А С...",
-		"Н Е   С О П Р О Т И В Л Я Й Т Е С Ь...",
-		"С Л Е Д У Й Т Е   З О В У...",
-	)
-	exit_combat_lines = list(
-		"Н И Ч Е Г О...",
-		"В С Ё   К О Н Ч Е Н О...",
-		"М Ы   З А С Т А В И М   И Х   П Р И С О Е Д И Н И Т Ь С Я...",
-		"О Н И   У Ш Л И...",
-		"В А М   З Д Е С Ь   Н Е    М Е С Т О...",
-	)
-	squad_member_death_lines = list(
-		"О Н   В О С С Т А Н Е Т   В Н О В Ь...",
-		"Э Т О   В Р Е М Е Н Н О...",
-		"Н А Ш И   С Т Р А Д А Н И Я   В Е Ч Н Ы...",
-		"О Н   С Н О В А   С О Б Е Р Ё Т   Н А С...",
-	)
-	reload_lines = list(
-		". . .",
-	)
-	reload_internal_mag_lines = list(
-		". . .",
-	)
+/datum/human_ai_faction/xeno_cultist/corrupted
+	faction = FACTION_XENOMORPH_CORRPUTED

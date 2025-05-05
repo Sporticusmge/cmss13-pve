@@ -7,6 +7,7 @@
 #define LATIN_AMERICAN_ETHNICITY "Latin-American"
 #define JAPANESE_ETHNICITY "Japanese"
 #define UPP_ETHNICITY "Progressive"
+#define CHINESE_ETHNICITY "Chinese"
 
 /datum/equipment_preset
 	var/name = "Preset"
@@ -90,7 +91,7 @@
 	var/random_name
 	var/first_name
 	var/last_name
-	new_human.gender = pick(85;MALE,15;FEMALE)
+	new_human.gender = pick(60;MALE,40;FEMALE)
 	switch(ethnicity)
 		if(LATIN_AMERICAN_ETHNICITY)
 			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
@@ -213,6 +214,33 @@
 				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
 			else
 				new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+		if(CHINESE_ETHNICITY)
+			new_human.skin_color = pick(50;"Pale 1",50;"Tan 1")
+			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10))
+			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10))
+			var/hair_color = pick(hair_colors)
+			new_human.r_hair = hair_colors[hair_color][1]
+			new_human.g_hair = hair_colors[hair_color][2]
+			new_human.b_hair = hair_colors[hair_color][3]
+			new_human.r_facial = hair_colors[hair_color][1]
+			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
+			var/eye_color = pick(colors)
+			new_human.r_eyes = colors[eye_color][1]
+			new_human.g_eyes = colors[eye_color][2]
+			new_human.b_eyes = colors[eye_color][3]
+			//gender checks
+			if(new_human.gender == MALE)
+				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+			else
+				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
+			//surname
+			last_name = "[capitalize(randomly_generate_chinese_word(rand(1, 4)))]"
+			random_name = "[first_name] [last_name]"
+			new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(18,55)
 
 /datum/equipment_preset/proc/load_age(mob/living/carbon/human/new_human, client/mob_client)
@@ -1006,7 +1034,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/self_setting(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/proc/add_ice_colony_survivor_equipment(mob/living/carbon/human/new_human)
 	if((SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD]) && (SSmapping.configs[GROUND_MAP].map_name != MAP_CORSAT))
@@ -1102,7 +1130,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(0)
 			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov(new_human), WEAR_IN_BACK)
 		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun(new_human), WEAR_IN_BACK)
 		if(3)
@@ -1468,6 +1496,18 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
 
+/datum/equipment_preset/proc/add_neckerchief(mob/living/carbon/human/new_human)
+	var/random_face_wrap = rand(1,5)
+	switch(random_face_wrap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/black(new_human), WEAR_FACE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/gray(new_human), WEAR_FACE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief(new_human), WEAR_FACE)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/neckerchief/green(new_human), WEAR_FACE)
+
 	//UPP
 /datum/equipment_preset/proc/add_upp_head(mob/living/carbon/human/new_human)
 	var/maybeberet = rand(1,3)
@@ -1540,12 +1580,16 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/green, WEAR_IN_HELMET)
 
 /datum/equipment_preset/proc/add_combat_gloves(mob/living/carbon/human/new_human)
-	var/add_combat_gloves = rand(1,4)
+	var/add_combat_gloves = rand(1,5)
 	switch(add_combat_gloves)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/fingerless, WEAR_HANDS)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/fingerless, WEAR_HANDS)
 
 /datum/equipment_preset/proc/add_helmet_cigarettes(mob/living/carbon/human/new_human)
 	var/add_helmet_cigarettes = rand(1,10)
@@ -1562,3 +1606,13 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_HELMET)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/arcturian_ace, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/canc/uniform = new()
+	var/random_uniform = rand(1,3)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
