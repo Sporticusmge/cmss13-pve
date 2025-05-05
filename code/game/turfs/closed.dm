@@ -291,6 +291,11 @@
 	icon = 'icons/turf/dropship2.dmi'
 	icon_state = "1"
 
+/turf/closed/shuttle/inchon
+	name = "\improper Inchon"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+
 /turf/closed/shuttle/cyclone/transparent
 	opacity = FALSE
 
