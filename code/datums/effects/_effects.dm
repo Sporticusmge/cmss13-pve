@@ -42,8 +42,7 @@
 	if(!validate_atom(thing) || QDELETED(thing))
 		qdel(src)
 		return
-	if(flags & EFFECT_NO_PROCESS)
-		START_PROCESSING(SSoldeffects, src)
+	START_PROCESSING(SSoldeffects, src)
 
 	affected_atom = thing
 	LAZYADD(affected_atom.effects_list, src)
@@ -92,6 +91,9 @@
 			qdel(src)
 			return FALSE
 
+	if(flags & EFFECT_NO_PROCESS)
+		return FALSE
+
 	if((flags & NO_PROCESS_ON_DEATH) && affected_mob.stat == DEAD)
 		return FALSE
 	return TRUE
@@ -104,6 +106,9 @@
 
 	if((flags & DEL_ON_LIVING) && affected_obj.health > 0)
 		qdel(src)
+		return FALSE
+
+	if(flags & EFFECT_NO_PROCESS)
 		return FALSE
 
 	if((flags & NO_PROCESS_ON_DEATH) && affected_obj.health <= 0)
