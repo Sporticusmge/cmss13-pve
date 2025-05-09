@@ -695,7 +695,7 @@
 		apply_transform(base.Turn(visual_angle), UPDATE_TRANSFORM_ANIMATION_TIME)
 
 /mob/living/carbon/human/update_transform(instant_update = FALSE)
-	..()
+	. = ..()
 
 	for(var/datum/effects/turf_overlay_effect/hooplah in effects_list)
 		update_effects()

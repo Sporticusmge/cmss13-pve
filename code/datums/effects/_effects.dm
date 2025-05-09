@@ -43,7 +43,7 @@
 		qdel(src)
 		return
 	if(flags & EFFECT_NO_PROCESS)
-		START_PROCESSING(SSeffects, src)
+		START_PROCESSING(SSoldeffects, src)
 
 	affected_atom = thing
 	LAZYADD(affected_atom.effects_list, src)
