@@ -2218,3 +2218,6 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/mateba/cmateba/black
+	flags_atom = NO_NAME_OVERRIDE

@@ -258,6 +258,10 @@
 	icon_state = "binary_key"
 	channels = list()
 
+/obj/item/device/encryptionkey/soc/army
+	name = "\improper Army Radio Encryption Key"
+	channels = list(SQUAD_SOF = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
 //ERT, PMC
 
 /obj/item/device/encryptionkey/dutch

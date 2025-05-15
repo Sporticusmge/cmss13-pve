@@ -701,6 +701,11 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
+/obj/item/weapon/gun/pistol/vp78/army
+	starting_attachment_types = list(/obj/item/attachable/extended_barrel, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/vp78/army/heap
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/heap
 
 //-------------------------------------------------------
 //DEAGLE //This one is obvious.

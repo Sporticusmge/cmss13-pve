@@ -156,6 +156,11 @@
 	html_link = ""
 	color = "white"
 
+/obj/item/map/tyrargo_rift
+	name = "\improper Tyrargo Rift map"
+	desc = "A labeled blueprint of the UA city Tyrargo Rift"
+	html_link = "images/7/79/Tyrargo_Rift.png"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -188,6 +193,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
