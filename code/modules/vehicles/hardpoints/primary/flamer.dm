@@ -13,6 +13,7 @@
 
 	health = 2000
 	firing_arc = 90
+	firing_smoke = FALSE
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary_flamer
 	max_clips = 1
@@ -61,3 +62,14 @@
 /obj/item/hardpoint/primary/flamer/stop_fire()
 	. = ..()
 	playsound(get_turf(src), 'sound/weapons/flamethrower_complete.ogg', 60)
+
+/obj/item/hardpoint/primary/flamer/update_smoke_dir(datum/source, dir, newdir)
+	switch(newdir)
+		if(SOUTH)
+			smoke_holder.particles.position = list(55, 70, 0)
+		if(NORTH)
+			smoke_holder.particles.position = list(50, 55, 0)
+		if(EAST)
+			smoke_holder.particles.position = list(45, 70, 0)
+		if(WEST)
+			smoke_holder.particles.position = list(50, 72, 0)

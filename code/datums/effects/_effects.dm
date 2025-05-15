@@ -25,6 +25,7 @@
 #define INF_DURATION 4 //An effect that lasts forever
 #define NO_PROCESS_ON_DEATH 8 //Don't process while the mob is dead
 #define DEL_ON_UNDEFIBBABLE 16 //Delete the effect when human mob is undefibbable
+#define EFFECT_NO_PROCESS 32 //! Do not process this effect at all
 
 /datum/effects
 	var/effect_name = "standard" //Name of the effect
@@ -90,6 +91,9 @@
 			qdel(src)
 			return FALSE
 
+	if(flags & EFFECT_NO_PROCESS)
+		return FALSE
+
 	if((flags & NO_PROCESS_ON_DEATH) && affected_mob.stat == DEAD)
 		return FALSE
 	return TRUE
@@ -102,6 +106,9 @@
 
 	if((flags & DEL_ON_LIVING) && affected_obj.health > 0)
 		qdel(src)
+		return FALSE
+
+	if(flags & EFFECT_NO_PROCESS)
 		return FALSE
 
 	if((flags & NO_PROCESS_ON_DEATH) && affected_obj.health <= 0)

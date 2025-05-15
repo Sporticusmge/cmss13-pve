@@ -67,6 +67,9 @@
 	reinforced = !reinforced
 	update_icon()
 
+/obj/structure/barricade/snow/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SNOW, -40, 5, 1)
+
 /obj/structure/barricade/handrail/attackby(obj/item/item, mob/user)
 	for(var/obj/effect/xenomorph/acid/A in src.loc)
 		if(A.acid_t == src)

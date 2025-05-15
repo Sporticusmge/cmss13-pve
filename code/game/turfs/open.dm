@@ -628,6 +628,7 @@
 	name = "river"
 	icon_state = "seashallow"
 	can_bloody = FALSE
+	fishing_allowed = TRUE
 	var/icon_overlay = "riverwater"
 	var/covered = 0
 	var/covered_name = "grate"
@@ -639,6 +640,16 @@
 	baseturfs = /turf/open/gm/river
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/river/pool
+	fishing_allowed = 0
+
+/turf/open/gm/river/Entered(atom/movable/A)
+	. = ..()
+	if(!covered)
+		if(ishuman(A))
+			A.AddComponent(/datum/component/turf_overlay_effect, src.type, -8)
 
 /turf/open/gm/river/Initialize(mapload, ...)
 	. = ..()
@@ -655,9 +666,9 @@
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
-	else
+/*	else
 		name = default_name
-		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER,"dir" = dir)
+		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER,"dir" = dir)*/
 
 /turf/open/gm/river/ex_act(severity)
 	if(covered & severity >= EXPLOSION_THRESHOLD_LOW)
@@ -754,6 +765,13 @@
 	color = "#995555"
 	name = "pool"
 
+/turf/open/gm/river/dark_water
+	color = "#4d4d4d"
+	name = "fuel"
+
+/turf/open/gm/river/dark_water/no_overlay
+	no_overlay = TRUE
+
 /turf/open/gm/river/red
 	color = "#995555"
 
@@ -779,11 +797,16 @@
 
 /turf/open/gm/river/ocean/deep_water
 	name = "deep water"
+
+/turf/open/gm/river/ocean/no_overlay
 	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
 	default_name = "deep ocean"
+
+/turf/open/gm/river/ocean/deep_ocean/no_overlay
+	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
@@ -813,6 +836,12 @@
 	icon_state = "beach"
 	baseturfs = /turf/open/gm/coast
 	supports_surgery = FALSE
+	layer = UNDER_TURF_LAYER -0.03
+
+/turf/open/gm/coast/Entered(atom/movable/A)
+	. = ..()
+	if(ishuman(A))
+		A.AddComponent(/datum/component/turf_overlay_effect, src.type, -2)
 
 /turf/open/gm/coast/north
 
@@ -864,7 +893,12 @@
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
 	is_groundmap_turf = FALSE // Not real ground
+	fishing_allowed = TRUE
 
+/turf/open/gm/riverdeep/Entered(atom/movable/A)
+	. = ..()
+	if(ishuman(A))
+		A.AddComponent(/datum/component/turf_overlay_effect, src.type, -16)
 
 /turf/open/gm/riverdeep/Initialize(mapload, ...)
 	. = ..()
@@ -874,6 +908,9 @@
 	no_overlay = TRUE
 	supports_surgery = FALSE
 
+/turf/open/gm/river/no_overlay_lighted
+	no_overlay = TRUE
+	supports_surgery = FALSE
 
 
 
@@ -1590,3 +1627,91 @@
 
 /turf/open/gm/empty/navalis/dig
 	desc = "Worse than Xenomorphs lurk the deepest, darkest, pits of this world. These nameless things await in the dark. Pray they don't find this escape."
+
+/turf/open/shuttle/dropship/can_surgery/inchon //forgive me father, for I have sinned
+	icon = 'icons/turf/dropship6.dmi'
+	icon_state = "dropship_interior 3,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/two
+	icon_state = "dropship_interior 4,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/three
+	icon_state = "dropship_interior 5,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/four
+	icon_state = "dropship_interior 6,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/five
+	icon_state = "dropship_interior 7,16"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/six
+	icon_state = "dropship_interior 3,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/seven
+	icon_state = "dropship_interior 4,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eight
+	icon_state = "dropship_interior 5,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/nine
+	icon_state = "dropship_interior 6,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/ten
+	icon_state = "dropship_interior 7,15"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eleven
+	icon_state = "dropship_interior 4,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twelve
+	icon_state = "dropship_interior 5,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/thirteen
+	icon_state = "dropship_interior 6,14"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/fourteen
+	icon_state = "dropship_interior 4,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/fifteen
+	icon_state = "dropship_interior 5,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/sixteen
+	icon_state = "dropship_interior 6,13"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/seventeen
+	icon_state = "dropship_interior 4,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/eighteen
+	icon_state = "dropship_interior 5,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/nineteen
+	icon_state = "dropship_interior 6,12"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twenty
+	icon_state = "dropship_interior 4,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyone
+	icon_state = "dropship_interior 5,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentytwo
+	icon_state = "dropship_interior 6,11"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentythree
+	icon_state = "dropship_interior 4,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfour
+	icon_state = "dropship_interior 5,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfive
+	icon_state = "dropship_interior 6,10"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentysix
+	icon_state = "dropship_interior 4,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyseven
+	icon_state = "dropship_interior 5,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyeight
+	icon_state = "dropship_interior 6,9"
+
+/turf/open/shuttle/dropship/can_surgery/inchon/twentynine
+	icon_state = "dropship_interior 5,17"

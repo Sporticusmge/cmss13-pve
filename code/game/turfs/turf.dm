@@ -64,6 +64,8 @@
 	var/list/atom/movable/opacity_sources
 
 	vis_flags = VIS_INHERIT_PLANE
+	/// Is fishing allowed on this turf
+	var/fishing_allowed = FALSE
 
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // this doesn't parent call for optimisation reasons

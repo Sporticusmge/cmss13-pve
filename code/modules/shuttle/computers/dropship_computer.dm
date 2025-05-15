@@ -612,6 +612,10 @@
 	is_remote = TRUE
 	can_change_shuttle = TRUE
 
+/obj/structure/machinery/computer/shuttle/dropship/flight/small/inchon
+	icon = 'icons/turf/dropship5-2.dmi'
+	icon_state = "flightcontrols"
+
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "shuttle"

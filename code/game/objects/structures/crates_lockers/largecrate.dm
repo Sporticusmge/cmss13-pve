@@ -15,6 +15,9 @@
 	if(fill_from_loc)
 		store_items()
 
+/obj/structure/largecrate/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -40, 5)
+
 /obj/structure/largecrate/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
@@ -84,6 +87,7 @@
 		unpack()
 
 /obj/structure/largecrate/bullet_act(obj/projectile/P)
+	bullet_ping(P)
 	take_damage(P.calculate_damage(P.damage))
 	return TRUE
 
@@ -270,6 +274,9 @@
 	parts_type = /obj/item/stack/sheet/metal
 	unpacking_sound = 'sound/effects/metalhit.ogg'
 	var/straps = FALSE
+
+/obj/structure/largecrate/random/barrel/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
 
 /obj/structure/largecrate/random/barrel/true_random
 	name = "barrel"
@@ -552,8 +559,8 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 
 /obj/structure/largecrate/hunter_games_supplies/Initialize()
 	. = ..()
-	new /obj/item/storage/box/m94(src)
-	new /obj/item/storage/box/m94(src)
+	new /obj/item/storage/box/flare(src)
+	new /obj/item/storage/box/flare(src)
 	new /obj/item/storage/pouch/general/medium(src)
 	new /obj/item/storage/pouch/survival(src)
 	new /obj/item/device/flashlight (src)
@@ -572,10 +579,10 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/weapon/throwing_knife(src)
 	new /obj/item/weapon/throwing_knife(src)
-	new /obj/item/storage/box/uscm_mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/donkpockets(src)
-	new /obj/item/storage/box/MRE(src)
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/pizza(src)
 
 

@@ -3,6 +3,10 @@
 	density = TRUE
 	opacity = TRUE
 
+/turf/closed/Initialize(mapload)
+	. = ..()
+	add_debris_element()
+
 /turf/closed/attack_alien(mob/user)
 	attack_hand(user)
 
@@ -325,6 +329,11 @@
 	icon = 'icons/turf/dropship2.dmi'
 	icon_state = "1"
 
+/turf/closed/shuttle/inchon
+	name = "\improper Inchon"
+	icon = 'icons/turf/dropship4.dmi'
+	icon_state = "1"
+
 /turf/closed/shuttle/cyclone/transparent
 	opacity = FALSE
 
@@ -491,3 +500,41 @@
 /turf/closed/shuttle/dropship2/WY/transparent
 	icon = 'icons/turf/dropship5.dmi'
 	opacity = FALSE
+
+// Particles
+
+/turf/closed/mineral/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
+
+/turf/closed/gm/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_LEAF, -40, 5)
+
+/turf/closed/ice/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ICE, -40, 5, 1)
+
+/turf/closed/ice_rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ICE, -40, 5, 1)
+
+/turf/closed/shuttle/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
+
+/turf/closed/wall/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -40, 5)
+
+/turf/closed/wall/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
+
+/turf/closed/wall/strata_ice/jungle/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_LEAF, -40, 5)
+
+/turf/closed/wall/solaris/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
+
+/turf/closed/wall/kutjevo/rock/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -40, 5, 1)
+
+/turf/closed/wall/resin/add_debris_element()
+	AddElement(/datum/element/debris, null, -40, 8, 0.7)
+
+/turf/closed/wall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
