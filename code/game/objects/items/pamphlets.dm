@@ -90,13 +90,6 @@
 	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Spotter")
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Spotter")
 
-/obj/item/pamphlet/skill/loader
-	name = "Loader instructional pamphlet"
-	desc = "A pamphlet used to quickly impart vital knowledge. This one has the image of a rocket on it."
-	icon_state = "pamphlet_loader"
-	trait = /datum/character_trait/skills/loader
-	bypass_pamphlet_limit = TRUE
-
 /obj/item/pamphlet/skill/loader/can_use(mob/living/carbon/human/user)
 	if(user.job != JOB_SQUAD_MARINE)
 		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
