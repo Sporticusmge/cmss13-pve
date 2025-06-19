@@ -206,10 +206,10 @@
 	toggle_off_sound = 'sound/handling/toggle_nv2.ogg'
 
 	/// The internal battery for the visor
-	var/obj/item/cell/high/power_cell
+	var/obj/item/cell/super/power_cell
 
-	/// About 5 minutes active use charge (hypothetically)
-	var/power_use = 33
+	/// About 20 minutes active use charge (hypothetically)
+	var/power_use = 15
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
 	var/lighting_alpha = 100
