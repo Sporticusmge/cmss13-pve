@@ -8,7 +8,7 @@
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_3
-	armor_deflection = XENO_ARMOR_TIER_3
+	armor_deflection = XENO_ARMOR_TIER_2
 	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_HELLHOUND //Faster than drones, slower than lurkers.
 
