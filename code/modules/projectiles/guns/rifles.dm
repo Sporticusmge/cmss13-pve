@@ -271,8 +271,12 @@
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 	attachable_allowed = list(
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/bayonet,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/flamer,advanced,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
