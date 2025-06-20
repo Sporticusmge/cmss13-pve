@@ -9,7 +9,7 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	damage = 70
-	penetration = -ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_4
 	accuracy = HIT_ACCURACY_TIER_2
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -20,11 +20,11 @@
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
-	damage = 55
+	damage = 90
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_6
 
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
@@ -39,7 +39,7 @@
 
 /datum/ammo/bullet/revolver/incendiary
 	name = "incendiary revolver bullet"
-	damage = 40
+	damage = 55
 
 /datum/ammo/bullet/revolver/incendiary/set_bullet_traits()
 	..()
@@ -81,8 +81,8 @@
 /datum/ammo/bullet/revolver/upp
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	penetration = ARMOR_PENETRATION_TIER_4
-	damage = 70
+	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 90
 
 
 /datum/ammo/bullet/revolver/upp/shrapnel
@@ -135,21 +135,21 @@
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
 
-	damage = 60
+	damage = 125
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/revolver/mateba/highimpact
 	name = ".454 heavy high-impact revolver bullet"
 	debilitate = list(0,2,0,0,0,1,0,0)
-	penetration = ARMOR_PENETRATION_TIER_1
+	penetration = ARMOR_PENETRATION_TIER_6
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 /datum/ammo/bullet/revolver/mateba/highimpact/ap
 	name = ".454 heavy high-impact armor piercing revolver bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 45
+	damage = 100
 
 /datum/ammo/bullet/revolver/mateba/highimpact/New()
 	..()
@@ -160,7 +160,7 @@
 
 /datum/ammo/bullet/revolver/mateba/highimpact/explosive //if you ever put this in normal gameplay, i am going to scream
 	name = ".454 heavy explosive revolver bullet"
-	damage = 100
+	damage = 175
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_10
