@@ -392,6 +392,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/extended_barrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	damage_mod = BULLET_DAMAGE_MULT_TIER_1
 	velocity_mod = AMMO_SPEED_TIER_1
 
 /obj/item/attachable/heavy_barrel
@@ -405,15 +406,13 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/heavy_barrel/New()
 	..()
-	accuracy_mod = -HIT_ACCURACY_MULT_TIER_3
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_1
 	damage_mod = BULLET_DAMAGE_MULT_TIER_6
-	delay_mod = FIRE_DELAY_TIER_11
-
-	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_7
+	velocity_mod = AMMO_SPEED_TIER_1
 
 /obj/item/attachable/heavy_barrel/Attach(obj/item/weapon/gun/G)
 	if(G.gun_category == GUN_CATEGORY_SHOTGUN)
-		damage_mod = BULLET_DAMAGE_MULT_TIER_1
+		damage_mod = BULLET_DAMAGE_MULT_TIER_6
 	else
 		damage_mod = BULLET_DAMAGE_MULT_TIER_6
 	..()
@@ -1231,6 +1230,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/pve/New()
 	..()
 	damage_falloff_scoped_buff = -0.2
+	damage_mod = BULLET_DAMAGE_MULT_TIER_1
 
 /obj/item/attachable/scope/pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
 	. = ..()
