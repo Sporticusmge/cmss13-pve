@@ -276,7 +276,6 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer,advanced,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
