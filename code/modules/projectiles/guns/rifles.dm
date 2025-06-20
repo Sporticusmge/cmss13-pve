@@ -275,7 +275,6 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
@@ -536,6 +535,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/verticalgrip, // Under
