@@ -13,8 +13,8 @@
 
 	accurate_range = 7
 	max_range = 14
-	damage = 105
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
@@ -67,8 +67,8 @@
 
 	accuracy = -HIT_ACCURACY_TIER_2
 	max_range = 12
-	damage = 75
-	penetration= ARMOR_PENETRATION_TIER_1
+	damage = 110
+	penetration= ARMOR_PENETRATION_TIER_4
 	handful_state = "incendiary_slug"
 
 /datum/ammo/bullet/shotgun/incendiary/set_bullet_traits()
@@ -100,7 +100,7 @@
 	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_7
+	penetration = ARMOR_PENETRATION_TIER_5
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	handful_state = "flechette_shell"
 	multiple_handful_name = TRUE
@@ -112,7 +112,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 45
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_7
@@ -209,7 +209,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/spread/masterkey
-	damage = 20
+	damage = 50
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
@@ -249,8 +249,8 @@
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	accurate_range = 8
 	max_range = 10
-	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 100
+	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
@@ -298,8 +298,8 @@
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	accurate_range = 8
 	max_range = 8
-	damage = 75
-	penetration = 0
+	damage = 100
+	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
@@ -316,7 +316,7 @@
 	handful_state = "heavy_dragonsbreath"
 	multiple_handful_name = TRUE
 	damage_type = BURN
-	damage = 60
+	damage = 100
 	accurate_range = 4
 	max_range = 6
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath/spread
@@ -339,8 +339,8 @@
 
 	accurate_range = 7
 	max_range = 17
-	damage = 120 //ouch.
-	penetration = ARMOR_PENETRATION_TIER_9
+	damage = 155 //ouch.
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_armor_punch = 2
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
@@ -392,10 +392,10 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_3
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_3
 	max_range = 12
-	damage = 45
+	damage = 70
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_10
+	penetration = ARMOR_PENETRATION_TIER_6
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_2
 
 /datum/ammo/bullet/shotgun/heavy/flechette_spread
@@ -404,10 +404,10 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 12
-	damage = 45
+	damage = 70
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_10
+	penetration = ARMOR_PENETRATION_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_4
 
 /*
