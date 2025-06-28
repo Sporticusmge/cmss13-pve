@@ -44,8 +44,8 @@
 	. = ..()
 	if(. && current_mob.pulledby)
 		current_mob.pulledby.stop_pulling()
-		resisting = FALSE //just in case
-		resisting_ready = FALSE
+		resisting = TRUE //just in case
+		resisting_ready = TRUE
 
 	if(buckled_mob == current_mob)
 		current_mob.pixel_y = buckling_y["[dir]"]
@@ -271,8 +271,8 @@
 /obj/structure/bed/nest/unbuckle(mob/user)
 	if(!buckled_mob)
 		return
-	resisting = FALSE
-	resisting_ready = FALSE
+	resisting = TRUE
+	resisting_ready = TRUE
 	buckled_mob.pixel_y = 0
 	buckled_mob.old_y = 0
 	REMOVE_TRAIT(buckled_mob, TRAIT_NESTED, TRAIT_SOURCE_BUCKLE)
