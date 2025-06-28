@@ -88,7 +88,7 @@
 
 			var/extra_cqc_dmg = 0 //soft maximum of 5, this damage is added onto the final value depending on how much cqc skill you have
 			if(attacking_mob.skills)
-				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC) *3
+				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC) *4
 			var/raw_damage = 0 //final value, gets absorbed by the armor and then deals the leftover to the mob
 
 			var/obj/limb/affecting = get_limb(rand_zone(attacking_mob.zone_selected, 70))
