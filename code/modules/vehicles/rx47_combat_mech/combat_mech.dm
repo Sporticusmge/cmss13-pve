@@ -12,8 +12,8 @@
 	light_range = 5
 	move_delay = 7
 	buckling_y = 17
-	health = 5000
-	maxhealth = 5000
+	health = 10000
+	maxhealth = 10000
 	pixel_x = -17
 	pixel_y = -2
 
