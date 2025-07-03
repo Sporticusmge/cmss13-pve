@@ -3,10 +3,10 @@
 	caste_desc = "The end of the line."
 	tier = 4
 
-	melee_damage_lower = XENO_DAMAGE_TIER_9
-	melee_damage_upper = XENO_DAMAGE_TIER_9
+	melee_damage_lower = XENO_DAMAGE_TIER_12
+	melee_damage_upper = XENO_DAMAGE_TIER_12
 	melee_vehicle_damage = XENO_DAMAGE_TIER_5
-	max_health = XENO_HEALTH_KING * 4 // PVE X4 boss edition
+	max_health = XENO_HEALTH_KING * 8 // PVE X8 boss edition
 	plasma_gain = XENO_PLASMA_GAIN_TIER_3
 	plasma_max = XENO_PLASMA_TIER_10 * 3 // PVE X3 boss edition
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_7
