@@ -163,6 +163,8 @@
 #define TRAIT_TEMPORARILY_MUTED "temporarily_muted"
 /// Mob wont get hit by stray projectiles
 #define TRAIT_NO_STRAY "trait_no_stray"
+/// Mob is inside a vehicle that protects it
+#define TRAIT_INSIDE_VEHICLE "trait_inside_vehicle"
 
 // SPECIES TRAITS
 /// Knowledge of Yautja technology
@@ -325,6 +327,7 @@ GLOBAL_LIST_INIT(mob_traits, list(
 	TRAIT_IN_TUTORIAL,
 	TRAIT_SPEC_KIT,
 	TRAIT_SPEC_VENDOR,
+	TRAIT_INSIDE_VEHICLE,
 ))
 
 /*
