@@ -46,11 +46,11 @@
 	name = "chaingun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	accuracy = -HIT_ACCURACY_TIER_3
+	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 12
-	damage = 25
+	damage = 125
 	penetration = ARMOR_PENETRATION_TIER_6
 
 /obj/item/weapon/gun/mech/chaingun
@@ -114,9 +114,9 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 12
-	damage = 45
+	damage = 250
 	penetration = ARMOR_PENETRATION_TIER_10
-	var/explosion_power = 100
+	var/explosion_power = 300
 	var/explosion_falloff = 40
 
 /datum/ammo/bullet/rx47_cannon/on_hit_mob(mob/M, obj/projectile/P)
@@ -203,10 +203,10 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
 	max_range = 12
 	accuracy = HIT_ACCURACY_TIER_4
-	damage = 15
+	damage = 80
 	penetration = 0
 	effective_range_max = 5
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
 
 /obj/item/weapon/gun/mech/cupola/set_gun_config_values()
 	..()
