@@ -34,6 +34,8 @@
 	var/charge_use = 5
 	can_block_movement = TRUE
 
+	var/heal_increment = 10
+
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
