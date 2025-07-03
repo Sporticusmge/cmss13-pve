@@ -55,7 +55,7 @@
 	damage = 160
 	penetration = ARMOR_PENETRATION_TIER_8
 	accuracy = HIT_ACCURACY_TIER_1
-	shell_speed = AMMO_SPEED_TIER_10
+	shell_speed = AMMO_SPEED_TIER_8
 	accurate_range = 14
 	handful_state = "boomslang_bullet"
 

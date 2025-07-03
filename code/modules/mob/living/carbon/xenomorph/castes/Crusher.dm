@@ -119,7 +119,7 @@
 		M.Collided(src)
 		. = FALSE
 
-else if (istype(target, /obj/vehicle/rx47_mech))
+	else if (istype(target, /obj/vehicle/rx47_mech))
 		var/obj/vehicle/rx47_mech/mech_in_path = target
 		visible_message(SPAN_DANGER("[src] rams into [mech_in_path] and skids to a halt!"), SPAN_XENOWARNING("We ram into [mech_in_path] and skid to a halt!"))
 

@@ -120,7 +120,7 @@
 	return FALSE
 
 //Drops the item in our right hand
-/mob/proc/drop_r_hand()
+/mob/proc/drop_r_hand(forced)
 	if(r_hand)
 		return drop_inv_item_on_ground(r_hand, force = forced)
 	return FALSE
