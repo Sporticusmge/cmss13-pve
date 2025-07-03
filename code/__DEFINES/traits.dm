@@ -369,6 +369,7 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_CLOAKED" = TRAIT_CLOAKED,
 		"TRAIT_SPEC_KIT" = TRAIT_SPEC_KIT,
 		"TRAIT_SPEC_VENDOR" = TRAIT_SPEC_VENDOR,
+		"TRAIT_INSIDE_VEHICLE" = TRAIT_INSIDE_VEHICLE,
 	),
 //	/mob/living/carbon/human = list(
 //	),
