@@ -33,12 +33,34 @@
 	///Set to TRUE if you want the light to rotate with the owner
 	var/is_directional = FALSE
 
+	///Turfs that are being affected by this mask, this is for the sake of luminosity
+	var/list/turf/affecting_turfs
+	///list of mutable appearance shadows
+	var/list/mutable_appearance/shadows
+	var/times_calculated = 0
+
+	//Please dont change these
+	var/calculated_position_x
+	var/calculated_position_y
+
 /atom/movable/lighting_mask/Initialize(mapload, ...)
 	. = ..()
 	add_filter("pixel_smoother", 3, gauss_blur_filter(2))
 	add_filter("shadow_alpha_masking", 4, alpha_mask_filter(render_source = SHADOW_RENDER_TARGET, flags = MASK_INVERSE))
 
 /atom/movable/lighting_mask/Destroy()
+	//Make sure we werent destroyed in init
+	SSlighting.mask_queue -= src
+	//Remove from affecting turfs
+	if(affecting_turfs)
+		for(var/turf/thing as anything in affecting_turfs)
+			var/area/A = thing.loc
+			LAZYREMOVE(thing.hybrid_lights_affecting, src)
+			if(!A.base_lighting_alpha)
+				thing.luminosity -= 1
+		affecting_turfs = null
+	//Cut the shadows. Since they are overlays they will be deleted when cut from overlays.
+	LAZYCLEARLIST(shadows)
 	mask_holder = null
 	attached_atom = null
 	return ..()
@@ -138,6 +160,21 @@
 /atom/movable/lighting_mask/rotating/Initialize(mapload, ...)
 	. = ..()
 	icon_state = "light_rotating-[rand(1, 3)]"
+
+//For when a rotating light needs to be stoppable
+/atom/movable/lighting_mask/rotating_toggleable
+	icon_state = "no_animation_light_rotating-1"
+	var/picked_number = 0
+	var/toggled = FALSE
+
+/atom/movable/lighting_mask/rotating_toggleable/Initialize(mapload, ...)
+	. = ..()
+	picked_number = rand(1, 3)
+	icon_state = "no_animation_light_rotating-[picked_number]"
+
+/atom/movable/lighting_mask/rotating_toggleable/proc/toggle()
+	toggled = toggled ? FALSE : TRUE
+	icon_state = "[toggled ? "light_rotating" : "no_animation_light_rotating"]-[picked_number]"
 
 ///rotating light mask, but only pointing in one direction
 /atom/movable/lighting_mask/rotating_conical
