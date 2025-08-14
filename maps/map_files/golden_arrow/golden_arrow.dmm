@@ -95,14 +95,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aam" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = -7
+/obj/structure/disposalpipe/down/almayer{
+	id = "rubbish";
+	dir = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal/corpsman{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/turf/open/space/basic,
+/area/space)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -166,14 +164,9 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aar" = (
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = 8
-	},
-/obj/structure/closet/secure_closet/marine_personal/squad_leader{
-	pixel_x = -7
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
 "aas" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -196,28 +189,25 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aau" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/obj/item/trash/cigbutt{
-	pixel_y = 19;
-	pixel_x = -6
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
 	},
-/obj/item/trash/cigbutt{
-	pixel_y = 6;
-	pixel_x = -16
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13;
+	pixel_x = 7
 	},
 /turf/open/floor/almayer,
-/area/golden_arrow/supply)
+/area/golden_arrow/hangar)
 "aav" = (
-/obj/item/trash/snack_bowl{
-	pixel_x = -7;
-	pixel_y = 14;
-	name = "water bowl";
-	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/supply)
+/turf/closed/wall/almayer,
+/area/golden_arrow/hangar)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -257,41 +247,43 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaB" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/accessory/medal/silver/valor{
-	pixel_x = -8;
-	pixel_y = 1;
-	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
-	},
-/obj/item/prop{
-	icon = 'icons/obj/items/clothing/cm_hats.dmi';
-	icon_state = "helmet";
-	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
-	pixel_y = 6;
-	pixel_x = 3;
-	name = "\improper damaged M10 pattern ballistic helmet"
-	},
-/obj/item/card/id/dogtag{
-	layer = 3.001;
-	pixel_x = 2
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/golden_arrow/supply)
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
 "aaC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"aaD" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"aaD" = (
+"aaE" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"aaE" = (
+"aaF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/prep_hallway)
+"aaG" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
@@ -308,7 +300,7 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"aaF" = (
+"aaH" = (
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
 	},
@@ -318,7 +310,10 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"aaG" = (
+"aaI" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/medical)
+"aaJ" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
@@ -339,38 +334,6 @@
 	pixel_x = -1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
-"aaH" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
-"aaI" = (
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/medical)
-"aaJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaK" = (
 /obj/structure/disposalpipe/segment,
@@ -400,32 +363,13 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "aaN" = (
-/obj/structure/machinery/shower{
-	pixel_y = 16
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/cobweb2,
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1
-	},
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 11
-	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1;
-	pixel_y = 11
-	},
-/obj/structure/curtain/open/shower{
-	pixel_y = -6
-	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/cryo_cells)
 "aaO" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
@@ -435,12 +379,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/structure/disposalpipe/down/almayer{
-	id = "rubbish";
-	dir = 1
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
 	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -462,9 +417,14 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaS" = (
-/obj/structure/disposalpipe/segment,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/dorms)
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -504,18 +464,19 @@
 /area/golden_arrow/platoonprep)
 "aaX" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	dir = 1
 	},
-/turf/closed/wall/almayer,
-/area/golden_arrow/hangar)
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aaY" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -527,41 +488,41 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
 "abb" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "abc" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/prep_hallway)
-"abd" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/almayer/edge/smooth/east,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
-"abe" = (
+"abd" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1
+	dir = 1;
+	icon_state = "pipe-c"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoonprep)
+"abe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "abf" = (
 /obj/effect/decal/warning_stripes{
@@ -571,11 +532,14 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
 "abg" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoonprep)
 "abh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -604,35 +568,6 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/cryo_cells)
 "abj" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/cryo_cells)
-"abk" = (
-/turf/closed/wall/almayer,
-/area/golden_arrow/platoonarmory)
-"abl" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
-"abm" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
-"abn" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -647,6 +582,60 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
+"abk" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
+"abl" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/curtain/open/shower{
+	pixel_y = -6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"abm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 19;
+	pixel_x = -6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 6;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"abn" = (
+/obj/item/trash/snack_bowl{
+	pixel_x = -7;
+	pixel_y = 14;
+	name = "water bowl";
+	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/supply)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -665,16 +654,33 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "abq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/medal/silver/valor{
+	pixel_x = -8;
+	pixel_y = 1;
+	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon_state = "helmet";
+	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
+	pixel_y = 6;
+	pixel_x = 3;
+	name = "\improper damaged M10 pattern ballistic helmet"
+	},
+/obj/item/card/id/dogtag{
+	layer = 3.001;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"abr" = (
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
-	},
-/turf/open/space/basic,
-/area/space)
-"abr" = (
-/obj/structure/disposalpipe/up/almayer{
-	id = "rubbish";
-	dir = 8
 	},
 /turf/open/space/basic,
 /area/space)
@@ -690,18 +696,12 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "abt" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
+/obj/structure/disposalpipe/up/almayer{
+	id = "rubbish";
 	dir = 8
 	},
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 13;
-	pixel_x = 7
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
+/turf/open/space/basic,
+/area/space)
 "abu" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25343,11 +25343,11 @@ aWh
 awS
 alP
 atN
-abe
-abg
+aaS
+aaX
 axN
-abe
-abe
+aaS
+aaS
 apV
 atM
 aBk
@@ -25526,7 +25526,7 @@ aFK
 aTS
 aQd
 ase
-abd
+aaN
 aqd
 abx
 aeL
@@ -25695,7 +25695,7 @@ aEG
 aEG
 aWh
 aog
-abj
+aba
 anC
 aQr
 aog
@@ -25892,8 +25892,8 @@ alw
 aMQ
 aHk
 aWM
-aaS
-aaP
+aar
+aam
 aEG
 aEG
 aEG
@@ -26229,7 +26229,7 @@ aFo
 awW
 apm
 alD
-aam
+aaY
 aog
 alc
 awW
@@ -26579,7 +26579,7 @@ aWh
 aWh
 aWh
 aWh
-aar
+abc
 aZw
 amS
 azT
@@ -26943,7 +26943,7 @@ adW
 avj
 agG
 adt
-aaE
+aaG
 acO
 aRz
 aog
@@ -27122,7 +27122,7 @@ aBw
 atm
 aPf
 aQr
-aaC
+aaD
 aog
 atY
 ayJ
@@ -27285,7 +27285,7 @@ aEG
 aEG
 aWh
 afI
-aaJ
+abe
 aHd
 aog
 fSy
@@ -27297,7 +27297,7 @@ aNn
 aAs
 agh
 aUh
-aaF
+aaH
 ato
 aSu
 aog
@@ -27461,8 +27461,8 @@ aEG
 aEG
 aEG
 aWh
-aaN
-aaJ
+abl
+abe
 aHd
 aog
 ajq
@@ -27476,7 +27476,7 @@ aBw
 aGr
 aPf
 aNT
-aaD
+aaE
 aog
 aCH
 adj
@@ -27649,9 +27649,9 @@ aht
 aCB
 aQm
 aBk
-aaH
+aaP
 aog
-aaG
+aaJ
 aYH
 azq
 aog
@@ -28715,7 +28715,7 @@ aLz
 aDS
 azx
 aQb
-abc
+aaF
 aCm
 acs
 aIR
@@ -28834,7 +28834,7 @@ aUO
 tNi
 aaw
 aOK
-abq
+abr
 aTv
 aNx
 aPh
@@ -29011,7 +29011,7 @@ qRO
 aVX
 aXB
 aEG
-abr
+abt
 aDh
 aPh
 aPh
@@ -30294,8 +30294,8 @@ ahl
 ahl
 ahl
 aMS
-abm
-abl
+abg
+abd
 alW
 aun
 agE
@@ -30485,7 +30485,7 @@ aVC
 auU
 aiq
 ayw
-abc
+aaF
 aCm
 aEo
 aEo
@@ -31002,7 +31002,7 @@ gry
 bfK
 azW
 aXt
-abn
+abj
 aoq
 aDQ
 aiD
@@ -31517,8 +31517,8 @@ aEG
 aEG
 vYW
 cqk
-aaB
-aau
+abq
+abm
 afz
 aAu
 aoN
@@ -31695,7 +31695,7 @@ aEG
 vYW
 cqk
 vve
-aav
+abn
 afz
 aAu
 aPB
@@ -32080,7 +32080,7 @@ aeW
 aZm
 aEt
 aoz
-aaX
+aav
 akb
 akb
 akb
@@ -32256,8 +32256,8 @@ arP
 aTD
 adz
 adz
-aba
-aaY
+aaC
+aaB
 akb
 akb
 akb
@@ -32966,7 +32966,7 @@ aZy
 adz
 ayX
 adz
-abt
+aau
 vRh
 aVD
 akZ

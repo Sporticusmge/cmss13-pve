@@ -98,7 +98,7 @@
 	if(!speaking)
 		speaking = get_default_language()
 
-	var/ending = copytext_char(message, length(message))
+
 	if (speaking)
 		var/ending = copytext_char(message, length(message))
 		if(ending=="!")
