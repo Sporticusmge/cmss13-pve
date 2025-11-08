@@ -182,6 +182,7 @@ GLOBAL_LIST_INIT(admin_verbs_major_event, list(
 	/client/proc/enable_podlauncher,
 	/client/proc/change_taskbar_icon,
 	/client/proc/change_weather,
+	/client/proc/change_wind,
 	/client/proc/admin_blurb
 ))
 

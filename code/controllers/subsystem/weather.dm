@@ -104,14 +104,16 @@ SUBSYSTEM_DEF(weather)
 
 
 /// Startup of an arbitrary weather event if none is running. Returns TRUE if successful.
-/datum/controller/subsystem/weather/proc/setup_weather_event(event_typepath)
+/datum/controller/subsystem/weather/proc/setup_weather_event(event_typepath, warning_time)
 	. = FALSE
 	if(!map_holder || is_weather_event || is_weather_event_starting)
 		return
+	if(!warning_time)
+		warning_time = map_holder.warn_time
 	is_weather_event_starting = TRUE
 	weather_event_type = event_typepath
 	map_holder.weather_warning(weather_event_type)
-	addtimer(CALLBACK(src, PROC_REF(start_weather_event)), map_holder.warn_time)
+	addtimer(CALLBACK(src, PROC_REF(start_weather_event)), warning_time)
 	return TRUE
 
 // Adjust our state to indicate that we're starting a new event

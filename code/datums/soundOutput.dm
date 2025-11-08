@@ -96,7 +96,7 @@
 	S.volume = 100 * owner.volume_preferences[VOLUME_AMB]
 	S.status = status_flags
 
-	if(target_area)
+	if(target_area && target_area.z)
 		var/muffle
 		if(target_area.ceiling_muffle)
 			switch(target_area.ceiling)
@@ -104,10 +104,8 @@
 					muffle = 0
 				if(CEILING_GLASS)
 					muffle = MUFFLE_MEDIUM
-				if(CEILING_METAL)
-					muffle = MUFFLE_HIGH
 				else
-					S.volume = 0
+					muffle = MUFFLE_HIGH
 		muffle += target_area.base_muffle
 		S.echo = list(muffle)
 	sound_to(owner, S)

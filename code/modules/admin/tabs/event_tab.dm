@@ -1055,11 +1055,44 @@
 	if(!chosen_typepath)
 		return
 
-	var/retval = SSweather.setup_weather_event(chosen_typepath)
+	var/chosen_delay = tgui_input_number(src, "Choose weather start delay", "Weather Delay", 10, 60, 10)
+	if(!chosen_delay)
+		return
+
+	var/retval = SSweather.setup_weather_event(chosen_typepath, chosen_delay SECONDS)
 	if(!retval)
 		to_chat(src, SPAN_WARNING("Could not start the weather event at present!"))
 		return
 	to_chat(src, SPAN_BOLDNOTICE("Success! The weather event should start shortly."))
+
+/client/proc/change_wind()
+	set name = "Change Wind"
+	set category = "Admin.Events"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	if(!SSweather.weather_event_instance)
+		to_chat(src, SPAN_WARNING("There is no weather event going on right now."))
+		return
+
+	var/datum/weather_event/weather_event_instance = SSweather.weather_event_instance
+
+	var/chosen_strength = tgui_input_number(src, "Choose wind strength", "Wind Strength", 10, 60, 10)
+	if(!chosen_strength)
+		return
+
+	weather_event_instance.wind_strength = chosen_strength
+
+	var/randomize_dir = tgui_alert(src, "Randomize wind direction?", "Wind Direction", list("Yes", "Manual Input") == "Yes")
+	if(randomize_dir)
+		weather_event_instance.wind_direction = pick(CARDINAL_ALL_DIRS)
+	else
+		var/chosen_direction = tgui_input_number(src, "Choose wind direction", "Wind Direction", 1, 10, 1)
+		if(chosen_direction)
+			weather_event_instance.wind_direction = chosen_direction
+
+	to_chat(src, SPAN_BOLDNOTICE("The wind will now blow towards [uppertext(dir2text(weather_event_instance.wind_direction))] with the strength of [chosen_strength]."))
 
 
 /client/proc/cmd_admin_create_bioscan()

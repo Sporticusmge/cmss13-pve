@@ -1030,6 +1030,10 @@ Defined in conflicts.dm of the #defines folder.
 			if(user)
 				to_chat(user, SPAN_DANGER("You peer into [src], but it seems to have fogged up. You can't use this!"))
 			return FALSE
+		if(is_ground_level(user.z) && SSweather?.weather_event_instance.wind_strength)
+			if(user)
+				to_chat(user, SPAN_DANGER("You peer into [src], but the weather is impairing your view. You can't use this!"))
+			return FALSE
 		else
 			G.zoom(user, zoom_offset, zoom_viewsize, allows_movement)
 			apply_scoped_buff(G,user)

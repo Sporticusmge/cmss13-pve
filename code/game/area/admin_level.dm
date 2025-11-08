@@ -3,6 +3,7 @@
 
 /area/adminlevel
 	ceiling = CEILING_METAL
+	weather_enabled = FALSE
 	base_lighting_alpha = 255
 
 /area/adminlevel/bunker01

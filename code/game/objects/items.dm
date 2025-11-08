@@ -841,6 +841,8 @@ cases. Override_icon_state should be a list.*/
 		to_chat(user, SPAN_WARNING("Your welding equipment gets in the way of you looking through \the [zoom_device]."))
 	else if(!zoom && user.get_active_hand() != src && !istype(src, /obj/item/clothing/mask))
 		to_chat(user, SPAN_WARNING("You need to hold \the [zoom_device] to look through it."))
+	else if(!zoom && is_ground_level(user.z) && SSweather?.weather_event_instance.wind_strength)
+		to_chat(user, SPAN_DANGER("You peer into [src], but the weather is impairing your view. You can't use this!"))
 	else if(!zoom)
 		do_zoom(user, tileoffset, viewsize, keep_zoom)
 		return

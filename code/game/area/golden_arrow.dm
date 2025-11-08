@@ -13,6 +13,7 @@
 	icon_state = "hangar"
 	soundscape_playlist = SCAPE_PL_HANGAR
 	soundscape_interval = 50
+	weather_enabled = FALSE
 
 /area/golden_arrow/platoon_commander_rooms
 	name = "\improper Platoon Commander's Rooms"
