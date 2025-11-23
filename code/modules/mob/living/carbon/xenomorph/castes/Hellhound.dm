@@ -7,8 +7,8 @@
 	plasma_gain = XENO_PLASMA_GAIN_TIER_4
 	plasma_max = XENO_NO_PLASMA
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_4
-	armor_deflection = XENO_ARMOR_TIER_3
-	max_health = XENO_HEALTH_TIER_7
+	armor_deflection = XENO_ARMOR_TIER_5
+	max_health = XENO_HEALTH_TIER_8
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_HELLHOUND
 	attack_delay = -2

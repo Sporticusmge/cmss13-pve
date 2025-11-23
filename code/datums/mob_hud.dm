@@ -1,7 +1,7 @@
 /* HUD DATUMS */
 
 //GLOBAL HUD LIST
-GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
+GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, alist(
 	MOB_HUD_SECURITY_BASIC = new /datum/mob_hud/security/basic(),
 	MOB_HUD_SECURITY_ADVANCED = new /datum/mob_hud/security/advanced(),
 	MOB_HUD_MEDICAL_BASIC = new /datum/mob_hud/medical/basic(),
@@ -27,9 +27,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	))
 
 /datum/mob_hud
-	var/list/mob/hudmobs = list() //list of all mobs which display this hud
-	var/list/mob/hudusers = list() //list with all mobs who can see the hud
-	var/list/hud_icons = list() //these will be the indices for the atom's hud_list
+	var/list/mob/hudmobs = alist() //list of all mobs which display this hud
+	var/list/mob/hudusers = alist() //list with all mobs who can see the hud
+	var/list/hud_icons = alist() //these will be the indices for the atom's hud_list
 								// which is the list of the images maintenenced by this HUD
 								// Actually managing those images is left up to clients.
 
