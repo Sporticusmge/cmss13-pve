@@ -82,11 +82,11 @@
 	description = "Oxycodone is an opioid agonist with addiction potential similar to that of morphine. It is approved for the treatment of patients with moderate to severe pain who are expected to need continuous opioids for an extended period of time. Overdosing on oxycodone can cause hallucinations, brain damage and be highly toxic."
 	reagent_state = LIQUID
 	color = "#E01D25"
-	custom_metabolism = AMOUNT_PER_TIME(15, 8 MINUTES) // Lasts 8 minutes for 15 units
+	custom_metabolism = AMOUNT_PER_TIME(15, 10 MINUTES) // Lasts 10 minutes for 15 units
 	overdose = MED_REAGENTS_OVERDOSE
 	overdose_critical = MED_REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_PAINKILLING = 9)
+	properties = list(PROPERTY_PAINKILLING = 10)
 
 /datum/reagent/medical/sterilizine
 	name = "Sterilizine"
@@ -171,7 +171,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.1, PROPERTY_HEPATOPEUTIC = 0.1, PROPERTY_ANTIHALLUCINOGENIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.2, PROPERTY_HEPATOPEUTIC = 0.2, PROPERTY_ANTIHALLUCINOGENIC = 2)
 
 /datum/reagent/medical/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
@@ -246,11 +246,11 @@
 	description = "Alkysine is a drug used to lessen and heal the damage to neurological tissue after a catastrophic injury. Small amounts can repair extensive brain trauma. Functions as a very weak painkiller. Overdosing on alkysine is extremely toxic."
 	reagent_state = LIQUID
 	color = "#E89599"
-	custom_metabolism = AMOUNT_PER_TIME(1, 80 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 100 SECONDS)
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 0.1)
+	properties = list(PROPERTY_NEUROPEUTIC = 0.2)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -258,11 +258,11 @@
 	description = "Used for treating non-genetic eye trauma. Generally prescribed as treatment for most cases of eye trauma instead of performing a surgical operation."
 	reagent_state = LIQUID
 	color = "#C8A5DC" // rgb: 200, 165, 220
-	custom_metabolism = AMOUNT_PER_TIME(1, 80 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 100 SECONDS)
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 0.1)
+	properties = list(PROPERTY_OCULOPEUTIC = 0.2)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
@@ -272,7 +272,7 @@
 	color = "#C845DC"
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
-	custom_metabolism = AMOUNT_PER_TIME(1, 80 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 180 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
 	properties = list(PROPERTY_ORGANSTABILIZE = 4)
 

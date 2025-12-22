@@ -1488,10 +1488,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 	cost = 0
 
+/datum/gear/smoking/pack_balaji
+	display_name = "Pack Of Balaji"
+	path = /obj/item/storage/fancy/cigarettes/balaji
+	cost = 0
+
 /datum/gear/smoking/pack_laika
 	display_name = "Pack Of Laika"
 	path = /obj/item/storage/fancy/cigarettes/laika
-	allowed_origins = UPP_ORIGINS
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"

@@ -468,6 +468,7 @@
 
 		list("ARMOR", -1, null, null),
 		list("M3-R Pattern Recon Armor", round(scale * 10), /obj/item/clothing/suit/marine/rto/forecon, VENDOR_ITEM_REGULAR),
+		list("ASAPP armor plate", round(scale * 4), /obj/item/clothing/accessory/health/ceramic_plate/marine, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Vambraces", round(scale * 10), /obj/item/clothing/accessory/pads/bracers/standard, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Greaves", round(scale * 10), /obj/item/clothing/accessory/pads/greaves/standard, VENDOR_ITEM_REGULAR),
 		list("M3 Pattern Kneepads", round(scale * 10), /obj/item/clothing/accessory/pads/kneepads/standard, VENDOR_ITEM_REGULAR),
