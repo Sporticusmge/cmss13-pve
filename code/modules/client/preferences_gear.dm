@@ -1496,6 +1496,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/smoking/pack_laika
 	display_name = "Pack Of Laika"
 	path = /obj/item/storage/fancy/cigarettes/laika
+	cost = 0
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
