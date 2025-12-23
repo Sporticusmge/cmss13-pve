@@ -632,10 +632,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/squad_one)
-"br" = (
-/obj/structure/dropship_equipment/paradrop_system,
-/turf/open/floor/almayer/cargo/southwest,
-/area/golden_arrow/hangar)
 "bs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1195,6 +1191,7 @@
 "cG" = (
 /obj/effect/landmark/personal_weapon,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
 "cH" = (
@@ -4014,15 +4011,13 @@
 	pixel_y = 1;
 	pixel_x = -7
 	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_y = 11;
-	pixel_x = -7;
-	layer = 2.98
-	},
 /obj/item/tool/hand_labeler{
 	pixel_x = 11;
 	pixel_y = 3
 	},
+/obj/item/ammo_box/magazine/m4a3/ap,
+/obj/item/ammo_box/magazine/m39,
+/obj/item/storage/belt/gun/m39/forecon,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
 "zZ" = (
@@ -5095,6 +5090,7 @@
 /obj/item/ammo_box/magazine/shotgun/buckshot{
 	pixel_y = 1
 	},
+/obj/item/ammo_box/magazine/m44,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
 "JE" = (
@@ -5486,6 +5482,12 @@
 	name = "\improper Hangar Lockdown Blast Door"
 	},
 /turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"MX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/dropship_equipment/mg_holder,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "Nc" = (
 /obj/effect/decal/warning_stripes{
@@ -7941,7 +7943,7 @@ aY
 Uq
 Uq
 TX
-br
+Uq
 Uq
 vi
 kh
@@ -8449,7 +8451,7 @@ Bh
 Bh
 Bh
 Bh
-sr
+MX
 zZ
 Yl
 Aa
