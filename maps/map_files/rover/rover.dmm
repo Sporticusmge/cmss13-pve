@@ -1117,10 +1117,6 @@
 	icon_state = "cargo"
 	},
 /obj/structure/largecrate/random/case,
-/obj/item/clothing/head/helmet/marine/scout{
-	pixel_x = 8;
-	pixel_y = 4
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "cy" = (
@@ -4615,13 +4611,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"FO" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/obj/structure/largecrate/supply/ammo/m41amk1/forecon,
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/lower_cargo)
 "FQ" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -15646,7 +15635,7 @@ cJ
 co
 co
 cw
-FO
+co
 ch
 ae
 ae
