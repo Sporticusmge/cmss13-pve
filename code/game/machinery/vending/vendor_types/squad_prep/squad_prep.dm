@@ -810,7 +810,7 @@
 		list("SIDEARMS", -1, null, null),
 		list("NP92 Standard Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/np92/unloaded, VENDOR_ITEM_REGULAR),
 		list("Type 73 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/t73/unloaded, VENDOR_ITEM_REGULAR),
-		list("ZHNK-72 Revolver", 1, round(scale * 1), /obj/item/weapon/gun/revolver/upp, VENDOR_ITEM_REGULAR),
+		list("ZHNK-72 Revolver", round(scale * 1), /obj/item/weapon/gun/revolver/upp, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
