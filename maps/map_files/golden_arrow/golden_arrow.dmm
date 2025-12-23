@@ -10574,8 +10574,7 @@
 	pixel_x = -17
 	},
 /obj/structure/ladder{
-	id = "engisouth";
-	height = -1
+	id = "engisouth"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -17106,10 +17105,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/supply)
-"gtO" = (
-/obj/item/storage/box/guncase/lmg,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/shared_office)
 "gtS" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3;
@@ -17132,7 +17127,8 @@
 /area/golden_arrow/engineering)
 "gBu" = (
 /obj/structure/ladder{
-	id = "tech"
+	id = "tech";
+	height = -1
 	},
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -32335,7 +32331,7 @@ aOt
 aBa
 aHZ
 aHZ
-gtO
+arP
 ahj
 alG
 aAQ
