@@ -1674,7 +1674,7 @@
 /area/golden_arrow/briefing)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/platoon_commander_rooms)
+/area/golden_arrow/prep_hallway)
 "db" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -6872,6 +6872,9 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/platoon_commander_rooms)
+"py" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/platoon_commander_rooms)
 "pz" = (
 /obj/structure/machinery/light/small{
 	light_color = "#832121";
@@ -8468,6 +8471,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
+"ya" = (
+/obj/structure/machinery/light/small{
+	light_color = "#832121";
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/golden_arrow/briefing)
 "yb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -9376,9 +9386,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
-"Qe" = (
-/turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/prep_hallway)
 "Qh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tool/warning_cone{
@@ -12196,8 +12203,8 @@ mH
 mH
 mH
 mH
-Qe
-Qe
+da
+da
 mV
 mV
 mV
@@ -12349,8 +12356,8 @@ ok
 ok
 YY
 jS
-Qe
-Qe
+da
+da
 mV
 mV
 mV
@@ -12502,7 +12509,7 @@ vW
 xw
 kg
 vu
-Qe
+da
 mV
 mV
 mV
@@ -12654,24 +12661,24 @@ mL
 mH
 kg
 KY
-Qe
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
 da
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+py
 yH
 nP
 iK
@@ -12806,24 +12813,24 @@ DL
 mI
 kg
 jS
-Qe
-Qe
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
-mV
 da
+da
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+mV
+py
 iK
 nn
 nn
@@ -12958,24 +12965,24 @@ DL
 mI
 kg
 jS
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
-Qe
 da
 da
 da
 da
+da
+da
+da
+da
+da
+da
+da
+da
+da
+da
+py
+py
+py
+py
 KD
 nn
 Om
@@ -13126,8 +13133,8 @@ wl
 nU
 Nz
 iY
-da
-da
+py
+py
 KD
 gZ
 Om
@@ -16787,9 +16794,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 uk
 dh
 Yt
@@ -16939,9 +16946,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 dh
 dh
 Yt
@@ -17091,9 +17098,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 dh
 Yt
 dh
@@ -17243,9 +17250,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 dh
 dh
 dh
@@ -17395,9 +17402,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 dh
 Yt
 dh
@@ -17547,9 +17554,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+dh
+dh
 dh
 dh
 dh
@@ -17699,9 +17706,9 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
+ya
+dh
 dh
 dh
 dh
@@ -17851,10 +17858,10 @@ mV
 mV
 mV
 mV
-mV
-mV
 qR
-tR
+qR
+dh
+dh
 dh
 dh
 dh
@@ -18004,21 +18011,21 @@ mV
 mV
 mV
 mV
-mV
 qR
 qR
+qR
+ya
 dh
 dh
 dh
 dh
 dh
-tR
-dh
+ya
 Yt
 Yt
 dh
-tR
-Fd
+ya
+qR
 qR
 mV
 mV
@@ -18166,7 +18173,7 @@ qR
 qR
 qR
 qR
-qR
+Fd
 qR
 qR
 qR
