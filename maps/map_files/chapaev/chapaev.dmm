@@ -1588,7 +1588,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "cT" = (
-/obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
 	req_access = null;
@@ -4989,7 +4988,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lf" = (
-/obj/item/ammo_box/magazine/type71/large,
+/obj/item/ammo_box/magazine/type71/large/ag80,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lg" = (
@@ -5206,12 +5205,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "lG" = (
-/obj/structure/closet/crate/secure/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
@@ -5219,6 +5212,9 @@
 	dir = 8
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5282,9 +5278,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "lN" = (
-/obj/structure/closet/crate/secure/upp,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5374,6 +5367,18 @@
 /obj/item/ammo_magazine/shotgun/slug/heavy{
 	pixel_y = 15;
 	pixel_x = -3
+	},
+/obj/item/ammo_magazine/shotgun/slug/heavy{
+	pixel_y = 15;
+	pixel_x = -3
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = -4;
+	pixel_y = -1
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = -4;
+	pixel_y = -1
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5496,13 +5501,13 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "mr" = (
-/obj/structure/gun_rack/type71/unloaded,
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
+/obj/structure/gun_rack/ag80/unloaded,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mt" = (
@@ -5609,6 +5614,7 @@
 	light_range = 5;
 	dir = 1
 	},
+/obj/item/ammo_box/magazine/zhnk,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mz" = (
