@@ -2,8 +2,8 @@
 	caste_type = PATHOGEN_CREATURE_POPPER
 	tier = 1
 
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 25
+	melee_damage_upper = 30
 	melee_vehicle_damage = 0
 	max_health = XENO_HEALTH_LESSER_DRONE
 	plasma_gain = XENO_PLASMA_GAIN_TIER_2
