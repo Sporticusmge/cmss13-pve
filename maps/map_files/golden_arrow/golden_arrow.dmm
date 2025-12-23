@@ -10570,11 +10570,12 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "aIv" = (
-/obj/structure/ladder{
-	id = "tech"
-	},
 /obj/structure/sign/safety/ladder{
 	pixel_x = -17
+	},
+/obj/structure/ladder{
+	id = "engisouth";
+	height = -1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
