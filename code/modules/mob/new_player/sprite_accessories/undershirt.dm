@@ -97,6 +97,38 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	name = "Undershirt (Black, Long Sleeved)"
 	icon_state = "b_long_undershirt"
 
+/datum/sprite_accessory/undershirt/civilian
+	name = "undershirt"
+	icon_state = "undershirt"
+
+/datum/sprite_accessory/undershirt/telnyashka
+	name = "Naval Infantry Telnyashka"
+	icon_state = "telnyashka_blue"
+
+/datum/sprite_accessory/undershirt/telnyashka/territorial
+	name = "Territorial Guard Telnyashka"
+	icon_state = "telnyashka_green"
+
+/datum/sprite_accessory/undershirt/telnyashka/interior
+	name = "Interior Forces Telnyashka"
+	icon_state = "telnyashka_red"
+
+/datum/sprite_accessory/undershirt/marine
+	name = "Marine Undershirt"
+	icon_state = "undershirt_uscm"
+
+/datum/sprite_accessory/undershirt/black
+	name = "Black Undershirt"
+	icon_state = "undershirt_black"
+
+/datum/sprite_accessory/undershirt/black/short
+	name = "Black Undershirt, Short"
+	icon_state = "undershirt_black_short"
+
+/datum/sprite_accessory/undershirt/black/long
+	name = "Black Undershirt, Long"
+	icon_state = "undershirt_black_long"
+
 // Male
 /datum/sprite_accessory/undershirt/none
 	name = "None"
@@ -121,43 +153,3 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 	icon_state = "strapless"
 	gender = FEMALE
 	camo_conforming = TRUE
-
-// Restricted
-
-/datum/sprite_accessory/undershirt/civilian
-	name = "undershirt"
-	icon_state = "undershirt"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/telnyashka
-	name = "Naval Infantry Telnyashka"
-	icon_state = "telnyashka_blue"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/telnyashka/territorial
-	name = "Territorial Guard Telnyashka"
-	icon_state = "telnyashka_green"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/telnyashka/interior
-	name = "Interior Forces Telnyashka"
-	icon_state = "telnyashka_red"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/marine
-	name = "Marine Undershirt"
-	icon_state = "undershirt_uscm"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/black
-	name = "Black Undershirt"
-	icon_state = "undershirt_black"
-	gender = NEUTER
-
-/datum/sprite_accessory/undershirt/black/short
-	name = "Black Undershirt, Short"
-	icon_state = "undershirt_black_short"
-
-/datum/sprite_accessory/undershirt/black/long
-	name = "Black Undershirt, Long"
-	icon_state = "undershirt_black_long"
