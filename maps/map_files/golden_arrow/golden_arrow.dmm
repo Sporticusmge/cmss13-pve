@@ -10574,7 +10574,8 @@
 	pixel_x = -17
 	},
 /obj/structure/ladder{
-	id = "engisouth"
+	id = "engisouth";
+	height = -1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -15781,6 +15782,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
+"bSm" = (
+/obj/structure/machinery/status_display,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
 "bUF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -15996,6 +16001,10 @@
 "cUo" = (
 /turf/closed/wall/almayer/outer/friegt,
 /area/golden_arrow/cargo_shuttle/upper)
+"cUI" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "cUK" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
@@ -16526,6 +16535,23 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/supply)
+"eBG" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/crushed_cup,
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/spacecash/c10{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/ashtray/plastic{
+	pixel_x = 5;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "eEG" = (
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
@@ -16657,6 +16683,10 @@
 "fbw" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cargo_shuttle/lower)
+"fea" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "feX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17102,8 +17132,7 @@
 /area/golden_arrow/engineering)
 "gBu" = (
 /obj/structure/ladder{
-	id = "tech";
-	height = -1
+	id = "tech"
 	},
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -17532,6 +17561,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"iel" = (
+/obj/structure/machinery/status_display,
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
 "ieS" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17698,6 +17731,15 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"iST" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/machinery/sentry_holder/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "iTu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -19329,6 +19371,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"oqs" = (
+/obj/structure/surface/rack,
+/obj/item/storage/belt/utility/full{
+	pixel_y = 8
+	},
+/obj/item/storage/belt/utility/full,
+/obj/item/clothing/suit/storage/hazardvest/black,
+/obj/item/tool/crowbar,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "osR" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -19936,6 +19989,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"qvL" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/sign/poster/blacklight{
+	pixel_y = 35
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "qwH" = (
 /turf/open/floor/plating,
 /area/golden_arrow/lower_cargo)
@@ -20273,6 +20333,16 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
+"rOa" = (
+/obj/structure/machinery/sentry_holder/almayer,
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "rOB" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
@@ -20535,6 +20605,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"sxZ" = (
+/obj/structure/machinery/status_display,
+/turf/closed/wall/almayer,
+/area/golden_arrow/prep_hallway)
 "syi" = (
 /obj/structure/cargo_container/kelland/right{
 	opacity = 0;
@@ -20904,6 +20978,11 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
+"tXf" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/prop/invuln/joey,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "uel" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -20952,6 +21031,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"unO" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/tray,
+/obj/item/reagent_container/food/drinks/bottle/whiskey,
+/obj/item/toy/deck{
+	pixel_x = -9
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "uoJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -20961,6 +21050,10 @@
 	},
 /turf/open/floor/almayer/edge/southwest,
 /area/golden_arrow/platoonarmory)
+"uqs" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "uto" = (
 /obj/structure/roof/cargocrane_tracks/tjoint2{
 	pixel_y = 14
@@ -21297,13 +21390,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "vIr" = (
-/obj/structure/machinery/sentry_holder/almayer,
-/obj/structure/cable/heavyduty/west_east,
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
-	},
-/turf/open/floor/almayer,
+/obj/docking_port/stationary/escape_pod/west,
+/turf/open/floor/plating,
 /area/golden_arrow/prep_hallway)
 "vLe" = (
 /obj/effect/decal/warning_stripes{
@@ -21455,6 +21543,10 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/prep_hallway)
+"wvP" = (
+/obj/structure/bed/stool,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -21598,6 +21690,13 @@
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
+"wTZ" = (
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	name = "\improper Evacuation Airlock PL-3";
+	req_access = null
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/prep_hallway)
 "wYO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -27136,8 +27235,8 @@ auh
 auh
 auh
 auh
-aEG
-aEG
+auh
+auh
 aEG
 aEG
 aEG
@@ -27302,6 +27401,8 @@ apP
 aTc
 aer
 aWi
+aCm
+aWi
 auE
 sqd
 aYu
@@ -27313,8 +27414,6 @@ auE
 aCm
 qPd
 auh
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -27479,6 +27578,8 @@ aiU
 avO
 aYk
 aGT
+aYk
+aGT
 agR
 aBN
 pgO
@@ -27490,8 +27591,6 @@ iUm
 iMp
 iIw
 auh
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -27656,6 +27755,8 @@ rPa
 auh
 auh
 auh
+auh
+auh
 rPa
 rPa
 rPa
@@ -27682,8 +27783,6 @@ kdw
 kdw
 kdw
 uue
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -27833,6 +27932,8 @@ aDO
 vtV
 aaI
 aVg
+auh
+auh
 rPa
 gfM
 gfM
@@ -27859,8 +27960,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -27998,7 +28097,7 @@ aog
 aaG
 aYH
 azq
-aog
+bSm
 aDd
 aeA
 aHp
@@ -28010,6 +28109,8 @@ aoe
 jVu
 hRK
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -28036,8 +28137,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -28187,6 +28286,8 @@ aed
 rAj
 nLR
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -28213,8 +28314,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -28364,6 +28463,8 @@ anM
 akY
 aQI
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -28390,8 +28491,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -28541,6 +28640,8 @@ aXk
 cUK
 aIu
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -28567,8 +28668,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -28718,6 +28817,8 @@ aCE
 aHp
 aCE
 aaI
+auh
+auh
 rPa
 rPa
 rPa
@@ -28744,8 +28845,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -28895,6 +28994,8 @@ pKQ
 aVT
 ans
 aaI
+auh
+auh
 rPa
 rPa
 rPa
@@ -28921,8 +29022,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29072,6 +29171,8 @@ atv
 aBv
 akT
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -29098,8 +29199,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29249,6 +29348,8 @@ akY
 ikK
 aCE
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -29275,8 +29376,6 @@ vbQ
 vbQ
 vbQ
 lfy
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29426,6 +29525,8 @@ pZI
 aBv
 aNI
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -29452,8 +29553,6 @@ gYl
 gYl
 gYl
 otn
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29603,6 +29702,8 @@ olG
 wYO
 aPm
 aaI
+auh
+auh
 rPa
 gfM
 gfM
@@ -29614,8 +29715,6 @@ aCm
 aCm
 sIB
 auh
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29780,19 +29879,19 @@ aCE
 aCE
 aCE
 aaI
-aEo
+awL
+auh
+rPa
 gfM
 gfM
 gfM
 gfM
 rPa
-vIr
+rOa
 aCm
 xlN
 xAS
 auh
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -29963,13 +30062,13 @@ auh
 auh
 auh
 auh
+rPa
+rPa
+qiA
+aCm
+aCm
+fea
 auh
-auh
-auh
-auh
-auh
-aEG
-aEG
 aEG
 aEG
 aEG
@@ -30136,17 +30235,17 @@ azs
 ewl
 awL
 auh
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rPa
+rPa
+rPa
+rPa
+rPa
+rPa
+qiA
+aCm
+aCm
+aCm
+auh
 aEG
 aEG
 aEG
@@ -30313,17 +30412,17 @@ pvV
 alp
 awL
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rPa
+gfM
+gfM
+gfM
+mTo
+rPa
+qiA
+aCm
+aCm
+aCm
+auh
 aEG
 aEG
 aEG
@@ -30490,17 +30589,17 @@ gGG
 alp
 aat
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rPa
+gfM
+gfM
+gfM
+gfM
+rPa
+qiA
+aCm
+aCm
+oqs
+auh
 aEG
 aEG
 aEG
@@ -30667,17 +30766,17 @@ kNp
 alp
 hrh
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rPa
+gfM
+gfM
+gfM
+gfM
+okM
+qiA
+aCm
+aCm
+uqs
+auh
 aEG
 aEG
 aEG
@@ -30844,17 +30943,17 @@ hmW
 anb
 awL
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+rPa
+gfM
+gfM
+gfM
+gfM
+rPa
+qvL
+aCm
+aCm
+cUI
+auh
 aEG
 aEG
 aEG
@@ -31020,18 +31119,18 @@ hVV
 aKs
 oIL
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+awL
+rPa
+gfM
+gfM
+gfM
+gfM
+rPa
+iST
+aCm
+aCm
+aCm
+auh
 aEG
 aEG
 aEG
@@ -31198,17 +31297,17 @@ fLv
 eGp
 awL
 awL
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+auh
+auh
+auh
+rPa
+sxZ
+qiA
+aCm
+wvP
+wvP
+auh
 aEG
 aEG
 aEG
@@ -31379,13 +31478,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+auh
+tXf
+aCm
+eBG
+unO
+auh
 aEG
 aEG
 aEG
@@ -31556,13 +31655,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+rPa
+rPa
+wTZ
+rPa
+rPa
+auh
 aEG
 aEG
 aEG
@@ -31733,13 +31832,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+gfM
+gfM
+gfM
+gfM
+vIr
+auh
 aEG
 aEG
 aEG
@@ -31910,13 +32009,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+gfM
+gfM
+gfM
+gfM
+gfM
+auh
 aEG
 aEG
 aEG
@@ -32087,13 +32186,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+gfM
+gfM
+gfM
+gfM
+gfM
+auh
 aEG
 aEG
 aEG
@@ -32253,7 +32352,7 @@ aTT
 amM
 azV
 aEo
-aEo
+iel
 aRf
 ayY
 gUY
@@ -32264,13 +32363,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+gfM
+gfM
+gfM
+gfM
+gfM
+auh
 aEG
 aEG
 aEG
@@ -32441,13 +32540,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+auh
+auh
+auh
+auh
+auh
+auh
+auh
 aEG
 aEG
 aEG
