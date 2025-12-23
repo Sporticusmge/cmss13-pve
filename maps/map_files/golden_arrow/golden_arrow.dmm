@@ -7744,7 +7744,6 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/bed/bedroll,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "azo" = (
@@ -16761,6 +16760,16 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/bed/bedroll{
+	pixel_x = -2;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	},
+/obj/item/reagent_container/food/snacks/protein_pack/rmc,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "ftY" = (
@@ -17414,11 +17423,6 @@
 	dir = 4;
 	pixel_y = 7
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	dir = 4;
-	light_power = 0.5;
-	pixel_y = 10
-	},
 /obj/item/reagent_container/glass/bucket/janibucket{
 	pixel_y = -11;
 	pixel_x = -2
@@ -17430,6 +17434,9 @@
 	name = "dense fuel line";
 	desc = "Likely to be incredibly flammable.";
 	density = 0
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/briefing)
@@ -19573,6 +19580,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"pbH" = (
+/obj/structure/mirror{
+	desc = "Do you remember who you are?";
+	icon_state = "mirror_broke";
+	name = "broken mirror";
+	pixel_y = 32
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
 "pce" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25
@@ -31283,7 +31299,7 @@ aeA
 aEo
 aEo
 aEo
-aEo
+pbH
 aEo
 aEo
 awf
