@@ -178,6 +178,7 @@
 	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds."
 	icon_state = "armor_plate_100"
 	base_icon_state = "armor_plate"
+	overlay_state = "armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE
 	armor_health = 300
 	armor_maxhealth = 300
