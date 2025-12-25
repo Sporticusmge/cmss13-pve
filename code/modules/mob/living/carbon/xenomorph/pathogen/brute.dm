@@ -11,7 +11,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_4
+	speed = XENO_SPEED_TIER_5
 
 	attack_delay = 0 // VERY high slash damage, but attacks relatively slowly
 
