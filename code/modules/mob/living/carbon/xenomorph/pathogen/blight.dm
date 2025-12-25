@@ -2,10 +2,10 @@
 	caste_type = PATHOGEN_CREATURE_BLIGHT
 	tier = 2
 
-	melee_damage_lower = XENO_DAMAGE_TIER_7
-	melee_damage_upper = XENO_DAMAGE_TIER_7
+	melee_damage_lower = XENO_DAMAGE_TIER_3
+	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
-	max_health = XENO_HEALTH_TIER_10
+	max_health = XENO_HEALTH_TIER_8
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_6
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
@@ -13,7 +13,7 @@
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_8
 
-	attack_delay = 1.7 // VERY high slash damage, but attacks relatively slowly
+	attack_delay = -4
 
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base/blight
