@@ -8,7 +8,7 @@
 	max_health = XENO_HEALTH_LESSER_DRONE
 	plasma_gain = XENO_PLASMA_GAIN_TIER_2
 	plasma_max = XENO_PLASMA_TIER_10
-	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_8
