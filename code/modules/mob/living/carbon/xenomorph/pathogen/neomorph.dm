@@ -2,13 +2,13 @@
 	caste_type = PATHOGEN_CREATURE_NEOMORPH
 	tier = 2
 
-	melee_damage_lower = XENO_DAMAGE_TIER_9
-	melee_damage_upper = XENO_DAMAGE_TIER_9
+	melee_damage_lower = XENO_DAMAGE_TIER_7
+	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
-	max_health = XENO_HEALTH_TIER_8
+	max_health = XENO_HEALTH_TIER_6
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_4
-	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_NO_ARMOR
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_TIER_9
