@@ -10,7 +10,7 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	damage = 35
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing
@@ -34,22 +34,22 @@
 	name = "A27 9x19 bullet"
 
 	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_3
+	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
 	name = "armor-piercing 9x19 bullet"
 
-	damage = 40
+	damage = 45
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_3
+	penetration= ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/pistol/ap/penetrating
 	name = "wall-penetrating 9x19 bullet"
 	shrapnel_chance = 0
 
-	damage = 40
+	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/pistol/ap/penetrating/set_bullet_traits()
@@ -108,7 +108,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 65
-	penetration = ARMOR_PENETRATION_TIER_1 //bigger but slower, armor works to counter more effectively
+	penetration = ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
@@ -170,7 +170,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 35
+	damage = 40
 
 /datum/ammo/bullet/pistol/incendiary/set_bullet_traits()
 	..()
@@ -188,8 +188,8 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
 // Used by VP78 and Auto 9
@@ -199,8 +199,8 @@
 	debilitate = list(0,0,0,0,0,0,0,2)
 
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_5
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
 	effective_range_max = 3 //hopefully this fixes the damage woes.
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
@@ -241,7 +241,7 @@
 	shrapnel_chance = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 50
+	damage = 60
 
 /datum/ammo/bullet/pistol/squash/incendiary/set_bullet_traits()
 	..()

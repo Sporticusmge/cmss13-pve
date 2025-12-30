@@ -48,8 +48,8 @@
 	icon_state = "burnkit_upgraded"
 	desc = "An upgraded burn treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical burns."
 
-	max_amount = 20
-	amount = 20
+	max_amount = 15
+	amount = 15
 
 /obj/item/stack/medical/advanced/ointment/upgraded/Initialize(mapload, ...)
 	. = ..()
@@ -63,8 +63,8 @@
 	icon_state = "traumakit_upgraded"
 	desc = "An upgraded trauma treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical wounds."
 
-	max_amount = 20
-	amount = 20
+	max_amount = 15
+	amount = 15
 
 /obj/item/stack/medical/advanced/bruise_pack/upgraded/Initialize(mapload, ...)
 	. = ..()

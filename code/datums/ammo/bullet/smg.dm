@@ -29,7 +29,7 @@
 /datum/ammo/bullet/smg/squash
 	name = "squash-head submachinegun bullet"
 	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_3
+	penetration = ARMOR_PENETRATION_TIER_4
 	effective_range_max = 7
 	damage_falloff = DAMAGE_FALLOFF_TIER_3
 	max_range = 14
@@ -53,15 +53,15 @@
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
 	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_5
 	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/bullet/smg/heap
 	name = "high-explosive armor-piercing submachinegun bullet"
 
-	damage = 50
+	damage = 55
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_5
 	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/bullet/smg/ap/toxin

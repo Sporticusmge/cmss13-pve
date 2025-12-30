@@ -51,7 +51,7 @@
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
 	damage = 195
-	penetration = ARMOR_PENETRATION_TIER_7
+	penetration = ARMOR_PENETRATION_TIER_10
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
