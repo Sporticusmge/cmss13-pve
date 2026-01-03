@@ -3227,7 +3227,10 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
 	},
-/obj/item/weapon/gun/pistol/vp78/rmc/unloaded,
+/obj/item/weapon/gun/rifle/rmc_f90{
+	name = "F903A1 'Cap' Rifle";
+	desc = "An old standard-issue rifle of the Royal Marines. Now an antique weapon with memories of its use etched into the body. Despite the mess it has been well maintained, though the weapon itself seems unusuable."
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "gs" = (
@@ -3749,8 +3752,7 @@
 /area/hms_brynhild/dorms)
 "hp" = (
 /obj/item/weapon/gun/rifle/rmc_f90{
-	anchored = 1;
-	name = "F903A1 'Gallahad' Rifle";
+	name = "F903A1 'Cap' Rifle";
 	desc = "An old standard-issue rifle of the Royal Marines. Now an antique weapon with memories of its use etched into the body. Despite the mess it has been well maintained, though the weapon itself seems unusuable."
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
@@ -4988,11 +4990,9 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
 "jS" = (
-/obj/item/paper{
-	name = "RMC NVGS, COPY AND DROP IN AMMO ROOM IF YOU WANT THEM TO HAVE THEM"
-	},
-/turf/open/space/basic,
-/area/hms_brynhild/supply)
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "jT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/motiondetectors/rmc{
@@ -5172,8 +5172,9 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/prep_hallway)
 "kl" = (
-/turf/closed/wall/almayer/white/hull,
-/area/hms_brynhild/supply)
+/obj/structure/machinery/door/airlock/upp_grey/window,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "km" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -5193,9 +5194,14 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "ko" = (
-/obj/structure/closet/crate/secure/rmcnvg,
-/turf/open/space/basic,
-/area/hms_brynhild/supply)
+/obj/structure/machinery/chem_dispenser,
+/obj/item/reagent_container/glass/beaker/bluespace,
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "kp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -5254,12 +5260,11 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
 "ku" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
-/turf/open/space/basic,
-/area/hms_brynhild/supply)
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "kv" = (
 /obj/structure/platform{
 	dir = 8;
@@ -6532,7 +6537,6 @@
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/item/device/defibrillator/upgraded,
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
 "nf" = (
@@ -7801,6 +7805,7 @@
 	pixel_x = -2;
 	pixel_y = 6
 	},
+/obj/item/storage/belt/gun/webley/full,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "pP" = (
@@ -9925,6 +9930,7 @@
 	pixel_x = -11;
 	pixel_y = 9
 	},
+/obj/item/storage/belt/gun/webley/full,
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/dorms)
 "uh" = (
@@ -10860,6 +10866,10 @@
 	pixel_x = 0;
 	pixel_y = 16
 	},
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 4
+	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
 "wU" = (
@@ -11477,6 +11487,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
+"yZ" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "zb" = (
 /obj/structure/barricade/handrail/type_b,
 /turf/open/floor/prison,
@@ -11703,12 +11717,9 @@
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/lower_cargo)
 "zI" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	dir = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/hms_brynhild/medical)
+/obj/item/weapon/gun/revolver/m44/custom/webley,
+/turf/open/space/basic,
+/area/space)
 "zJ" = (
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
@@ -12013,6 +12024,10 @@
 	},
 /turf/open/floor/corsat,
 /area/hms_brynhild/colour_office)
+"AE" = (
+/obj/structure/reagent_dispensers,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "AG" = (
 /turf/open/space/basic,
 /area/hms_brynhild/Docking)
@@ -17330,6 +17345,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_cargo)
+"Pr" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "Pt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17454,6 +17473,18 @@
 	light_color = "#dae2ff";
 	dir = 8
 	},
+/obj/structure/closet/crate/weapon,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
+/obj/item/ammo_magazine/rifle/rmc_f90,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "PN" = (
@@ -17918,7 +17949,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "Ri" = (
-/obj/structure/machinery/cm_vending/gear/medic_chemical/rmc,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/rmc,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/medical)
 "Rj" = (
@@ -18497,6 +18528,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/prep_hallway)
+"Tk" = (
+/obj/structure/closet/crate/secure/rmcnvg,
+/turf/open/space/basic,
+/area/space)
 "Tl" = (
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/lower_hangar)
@@ -18581,6 +18616,11 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
+"TD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/chem_master,
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/medical)
 "TG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow"
@@ -19384,11 +19424,8 @@
 /turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/hangar)
 "VW" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 2;
-	id = "EMcloset";
-	name = "Emergency Medical Closet Shutter";
-	pixel_y = -2
+/obj/structure/machinery/door/airlock/upp_grey/window{
+	dir = 2
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/hms_brynhild/medical)
@@ -24974,7 +25011,7 @@ BP
 BP
 BP
 BP
-BP
+zI
 BP
 BP
 BP
@@ -29094,7 +29131,7 @@ BP
 BP
 iw
 wT
-zI
+EF
 VW
 uH
 oD
@@ -29236,7 +29273,7 @@ BP
 BP
 iw
 iw
-iw
+kl
 iw
 iw
 jC
@@ -29376,10 +29413,10 @@ BP
 BP
 BP
 BP
-kl
-MU
-MU
-MU
+iw
+AE
+EF
+yZ
 iw
 fH
 Sw
@@ -29517,11 +29554,11 @@ BP
 BP
 BP
 BP
-BP
-kl
+Tk
+iw
 ku
-ko
-jS
+Pr
+EF
 iw
 Sy
 Hg
@@ -29660,10 +29697,10 @@ BP
 BP
 BP
 BP
-kl
-MU
-MU
-MU
+iw
+TD
+ko
+jS
 iw
 iw
 iw
@@ -29802,10 +29839,10 @@ BP
 BP
 BP
 BP
-kl
-kl
-kl
-kl
+iw
+iw
+iw
+iw
 iw
 iw
 AQ
