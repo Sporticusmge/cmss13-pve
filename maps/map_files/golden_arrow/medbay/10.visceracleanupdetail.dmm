@@ -1,11 +1,15 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ak" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/light/double/blue{
 	dir = 8;
-	light_power = 0.7
+	light_color = "#dae2ff"
 	},
-/obj/structure/machinery/chem_dispenser,
-/obj/item/reagent_container/glass/beaker/bluespace,
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aP" = (
@@ -41,6 +45,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "gq" = (
@@ -51,10 +56,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "hc" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/reagent_container/spray/cleaner,
-/obj/item/storage/box/pillbottles,
-/obj/item/storage/box/pillbottles,
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
@@ -389,6 +390,10 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Au" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical{
+	pixel_y = 20;
+	density = 0
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
@@ -464,7 +469,18 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "Fe" = (
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/paper_bin/uscm{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/tool/pen{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Fh" = (
@@ -615,7 +631,20 @@
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
 "Pm" = (
-/obj/structure/reagent_dispensers,
+/obj/structure/filingcabinet/medical{
+	pixel_y = 17;
+	pixel_x = -8;
+	name = "medical records";
+	density = 0
+	},
+/obj/structure/filingcabinet{
+	pixel_y = 17;
+	pixel_x = 8;
+	density = 0
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Pr" = (
@@ -661,10 +690,18 @@
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
 "QS" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_y = 14;
+	pixel_x = -4
+	},
+/obj/item/ashtray/plastic{
+	pixel_y = 3;
+	pixel_x = -10
+	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/chem_master,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "Sa" = (

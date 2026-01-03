@@ -1689,10 +1689,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"dc" = (
-/obj/structure/machinery/requests_console,
-/turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/hangar)
 "de" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5030,9 +5026,8 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "kV" = (
-/obj/structure/machinery/chem_dispenser,
-/obj/item/reagent_container/glass/beaker/bluespace,
-/turf/open/floor/plating/plating_catwalk/strata,
+/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
+/turf/open/floor/strata/floor2,
 /area/golden_arrow/medical)
 "kW" = (
 /obj/structure/surface/table/almayer{
@@ -5219,9 +5214,18 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/medical)
 "lt" = (
-/obj/structure/ladder{
-	id = med1;
-	height = 2
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/roller,
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/firstaid/softpack/upp{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/obj/item/storage/firstaid/softpack/upp{
+	pixel_y = 5;
+	pixel_x = -8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
@@ -8402,15 +8406,6 @@
 "uF" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
-"uH" = (
-/obj/structure/machinery/light/small{
-	light_power = 0.8;
-	light_range = 4;
-	light_color = "#e7c0a4"
-	},
-/obj/structure/closet/firecloset,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/medical)
 "uM" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -8419,13 +8414,6 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"uN" = (
-/obj/structure/reagent_dispensers,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/medical)
 "uU" = (
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
@@ -8440,10 +8428,6 @@
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"vg" = (
-/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/medical)
 "vh" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -9624,19 +9608,6 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/obj/item/storage/firstaid/softpack/upp{
-	pixel_x = 3;
-	pixel_y = 2
-	},
-/obj/item/storage/belt/medical/only_scanner,
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/roller,
-/obj/item/storage/firstaid/softpack/upp{
-	pixel_y = 5;
-	pixel_x = -8
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "GF" = (
@@ -9723,13 +9694,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"Hk" = (
-/obj/structure/ladder{
-	id = med1;
-	height = 1
-	},
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/medical)
 "Hm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10032,17 +9996,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
-"Kk" = (
-/obj/structure/machinery/light/small{
-	light_power = 0.8;
-	light_range = 4;
-	light_color = "#e7c0a4"
-	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/storage/box/pillbottles,
-/obj/item/storage/box/pillbottles,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/medical)
 "Km" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -10575,13 +10528,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
-"PP" = (
-/obj/structure/reagent_dispensers/fueltank/oxygentank,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo"
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/medical)
 "PV" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -10806,10 +10752,6 @@
 /obj/structure/grille,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/engineering)
-"RW" = (
-/obj/structure/machinery/chem_master,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/medical)
 "Sj" = (
 /obj/structure/machinery/door_control{
 	id = "chapaev_engi";
@@ -11538,10 +11480,6 @@
 /obj/structure/curtain/red,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
-"ZJ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/medical)
 "ZS" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -17423,7 +17361,7 @@ DH
 kM
 lr
 vC
-SJ
+kV
 kM
 iD
 dE
@@ -17725,7 +17663,7 @@ GI
 lW
 Kg
 lE
-vC
+SJ
 vC
 kX
 kM
@@ -26223,11 +26161,11 @@ ac
 ac
 uU
 mH
-vg
-kV
-RW
-Kk
-kP
+mV
+mV
+mV
+mV
+aa
 PK
 sZ
 Ln
@@ -26374,12 +26312,12 @@ ac
 ac
 ac
 zG
-dc
-ZJ
-ZJ
-ZJ
-vC
-kP
+mH
+mV
+mV
+mV
+mV
+aa
 RE
 Tg
 HX
@@ -26527,11 +26465,11 @@ mW
 Ps
 mH
 mH
-vC
-ZJ
-ZJ
-vC
-kP
+mV
+mV
+mV
+mV
+aa
 aa
 aa
 aa
@@ -26679,11 +26617,11 @@ ac
 mH
 mH
 mH
-Hk
-uN
-PP
-uH
-kP
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
@@ -26831,11 +26769,11 @@ mH
 mH
 mH
 mH
-kP
-kP
-kP
-kP
-kP
+mV
+mV
+mV
+mV
+mV
 mV
 mV
 mV
