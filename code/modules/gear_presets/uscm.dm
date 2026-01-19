@@ -430,12 +430,12 @@
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
 	assignment = JOB_SQUAD_LEADER_FORECON
-	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RSL"
 
-/datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
-	name = parent_type::name + " (E7 Rank)"
-	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/leader/forecon/major
+	name = parent_type::name + " (Higher Rank)"
+	paygrades = list(PAY_SHORT_MO4 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
