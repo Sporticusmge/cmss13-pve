@@ -650,7 +650,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SO
 	rank = JOB_SO
-	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PltCo"
 	minimum_age = 30
 	skills = /datum/skills/SO
