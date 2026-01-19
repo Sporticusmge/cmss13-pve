@@ -15,7 +15,7 @@
 	gear_preset_tertiary =  /datum/equipment_preset/uscm/leader/staff_sergeant
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your entire section.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
+	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
 
 /datum/job/marine/leader/handle_job_options(option)
 	gear_preset = initial(gear_preset)
