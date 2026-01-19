@@ -69,7 +69,7 @@
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/lthigh
-	job_options = list(FIRST_LT_VARIANT = "1st Lieutenant", SECOND_LT_VARIANT = "2nd Lieutenant")
+	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")
 
 /datum/job/marine/tl/ai/forecon/handle_job_options(option)
 	gear_preset = initial(gear_preset)
