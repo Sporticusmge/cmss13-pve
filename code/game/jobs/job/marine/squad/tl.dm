@@ -2,8 +2,8 @@
 #define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
 #define JSGT_VARIANT "Junior Sergeant"
-#define FIRST_LT_VARIANT "1st Lieutenant"
-#define SECOND_LT_VARIANT "2nd Lieutenant"
+#define FIRST_LT_VARIANT "First Lieutenant"
+#define SECOND_LT_VARIANT "Second Lieutenant"
 
 /datum/job/marine/tl
 	title = JOB_SQUAD_TEAM_LEADER
