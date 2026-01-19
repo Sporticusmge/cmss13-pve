@@ -355,7 +355,7 @@
 	role_comm_title = "ARSL"
 	skills = /datum/skills/tl/recon
 
-/datum/equipment_preset/uscm/tl/forecon/1stlt
+/datum/equipment_preset/uscm/tl/forecon/lthigh
 	name = parent_type::name + " (Higher Rank)"
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
 
