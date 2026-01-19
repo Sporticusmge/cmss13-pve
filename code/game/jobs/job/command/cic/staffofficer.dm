@@ -45,9 +45,12 @@
 	GLOB.marine_leaders[JOB_SO] -= M
 
 /datum/job/command/bridge/handle_job_options(option)
-	if(option != SECOND_LT_VARIANT)
-		gear_preset = initial(gear_preset)
-	else
+	gear_preset = initial(gear_preset)
+	if(option == SECOND_LT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == FIRST_LT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == CAPTAIN_VARIANT)
 		gear_preset = gear_preset_secondary
 
 OverrideTimelock(/datum/job/command/bridge, list(
