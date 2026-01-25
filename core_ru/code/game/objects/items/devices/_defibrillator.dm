@@ -28,7 +28,7 @@
 /obj/item/device/defibrillator
 	name = "emergency defibrillator"
 	desc = "A handheld emergency defibrillator, used to restore fibrillating patients. Can optionally bring people back from the dead."
-	icon = 'code/core_ru/icons/obj/items/defibs.dmi'
+	icon = 'core_ru/icons/obj/items/defibs.dmi'
 	icon_state = "defib"
 	item_state = "defib"
 	flags_atom = FPRINT|CONDUCT
