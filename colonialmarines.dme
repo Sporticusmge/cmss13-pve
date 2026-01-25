@@ -340,9 +340,7 @@
 #include "code\controllers\subsystem\processing\shield_pillar.dm"
 #include "code\controllers\subsystem\processing\slowobj.dm"
 #include "code\core_ru\_defibrillator.dm"
-#include "code\core_ru\code\game\objects\defibrillator_paddles.dm
-#include "code\core_ru\iconsobj\items\effects\beam.dmi"
-#include "code\core_ru\icons\obj\items\defibs.dmi"
+#include "code\core_ru\code\game\objects\defibrillator_paddles.dm"
 #include "code\datums\_atmos_setup.dm"
 #include "code\datums\action.dm"
 #include "code\datums\ASRS.dm"
