@@ -1,6 +1,6 @@
 /obj/item/device/paddles
 	name = "paddles"
-	icon = 'core_ru/icons/obj/items/defibs.dmi'
+	icon = 'code/core_ru/icons/obj/items/defibs.dmi'
 	icon_state = "paddles"
 
 	w_class = SIZE_LARGE
