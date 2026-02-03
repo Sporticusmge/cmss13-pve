@@ -258,7 +258,7 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
 	max_range = 22
 	effective_range_max = 12
-	damage = 40
+	damage = 100
 	penetration = ARMOR_PENETRATION_TIER_6
 	damage_armor_punch = 0
 	pen_armor_punch = 0
