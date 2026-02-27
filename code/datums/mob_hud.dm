@@ -23,7 +23,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_FACTION_UACG = new /datum/mob_hud/faction/guard(),
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
-	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
+	MOB_HUD_THERMAL = new new /datum/mob_hud/thermal(),
 	))
 
 /datum/mob_hud
@@ -108,6 +108,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 
 
 // MOB HUD TYPES //////////////////////////////////:
+/datum/mob_hud/thermal
+	hud_icons = list(THERMAL_HUD)
+
+/datum/mob_hud/thermal/add_to_single_hud(mob/user, mob/target)
+	if(target != user)
+		..()
 
 
 //Medical
@@ -862,3 +868,18 @@ GLOBAL_DATUM(hud_icon_hudfocus, /image)
 	var/freeze_found = HAS_TRAIT(src, TRAIT_IMMOBILIZED) && body_position == STANDING_UP && !buckled // Eligible targets are unable to move but can stand and aren't buckled (eg nested) - This is to convey that they are temporarily unable to move
 	if (freeze_found)
 		freeze_holder.overlays += image('icons/mob/hud/hud.dmi', src, "xeno_freeze")
+
+/mob/proc/set_thermal_hud()
+	return
+
+/mob/living/carbon/human/set_thermal_hud()
+	var/image/holder = hud_list[THERMAL_HUD]
+	var/faction_color = COLOR_VERY_SOFT_YELLOW
+	if(faction in list(FACTION_CLF, FACTION_UPP))
+		faction_color = COLOR_LASER_RED
+	if(faction in list(FACTION_MARINE, FACTION_ARMY, FACTION_NAVY, FACTION_UACG, FACTION_MARSHAL))
+		faction_color = COLOR_LIGHT_GREEN
+	holder.appearance_flags |= KEEP_TOGETHER | RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
+	holder.vis_contents += src
+
+	holder.filters += filter(type = "outline", size = 1, color = faction_color)
