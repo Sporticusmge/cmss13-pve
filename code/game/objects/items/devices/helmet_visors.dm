@@ -4,6 +4,7 @@
 	icon = 'icons/obj/items/clothing/helmet_visors.dmi'
 	icon_state = "hud_sight"
 	hud_type = MOB_HUD_THERMAL
+	helmet_overlay = null
 	w_class = SIZE_TINY
 
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
@@ -475,6 +476,8 @@
 /obj/item/device/helmet_visor/sight
 	name = "sight optic"
 	desc = "A standard M10 pattern helmet optic that grants its user point and shoot capabilities and provides tactical squad HUD display."
+	hud_type = MOB_HUD_THERMAL
+	helmet_overlay = null
 
 /obj/item/device/helmet_visor/sight/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
