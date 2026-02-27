@@ -876,7 +876,7 @@ GLOBAL_DATUM(hud_icon_hudfocus, /image)
 /mob/living/carbon/human/set_thermal_hud()
 	var/image/holder = hud_list[THERMAL_HUD]
 	var/faction_color = COLOR_VERY_SOFT_YELLOW
-	if(faction in list(FACTION_CLF, FACTION_UPP, HUNTER_CLAN))
+	if(faction in list(FACTION_CLF, FACTION_UPP, HUNTER_HUD))
 		faction_color = COLOR_LASER_RED
 	if(faction in list(FACTION_MARINE, FACTION_ARMY, FACTION_NAVY, FACTION_UACG, FACTION_MARSHAL))
 		faction_color = COLOR_LIGHT_GREEN

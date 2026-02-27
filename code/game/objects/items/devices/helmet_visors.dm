@@ -257,7 +257,7 @@
 	name = "AN/NVPAV-75 visor"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in units with regular funding."
 	icon_state = "nvg_sight"
-	hud_type = MOB_HUD_THERMAL
+	hud_type = null
 	action_icon_string = "nvg_sight_down"
 	helmet_overlay = "nvg_sight_right"
 	toggle_on_sound = 'sound/handling/toggle_nv1.ogg'
