@@ -281,7 +281,7 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency
 	name = "emergency autoinjector (CAUTION)"
-	desc = "An autoinjector loaded with a single dose of 77u of a special cocktail of chemicals, to be used in life-threatening situations. Doesn't require any training to use."
+	desc = "An autoinjector loaded with a single dose of 70u of a special cocktail of chemicals, to be used in life-threatening situations. Doesn't require any training to use."
 	icon_state = "empty_emergency"
 	chemname = "emergency"
 	autoinjector_type = "autoinjector_oneuse"
@@ -297,9 +297,11 @@
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency/Initialize()
 	. = ..()
-	reagents.add_reagent("bicaridine", REAGENTS_OVERDOSE-1)
-	reagents.add_reagent("kelotane", REAGENTS_OVERDOSE-1)
-	reagents.add_reagent("oxycodone", MED_REAGENTS_OVERDOSE-1)
+	reagents.add_reagent("bicaridine", 15)
+	reagents.add_reagent("kelotane", 15)
+	reagents.add_reagent("oxycodone", 10)
+	reagents.add_reagent("inaprovaline", 15)
+	reagents.add_reagent("dexalin", 15)
 	update_icon()
 
 /obj/item/reagent_container/hypospray/autoinjector/black_goo_cure
