@@ -524,3 +524,5 @@ GLOBAL_LIST(trait_name_map)
 #define WALL_HIDING_TRAIT "wallhiding"
 /// trait effect related to the pathogen overmind
 #define OVERMIND_TRAIT "overmind"
+/// from watchtower.dm
+#define TRAIT_ON_WATCHTOWER "on_watchtower"
