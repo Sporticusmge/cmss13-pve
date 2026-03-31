@@ -583,6 +583,11 @@
 	unacidable = TRUE
 	health = 1000000 //Failsafe, shouldn't matter
 
+/obj/structure/window/framed/colony/reinforced/hull/yautja
+	name = "alien hull window"
+	icon_state = "pred_window0"
+	basestate = "pred_window"
+
 /obj/structure/window/framed/almayer/hull/hijack_bustable //I exist to explode after hijack, that is all.
 
 /obj/structure/window/framed/almayer/hull/hijack_bustable/Initialize()
@@ -684,7 +689,10 @@
 	unacidable = TRUE
 	health = 1000000 //Failsafe, shouldn't matter
 
-
+/obj/structure/window/framed/colony/reinforced/hull/yautja
+	name = "alien hull window"
+	icon_state = "pred_window0"
+	basestate = "pred_window"
 
 //Chigusa windows
 

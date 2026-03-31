@@ -64,3 +64,6 @@
 	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
+
+	skull = /obj/item/skull/spitter
+	pelt = /obj/item/pelt/spitter

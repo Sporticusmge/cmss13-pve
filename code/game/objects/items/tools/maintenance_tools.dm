@@ -55,9 +55,13 @@
 	inherent_traits = list(TRAIT_TOOL_SCREWDRIVER)
 	preferred_storage = list(/obj/item/clothing/accessory/storage/tool_webbing = WEAR_ACCESSORY)
 
+	/// If the item should be assigned a random color
+	var/random_color = TRUE
 
 /obj/item/tool/screwdriver/Initialize()
 	. = ..()
+	if(!random_color)
+		return
 	switch(pick("red","blue","purple","brown","green","cyan","yellow"))
 		if ("red")
 			icon_state = "screwdriver2"
@@ -81,8 +85,6 @@
 			icon_state = "screwdriver7"
 			item_state = "screwdriver_yellow"
 
-	if (prob(75))
-		src.pixel_y = rand(0, 16)
 	return
 
 
