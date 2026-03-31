@@ -78,6 +78,7 @@ LINEN BINS
 /obj/item/bedsheet/colorable
 	icon_state = "sheetce"
 
+
 /obj/structure/bedsheetbin
 	name = "linen bin"
 	desc = "A linen bin. It looks rather cosy."

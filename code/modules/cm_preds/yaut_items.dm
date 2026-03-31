@@ -476,6 +476,7 @@
 		message_all_yautja("[usr.real_name] has created a new teleport location, [name], at [usr.loc] in [get_area(usr)]")
 		return TRUE
 
+
 ///HUNTING GROUNDS STUFF!!!!///
 //HG objects are not functional because HG is not ported in PVE yet
 /obj/structure/machinery/hunting_ground_selection
@@ -1088,6 +1089,7 @@
 		to_chat(user, SPAN_NOTICE("Why would you try attaching this to your clothing?"))
 		return
 	. = ..()
+
 
 /// Skulls & Parts
 /obj/item/skull
