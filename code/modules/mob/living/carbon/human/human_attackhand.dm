@@ -25,7 +25,6 @@
 						SPAN_NOTICE("You extinguished the fire on [src]."), null, 5)
 				return 1
 
-			// If unconscious with oxygen damage, do CPR. If dead, we do CPR
 			if(!((stat == UNCONSCIOUS || ((locate(/datum/effects/crit) in effects_list) && (status_flags & CANKNOCKOUT))) && getOxyLoss() > 0) && !(stat == DEAD))
 				help_shake_act(attacking_mob)
 				return 1
@@ -40,7 +39,6 @@
 				to_chat(attacking_mob, SPAN_NOTICE("<B>CPR is already being performed on [src]!</B>"))
 				return 0
 
-			//CPR
 			if(attacking_mob.action_busy)
 				return 1
 
@@ -65,7 +63,7 @@
 				check_for_injuries()
 				return 1
 
-			// --- NECK SNAP (similar to throat slit) ---
+			// --- NECK SNAP (fully analogous to throat slit) ---
 			if(HAS_TRAIT(attacking_mob, NECKBREAK_TRAIT) && attacking_mob.pulling == src && attacking_mob.zone_selected == "head")
 				if(stat == DEAD)
 					to_chat(attacking_mob, SPAN_WARNING("[src] is already dead."))
@@ -83,12 +81,7 @@
 					to_chat(attacking_mob, SPAN_WARNING("[src]'s head is destroyed!"))
 					return 1
 
-				// Check position: victim must be lying down, handcuffed, or directly in front of attacker
-				if(!(body_position == LYING_DOWN || handcuffed || (dir == attacking_mob.dir && loc == get_step(attacking_mob, attacking_mob.dir))))
-					to_chat(attacking_mob, SPAN_WARNING("You must be directly behind your target, or they must be on the ground or restrained!"))
-					return 1
-
-				// Apply temporary immobilization
+				// Apply the same stun as throat slit
 				neckbreak_stun(src)
 
 				attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> grabs <b>[src]</b> by the head and prepares to snap their neck!"))
@@ -100,10 +93,14 @@
 					// Massive damage to head
 					apply_damage(200, BRUTE, head_limb, sharp = 0, edge = 0)
 
+					// Add the same floored trait as throat slit
+					ADD_TRAIT(src, TRAIT_FLOORED, NECKBREAK_TRAIT)
+
 					// Death after 2 seconds (like throat slit)
 					spawn(20)
 						if(src && stat != DEAD)
 							src.death()
+							REMOVE_TRAIT(src, TRAIT_FLOORED, NECKBREAK_TRAIT)
 
 					remove_neckbreak_stun(src)
 					attacking_mob.stop_pulling()
@@ -124,7 +121,6 @@
 			return 1
 
 		if(INTENT_HARM)
-			// See if they can attack, and which attacks to use.
 			var/datum/unarmed_attack/attack = attacking_mob.species.unarmed
 			if(!attack.is_usable(attacking_mob))
 				attack = attacking_mob.species.secondary_unarmed
@@ -138,10 +134,10 @@
 			attacking_mob.animation_attack_on(src)
 			attacking_mob.flick_attack_overlay(src, "punch")
 
-			var/extra_cqc_dmg = 0 //soft maximum of 5, this damage is added onto the final value depending on how much cqc skill you have
+			var/extra_cqc_dmg = 0
 			if(attacking_mob.skills)
 				extra_cqc_dmg = attacking_mob.skills?.get_skill_level(SKILL_CQC) *5
-			var/raw_damage = 0 //final value, gets absorbed by the armor and then deals the leftover to the mob
+			var/raw_damage = 0
 
 			var/obj/limb/affecting = get_limb(rand_zone(attacking_mob.zone_selected, 70))
 			var/armor = getarmor(affecting, ARMOR_MELEE)
@@ -151,7 +147,7 @@
 			visible_message(SPAN_DANGER("[attacking_mob] [pick(attack.attack_verb)]ed [src]!"), null, null, 5)
 
 			raw_damage = attack.damage + extra_cqc_dmg
-			var/final_damage = armor_damage_reduction(GLOB.marine_melee, raw_damage, armor, FALSE) // no penetration from punches
+			var/final_damage = armor_damage_reduction(GLOB.marine_melee, raw_damage, armor, FALSE)
 			apply_damage(final_damage, BRUTE, affecting, sharp=attack.sharp, edge = attack.edge)
 
 		if(INTENT_DISARM)
@@ -170,7 +166,6 @@
 			if(w_uniform)
 				w_uniform.add_fingerprint(attacking_mob)
 
-			//Accidental gun discharge
 			if(!skillcheck(attacking_mob, SKILL_CQC, SKILL_CQC_SKILLED))
 				if (isgun(r_hand) || isgun(l_hand))
 					var/obj/item/weapon/gun/held_weapon = null
@@ -226,9 +221,7 @@
 			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, 7)
 			visible_message(SPAN_DANGER("<B>[attacking_mob] attempted to disarm [src]!</B>"), null, null, 5)
 
-/mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
-	return
-
+// --- Helper procs for neck snap (identical to throat slit stun) ---
 /mob/living/carbon/human/proc/neckbreak_stun(mob/living/target)
 	target.anchored = TRUE
 	ADD_TRAIT(target, TRAIT_IMMOBILIZED, NECKBREAK_TRAIT)
@@ -240,13 +233,14 @@
 	REMOVE_TRAIT(target, TRAIT_IMMOBILIZED, NECKBREAK_TRAIT)
 	REMOVE_TRAIT(target, TRAIT_UNDENSE, NECKBREAK_TRAIT)
 
+/mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
+	return
+
 /mob/living/carbon/human/help_shake_act(mob/living/carbon/M)
-	//Target is us
 	if(src == M)
 		check_for_injuries()
 		return
 
-	//Target is not us
 	var/t_him = "it"
 	if (gender == MALE)
 		t_him = "him"
