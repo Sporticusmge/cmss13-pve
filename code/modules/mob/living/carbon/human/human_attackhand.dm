@@ -1,4 +1,7 @@
+#define NECKBREAK_TRAIT "neck_break"
+
 /mob/living/carbon/human/var/cpr_attempt_timer
+
 /mob/living/carbon/human/attack_hand(mob/living/carbon/human/attacking_mob)
 	if(..())
 		return TRUE
@@ -51,7 +54,7 @@
 					SPAN_HELPFUL("You <b>perform CPR</b> on <b>[src]</b>."),
 					SPAN_NOTICE("<b>[attacking_mob]</b> performs <b>CPR</b> on <b>[src]</b>."))
 				if(stat != DEAD)
-					var/suff = min(getOxyLoss(), 10) //Pre-merge level, less healing, more prevention of dieing.
+					var/suff = min(getOxyLoss(), 10)
 					apply_damage(-suff, OXY)
 					updatehealth()
 			cpr_attempt_timer = 0
@@ -62,7 +65,7 @@
 				check_for_injuries()
 				return 1
 
-			// --- NECK SNAP: requires NECKBREAK_TRAIT, target being pulled, and head targeted ---
+			// --- NECK SNAP (similar to throat slit) ---
 			if(HAS_TRAIT(attacking_mob, NECKBREAK_TRAIT) && attacking_mob.pulling == src && attacking_mob.zone_selected == "head")
 				if(stat == DEAD)
 					to_chat(attacking_mob, SPAN_WARNING("[src] is already dead."))
@@ -80,22 +83,36 @@
 					to_chat(attacking_mob, SPAN_WARNING("[src]'s head is destroyed!"))
 					return 1
 
-				attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> grabs <b>[src]</b> by the head and twists it sharply!"))
-				if(do_after(attacking_mob, 30, INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED))
-					attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> snaps [src]'s neck with a horrible crack!"))
-					playsound(src.loc, 'sound/effects/bone_break1.ogg', 50, 1)
+				// Check position: victim must be lying down, handcuffed, or directly in front of attacker
+				if(!(body_position == LYING_DOWN || handcuffed || (dir == attacking_mob.dir && loc == get_step(attacking_mob, attacking_mob.dir))))
+					to_chat(attacking_mob, SPAN_WARNING("You must be directly behind your target, or they must be on the ground or restrained!"))
+					return 1
 
+				// Apply temporary immobilization
+				neckbreak_stun(src)
+
+				attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> grabs <b>[src]</b> by the head and prepares to snap their neck!"))
+				var/neck_snap_delay = 4 SECONDS * attacking_mob.get_skill_duration_multiplier(SKILL_CQC)
+				if(do_after(attacking_mob, neck_snap_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, src, INTERRUPT_OUT_OF_RANGE))
+					attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> snaps [src]'s neck with a horrible crack!"))
+					playsound(src.loc, 'sound/effects/bonebreak1.ogg', 50, 1)
+
+					// Massive damage to head
 					apply_damage(200, BRUTE, head_limb, sharp = 0, edge = 0)
-					// Delay death by 2 seconds (20 deciseconds)
+
+					// Death after 2 seconds (like throat slit)
 					spawn(20)
 						if(src && stat != DEAD)
 							src.death()
+
+					remove_neckbreak_stun(src)
 					attacking_mob.stop_pulling()
 					return 1
 				else
 					attacking_mob.visible_message(SPAN_NOTICE("[attacking_mob] fails to snap [src]'s neck."))
+					remove_neckbreak_stun(src)
 					return 1
-			// --- END OF NECK SNAP ---
+			// --- END NECK SNAP ---
 
 			if(anchored)
 				return 0
@@ -182,8 +199,8 @@
 						return held_weapon.afterattack(target,src)
 
 			var/disarm_chance = rand(1, 100)
-			var/attacker_skill_level = attacking_mob.skills ? attacking_mob.skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
-			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX // No skills, so assume max
+			var/attacker_skill_level = attacking_mob.skills ? attacking_mob.skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX
+			var/defender_skill_level = skills ? skills.get_skill_level(SKILL_CQC) : SKILL_CQC_MAX
 			disarm_chance -= 15 * attacker_skill_level
 			disarm_chance += 15 * defender_skill_level
 
@@ -197,7 +214,6 @@
 				return
 
 			if(disarm_chance <= 60)
-				//BubbleWrap: Disarming breaks a pull
 				if(pulling)
 					visible_message(SPAN_DANGER("<b>[attacking_mob] has broken [src]'s grip on [pulling]!</B>"), null, null, 5)
 					stop_pulling()
@@ -212,6 +228,17 @@
 
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
 	return
+
+/mob/living/carbon/human/proc/neckbreak_stun(mob/living/target)
+	target.anchored = TRUE
+	ADD_TRAIT(target, TRAIT_IMMOBILIZED, NECKBREAK_TRAIT)
+	ADD_TRAIT(target, TRAIT_UNDENSE, NECKBREAK_TRAIT)
+	playsound(target, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+
+/mob/living/carbon/human/proc/remove_neckbreak_stun(mob/living/target)
+	target.anchored = FALSE
+	REMOVE_TRAIT(target, TRAIT_IMMOBILIZED, NECKBREAK_TRAIT)
+	REMOVE_TRAIT(target, TRAIT_UNDENSE, NECKBREAK_TRAIT)
 
 /mob/living/carbon/human/help_shake_act(mob/living/carbon/M)
 	//Target is us
@@ -306,7 +333,7 @@
 				if(40 to INFINITY)
 					status += "peeling away"
 
-		if(org.get_incision_depth()) //Unindented because robotic and severed limbs may also have surgeries performed upon them.
+		if(org.get_incision_depth())
 			status += "cut open"
 
 		for(var/datum/effects/bleeding/external/E in org.bleeding_effects_list)
