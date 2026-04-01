@@ -95,7 +95,7 @@
 				var/neck_snap_delay = 4 SECONDS * attacking_mob.get_skill_duration_multiplier(SKILL_CQC)
 				if(do_after(attacking_mob, neck_snap_delay, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, src, INTERRUPT_OUT_OF_RANGE))
 					attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> snaps [src]'s neck with a horrible crack!"))
-					playsound(src.loc, 'sound/effects/bonebreak1.ogg', 50, 1)
+					playsound(src.loc, 'sound/effects/bone_break1.ogg', 50, 1)
 
 					// Massive damage to head
 					apply_damage(200, BRUTE, head_limb, sharp = 0, edge = 0)
