@@ -518,6 +518,8 @@ GLOBAL_LIST(trait_name_map)
 #define CHLOROFORM_TRAIT "chloroform"
 /// traits transparent turf
 #define TURF_Z_TRANSPARENT_TRAIT "turf_z_transparent"
+/// traits from neck-break
+#define NECKBREAK_TRAIT "neck_break"
 /// traits from throat-slitting
 #define THROATSLIT_TRAIT "throat_slit"
 /// traits from wall hiding

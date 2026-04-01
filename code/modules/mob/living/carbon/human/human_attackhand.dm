@@ -62,6 +62,41 @@
 				check_for_injuries()
 				return 1
 
+			// --- NECK SNAP: requires NECKBREAK_TRAIT, target being pulled, and head targeted ---
+			if(HAS_TRAIT(attacking_mob, NECKBREAK_TRAIT) && attacking_mob.pulling == src && attacking_mob.zone_selected == "head")
+				if(stat == DEAD)
+					to_chat(attacking_mob, SPAN_WARNING("[src] is already dead."))
+					return 1
+
+				if(attacking_mob.action_busy)
+					return 1
+
+				var/obj/limb/head_limb = get_limb("head")
+				if(!head_limb)
+					to_chat(attacking_mob, SPAN_WARNING("[src] has no head!"))
+					return 1
+
+				if(head_limb.status & LIMB_DESTROYED)
+					to_chat(attacking_mob, SPAN_WARNING("[src]'s head is destroyed!"))
+					return 1
+
+				attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> grabs <b>[src]</b> by the head and twists it sharply!"))
+				if(do_after(attacking_mob, 30, INTERRUPT_ALL, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED))
+					attacking_mob.visible_message(SPAN_DANGER("<b>[attacking_mob]</b> snaps [src]'s neck with a horrible crack!"))
+					playsound(src.loc, 'sound/effects/bone_break1.ogg', 50, 1)
+
+					apply_damage(200, BRUTE, head_limb, sharp = 0, edge = 0)
+					// Delay death by 2 seconds (20 deciseconds)
+					spawn(20)
+						if(src && stat != DEAD)
+							src.death()
+					attacking_mob.stop_pulling()
+					return 1
+				else
+					attacking_mob.visible_message(SPAN_NOTICE("[attacking_mob] fails to snap [src]'s neck."))
+					return 1
+			// --- END OF NECK SNAP ---
+
 			if(anchored)
 				return 0
 
