@@ -1484,6 +1484,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	accessories.Cut()
 	return ..()
 
+// Disable Alt+click completely to prevent duping
+/obj/item/storage/backpack/marine/imp/AltClick(mob/user)
+	return // do nothing, no alt-click removal
+
 // Check if an item can be attached
 /obj/item/storage/backpack/marine/imp/proc/can_attach_accessory(obj/item/I)
 	// Determine slot type
@@ -1549,7 +1553,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		to_chat(user, SPAN_WARNING("You cannot detach [I] from your hand."))
 		return FALSE
 
+	// Move item into backpack, then remove it from storage contents so it doesn't show inside
 	I.forceMove(src)
+	if(istype(src, /obj/item/storage))
+		var/obj/item/storage/S = src
+		S.remove_from_storage(user, I)  // removes from contents but keeps loc = src
+
 	accessories += I
 
 	var/slot = get_slot_type(I)
@@ -1684,7 +1693,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		attach_accessory(user, I)
 		return TRUE
 
-	// Otherwise, try parent storage handling (put inside)
+	// Otherwise, try parent storage handling (put inside for non-attachable items)
 	return ..()
 
 // attack_self: when you click on the backpack while it's in your hand, show removal menu
