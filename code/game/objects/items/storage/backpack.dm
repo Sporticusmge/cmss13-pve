@@ -1484,10 +1484,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	accessories.Cut()
 	return ..()
 
-// Disable Alt+click completely to prevent duping
-/obj/item/storage/backpack/marine/imp/AltClick(mob/user)
-	return // do nothing, no alt-click removal
-
 // Check if an item can be attached
 /obj/item/storage/backpack/marine/imp/proc/can_attach_accessory(obj/item/I)
 	// Determine slot type
