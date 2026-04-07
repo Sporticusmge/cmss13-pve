@@ -1458,11 +1458,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 //==========================// IMP BACKPACK \\================================\\
 //=======================================================================\\
 
-#define ATTACHABLE_ITEMS list(\
-		/obj/item/tool/shovel/etool,\
-		/obj/item/roller/bedroll,\
-		/obj/item/prop/folded_anti_tank_sadar,\
-	)
+// Define slots for IMP backpack attachments (if not already defined globally)
+#ifndef IMP_SLOT_ETOOL
+#define IMP_SLOT_ETOOL   "imp_etool"
+#define IMP_SLOT_BEDROLL "imp_bedroll"
+#define IMP_SLOT_SADAR   "imp_sadar"
+#define IMP_SLOT_POUCH   "imp_pouch"
+#endif
 
 /obj/item/storage/backpack/marine/imp
 	name = "\improper IMP backpack"
@@ -1472,11 +1474,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	has_gamemode_skin = FALSE
 	xeno_types = null
 
-	// Accessory system (mirroring /obj/item/clothing)
-	var/list/valid_accessory_slots = list("etool", "bedroll", "sadar", "pouch")
-	var/list/restricted_accessory_slots = list("etool", "bedroll", "sadar") // only one of each
-	var/list/accessories = list()            // list of attached items
-	var/max_pouches = 2                      // maximum number of pouches
+	// List of allowed IMP slots
+	var/list/valid_imp_slots = list(IMP_SLOT_ETOOL, IMP_SLOT_BEDROLL, IMP_SLOT_SADAR, IMP_SLOT_POUCH)
+	// Restricted slots (only one per slot)
+	var/list/restricted_imp_slots = list(IMP_SLOT_ETOOL, IMP_SLOT_BEDROLL, IMP_SLOT_SADAR)
+	// List of attached items (stored in nullspace)
+	var/list/accessories = list()
+	// Max pouches
+	var/max_pouches = 2
 
 /obj/item/storage/backpack/marine/imp/Destroy()
 	for(var/obj/item/I in accessories)
@@ -1484,36 +1489,38 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	accessories.Cut()
 	return ..()
 
+// Helper: determine IMP slot from item type
+/obj/item/storage/backpack/marine/imp/proc/get_imp_slot(obj/item/I)
+	if(istype(I, /obj/item/tool/shovel/etool))
+		return IMP_SLOT_ETOOL
+	if(istype(I, /obj/item/roller/bedroll))
+		return IMP_SLOT_BEDROLL
+	if(istype(I, /obj/item/prop/folded_anti_tank_sadar))
+		return IMP_SLOT_SADAR
+	if(istype(I, /obj/item/storage/pouch))
+		return IMP_SLOT_POUCH
+	return null
+
 // Check if an item can be attached
 /obj/item/storage/backpack/marine/imp/proc/can_attach_accessory(obj/item/I)
-	// Determine slot type
-	var/slot
-	if(istype(I, /obj/item/tool/shovel/etool))
-		slot = "etool"
-	else if(istype(I, /obj/item/roller/bedroll))
-		slot = "bedroll"
-	else if(istype(I, /obj/item/prop/folded_anti_tank_sadar))
-		slot = "sadar"
-	else if(istype(I, /obj/item/storage/pouch))
-		slot = "pouch"
-	else
+	var/slot = get_imp_slot(I)
+	if(!slot)
 		return FALSE
 
-	// Check if slot is allowed
-	if(!(slot in valid_accessory_slots))
+	if(!(slot in valid_imp_slots))
 		return FALSE
 
-	// Check restricted slots (only one per restricted slot)
-	if(slot in restricted_accessory_slots)
+	// Check restricted slots (only one)
+	if(slot in restricted_imp_slots)
 		for(var/obj/item/AC in accessories)
-			if(get_slot_type(AC) == slot)
+			if(get_imp_slot(AC) == slot)
 				return FALSE
 
 	// Special pouch limit
-	if(slot == "pouch")
+	if(slot == IMP_SLOT_POUCH)
 		var/pouch_count = 0
 		for(var/obj/item/AC in accessories)
-			if(istype(AC, /obj/item/storage/pouch))
+			if(get_imp_slot(AC) == IMP_SLOT_POUCH)
 				pouch_count++
 		if(pouch_count >= max_pouches)
 			return FALSE
@@ -1528,48 +1535,31 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 	return TRUE
 
-// Helper: get slot type from an item
-/obj/item/storage/backpack/marine/imp/proc/get_slot_type(obj/item/I)
-	if(istype(I, /obj/item/tool/shovel/etool))
-		return "etool"
-	if(istype(I, /obj/item/roller/bedroll))
-		return "bedroll"
-	if(istype(I, /obj/item/prop/folded_anti_tank_sadar))
-		return "sadar"
-	if(istype(I, /obj/item/storage/pouch))
-		return "pouch"
-	return null
-
-// Attach an accessory (item) to the backpack
+// Attach accessory (moves item directly to nullspace, bypassing the floor)
 /obj/item/storage/backpack/marine/imp/proc/attach_accessory(mob/user, obj/item/I, silent = FALSE)
 	if(!can_attach_accessory(I))
 		return FALSE
 
-	if(!user.drop_held_item(I))
+	// Move item directly from hand to nullspace, without dropping on ground
+	if(!user.drop_inv_item_to_loc(I, null))
 		to_chat(user, SPAN_WARNING("You cannot detach [I] from your hand."))
 		return FALSE
 
-	// Move item into backpack, then remove it from storage contents so it doesn't show inside
-	I.forceMove(src)
-	if(istype(src, /obj/item/storage))
-		var/obj/item/storage/S = src
-		S.remove_from_storage(user, I)  // removes from contents but keeps loc = src
-
 	accessories += I
 
-	var/slot = get_slot_type(I)
+	var/slot = get_imp_slot(I)
 	var/msg = ""
 	switch(slot)
-		if("etool")
+		if(IMP_SLOT_ETOOL)
 			msg = "You attach the folded e-tool to the side of [src]."
-		if("bedroll")
+		if(IMP_SLOT_BEDROLL)
 			msg = "You strap the bedroll to the bottom of [src]."
-		if("sadar")
+		if(IMP_SLOT_SADAR)
 			msg = "You clip the folded SADAR to the front of [src]."
-		if("pouch")
+		if(IMP_SLOT_POUCH)
 			var/pouch_count = 0
 			for(var/obj/item/P in accessories)
-				if(istype(P, /obj/item/storage/pouch))
+				if(get_imp_slot(P) == IMP_SLOT_POUCH)
 					pouch_count++
 			msg = "You attach the [I] to the waist belt of [src]. ([pouch_count]/[max_pouches] pouches)"
 
@@ -1577,12 +1567,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		to_chat(user, SPAN_NOTICE(msg))
 
 	update_icon()
-	// Add remove verb if any removable accessories exist
 	if(length(accessories))
 		verbs += /obj/item/storage/backpack/marine/imp/proc/remove_accessory_verb
 	return TRUE
 
-// Remove an accessory from the backpack
+// Remove accessory (brings item back from nullspace)
 /obj/item/storage/backpack/marine/imp/proc/remove_accessory(mob/user, obj/item/I)
 	if(!(I in accessories))
 		return FALSE
@@ -1595,13 +1584,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		to_chat(user, SPAN_NOTICE("You drop the [I.name] from [src] on the ground."))
 	update_icon()
 
-	// Remove verb if no removable accessories left
-	var/any_removable = length(accessories)
-	if(!any_removable)
+	if(!length(accessories))
 		verbs -= /obj/item/storage/backpack/marine/imp/proc/remove_accessory_verb
 	return TRUE
 
-// Show radial menu to choose which accessory to remove
+// Radial menu for removal
 /obj/item/storage/backpack/marine/imp/proc/pick_accessory_to_remove(mob/user)
 	if(!length(accessories))
 		return null
@@ -1612,23 +1599,22 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	for(var/obj/item/I in accessories)
 		var/display_name
 		var/icon_state_ov
-		var/slot = get_slot_type(I)
+		var/slot = get_imp_slot(I)
 		switch(slot)
-			if("etool")
+			if(IMP_SLOT_ETOOL)
 				display_name = "E-Tool"
 				icon_state_ov = "+imp_shovel"
-			if("bedroll")
+			if(IMP_SLOT_BEDROLL)
 				display_name = "Bedroll"
 				icon_state_ov = "+imp_bedroll"
-			if("sadar")
+			if(IMP_SLOT_SADAR)
 				display_name = "SADAR"
 				icon_state_ov = "+imp_sadar"
-			if("pouch")
-				// Determine pouch index (1 or 2)
+			if(IMP_SLOT_POUCH)
 				var/index = 1
 				var/pouch_num = 0
 				for(var/obj/item/P in accessories)
-					if(istype(P, /obj/item/storage/pouch))
+					if(get_imp_slot(P) == IMP_SLOT_POUCH)
 						pouch_num++
 						if(P == I)
 							index = pouch_num
@@ -1659,7 +1645,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 	return choice_to_item[choice]
 
-// Verb for removing accessories (appears in right-click menu when backpack is in hand or on back)
+// Verb for removal
 /obj/item/storage/backpack/marine/imp/proc/remove_accessory_verb()
 	set name = "Remove Accessory"
 	set category = "Object"
@@ -1668,7 +1654,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!usr.can_use_hands() || usr.is_mob_incapacitated())
 		return
 
-	// Check if we have the backpack in hands or on back
 	if(usr.get_active_hand() != src && usr.l_hand != src && usr.r_hand != src && usr.back != src)
 		to_chat(usr, SPAN_WARNING("You must be holding or wearing [src] to remove accessories."))
 		return
@@ -1677,54 +1662,49 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(to_remove)
 		remove_accessory(usr, to_remove)
 
-// Attackby: attach item when clicked on backpack
+// Attackby: attach item, otherwise try to put inside
 /obj/item/storage/backpack/marine/imp/attackby(obj/item/I, mob/user)
-	// Special message for unfolded SADAR
 	if(istype(I, /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable))
 		to_chat(user, SPAN_WARNING("You'll need to fold the [I] before attaching it to the [src]."))
 		return TRUE
 
-	// Check if it's an attachable item
 	if(can_attach_accessory(I))
 		attach_accessory(user, I)
 		return TRUE
 
-	// Otherwise, try parent storage handling (put inside for non-attachable items)
+	// For non-attachable items, let parent handle storage insertion
 	return ..()
 
-// attack_self: when you click on the backpack while it's in your hand, show removal menu
+// Attack self (click in hand) - show removal menu if accessories exist
 /obj/item/storage/backpack/marine/imp/attack_self(mob/user)
 	if(!user.can_use_hands() || user.is_mob_incapacitated())
 		return
-	// Only show removal menu if there are accessories attached
 	if(length(accessories))
 		var/obj/item/to_remove = pick_accessory_to_remove(user)
 		if(to_remove)
 			remove_accessory(user, to_remove)
 	else
-		// If no accessories, just open storage (parent behavior)
 		return ..()
 
-// Update icon: add overlays for all attached items
+// Update icon overlays
 /obj/item/storage/backpack/marine/imp/update_icon()
-	..() // parent handles basic overlays (fullness, lock, etc.)
-	// Add our own overlays on top
+	..()
 	var/pouch_count = 0
 	for(var/obj/item/I in accessories)
-		var/slot = get_slot_type(I)
+		var/slot = get_imp_slot(I)
 		switch(slot)
-			if("etool")
+			if(IMP_SLOT_ETOOL)
 				overlays += image(icon = 'icons/obj/items/clothing/backpacks.dmi', icon_state = "+imp_shovel")
-			if("bedroll")
+			if(IMP_SLOT_BEDROLL)
 				overlays += image(icon = 'icons/obj/items/clothing/backpacks.dmi', icon_state = "+imp_bedroll")
-			if("sadar")
+			if(IMP_SLOT_SADAR)
 				overlays += image(icon = 'icons/obj/items/clothing/backpacks.dmi', icon_state = "+imp_sadar")
-			if("pouch")
+			if(IMP_SLOT_POUCH)
 				pouch_count++
 				var/icon_state_ov = (pouch_count == 1) ? "+imp_leftpouch" : "+imp_rightpouch"
 				overlays += image(icon = 'icons/obj/items/clothing/backpacks.dmi', icon_state = icon_state_ov)
 
-// Examine: list attached items
+// Examine
 /obj/item/storage/backpack/marine/imp/examine(mob/user)
 	..()
 	if(!length(accessories))
@@ -1735,17 +1715,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/names = list()
 	var/pouch_idx = 1
 	for(var/obj/item/I in accessories)
-		var/slot = get_slot_type(I)
+		var/slot = get_imp_slot(I)
 		switch(slot)
-			if("etool")
+			if(IMP_SLOT_ETOOL)
 				names += "a folded e-tool"
-			if("bedroll")
+			if(IMP_SLOT_BEDROLL)
 				names += "a bedroll"
-			if("sadar")
+			if(IMP_SLOT_SADAR)
 				names += "a folded SADAR"
-			if("pouch")
+			if(IMP_SLOT_POUCH)
 				names += "[I.name] (pouch [pouch_idx])"
 				pouch_idx++
 	to_chat(user, SPAN_NOTICE(msg + english_list(names)))
-
-#undef ATTACHABLE_ITEMS
