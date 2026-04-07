@@ -1641,12 +1641,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/imp/update_icon()
 	..()
 	overlays.Cut()
-	// Add overlays based on attached items
+	// Overlay code disabled due to missing pouch sprite file
+	// Uncomment and adjust path when the correct DMI file is available
+	/*
 	if(length(attached_pouches))
 		var/image/pouch_overlay = image('icons/obj/items/storage.dmi', "pouch_imp")
 		if(pouch_overlay)
 			overlays += pouch_overlay
 	// Additional overlays for e-tool, bedroll, SADAR can be added here
+	*/
 
 /obj/item/storage/backpack/marine/imp/examine(mob/user)
 	..()
