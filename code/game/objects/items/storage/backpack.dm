@@ -1454,3 +1454,216 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+//==========================// IMP BACKPACK \\================================\\
+//=======================================================================\\
+
+#define ATTACHABLE_ITEMS list(\
+		/obj/item/tool/shovel/etool,\
+		/obj/item/roller/bedroll,\
+		/obj/item/prop/folded_anti_tank_sadar,\
+	)
+
+/obj/item/storage/backpack/marine/imp
+	name = "\improper IMP backpack"
+	desc = "A lightweight backpack developed for the Marine 70 program, dubbed the IMP (Individual Mounting Points) backpack. There are various clips around the backpack to attach specialized gear to. MMB to attach items to it."
+	icon_state = "imp"
+	item_state = "imp"
+	has_gamemode_skin = FALSE
+	xeno_types = null
+
+	var/attachable_items = ATTACHABLE_ITEMS
+
+	// Slots for unique items
+	var/obj/item/tool/shovel/etool/attached_etool = null
+	var/obj/item/roller/bedroll/attached_bedroll = null
+	var/obj/item/prop/folded_anti_tank_sadar/attached_sadar = null
+	var/list/attached_pouches = list()   // max 2 items of /obj/item/storage/pouch
+
+/obj/item/storage/backpack/marine/imp/Destroy()
+	// Clean up references when backpack is deleted
+	if(attached_etool)
+		qdel(attached_etool)
+	if(attached_bedroll)
+		qdel(attached_bedroll)
+	if(attached_sadar)
+		qdel(attached_sadar)
+	for(var/obj/item/pouch in attached_pouches)
+		qdel(pouch)
+	return ..()
+
+/obj/item/storage/backpack/marine/imp/attack_hand(mob/user, list/mods)
+	if(mods["ctrl"] && !mods["shift"])
+		// Ctrl+click — attach item from active hand
+		var/obj/item/I = user.get_active_hand()
+		if(I)
+			insert_attachable(I, user)
+		else
+			to_chat(user, SPAN_WARNING("You have nothing in your hand to attach."))
+		return TRUE
+	else if(mods["ctrl"] && mods["shift"])
+		// Ctrl+Shift+click — remove attached item into hand
+		remove_attachable(user)
+		return TRUE
+	return ..()
+
+/obj/item/storage/backpack/marine/imp/clicked(mob/user, list/mods)
+	if(mods["ctrl"] && !mods["shift"])
+		var/obj/item/I = user.get_active_hand()
+		if(I)
+			insert_attachable(I, user)
+		else
+			to_chat(user, SPAN_WARNING("You have nothing in your hand to attach."))
+		return TRUE
+	else if(mods["ctrl"] && mods["shift"])
+		remove_attachable(user)
+		return TRUE
+	return ..()
+
+/obj/item/storage/backpack/marine/imp/proc/insert_attachable(obj/item/subject_item, mob/user)
+	if(!subject_item || !user)
+		return
+
+	// Check for unfolded SADAR
+	if(istype(subject_item, /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable))
+		to_chat(user, SPAN_WARNING("You'll need to fold the [subject_item] before attaching it to the [src]."))
+		return
+
+	// Check for folded e-tool
+	if(istype(subject_item, /obj/item/tool/shovel/etool))
+		var/obj/item/tool/shovel/etool/et = subject_item
+		if(!et.folded)
+			to_chat(user, SPAN_WARNING("You'll need to fold the [subject_item] before attaching it to the [src]."))
+			return
+		if(attached_etool)
+			to_chat(user, SPAN_WARNING("There is already an e-tool attached to the [src]."))
+			return
+		if(!user.drop_inv_item_to_loc(subject_item, src))
+			to_chat(user, SPAN_WARNING("You cannot detach [subject_item] from your hand."))
+			return
+		attached_etool = subject_item
+		to_chat(user, SPAN_NOTICE("You attach the folded e-tool to the side of [src]."))
+		update_icon()
+		return
+
+	// Bedroll
+	if(istype(subject_item, /obj/item/roller/bedroll))
+		if(attached_bedroll)
+			to_chat(user, SPAN_WARNING("There is already a bedroll attached to the [src]."))
+			return
+		if(!user.drop_inv_item_to_loc(subject_item, src))
+			to_chat(user, SPAN_WARNING("You cannot detach [subject_item] from your hand."))
+			return
+		attached_bedroll = subject_item
+		to_chat(user, SPAN_NOTICE("You strap the bedroll to the bottom of [src]."))
+		update_icon()
+		return
+
+	// Folded SADAR
+	if(istype(subject_item, /obj/item/prop/folded_anti_tank_sadar))
+		if(attached_sadar)
+			to_chat(user, SPAN_WARNING("There is already a SADAR attached to the [src]."))
+			return
+		if(!user.drop_inv_item_to_loc(subject_item, src))
+			to_chat(user, SPAN_WARNING("You cannot detach [subject_item] from your hand."))
+			return
+		attached_sadar = subject_item
+		to_chat(user, SPAN_NOTICE("You clip the folded SADAR to the front of [src]."))
+		update_icon()
+		return
+
+	// Pouches
+	if(istype(subject_item, /obj/item/storage/pouch))
+		if(length(attached_pouches) >= 2)
+			to_chat(user, SPAN_WARNING("[src] can only hold two pouches."))
+			return
+		if(!user.drop_inv_item_to_loc(subject_item, src))
+			to_chat(user, SPAN_WARNING("You cannot detach [subject_item] from your hand."))
+			return
+		attached_pouches += subject_item
+		to_chat(user, SPAN_NOTICE("You attach the [subject_item] to the waist belt of [src]. ([length(attached_pouches)]/2 pouches)"))
+		update_icon()
+		return
+
+	to_chat(user, SPAN_WARNING("You can't attach [subject_item] to the [src]."))
+
+/obj/item/storage/backpack/marine/imp/proc/remove_attachable(mob/user)
+	if(!user)
+		return
+
+	// Determine what to remove (priority: pouches, then e-tool, bedroll, SADAR)
+	if(length(attached_pouches))
+		var/obj/item/pouch = attached_pouches[length(attached_pouches)]
+		attached_pouches -= pouch
+		pouch.forceMove(user.loc)  // drop on ground if hands are full
+		if(user.put_in_hands(pouch))
+			to_chat(user, SPAN_NOTICE("You take the [pouch] from [src]."))
+		else
+			to_chat(user, SPAN_NOTICE("You drop the [pouch] from [src] on the ground."))
+		update_icon()
+		return
+
+	if(attached_etool)
+		var/obj/item/I = attached_etool
+		attached_etool = null
+		I.forceMove(user.loc)
+		if(user.put_in_hands(I))
+			to_chat(user, SPAN_NOTICE("You take the e-tool from [src]."))
+		else
+			to_chat(user, SPAN_NOTICE("You drop the e-tool from [src] on the ground."))
+		update_icon()
+		return
+
+	if(attached_bedroll)
+		var/obj/item/I = attached_bedroll
+		attached_bedroll = null
+		I.forceMove(user.loc)
+		if(user.put_in_hands(I))
+			to_chat(user, SPAN_NOTICE("You take the bedroll from [src]."))
+		else
+			to_chat(user, SPAN_NOTICE("You drop the bedroll from [src] on the ground."))
+		update_icon()
+		return
+
+	if(attached_sadar)
+		var/obj/item/I = attached_sadar
+		attached_sadar = null
+		I.forceMove(user.loc)
+		if(user.put_in_hands(I))
+			to_chat(user, SPAN_NOTICE("You take the SADAR from [src]."))
+		else
+			to_chat(user, SPAN_NOTICE("You drop the SADAR from [src] on the ground."))
+		update_icon()
+		return
+
+	to_chat(user, SPAN_WARNING("There is nothing attached to [src] that you can remove."))
+
+/obj/item/storage/backpack/marine/imp/update_icon()
+	..()
+	overlays.Cut()
+	// Add overlays based on attached items
+	if(length(attached_pouches))
+		var/image/pouch_overlay = image('icons/obj/items/storage.dmi', "pouch_imp")
+		if(pouch_overlay)
+			overlays += pouch_overlay
+	// Additional overlays for e-tool, bedroll, SADAR can be added here
+
+/obj/item/storage/backpack/marine/imp/examine(mob/user)
+	..()
+	var/msg = "It has attached: "
+	var/list/attached_names = list()
+	if(attached_etool)
+		attached_names += "a folded e-tool"
+	if(attached_bedroll)
+		attached_names += "a bedroll"
+	if(attached_sadar)
+		attached_names += "a folded SADAR"
+	for(var/obj/item/pouch in attached_pouches)
+		attached_names += "[pouch]"
+	if(attached_names.len)
+		msg += english_list(attached_names)
+	else
+		msg += "nothing"
+	to_chat(user, SPAN_NOTICE(msg))
+
+#undef ATTACHABLE_ITEMS
