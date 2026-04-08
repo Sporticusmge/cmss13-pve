@@ -112970,7 +112970,7 @@
 /turf/open/floor/plating,
 /area/lv759/indoors/hospital/cryo_room)
 "snE" = (
-/obj/structure/machinery/computer/supplycomp,
+/obj/structure/machinery/computer/supply/asrs,
 /turf/open/floor/almayer/black/southwest,
 /area/lv759/indoors/wy_research_complex/cargo)
 "snM" = (
