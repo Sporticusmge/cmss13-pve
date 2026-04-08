@@ -4138,7 +4138,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "alI" = (
-/obj/structure/machinery/computer/supplycomp,
+/obj/structure/machinery/computer/supply/asrs,
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/platoon_commander_rooms)
 "alK" = (
@@ -16004,7 +16004,7 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
 "bwt" = (
-/obj/structure/machinery/computer/ordercomp,
+/obj/structure/machinery/computer/supply,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/supply)
 "bxi" = (
@@ -19474,7 +19474,7 @@
 	pixel_x = -2;
 	id = "largebay"
 	},
-/obj/structure/machinery/computer/ordercomp,
+/obj/structure/machinery/computer/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "nrp" = (
