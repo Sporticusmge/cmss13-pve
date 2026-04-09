@@ -82,7 +82,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/nade_box/smoke,
 	)
-	cost = 200
+	cost = 30
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive m47 HSDP grenade crate (WARNING)"
 	group = "Explosives"

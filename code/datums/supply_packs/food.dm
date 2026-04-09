@@ -36,7 +36,7 @@
 		/obj/item/reagent_container/food/drinks/bottle/rum,
 		/obj/item/reagent_container/food/drinks/bottle/wine,
 	)
-	cost = 10
+	cost = 2
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "\improper surplus of ingredients crate"
 	group = "Food"
@@ -52,7 +52,7 @@
 		/obj/item/storage/donut_box,
 		/obj/item/storage/donut_box,
 	)
-	cost = 10
+	cost = 1
 	containertype = /obj/structure/closet/crate/supply
 	containername = "box of donuts (x5)"
 	group = "Food"
@@ -63,7 +63,7 @@
 		/obj/item/ammo_box/magazine/misc/mre,
 		/obj/item/ammo_box/magazine/misc/mre,
 	)
-	cost = 10
+	cost = 5
 	containertype = /obj/structure/closet/crate/supply
 	containername = "\improper USCM MRE crate(x2)"
 	group = "Food"
@@ -73,7 +73,7 @@
 	contains = list(
 		/obj/item/pizzabox/mystery/stack,
 	)
-	cost = 30
+	cost = 3
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "\improper Pizza crate"
 	group = "Food"

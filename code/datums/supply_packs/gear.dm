@@ -1,12 +1,11 @@
 // add all the gear in this group.
 
 /datum/supply_packs/motiondetector
-	name = "Motion Detector (x2)"
+	name = "Motion Detector (x4)"
 	contains = list(
-		/obj/item/device/motiondetector,
-		/obj/item/device/motiondetector,
+		/obj/item/storage/box/guncase/heavy/motiondetectors,
 		)
-	cost = 40
+	cost = 60
 	containertype = /obj/structure/closet/crate/supply
 	containername = "Motion Detector crate"
 	group = "Gear"
@@ -21,6 +20,19 @@
 	containername = "XM4 crate"
 	group = "Gear"
 
+/datum/supply_packs/medical_visor
+	name = "Medical Visor (x4)"
+	contains = list(
+		/obj/item/device/helmet_visor/medical,
+		/obj/item/device/helmet_visor/medical,
+		/obj/item/device/helmet_visor/medical,
+		/obj/item/device/helmet_visor/medical,
+		)
+	cost = 60
+	containertype = /obj/structure/closet/crate/supply
+	containername = "Medical Visor crate"
+	group = "Gear"
+
 /datum/supply_packs/night_vision
 	name = "Night Vision (x4)"
 	contains = list(
@@ -32,17 +44,4 @@
 	cost = 80
 	containertype = /obj/structure/closet/crate/supply
 	containername = "Night vision crate"
-	group = "Gear"
-
-/datum/supply_packs/night_vision
-	name = "Medical Visor (x4)"
-	contains = list(
-		/obj/item/device/helmet_visor/medical,
-		/obj/item/device/helmet_visor/medical,
-		/obj/item/device/helmet_visor/medical,
-		/obj/item/device/helmet_visor/medical,
-		)
-	cost = 60
-	containertype = /obj/structure/closet/crate/supply
-	containername = "Medical Visor crate"
 	group = "Gear"
