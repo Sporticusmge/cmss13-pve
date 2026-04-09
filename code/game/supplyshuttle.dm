@@ -679,7 +679,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 
 /datum/controller/supply
 	var/processing = 1
-	var/processing_interval = 30 SECONDS
+	var/processing_interval = 10 SECONDS
 	var/iteration = 0
 	/// Current supply points
 	var/points = 0
