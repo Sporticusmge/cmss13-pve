@@ -14,18 +14,6 @@
 
 //===================================
 // Rounds
-/datum/supply_packs_asrs/ammo_rounds_box_rifle
-	reference_package = /datum/supply_packs/ammo_rounds_box_rifle
-	cost = ASRS_MEDIUM_WEIGHT
-
-/datum/supply_packs_asrs/ammo_rounds_box_rifle_ap
-	reference_package = /datum/supply_packs/ammo_rounds_box_rifle_ap
-	cost = ASRS_LOW_WEIGHT
-
-/datum/supply_packs_asrs/ammo_rounds_box_xm88
-	reference_package = /datum/supply_packs/ammo_rounds_box_xm88
-	cost = ASRS_LOW_WEIGHT
-
 //===================================
 // Magazines
 /datum/supply_packs_asrs/gun/ammo_hpr
@@ -51,13 +39,6 @@
 /datum/supply_packs_asrs/ammo_mag_box_ap
 	reference_package = /datum/supply_packs/ammo_mag_box_ap
 
-/datum/supply_packs_asrs/ammo_m49a_mag_box
-	reference_package = /datum/supply_packs/ammo_m49a_mag_box
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/ammo_m49a_mag_box_ap
-	reference_package = /datum/supply_packs/ammo_m49a_mag_box_ap
-
 /datum/supply_packs_asrs/ammo_shell_box
 	reference_package = /datum/supply_packs/ammo_shell_box
 	cost = ASRS_VERY_LOW_WEIGHT
@@ -70,10 +51,6 @@
 	reference_package = /datum/supply_packs/ammo_shell_box_flechette
 	cost = ASRS_VERY_LOW_WEIGHT
 
-/datum/supply_packs_asrs/ammo_shell_box_breaching
-	reference_package = /datum/supply_packs/ammo_shell_box_breaching
-	cost = ASRS_VERY_LOW_WEIGHT
-
 /datum/supply_packs_asrs/ammo_smartgun
 	reference_package = /datum/supply_packs/ammo_smartgun
 
@@ -81,38 +58,10 @@
 	reference_package = /datum/supply_packs/ammo_napalm
 	cost = ASRS_VERY_LOW_WEIGHT
 
-/datum/supply_packs_asrs/ammo_napalm_gel
-	reference_package = /datum/supply_packs/ammo_napalm_gel
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/ammo_flamer_mixed
-	reference_package = /datum/supply_packs/ammo_flamer_mixed
-	cost = ASRS_VERY_LOW_WEIGHT
-
 //===================================
 // Mortar ammo
-/datum/supply_packs_asrs/ammo_mortar_he
-	reference_package = /datum/supply_packs/ammo_mortar_he
-
-/datum/supply_packs_asrs/ammo_mortar_incend
-	reference_package = /datum/supply_packs/ammo_mortar_incend
-
-/datum/supply_packs_asrs/ammo_mortar_flare
-	reference_package = /datum/supply_packs/ammo_mortar_flare
-
 //===================================
 // Misc supplies
-/datum/supply_packs_asrs/flares
-	reference_package = /datum/supply_packs/flares
-	cost = ASRS_LOW_WEIGHT
-
-/datum/supply_packs_asrs/mre
-	reference_package = /datum/supply_packs/mre
-	cost = ASRS_VERY_LOW_WEIGHT
-
-/datum/supply_packs_asrs/flashlights
-	reference_package = /datum/supply_packs/flashlights
-	cost = ASRS_VERY_LOW_WEIGHT
 
 /datum/supply_packs_asrs/batteries
 	reference_package = /datum/supply_packs/batteries

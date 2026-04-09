@@ -16,11 +16,11 @@
 /datum/supply_packs/rail_reflex
 	name = "reflex sight attachment crate (x6)"
 	contains = list(
-		/obj/item/attachable/reflex
-		/obj/item/attachable/reflex
-		/obj/item/attachable/reflex
-		/obj/item/attachable/reflex
-		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex,
 		/obj/item/attachable/reflex,
 	)
 	cost = 40
@@ -31,11 +31,11 @@
 /datum/supply_packs/laser_sight
 	name = "laser sight attachment crate (x6)"
 	contains = list(
-		/obj/item/attachable/lasersight
-		/obj/item/attachable/lasersight
-		/obj/item/attachable/lasersight
-		/obj/item/attachable/lasersight
-		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight,
 		/obj/item/attachable/lasersight,
 	)
 	cost = 30
@@ -57,7 +57,7 @@
 /datum/supply_packs/rail_miniscope_pve
 	name = "CCD television scope (x2)"
 	contains = list(
-		/obj/item/attachable/scope/pve
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/pve,
 	)
 	cost = 40
@@ -113,7 +113,7 @@
 /datum/supply_packs/barrel_charger
 	name = "barrel charger attachment crate (x2)"
 	contains = list(
-		/obj/item/attachable/heavy_barrel
+		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/heavy_barrel,
 	)
 	cost = 100
@@ -124,7 +124,7 @@
 /datum/supply_packs/barrel_charger
 	name = "quickfire adapter attachment crate (x2)"
 	contains = list(
-		/obj/item/attachable/quickfire
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/quickfire,
 	)
 	cost = 100
