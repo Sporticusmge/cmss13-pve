@@ -684,7 +684,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 	/// Current supply points
 	var/points = 0
 	/// Multiplier to the amount of points awarded based on marine scale
-	var/points_scale = 2
+	var/points_scale = 200
 	var/points_per_process = 0
 	var/points_per_slip = 1
 	var/points_per_crate = 2
