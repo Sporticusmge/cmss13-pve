@@ -1,8 +1,6 @@
 /datum/supply_packs/rail_reddot
-	name = "red-dot sight attachment crate (x8)"
+	name = "red-dot sight attachment crate (x6)"
 	contains = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reddot,
@@ -15,45 +13,60 @@
 	containername = "red-dot sight attachment crate"
 	group = "Attachments"
 
+/datum/supply_packs/rail_reflex
+	name = "reflex sight attachment crate (x6)"
+	contains = list(
+		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex
+		/obj/item/attachable/reflex,
+	)
+	cost = 40
+	containertype = /obj/structure/closet/crate
+	containername = "reflex sight attachment crate"
+	group = "Attachments"
+
+/datum/supply_packs/laser_sight
+	name = "laser sight attachment crate (x6)"
+	contains = list(
+		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight
+		/obj/item/attachable/lasersight,
+	)
+	cost = 30
+	containertype = /obj/structure/closet/crate
+	containername = "laser sight attachment crate"
+	group = "Attachments"
+
 /datum/supply_packs/rail_scope
-	name = "railscope attachment crate (x2)"
+	name = "railscope X4 attachment crate (x2)"
 	contains = list(
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate
 	containername = "scope attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/rail_miniscope
-	name = "mini railscope attachment crate (x2)"
+/datum/supply_packs/rail_miniscope_pve
+	name = "CCD television scope (x2)"
 	contains = list(
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/pve
+		/obj/item/attachable/scope/pve,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
-	containername = "mini scope attachment crate"
-	group = "Attachments"
-
-/datum/supply_packs/rail_magneticharness
-	name = "magnetic harness attachment crate (x6)"
-	contains = list(
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/magnetic_harness,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "magnetic harness attachment crate"
+	containername = "CCD television attachment crate"
 	group = "Attachments"
 
 /datum/supply_packs/muzzle_suppressor
-	name = "suppressor attachment crate (x8)"
+	name = "suppressor attachment crate (x6)"
 	contains = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/suppressor,
@@ -61,10 +74,8 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/suppressor,
 	)
-	cost = 30
+	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "suppressor attachment crate"
 	group = "Attachments"
@@ -99,40 +110,31 @@
 	containername = "compensator attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/underbarrel_foregrip
-	name = "foregrip attachment crate (x8)"
+/datum/supply_packs/barrel_charger
+	name = "barrel charger attachment crate (x2)"
 	contains = list(
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/heavy_barrel
+		/obj/item/attachable/heavy_barrel,
 	)
-	cost = 30
+	cost = 100
 	containertype = /obj/structure/closet/crate
-	containername = "foregrip attachment crate"
+	containername = "barrel charger attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/underbarrel_gyro
-	name = "gyroscopic stabilizer attachment crate (x2)"
+/datum/supply_packs/barrel_charger
+	name = "quickfire adapter attachment crate (x2)"
 	contains = list(
-		/obj/item/attachable/gyro,
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/quickfire
+		/obj/item/attachable/quickfire,
 	)
-	cost = 30
+	cost = 100
 	containertype = /obj/structure/closet/crate
-	containername = "gyro attachment crate"
+	containername = "quickfire adapter attachment crate"
 	group = "Attachments"
 
 /datum/supply_packs/underbarrel_bipod
-	name = "bipod attachment crate (x6)"
+	name = "bipod attachment crate (x3)"
 	contains = list(
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/bipod,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/bipod,
@@ -150,7 +152,7 @@
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/attached_gun/shotgun,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
 	containername = "shotgun attachment crate"
 	group = "Attachments"
@@ -176,7 +178,7 @@
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer,
 	)
-	cost = 30
+	cost = 40
 	containertype = /obj/structure/closet/crate
 	containername = "flamer attachment crate"
 	group = "Attachments"
@@ -192,79 +194,24 @@
 	containername = "burstfire assembly attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/s_attachables
-	name = "stock attachments crate (x3 each , 1 paratroopers)"
-	contains = list(
-		/obj/item/attachable/stock/revolver,
-		/obj/item/attachable/stock/revolver,
-		/obj/item/attachable/stock/revolver,
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/smg,
-		/obj/item/attachable/stock/smg,
-		/obj/item/attachable/stock/smg,
-		/obj/item/attachable/stock/carbine,
-		/obj/item/attachable/stock/carbine,
-		/obj/item/attachable/stock/carbine,
-		/obj/item/attachable/stock/smg/collapsible,
-	)
-	cost = 60
-	containertype = /obj/structure/closet/crate
-	containername = "stocks crate"
-	group = "Attachments"
-
 /datum/supply_packs/stock_revolver
-	name = "revolver stock attachment crate (x4)"
+	name = "revolver stock attachment crate (x2)"
 	contains = list(
 		/obj/item/attachable/stock/revolver,
 		/obj/item/attachable/stock/revolver,
-		/obj/item/attachable/stock/revolver,
-		/obj/item/attachable/stock/revolver,
 	)
-	cost = 30
+	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "stock revolver attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/stock_rifle
-	name = "rifle stock attachment crate (x4)"
-	contains = list(
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "stock rifle attachment crate"
-	group = "Attachments"
-
-/datum/supply_packs/stock_shotgun
-	name = "shotgun stock attachment crate (x4)"
-	contains = list(
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/shotgun,
-		/obj/item/attachable/stock/shotgun,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "stock shotgun attachment crate"
-	group = "Attachments"
-
 /datum/supply_packs/stock_smg
-	name = "submachinegun stock attachment crate (x4)"
+	name = "submachinegun stock attachment crate (x2)"
 	contains = list(
 		/obj/item/attachable/stock/smg,
 		/obj/item/attachable/stock/smg,
-		/obj/item/attachable/stock/smg,
-		/obj/item/attachable/stock/smg,
 	)
-	cost = 30
+	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "stock smg attachment crate"
 	group = "Attachments"

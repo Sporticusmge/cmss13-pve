@@ -1,25 +1,5 @@
 // Group to populate with all the explosives exept OB and mortar shell
 
-/datum/supply_packs/explosives
-	name = "surplus explosives crate (claymore mine x5, M40 HIDP x2, M40 HEDP x2, M15 Frag x2, M12 Blast x2, M40 MFHS x2)"
-	contains = list(
-		/obj/item/storage/box/explosive_mines,
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/high_explosive/m15,
-		/obj/item/explosive/grenade/high_explosive/m15,
-		/obj/item/explosive/grenade/high_explosive/pmc,
-		/obj/item/explosive/grenade/high_explosive/pmc,
-		/obj/item/explosive/grenade/metal_foam,
-		/obj/item/explosive/grenade/metal_foam,
-	)
-	cost = 40
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosives crate (WARNING)"
-	group = "Explosives"
-
 /datum/supply_packs/explosives_mines
 	name = "claymore mines crate (x10)"
 	contains = list(
@@ -31,25 +11,15 @@
 	containername = "\improper explosive mine boxes crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_m15
-	name = "M15 fragmentation grenades crate (x6)"
+/datum/supply_packs/explosives_plastic
+	name = "plastic explosives crate (x4)"
 	contains = list(
-		/obj/item/storage/box/packet/m15,
-		/obj/item/storage/box/packet/m15,
+		/obj/item/explosive/plastic,
+		/obj/item/explosive/plastic,
+		/obj/item/explosive/plastic,
+		/obj/item/explosive/plastic,
 	)
 	cost = 40
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosive M15 grenades crate (WARNING)"
-	group = "Explosives"
-
-/datum/supply_packs/explosives_plastic
-	name = "plastic explosives crate (x3)"
-	contains = list(
-		/obj/item/explosive/plastic,
-		/obj/item/explosive/plastic,
-		/obj/item/explosive/plastic,
-	)
-	cost = 30
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper plastic explosives crate (WARNING)"
 	group = "Explosives"
@@ -67,40 +37,6 @@
 	containername = "\improper plastic explosives crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_incendiary
-	name = "M40 HIDP incendiary grenades crate (x6)"
-	contains = list(
-		/obj/item/storage/box/packet/incendiary,
-		/obj/item/storage/box/packet/incendiary,
-	)
-	cost = 40
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosive M40 HIDP incendiary grenades crate (WARNING)"
-	group = "Explosives"
-
-/datum/supply_packs/explosives_M40_HEDP
-	name = "M40 HEDP blast grenades crate (x6)"
-	contains = list(
-		/obj/item/storage/box/packet/high_explosive,
-		/obj/item/storage/box/packet/high_explosive,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosive M40 HEDP grenades crate (WARNING)"
-	group = "Explosives"
-
-/datum/supply_packs/explosives_sebb
-	name = "G2 electroshock grenades crate (x6)"
-	contains = list(
-		/obj/item/storage/box/packet/sebb,
-		/obj/item/storage/box/packet/sebb,
-	)
-	cost = 30
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper G2 electroshock grenades crate (WARNING)"
-	group = "Explosives"
-
-
 /datum/supply_packs/explosives_hedp
 	name = "M40 HEDP blast grenade box crate (x25)"
 	contains = list(
@@ -111,34 +47,42 @@
 	containername = "\improper explosive HEDP grenade crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_M40_CCDP
-	name = "M40 CCDP chemical compound grenades crate (x6)"
+/datum/supply_packs/explosives_hedp_super
+	name = "M40/2 HEDP blast grenade box crate (x25)"
 	contains = list(
-		/obj/item/storage/box/packet/phosphorus,
-		/obj/item/storage/box/packet/phosphorus,
+		/obj/item/ammo_box/magazine/nade_box/super,
 	)
-	cost = 30
+	cost = 150
 	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper M40 CCDP grenade crate (WARNING)"
+	containername = "\improper explosive HEDP/2 grenade crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_M40_CCDP_crate
-	name = "M40 WPDP chemical compund grenade box crate (x25)"
+/datum/supply_packs/explosives_hedp_m15
+	name = "M15 frag grenade box crate (x25)"
 	contains = list(
-		/obj/item/ammo_box/magazine/nade_box/phophorus,
+		/obj/item/ammo_box/magazine/nade_box/m15,
 	)
-	cost = 100
+	cost = 120
 	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper CCDP grenade crate (WARNING)"
+	containername = "\improper explosive m15 frag grenade crate (WARNING)"
 	group = "Explosives"
 
-/datum/supply_packs/explosives_M40_HEFA
-	name = "M40 HEFA fragmentation grenades crate (x6)"
+/datum/supply_packs/explosives_heap
+	name = "M38 HEAP grenade box crate (x25)"
 	contains = list(
-		/obj/item/storage/box/packet/hefa,
-		/obj/item/storage/box/packet/hefa,
+		/obj/item/ammo_box/magazine/nade_box/heap,
 	)
-	cost = 30
+	cost = 200
 	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosive M40 HEFA grenades crate (WARNING)"
+	containername = "\improper explosive m38 HEAP grenade crate (WARNING)"
+	group = "Explosives"
+
+/datum/supply_packs/explosives_smoke
+	name = "M47 HSDP smoke box crate (x25)"
+	contains = list(
+		/obj/item/ammo_box/magazine/nade_box/smoke,
+	)
+	cost = 200
+	containertype = /obj/structure/closet/crate/explosives
+	containername = "\improper explosive m47 HSDP grenade crate (WARNING)"
 	group = "Explosives"
