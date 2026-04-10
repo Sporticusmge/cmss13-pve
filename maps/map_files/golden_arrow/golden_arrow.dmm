@@ -6103,6 +6103,13 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
+"ash" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "supply_elevator_railing"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "asi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/phone_base{
@@ -15909,6 +15916,19 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
+"bmD" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "supply_elevator_railing"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "bnm" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -16133,6 +16153,9 @@
 	icon_state = "N";
 	pixel_y = 3
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
 "bKv" = (
@@ -16158,6 +16181,10 @@
 /obj/structure/prop/almayer/ai_wallmonitor/west,
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
+"bOj" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/empty/requisitions,
+/area/supply/station)
 "bPy" = (
 /obj/structure/platform{
 	dir = 1
@@ -18242,6 +18269,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"iPf" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "supply_elevator_railing"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "iRi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -22305,6 +22342,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"wBu" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/empty/requisitions,
+/area/supply/station)
 "wBW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -22742,8 +22786,12 @@
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap1{
 	pixel_y = 14
 	},
-/turf/open/floor/almayer/empty/requisitions,
-/area/supply/station)
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "supply_elevator_railing"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 
 (1,1,1) = {"
 aEG
@@ -27618,13 +27666,13 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
 aEG
 aEG
 aEG
@@ -27796,11 +27844,11 @@ aEG
 aEG
 aEG
 ahl
-ahl
-ahl
-ahl
-ahl
-ahl
+wBu
+jRk
+jRk
+jRk
+bOj
 ahl
 aWh
 aWh
@@ -28152,7 +28200,7 @@ aEG
 ahl
 jRk
 jRk
-jRk
+aWi
 jRk
 jRk
 ahl
@@ -28329,7 +28377,7 @@ aEG
 ahl
 jRk
 jRk
-aWi
+jRk
 jRk
 jRk
 ahl
@@ -28504,11 +28552,11 @@ aEG
 aEG
 aEG
 ahl
+wBu
 jRk
 jRk
 jRk
-jRk
-jRk
+bOj
 ahl
 aWh
 afI
@@ -28681,11 +28729,11 @@ aEG
 aEG
 aEG
 ahl
-jRk
-jRk
+bmD
+iPf
 ygB
-jRk
-jRk
+iPf
+ash
 ahl
 aWh
 aaN

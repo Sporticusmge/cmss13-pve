@@ -133,7 +133,7 @@ GLOBAL_LIST_EMPTY(armor_plate_data)
 
 /obj/item/clothing/accessory/health/ceramic_plate/marine
 	name = "ASAPP armor plate"
-	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds."
+	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell."
 	icon_state = "armor_plate_100"
 	base_icon_state = "armor_plate"
 	overlay_state = "armor_plate_100"
@@ -141,21 +141,21 @@ GLOBAL_LIST_EMPTY(armor_plate_data)
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe
 	name = "HASP armor plate"
-	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
+	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell."
 	icon_state = "rmc_armor_plate_100"
 	base_icon_state = "rmc_armor_plate"
 	overlay_state = "rmc_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE2
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe/wy
-	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, though this one has been painted white for service with Weyland Yutani's elite tactical teams. gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
+	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell."
 	icon_state = "pmc_armor_plate_100"
 	overlay_state = "pmc_armor_plate_100"
 	base_icon_state = "pmc_armor_plate"
 
 /obj/item/clothing/accessory/health/ceramic_plate/upp
 	name = "TNAP armor plate"
-	desc = "Titanium Nanocrystalline Alloy Plate is a modular clip-on armor plate, designed to provide additional protection for UPP combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate can stop almost any firearm rounds and have highest protection."
+	desc = "Titanium Nanocrystalline Alloy Plate is a modular clip-on armor plate, designed to provide additional protection for UPP combat personell."
 	icon_state = "upp_armor_plate_100"
 	base_icon_state = "upp_armor_plate"
 	overlay_state = "upp_armor_plate_100"

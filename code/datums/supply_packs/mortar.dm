@@ -7,7 +7,9 @@
 /datum/supply_packs/mortar
 	name = "M112 HIMAT crate (Mortar HIMAT x1)"
 	contains = list(
-		/obj/item/mortar_kit,
+		/obj/item/mortar_kit/himat,
+		/obj/item/storage/belt/gun/mortarbelt,
+		/obj/item/storage/backpack/marine/mortarpack,
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/weapon

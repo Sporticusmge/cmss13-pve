@@ -13,7 +13,7 @@
 /datum/supply_packs/motiondetector_suit
 	name = "XM4 pattern intel armor (x1)"
 	contains = list(
-		/obj/item/device/motiondetector,
+		/obj/item/clothing/suit/marine/medium/rto/md,
 		)
 	cost = 100
 	containertype = /obj/structure/closet/crate/supply
