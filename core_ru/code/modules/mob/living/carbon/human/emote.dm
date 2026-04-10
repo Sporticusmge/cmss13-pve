@@ -45,3 +45,9 @@
 		return pick('core_ru/sound/misc/sneeze_male_1.ogg', 'core_ru/sound/misc/sneeze_male_2.ogg')
 	else
 		return pick('core_ru/sound/misc/sneeze_female_1.ogg', 'core_ru/sound/misc/sneeze_female_2.ogg')
+
+/datum/emote/living/carbon/human/beatbox/get_sound(mob/living/user)
+	if(user.gender == MALE)
+		return pick('core_ru/sound/misc/smehuyatina2.ogg')
+	else
+		return pick('core_ru/sound/misc/smehuyatina.ogg')
