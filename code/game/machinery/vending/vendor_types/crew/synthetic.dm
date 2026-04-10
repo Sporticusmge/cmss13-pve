@@ -20,9 +20,16 @@
 		list("ES-11 Mobile Fuel Canister", 4, /obj/item/tool/weldpack/minitank, null, VENDOR_ITEM_REGULAR),
 		list("Engineer Kit", 1, /obj/item/storage/toolkit/empty, null, VENDOR_ITEM_REGULAR),
 		list("Tactical Prybar", 5, /obj/item/tool/crowbar/tactical, null, VENDOR_ITEM_REGULAR),
+        list("Tactical Tools Pouch", 20, /obj/item/storage/pouch/tools/tactical/full, null, VENDOR_ITEM_REGULAR),
+        list("Large Backpack", 25, /obj/item/storage/backpack/marine/satchel/big, null, VENDOR_ITEM_REGULAR),
+		list("Large Backpack", 25, /obj/item/storage/backpack/lightpack, null, VENDOR_ITEM_REGULAR),
+		list("Tesla Coil", 20, /obj/item/defenses/handheld/tesla_coil/stun, null, VENDOR_ITEM_REGULAR),
+
+
+
 
 		list("FIRSTAID KITS", 0, null, null, null),
-		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_REGULAR),
+		list("Advanced Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_REGULAR),
 		list("Firstaid Kit", 5, /obj/item/storage/firstaid/softpack/regular, null, VENDOR_ITEM_REGULAR),
 		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/fire, null, VENDOR_ITEM_REGULAR),
 		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/toxin, null, VENDOR_ITEM_REGULAR),
@@ -66,7 +73,6 @@
 		list("Space Cleaner", 1, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 2, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR)
-
 	)
 
 //------------CLOTHING VENDOR---------------
@@ -122,9 +128,15 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Latex Gloves", 0, /obj/item/clothing/gloves/latex, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Tactical IMP Rucksack", 0, /obj/item/storage/backpack/marine/marsoc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Logistics IMP Backpack", 0, /obj/item/storage/backpack/marine/satchel/big, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Expedition Chestrig", 0, /obj/item/storage/backpack/marine/satchel/intel/chestrig, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Smartpack", 0, /obj/item/storage/backpack/marine/smartpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Smartpack green", 0, /obj/item/storage/backpack/marine/smartpack/green, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Smartpack tan", 0, /obj/item/storage/backpack/marine/smartpack/tan, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Smartpack black", 0, /obj/item/storage/backpack/marine/smartpack/black, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Smartpack white", 0, /obj/item/storage/backpack/marine/smartpack/white, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Satchel molle", 0, /obj/item/storage/backpack/molle/army, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Satchel", 0, /obj/item/storage/backpack/marine/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -203,6 +215,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Brown Suit Pants", 12, /obj/item/clothing/under/liaison_suit/brown, null, VENDOR_ITEM_REGULAR),
 	list("White Suit Pants", 12, /obj/item/clothing/under/liaison_suit/corporate_formal, null, VENDOR_ITEM_REGULAR),
 	list("Working Joe Uniform", 36, /obj/item/clothing/under/rank/synthetic/joe, null, VENDOR_ITEM_REGULAR),
+	list("expensive suit", 12, /obj/item/clothing/under/hybrisa/wy_exec_suit_uniform/jacket, null, VENDOR_ITEM_REGULAR),
+	list("Paramedic uniform", 12, /obj/item/clothing/under/hybrisa/paramedic, null, VENDOR_ITEM_REGULAR),
+	list("engineering utility uniform", 12, /obj/item/clothing/under/hybrisa/engineering_utility, null, VENDOR_ITEM_REGULAR),
 
 	list("GLASSES", 0, null, null, null),
 	list("HealthMate HUD", 12, /obj/item/clothing/glasses/hud/health, null, VENDOR_ITEM_REGULAR),
@@ -284,6 +299,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Bomber Jacket, Brown", 12, /obj/item/clothing/suit/storage/bomber, null, VENDOR_ITEM_REGULAR),
 	list("Bomber Jacket, Black", 12, /obj/item/clothing/suit/storage/bomber/alt, null, VENDOR_ITEM_REGULAR),
 	list("External Webbing", 12, /obj/item/clothing/suit/storage/webbing, null, VENDOR_ITEM_REGULAR),
+	list("External Webbing (black)", 12, /obj/item/clothing/suit/storage/webbing/black, null, VENDOR_ITEM_REGULAR),
 	list("Utility Vest", 12, /obj/item/clothing/suit/storage/utility_vest, null, VENDOR_ITEM_REGULAR),
 	list("Hazard Vest(Orange)", 12, /obj/item/clothing/suit/storage/hazardvest, null, VENDOR_ITEM_REGULAR),
 	list("Hazard Vest(Blue)", 12, /obj/item/clothing/suit/storage/hazardvest/blue, null, VENDOR_ITEM_REGULAR),
@@ -309,6 +325,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 	list("Brown Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest, null, VENDOR_ITEM_REGULAR),
 	list("Tan Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest/tan, null, VENDOR_ITEM_REGULAR),
 	list("Grey Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest/grey, null, VENDOR_ITEM_REGULAR),
+	list("Paramedic utility fatigues", 12, /obj/item/clothing/suit/hybrisa/EMT_green_utility, null, VENDOR_ITEM_REGULAR),
+	list("engineer utility uniform", 12, /obj/item/clothing/suit/hybrisa/engineering_utility_oversuit, null, VENDOR_ITEM_REGULAR),
 	list("USCM Poncho (Mission-Specific Camo)", 12, /obj/item/clothing/accessory/poncho, null, VENDOR_ITEM_REGULAR),
 	list("USCM Poncho (Green)", 12, /obj/item/clothing/accessory/poncho/green, null, VENDOR_ITEM_REGULAR),
 	list("USCM Poncho (Brown)", 12, /obj/item/clothing/accessory/poncho/brown, null, VENDOR_ITEM_REGULAR),
