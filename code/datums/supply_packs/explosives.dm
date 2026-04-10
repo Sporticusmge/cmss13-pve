@@ -47,6 +47,16 @@
 	containername = "\improper explosive HEDP grenade crate (WARNING)"
 	group = "Explosives"
 
+/datum/supply_packs/explosives_hiam_incendiary
+	name = "M77 HIAM Incendiary grenade box crate (x25)"
+	contains = list(
+		/obj/item/ammo_box/magazine/nade_box/incen,
+	)
+	cost = 100
+	containertype = /obj/structure/closet/crate/explosives
+	containername = "\improper explosive HIAM grenade crate (WARNING)"
+	group = "Explosives"
+
 /datum/supply_packs/explosives_hedp_super
 	name = "M40/2 HEDP blast grenade box crate (x25)"
 	contains = list(
@@ -85,4 +95,24 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive m47 HSDP grenade crate (WARNING)"
+	group = "Explosives"
+
+/datum/supply_packs/explosives_40mm
+	name = "40MM HEDP grenade box (for grenade launchers) (x25)"
+	contains = list(
+		/obj/item/ammo_box/magazine/nade_box/fourtymil,
+	)
+	cost = 50
+	containertype = /obj/structure/closet/crate/explosives
+	containername = "\improper explosive 40mm HEDP grenade crate (WARNING)"
+	group = "Explosives"
+
+/datum/supply_packs/explosives_40mm_incendiary
+	name = "40MM Incendiary grenade box (for grenade launchers) (x25)"
+	contains = list(
+		/obj/item/ammo_box/magazine/nade_box/fourtymil/incen,
+	)
+	cost = 50
+	containertype = /obj/structure/closet/crate/explosives
+	containername = "\improper explosive 40mm Incendiary grenade crate (WARNING)"
 	group = "Explosives"

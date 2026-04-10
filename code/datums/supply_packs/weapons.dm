@@ -31,15 +31,69 @@
 	containername = "M240 Incinerator crate"
 	group = "Weapons"
 
-/datum/supply_packs/grenade_launchers
-	name = "M79 Grenade Launcher Crate (x2 Guncases)"
+/datum/supply_packs/m46c_gun
+	name = "XM46A Pulse Rifle(x1)"
 	contains = list(
-		/obj/item/storage/box/guncase/m79,
-		/obj/item/storage/box/guncase/m79,
+		/obj/item/weapon/gun/rifle/m46c,
+	)
+	cost = 100
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "XM46A pulse rifle crate"
+	group = "Weapons"
+
+/datum/supply_packs/xm99_plasma
+	name = "XM99A Phased Plasma Rifle(x1)"
+	contains = list(
+		/obj/item/storage/box/guncase/heavy/XM99,
+	)
+	cost = 800
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "XM99A phased plasma rifle crate"
+	group = "Weapons"
+
+/datum/supply_packs/m120_shotgun
+	name = "M120 Tactical Shotgun(x2)"
+	contains = list(
+		/obj/item/weapon/gun/shotgun/combat/unloaded
+		/obj/item/weapon/gun/shotgun/combat/unloaded,
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "M120 tactical shotguns crate"
+	group = "Weapons"
+
+/datum/supply_packs/m39_gun
+	name = "M39 submachinegun and belts(x2)"
+	contains = list(
+		/obj/item/weapon/gun/smg/m39
+		/obj/item/weapon/gun/smg/m39
+		/obj/item/storage/belt/gun/m39
+		/obj/item/storage/belt/gun/m39,
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "M39 submachine gun with belts crate"
+	group = "Weapons"
+
+/datum/supply_packs/hpr_gun
+	name = "M41AE2 Pulse Rifle"
+	contains = list(
+		/obj/item/storage/box/guncase/heavy/hpr,
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/weapon
-	containername = "M79 grenade launcher crate"
+	containername = "M41AE2 pulse rifle crate"
+	group = "Weapons"
+
+/datum/supply_packs/m92_gun
+	name = "M92 Scope Grenade launcher"
+	contains = list(
+		/obj/item/weapon/gun/launcher/grenade/m92/scoped
+		/obj/item/storage/belt/grenade/large,
+	)
+	cost = 40
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "M92 scope grenade launcher"
 	group = "Weapons"
 
 /* Uncomment me if it's decided to let the m707 be purchasable through req

@@ -322,7 +322,7 @@
 	hand_throwable = FALSE
 	dangerous = TRUE
 	underslug_launchable = TRUE
-	explosion_power = 100 //hedp
+	explosion_power = 125 //hedp
 	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
