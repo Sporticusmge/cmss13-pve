@@ -67,7 +67,7 @@
 	contains = list(
 		/obj/item/weapon/gun/smg/m39,
 		/obj/item/weapon/gun/smg/m39,
-		/obj/item/storage/belt/gun/m39
+		/obj/item/storage/belt/gun/m39,
 		/obj/item/storage/belt/gun/m39,
 	)
 	cost = 20
