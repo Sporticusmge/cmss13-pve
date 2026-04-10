@@ -54,7 +54,7 @@
 /datum/supply_packs/m120_shotgun
 	name = "M120 Tactical Shotgun(x2)"
 	contains = list(
-		/obj/item/weapon/gun/shotgun/combat/unloaded
+		/obj/item/weapon/gun/shotgun/combat/unloaded,
 		/obj/item/weapon/gun/shotgun/combat/unloaded,
 	)
 	cost = 20
@@ -65,8 +65,8 @@
 /datum/supply_packs/m39_gun
 	name = "M39 submachinegun and belts(x2)"
 	contains = list(
-		/obj/item/weapon/gun/smg/m39
-		/obj/item/weapon/gun/smg/m39
+		/obj/item/weapon/gun/smg/m39,
+		/obj/item/weapon/gun/smg/m39,
 		/obj/item/storage/belt/gun/m39
 		/obj/item/storage/belt/gun/m39,
 	)
@@ -88,7 +88,7 @@
 /datum/supply_packs/m92_gun
 	name = "M92 Scope Grenade launcher"
 	contains = list(
-		/obj/item/weapon/gun/launcher/grenade/m92/scoped
+		/obj/item/weapon/gun/launcher/grenade/m92/scoped,
 		/obj/item/storage/belt/grenade/large,
 	)
 	cost = 40
