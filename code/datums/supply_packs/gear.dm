@@ -45,3 +45,16 @@
 	containertype = /obj/structure/closet/crate/supply
 	containername = "Night vision crate"
 	group = "Gear"
+
+/datum/supply_packs/armor_plate
+	name = "Advanced Armor Plates (x4)"
+	contains = list(
+		/obj/item/clothing/accessory/health/ceramic_plate/marine,
+		/obj/item/clothing/accessory/health/ceramic_plate/marine,
+		/obj/item/clothing/accessory/health/ceramic_plate/marine,
+		/obj/item/clothing/accessory/health/ceramic_plate/marine,
+		)
+	cost = 40
+	containertype = /obj/structure/closet/crate/supply
+	containername = "Advanced Armor Plates crate"
+	group = "Gear"
