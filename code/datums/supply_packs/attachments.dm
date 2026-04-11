@@ -121,7 +121,7 @@
 	containername = "barrel charger attachment crate"
 	group = "Attachments"
 
-/datum/supply_packs/barrel_charger
+/datum/supply_packs/quickfire_adapter
 	name = "quickfire adapter attachment crate (x2)"
 	contains = list(
 		/obj/item/attachable/quickfire,

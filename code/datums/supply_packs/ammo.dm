@@ -172,11 +172,11 @@
 	group = "Ammo"
 
 /datum/supply_packs/ammo_m4a3_mag_box_hp
-	name = "Magazine box (M4A3, 16x A27 mags)"
+	name = "Magazine box (M4A3, 16x HP mags)"
 	contains = list(
 		/obj/item/ammo_box/magazine/m4a3/hp,
 	)
-	cost = 60
+	cost = 20
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M4A3 HP magazines crate"
 	group = "Ammo"
@@ -292,7 +292,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/m41ae2/heap,
 	)
-	cost = 600
+	cost = 480
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M41AE2 HEAP magazines crate"
 	group = "Ammo"
