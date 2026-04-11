@@ -96,6 +96,17 @@
 	containername = "M92 scope grenade launcher"
 	group = "Weapons"
 
+/datum/supply_packs/m41elite_gun
+	name = "M41A2 Elite Pulse Rifle (2x) "
+	contains = list(
+		/obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded,
+		/obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded,
+	)
+	cost = 50
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "M41A2 pulse rifle crate"
+	group = "Weapons"
+
 /* Uncomment me if it's decided to let the m707 be purchasable through req
 /datum/supply_packs/gun/m707
 	name = "M707 Anti-Materiel Rifle crate (M707 x1)"

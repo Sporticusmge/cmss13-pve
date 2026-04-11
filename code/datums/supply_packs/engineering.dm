@@ -1,14 +1,15 @@
 /datum/supply_packs/sandbags
 	name = "empty sandbags crate (x50)"
-	contains = list(/obj/item/stack/sandbags_empty/full)
+	contains = list(/obj/item/stack/sandbags_empty/full, /obj/item/stack/sandbags_empty/full)
 	cost = 15
 	containertype = /obj/structure/closet/crate/supply
 	containername = "empty sandbags crate"
 	group = "Engineering"
 
 /datum/supply_packs/sandbagskit
-	name = "sandbags construction kit (sandbags x50, etool x2)"
+	name = "sandbags construction kit (sandbags x100, etool x2)"
 	contains = list(
+		/obj/item/stack/sandbags_empty/full
 		/obj/item/stack/sandbags_empty/full,
 		/obj/item/tool/shovel/etool,
 		/obj/item/tool/shovel/etool,
@@ -19,16 +20,16 @@
 	group = "Engineering"
 
 /datum/supply_packs/metal
-	name = "metal sheets (x50)"
-	contains = list(/obj/item/stack/sheet/metal/large_stack)
+	name = "metal sheets (x100)"
+	contains = list(/obj/item/stack/sheet/metal/large_stack, /obj/item/stack/sheet/metal/large_stack)
 	cost = 20
 	containertype = /obj/structure/closet/crate/supply
 	containername = "metal sheets crate"
 	group = "Engineering"
 
 /datum/supply_packs/plas
-	name = "plasteel sheets (x50)"
-	contains = list(/obj/item/stack/sheet/plasteel/large_stack)
+	name = "plasteel sheets (x100)"
+	contains = list(/obj/item/stack/sheet/plasteel/large_stack, /obj/item/stack/sheet/plasteel/large_stack)
 	cost = 30
 	containertype = /obj/structure/closet/crate/supply
 	containername = "plasteel sheets crate"
@@ -39,7 +40,7 @@
 		/obj/item/stack/folding_barricade/three,
 	)
 	name = "Folding Barricades (x3)"
-	cost = 20
+	cost = 10
 	containertype = /obj/structure/closet/crate/supply
 	containername = "folding barricades crate"
 	group = "Engineering"

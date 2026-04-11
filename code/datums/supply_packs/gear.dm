@@ -20,6 +20,18 @@
 	containername = "XM4 crate"
 	group = "Gear"
 
+/datum/supply_packs/m09_helmet
+	name = "M09 leader helmet (x3)"
+	contains = list(
+		/obj/item/clothing/head/helmet/marine/leader,
+		/obj/item/clothing/head/helmet/marine/leader,
+		/obj/item/clothing/head/helmet/marine/leader,
+		)
+	cost = 50
+	containertype = /obj/structure/closet/crate/supply
+	containername = "M09 leader helmet crate"
+	group = "Gear"
+
 /datum/supply_packs/medical_visor
 	name = "Medical Visor (x4)"
 	contains = list(
@@ -57,4 +69,19 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/supply
 	containername = "Advanced Armor Plates crate"
+	group = "Gear"
+
+/datum/supply_packs/poncho_suit
+	name = "Poncho (x6)"
+	contains = list(
+		/obj/item/clothing/accessory/poncho,
+		/obj/item/clothing/accessory/poncho,
+		/obj/item/clothing/accessory/poncho,
+		/obj/item/clothing/accessory/poncho,
+		/obj/item/clothing/accessory/poncho,
+		/obj/item/clothing/accessory/poncho,
+		)
+	cost = 20
+	containertype = /obj/structure/closet/crate/supply
+	containername = "Poncho crate"
 	group = "Gear"
