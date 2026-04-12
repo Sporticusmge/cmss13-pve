@@ -606,8 +606,9 @@
 	slot = ACCESSORY_SLOT_MEDAL
 
 /obj/item/clothing/accessory/poncho
-	name = "USCM Poncho"
-	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
+	name = "XM57 Thermal Cloak"
+	desc = "Failed first prototype of Thermal Cloak, acting like a shitty poncho, uncomfortable and heavy, remember - heroes don't wear capes."
+	desc_lore = "Back in 2158 when stealth technology was invited, the US military granted 7 million dollars to provide an additional protection against IR-visors and made a first thermal cloak prorotype. Army send a lot of them in SOL and Eridani batalions back in the day, however, these cloaks doesn't give you invisibility, they're too heavy about 9 lbs and and tear like paper. In 2163 they were replaced by a new succsesfull M68 Thermal Cloak. Now it act like a shitty poncho and gives you zero advantage in combat because passive thermal protection built in all US uniform and armor/helmets as a new military standard since 2164."
 	icon_state = "poncho"
 	slot = ACCESSORY_SLOT_PONCHO
 	var/has_variation = TRUE

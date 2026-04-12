@@ -9,7 +9,7 @@
 /datum/supply_packs/sandbagskit
 	name = "sandbags construction kit (sandbags x100, etool x2)"
 	contains = list(
-		/obj/item/stack/sandbags_empty/full
+		/obj/item/stack/sandbags_empty/full,
 		/obj/item/stack/sandbags_empty/full,
 		/obj/item/tool/shovel/etool,
 		/obj/item/tool/shovel/etool,

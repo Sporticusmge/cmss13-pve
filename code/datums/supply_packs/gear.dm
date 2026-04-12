@@ -72,7 +72,7 @@
 	group = "Gear"
 
 /datum/supply_packs/poncho_suit
-	name = "Poncho (x6)"
+	name = "Thermal Poncho (x6)"
 	contains = list(
 		/obj/item/clothing/accessory/poncho,
 		/obj/item/clothing/accessory/poncho,
@@ -81,7 +81,7 @@
 		/obj/item/clothing/accessory/poncho,
 		/obj/item/clothing/accessory/poncho,
 		)
-	cost = 20
+	cost = 600 //I hate TGMC shitty goyslop drip
 	containertype = /obj/structure/closet/crate/supply
 	containername = "Poncho crate"
 	group = "Gear"
