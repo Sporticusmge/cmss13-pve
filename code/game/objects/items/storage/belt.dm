@@ -1035,7 +1035,7 @@
 
 /obj/item/storage/belt/marine/upp/black/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/ak4047(src)
+		new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/wy
 	name = "\improper WY-TM402 pattern ammo load rig"
@@ -1125,6 +1125,15 @@
 		dump_ammo_to(M, user, M.transfer_handful_amount)
 	else
 		return ..()
+
+/obj/item/storage/belt/shotgun/black/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/slug(src)
+
+/obj/item/storage/belt/shotgun/black/full/random/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g)
+		new random_shell_type(src)
 
 /obj/item/storage/belt/shotgun/wy
 	name = "\improper WY-TM406 pattern shotgun shell loading rig"
