@@ -80,7 +80,7 @@
 			if(0 to BLOOD_VOLUME_SURVIVE)
 				death(create_cause_data(species.flags & IS_SYNTHETIC ? "power failure" : "blood loss"))
 
-// --- NEW PROC: Update max blood based on Endurance skill ---
+// --- UPDATED PROC: limit_blood = max_blood + 15 ---
 /mob/living/carbon/human/proc/update_blood_max_from_endurance()
 	// Do not modify blood values for species without blood
 	if(species && (species.flags & NO_BLOOD))
@@ -97,19 +97,15 @@
 	var/blood_multiplier = 1 + (endurance_level * 0.05)
 	max_blood = round(base_blood * blood_multiplier)
 
-	// Increase the absolute blood limit proportionally (max * 1.2)
-	var/base_limit = BLOOD_VOLUME_MAXIMUM
-	var/limit_multiplier = base_limit / base_blood
-	limit_blood = round(max_blood * limit_multiplier)
+	// Limit is only 15 units above max_blood (prevents excessive blood storage)
+	limit_blood = max_blood + 15
 
 	// Cap current blood volume if it exceeds new maximum
 	if(blood_volume > max_blood)
 		blood_volume = max_blood
 
-// --- MODIFIED New() proc: call the blood update with a 1-second delay to ensure skills are set ---
 /mob/living/carbon/human/New()
 	. = ..()
-	// ... (standard human initialization logic) ...
 	addtimer(CALLBACK(src, PROC_REF(update_blood_max_from_endurance)), 1 SECONDS)
 
 /datum/species/human
