@@ -235,7 +235,11 @@
 	var/datum/skill/S = skills[skill]
 	if(!S)
 		return
-	return S.set_skill(new_level, owner)
+	. = S.set_skill(new_level, owner)
+	// Additional hook: update blood max if endurance changed on a human owner
+	if(skill == SKILL_ENDURANCE && istype(owner, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = owner
+		H.update_blood_max_from_endurance()
 
 /datum/skills/proc/increment_skill(skill, increment, cap)
 	var/datum/skill/S = skills[skill]

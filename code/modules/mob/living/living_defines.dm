@@ -150,3 +150,5 @@
 	var/zombie_delimb_chance_multi = null
 	/// Bool for self-cleaning zombies to qdel their bodies and limbs or not. Disabled by default.
 	var/zombie_disable_auto_clean = FALSE
+
+	// ... (rest of the file remains unchanged) ...

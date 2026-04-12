@@ -80,6 +80,38 @@
 			if(0 to BLOOD_VOLUME_SURVIVE)
 				death(create_cause_data(species.flags & IS_SYNTHETIC ? "power failure" : "blood loss"))
 
+// --- NEW PROC: Update max blood based on Endurance skill ---
+/mob/living/carbon/human/proc/update_blood_max_from_endurance()
+	// Do not modify blood values for species without blood
+	if(species && (species.flags & NO_BLOOD))
+		return
+
+	if(!skills)
+		return
+
+	var/endurance_level = skills.get_skill_level(SKILL_ENDURANCE)
+
+	// Base maximum blood volume (560 cl)
+	var/base_blood = BLOOD_VOLUME_NORMAL
+	// Each Endurance level adds +5% to the base maximum
+	var/blood_multiplier = 1 + (endurance_level * 0.05)
+	max_blood = round(base_blood * blood_multiplier)
+
+	// Increase the absolute blood limit proportionally (max * 1.2)
+	var/base_limit = BLOOD_VOLUME_MAXIMUM
+	var/limit_multiplier = base_limit / base_blood
+	limit_blood = round(max_blood * limit_multiplier)
+
+	// Cap current blood volume if it exceeds new maximum
+	if(blood_volume > max_blood)
+		blood_volume = max_blood
+
+// --- MODIFIED New() proc: call the blood update after initialization ---
+/mob/living/carbon/human/New()
+	. = ..()
+	// ... (standard human initialization logic) ...
+	update_blood_max_from_endurance()
+
 /datum/species/human
 	group = SPECIES_HUMAN
 	name = "Human"
@@ -148,7 +180,7 @@
 	cold_level_2 = 50
 	cold_level_3 = 20
 
-	//To show them we mean business.
+//To show them we mean business.
 /datum/species/human/spook/handle_unique_behavior(mob/living/carbon/human/H)
 	//if(prob(25)) animation_horror_flick(H)
 

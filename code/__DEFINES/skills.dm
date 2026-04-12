@@ -1,4 +1,3 @@
-
 //skill defines
 #define SKILL_CQC "cqc"
 #define SKILL_MELEE_WEAPONS "melee_weapons"
