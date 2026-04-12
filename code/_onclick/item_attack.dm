@@ -130,10 +130,8 @@
 				else
 					to_chat(user, SPAN_WARNING("They're already dead. What's the point?"))
 			else
-				to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you? They're on your side!"))
-		else
-			to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
-		return FALSE
+				to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
+			return FALSE
 
 	if(ishuman(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
 		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
