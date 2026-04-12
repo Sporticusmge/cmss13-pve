@@ -106,11 +106,11 @@
 	if(blood_volume > max_blood)
 		blood_volume = max_blood
 
-// --- MODIFIED New() proc: call the blood update after initialization ---
+// --- MODIFIED New() proc: call the blood update with a 1-second delay to ensure skills are set ---
 /mob/living/carbon/human/New()
 	. = ..()
 	// ... (standard human initialization logic) ...
-	update_blood_max_from_endurance()
+	addtimer(CALLBACK(src, PROC_REF(update_blood_max_from_endurance)), 1 SECONDS)
 
 /datum/species/human
 	group = SPECIES_HUMAN
