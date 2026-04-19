@@ -9,7 +9,7 @@
 	containername = "sandbags construction kit"
 	group = "Engineering"
 
-/datum/supply_packs/sandbagskit
+/datum/supply_packs/sandbagskit_shovel
 	name = "sandbags construction kit (sandbags x100, etool x2)"
 	contains = list(
 		/obj/item/stack/sandbags_empty/full,

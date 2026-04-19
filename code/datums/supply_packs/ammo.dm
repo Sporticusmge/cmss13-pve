@@ -27,7 +27,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/mk1/large/heap,
 	)
-	cost = 400
+	cost = 150
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M41AMK1 HEAP magazines crate"
 	group = "Ammo"
@@ -80,7 +80,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/m39/heap,
 	)
-	cost = 120
+	cost = 60
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M39 HEAP magazines crate"
 	group = "Ammo"
@@ -112,7 +112,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/m49a/a19/explosive,
 	)
-	cost = 200
+	cost = 140
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M49A Explosive magazines crate"
 	group = "Ammo"
@@ -292,7 +292,7 @@
 	contains = list(
 		/obj/item/ammo_box/magazine/m41ae2/heap,
 	)
-	cost = 480
+	cost = 300
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper M41AE2 HEAP magazines crate"
 	group = "Ammo"

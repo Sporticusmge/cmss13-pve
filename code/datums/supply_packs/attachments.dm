@@ -55,12 +55,29 @@
 	group = "Attachments"
 
 /datum/supply_packs/rail_miniscope_pve
-	name = "CCD television scope (x2)"
+	name = "CCD television scope (x4)"
 	contains = list(
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/pve,
 	)
 	cost = 40
+	containertype = /obj/structure/closet/crate
+	containername = "CCD television attachment crate"
+	group = "Attachments"
+
+/datum/supply_packs/sling_pve
+	name = "Two-Point sling (x6)"
+	contains = list(
+		/obj/item/attachable/sling,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/sling,
+	)
+	cost = 10
 	containertype = /obj/structure/closet/crate
 	containername = "CCD television attachment crate"
 	group = "Attachments"
