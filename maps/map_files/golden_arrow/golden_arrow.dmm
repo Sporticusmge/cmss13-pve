@@ -959,10 +959,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Deployment Workshop Blast Door";
-	id = "cargobay1"
+	id = "cargobay1";
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/pilot_workshop)
@@ -978,18 +978,9 @@
 /obj/structure/barricade/handrail/type_b{
 	layer = 3.2
 	},
-/obj/structure/surface/table/almayer,
-/obj/structure/prop/ice_colony/hula_girl{
-	pixel_x = 10;
-	pixel_y = 7
-	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/tool/lighter{
+/obj/item/frame/table/almayer{
 	pixel_x = 0;
-	pixel_y = 3
+	pixel_y = 5
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/pilot_room)
@@ -1049,15 +1040,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/pilot_room)
 "acg" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_21";
-	pixel_y = 22;
-	pixel_x = -5
-	},
 /obj/structure/bed{
-	can_buckle = 0
+	icon_state = "abed";
+	pixel_x = 0;
+	pixel_y = 6
 	},
-/obj/item/bedsheet/blue,
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/pilot_room)
 "ach" = (
@@ -1552,10 +1539,10 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoonarmory)
 "adm" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Deployment Workshop Blast Door";
-	id = "cargobay1"
+	id = "cargobay1";
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/pilot_workshop)
@@ -10136,10 +10123,6 @@
 	pixel_x = -7;
 	pixel_y = 0
 	},
-/obj/structure/closet/secure_closet/marine_personal/pilot{
-	pixel_x = 8;
-	pixel_y = 0
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aFr" = (
@@ -10929,10 +10912,10 @@
 /area/golden_arrow/hangar)
 "aIf" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
+/obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Deployment Workshop Blast Door";
-	id = "cargobay1"
+	id = "cargobay1";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/pilot_workshop)
