@@ -674,10 +674,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "leadstorm"
 	item_state = "leadstorm_inhand"
-	item_icons = list(
-		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1',
-		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1'
-		)
 
 	w_class = SIZE_LARGE
 	force = MELEE_FORCE_STRONG
