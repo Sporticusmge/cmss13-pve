@@ -107,6 +107,20 @@
 	containername = "M41A2 pulse rifle crate"
 	group = "Weapons"
 
+/datum/supply_packs/m134_minigun
+	name = "M90 Minigun"
+	contains = list(
+		/obj/item/weapon/gun/drg_gunner_minigun,
+		/obj/item/ammo_magazine/drg_gunner_minigun,
+		/obj/item/ammo_magazine/drg_gunner_minigun,
+		/obj/item/ammo_magazine/drg_gunner_minigun,
+		/obj/item/ammo_magazine/drg_gunner_minigun,
+	)
+	cost = 200
+	containertype = /obj/structure/closet/crate/weapon
+	containername = "M90 Minigun crate"
+	group = "Weapons"
+
 /* Uncomment me if it's decided to let the m707 be purchasable through req
 /datum/supply_packs/gun/m707
 	name = "M707 Anti-Materiel Rifle crate (M707 x1)"
