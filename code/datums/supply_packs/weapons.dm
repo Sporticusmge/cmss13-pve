@@ -112,11 +112,8 @@
 	contains = list(
 		/obj/item/weapon/gun/drg_gunner_minigun,
 		/obj/item/ammo_magazine/drg_gunner_minigun,
-		/obj/item/ammo_magazine/drg_gunner_minigun,
-		/obj/item/ammo_magazine/drg_gunner_minigun,
-		/obj/item/ammo_magazine/drg_gunner_minigun,
 	)
-	cost = 200
+	cost = 500
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "M90 Minigun crate"
 	group = "Weapons"
