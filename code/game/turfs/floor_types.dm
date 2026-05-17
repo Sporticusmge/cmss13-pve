@@ -5240,6 +5240,25 @@
 /turf/open/floor/yellowfull
 	icon_state = "yellowfull"
 
+/turf/open/floor/almayer/arena/north
+	dir = NORTH
+
+/turf/open/floor/almayer/arena
+	icon_state = "arena_smooth"
+	dir = SOUTH
+
+/turf/open/floor/almayer/arena/east
+	dir = EAST
+
+/turf/open/floor/almayer/arena/west
+	dir = WEST
+
+/turf/open/floor/almayer/arena/tile_smooth
+	icon_state = "silver_smooth"
+
+/turf/open/floor/almayer/arena/tilefull_smooth
+	icon_state = "silverfull_smooth"
+
 /turf/open/floor/plating/catwalk/grate
 	icon = 'icons/obj/structures/props/hybrisa/grates.dmi'
 	icon_state = "solidgrate1"
