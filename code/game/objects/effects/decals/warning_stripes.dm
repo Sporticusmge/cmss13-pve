@@ -114,21 +114,6 @@
 	name = "wood siding"
 	icon_state = "wood_siding1"
 
-/obj/effect/decal/warning_stripes/uscm_logo
-	name = "\improper USCM logo"
-	desc = "The symbol of the United States Colonial Marines corps."
-	icon_state = "small_uscm_clean"
-
-/obj/effect/decal/warning_stripes/uscm_logo/desat
-	name = "\improper USCM logo"
-	desc = "The symbol of the United States Colonial Marines corps."
-	icon_state = "small_uscm_desat"
-
-/obj/effect/decal/warning_stripes/uscm_logo/dirty
-	name = "\improper Worn USCM logo"
-	desc = "The symbol of the United States Colonial Marines corps."
-	icon_state = "small_uscm_dirty"
-
 /obj/effect/decal/grass_overlay/grass1/dark
 
 	icon_state = "grass_outercorner_dark"
