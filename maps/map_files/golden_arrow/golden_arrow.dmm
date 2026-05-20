@@ -19258,13 +19258,14 @@
 /area/golden_arrow/briefing)
 "maN" = (
 /obj/structure/barricade/handrail/boxing_ring{
-	pixel_x = -4;
-	pixel_y = 16
-	},
-/obj/structure/barricade/handrail/boxing_ring{
 	dir = 4;
 	pixel_x = 0;
-	pixel_y = -1
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = -4;
+	pixel_y = 3;
+	dir = 1
 	},
 /turf/open/floor/prison/whitefull2,
 /area/golden_arrow/prep_hallway)
@@ -19668,13 +19669,14 @@
 /area/golden_arrow/lower_cargo)
 "mYs" = (
 /obj/structure/barricade/handrail/boxing_ring{
-	pixel_x = 1;
-	pixel_y = 16
-	},
-/obj/structure/barricade/handrail/boxing_ring{
 	dir = 8;
 	pixel_x = 0;
-	pixel_y = -1
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = 5;
+	pixel_y = 3;
+	dir = 1
 	},
 /turf/open/floor/prison/whitefull2,
 /area/golden_arrow/prep_hallway)
@@ -22041,7 +22043,8 @@
 "unC" = (
 /obj/structure/barricade/handrail/boxing_ring{
 	pixel_x = 1;
-	pixel_y = 16
+	pixel_y = 3;
+	dir = 1
 	},
 /turf/open/floor/prison/whitefull2,
 /area/golden_arrow/prep_hallway)
@@ -22631,10 +22634,6 @@
 "wvP" = (
 /obj/structure/bed/stool,
 /turf/open/floor/almayer,
-/area/golden_arrow/prep_hallway)
-"wvV" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/souto,
-/turf/closed/wall/almayer/outer,
 /area/golden_arrow/prep_hallway)
 "wAd" = (
 /obj/structure/platform_decoration{
@@ -28209,7 +28208,7 @@ wqb
 faS
 wKQ
 pXa
-wvV
+auh
 tUr
 aCm
 tCd
