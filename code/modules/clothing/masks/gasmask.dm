@@ -102,18 +102,6 @@
 	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This mask has newly installed filters and seals."
 	flags_inventory = SPOREPROOF
 
-/obj/item/clothing/mask/gas/military/sporeproof/attack_self(mob/user)
-	if(user.get_active_hand() != src)
-		return ..()
-
-	var/obj/item/clothing/accessory/m5packed/sporeproof/P = new(get_turf(user))
-	user.temp_drop_inv_item(src)
-	qdel(src)
-	user.put_in_active_hand(P)
-
-	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
-	to_chat(user, SPAN_NOTICE("You fold and pack the M5 gasmask."))
-
 /obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."

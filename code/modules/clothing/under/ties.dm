@@ -625,26 +625,6 @@
 	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
 	to_chat(user, SPAN_NOTICE("You unpack the M5 gasmask."))
 
-/obj/item/clothing/accessory/m5packed/sporeproof
-	name = "Packed M5 gasmask"
-	desc = "Packed gas mask, can be strapped into armor."
-	icon_state = "m5_packed"
-	item_state = "m5_suit"
-	w_class = SIZE_SMALL
-	slot = ACCESSORY_SLOT_GASMASK
-
-/obj/item/clothing/accessory/m5packed/attack_self(mob/user)
-	if(user.get_active_hand() != src)
-		return ..()
-
-	var/obj/item/clothing/mask/gas/military/sporeproof/M = new(get_turf(user))
-	user.temp_drop_inv_item(src)
-	qdel(src)
-	user.put_in_active_hand(M)
-
-	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
-	to_chat(user, SPAN_NOTICE("You unpack the M5 gasmask."))
-
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
