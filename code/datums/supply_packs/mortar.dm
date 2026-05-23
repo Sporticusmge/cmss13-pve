@@ -11,7 +11,7 @@
 		/obj/item/storage/belt/gun/mortarbelt,
 		/obj/item/storage/backpack/marine/mortarpack,
 	)
-	cost = 60
+	cost = 40
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "\improper M112 HIMAT mortar crate"
 	group = "Mortar"
@@ -20,7 +20,7 @@
 
 /datum/supply_packs/ammo_mortar_he
 	name = "M112 HIMAT mortar shells crate (x25 HE)"
-	cost = 200
+	cost = 100
 	contains = list(
 		/obj/structure/largecrate/supply/explosives/himat_explosive,
 	)
@@ -30,7 +30,7 @@
 
 /datum/supply_packs/ammo_mortar_ap
 	name = "M112 HIMAT mortar shells crate (x25 AP)"
-	cost = 200
+	cost = 100
 	contains = list(
 		/obj/structure/largecrate/supply/explosives/himat_antipersonnel,
 	)
@@ -40,7 +40,7 @@
 
 /datum/supply_packs/ammo_mortar_incendiary
 	name = "M112 HIMAT mortar shells crate (x25 Incendiary)"
-	cost = 200
+	cost = 100
 	contains = list(
 		/obj/structure/largecrate/supply/explosives/himat_incendiary,
 	)

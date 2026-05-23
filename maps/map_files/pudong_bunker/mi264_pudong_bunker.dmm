@@ -354,6 +354,11 @@
 	anchored = 1;
 	pixel_y = -3
 	},
+/obj/item/reagent_container/spray/pepper{
+	pixel_x = -1;
+	pixel_y = 17
+	},
+/obj/item/storage/box/zipcuffs,
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/platoon)
 "aK" = (

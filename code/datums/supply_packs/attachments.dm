@@ -201,8 +201,9 @@
 	group = "Attachments"
 
 /datum/supply_packs/underbarrel_burstfire_assembly
-	name = "burstfire assembly attachment crate (x2)"
+	name = "burstfire assembly attachment crate (x3)"
 	contains = list(
+		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/burstfire_assembly,
 	)

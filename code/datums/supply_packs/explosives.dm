@@ -1,38 +1,44 @@
 // Group to populate with all the explosives exept OB and mortar shell
 
 /datum/supply_packs/explosives_mines
-	name = "claymore mines crate (x10)"
+	name = "claymore mines crate (x20)"
 	contains = list(
 		/obj/item/storage/box/explosive_mines,
 		/obj/item/storage/box/explosive_mines,
+		/obj/item/storage/box/explosive_mines,
+		/obj/item/storage/box/explosive_mines,
 	)
-	cost = 30
+	cost = 50
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive mine boxes crate (WARNING)"
 	group = "Explosives"
 
 /datum/supply_packs/explosives_plastic
-	name = "plastic explosives crate (x4)"
+	name = "plastic explosives crate (x6)"
 	contains = list(
 		/obj/item/explosive/plastic,
 		/obj/item/explosive/plastic,
 		/obj/item/explosive/plastic,
 		/obj/item/explosive/plastic,
+		/obj/item/explosive/plastic,
+		/obj/item/explosive/plastic,
 	)
-	cost = 40
+	cost = 60
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper plastic explosives crate (WARNING)"
 	group = "Explosives"
 
 /datum/supply_packs/explosives_breaching_charge
-	name = "breaching charge crate (x4)"
+	name = "breaching charge crate (x6)"
 	contains = list(
 		/obj/item/explosive/plastic/breaching_charge,
 		/obj/item/explosive/plastic/breaching_charge,
 		/obj/item/explosive/plastic/breaching_charge,
 		/obj/item/explosive/plastic/breaching_charge,
+		/obj/item/explosive/plastic/breaching_charge,
+		/obj/item/explosive/plastic/breaching_charge,
 	)
-	cost = 40
+	cost = 60
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper plastic explosives crate (WARNING)"
 	group = "Explosives"

@@ -799,33 +799,3 @@
 	playsound(user, cocked_sound, 25, TRUE)
 
 	handle_heat_effects()
-
-/*
-	Ammo magazine / bullets
-*/
-/obj/item/ammo_magazine/drg_gunner_minigun
-	name = "\improper 'M90 minigun' drum (10x28 HEAP)"
-	desc = "A 10x28 HEAP heavy minigun drum magazine."
-	caliber = "20mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
-	icon_state = "leadstorm_mag"
-	item_state = "generic_mag"
-	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/drg_gunner_minigun
-	max_rounds = 900
-	gun_type = /obj/item/weapon/gun/drg_gunner_minigun
-	ammo_band_icon = "+m41a_band"
-	ammo_band_icon_empty = "+m41a_band_e"
-
-/datum/ammo/bullet/drg_gunner_minigun
-	name = "minigun bullet"
-
-	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_10
-	accurate_range = 18
-	accuracy = HIT_ACCURACY_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_9
-	shell_speed = AMMO_SPEED_TIER_3
-	effective_range_max = 10
-	damage_falloff = DAMAGE_FALLOFF_TIER_1
-	max_range = 24

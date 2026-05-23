@@ -793,7 +793,12 @@
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
-/turf/open/floor/almayer,
+/obj/structure/cable/heavyduty/north_east_west,
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "abH" = (
 /obj/effect/decal/warning_stripes{
@@ -841,18 +846,16 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "abN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
 	},
-/obj/structure/roof/cargocrane_tracks/horizontal{
-	pixel_y = 14
+/obj/structure/disposalpipe/segment{
+	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "abO" = (
 /obj/effect/decal/cleanable/dirt{
@@ -6091,12 +6094,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "ash" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "supply_elevator_railing"
-	},
-/obj/structure/machinery/light/blue,
-/turf/open/floor/almayer,
+/obj/structure/window/framed/almayer/hull,
+/turf/open/space/basic,
 /area/golden_arrow/supply)
 "asi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -6123,13 +6122,6 @@
 	pixel_x = -3
 	},
 /obj/item/tool/stamp/uscm,
-/obj/structure/machinery/door_control{
-	id = "cargo 3";
-	name = "RO Line 1 Shutters";
-	pixel_x = 5;
-	pixel_y = -2;
-	req_one_access_txt = "1;21"
-	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/platoon_commander_rooms)
 "asj" = (
@@ -6868,10 +6860,7 @@
 	icon_state = "cargo_arrow";
 	dir = 4
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
-	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "avj" = (
@@ -15877,14 +15866,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
 	},
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "supply_elevator_railing"
-	},
-/obj/structure/machinery/light/blue{
+/obj/structure/disposalpipe/segment{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -16041,6 +16026,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"bzK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty/east,
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "bAy" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16104,22 +16100,15 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "bHc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 3
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/smooth/west,
+/obj/structure/machinery/power/apc/power/west,
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "bJo" = (
 /obj/structure/weightmachine/stacklifter,
@@ -16332,6 +16321,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/lower_cargo)
+"cnW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/cargotech,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "cqk" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -16389,6 +16385,10 @@
 /obj/structure/cable/heavyduty/north_east_south,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -16538,6 +16538,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"dcn" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "dfZ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16554,11 +16562,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "dgn" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/computer/supply/asrs,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "dhv" = (
@@ -16825,6 +16834,15 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/motor_pool)
+"dYj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/supply)
 "dYR" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -16854,6 +16872,18 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"egL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty/north_south,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "egO" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14
@@ -17180,17 +17210,10 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "faS" = (
-/obj/item/prop/magazine/boots/n117{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/obj/item/prop/magazine/boots/n150{
-	pixel_x = -10;
-	pixel_y = 0
-	},
-/obj/item/prop/magazine/boots/n160{
-	pixel_x = 9;
-	pixel_y = 0
+/obj/structure/machinery/power/apc/power/east,
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -17202,6 +17225,19 @@
 	icon_state = "S"
 	},
 /turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"fdR" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "fea" = (
 /obj/structure/closet/emcloset,
@@ -17223,6 +17259,16 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"fkj" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "fli" = (
 /obj/structure/surface/rack{
 	density = 0;
@@ -17358,6 +17404,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"fGG" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "fIR" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17677,6 +17734,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
+"guK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
+/turf/open/space/basic,
+/area/space)
 "gwS" = (
 /obj/structure/machinery/light/small/red{
 	dir = 1
@@ -17757,6 +17821,15 @@
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"gLX" = (
+/obj/structure/machinery/door_control{
+	id = "cargo 3";
+	name = "GM cargo lock control";
+	pixel_y = -24;
+	needs_power = 0
+	},
+/turf/open/space/basic,
+/area/space)
 "gNW" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -17799,10 +17872,15 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "gUM" = (
-/obj/structure/machinery/door/airlock/almayer/marine/requisitions{
-	dir = 2;
-	no_panel = 1;
-	not_weldable = 1
+/obj/structure/roof/cargocrane_tracks/tjoint3{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
@@ -17922,6 +18000,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"hiB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"hiW" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "hiX" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18115,6 +18206,13 @@
 "hRK" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
+"hRX" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "hSj" = (
 /obj/effect/decal/cleanable/hybrisa/dirt,
 /turf/open/floor/almayer/plate,
@@ -18279,6 +18377,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "iLR" = (
@@ -18325,23 +18427,25 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "iOI" = (
-/obj/item/ammo_box/magazine/nade_box/training{
-	pixel_x = 1;
-	pixel_y = 1
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/magazine/boots/n054,
+/obj/item/prop/magazine/boots/n055,
+/obj/item/prop/magazine/boots/n056,
+/obj/item/prop/magazine/boots/n067,
+/obj/item/prop/magazine/boots/n117,
+/obj/item/prop/magazine/boots/n150,
+/obj/item/prop/magazine/boots/n160,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "iPf" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "supply_elevator_railing"
-	},
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "iRi" = (
@@ -18374,6 +18478,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/cable/heavyduty/north_west,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "iUC" = (
@@ -18414,6 +18519,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/cable/heavyduty/east_south,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "jiQ" = (
@@ -18483,6 +18589,23 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"joO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "jpb" = (
 /obj/structure/prop/dam/crane{
 	pixel_y = -13
@@ -18549,6 +18672,16 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"jAd" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "jHP" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -19212,6 +19345,18 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"lVN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "supply_elevator_railing"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange/north,
+/area/golden_arrow/supply)
 "lXR" = (
 /obj/structure/prop/almayer/ai_wallmonitor/east,
 /turf/open/floor/almayer/aicore/glowing,
@@ -19431,19 +19576,24 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
 "mxV" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = -18
 	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "myB" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Cargo Bay Blast Door";
-	id = "cargo 3";
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "supply_elevator_railing"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/orange/north,
 /area/golden_arrow/supply)
 "mAs" = (
 /obj/structure/cargo_container/horizontal/blue/top{
@@ -19696,6 +19846,13 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"mZu" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "mZX" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/structure/cable/heavyduty/west_east,
@@ -20127,6 +20284,16 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/lower_cargo)
+"ofZ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = -18
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
 "ogX" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/edge/smooth/west,
@@ -20187,6 +20354,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/lower_cargo)
+"omw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "onj" = (
 /turf/open/floor/almayer/aicore/glowing,
 /area/golden_arrow/ai_interface)
@@ -20202,6 +20376,17 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"ooH" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4;
+	pixel_y = 3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "opj" = (
@@ -20221,6 +20406,13 @@
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"orD" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "osR" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -20235,11 +20427,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "otk" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
 	},
-/obj/structure/machinery/vending/ingredients,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "otn" = (
@@ -20372,6 +20563,20 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"oNB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "supply_elevator_railing"
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = -18
+	},
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
+/turf/open/floor/almayer/orange/north,
+/area/golden_arrow/supply)
 "oRK" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -20452,8 +20657,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "pdN" = (
-/obj/structure/bed/chair/office/dark,
-/turf/open/floor/almayer,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "supply_elevator_railing"
+	},
+/turf/open/floor/almayer/orange/north,
 /area/golden_arrow/supply)
 "pej" = (
 /obj/structure/barricade/handrail/boxing_ring{
@@ -20682,12 +20892,10 @@
 "pXa" = (
 /obj/item/ammo_box/magazine/mk1/large/rubber{
 	pixel_x = 0;
-	pixel_y = -7
-	},
-/obj/item/ammo_box/magazine/mk1/large/rubber{
-	pixel_x = 0;
 	pixel_y = 8
 	},
+/obj/item/ammo_box/magazine/shotgun/beanbag,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "pXl" = (
@@ -20874,6 +21082,22 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"qsu" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "qsz" = (
 /obj/structure/largecrate,
 /obj/structure/prop/server_equipment/laptop{
@@ -20882,6 +21106,19 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
+"qvq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/airlock/almayer/marine/requisitions{
+	dir = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "qvL" = (
 /obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk,
@@ -20889,6 +21126,13 @@
 "qwH" = (
 /turf/open/floor/plating,
 /area/golden_arrow/lower_cargo)
+"qAj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "qEe" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -21015,6 +21259,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"qVw" = (
+/obj/structure/machinery/vending/cola{
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "qZf" = (
 /obj/vehicle/powerloader{
 	dir = 8
@@ -21023,6 +21274,7 @@
 /area/golden_arrow/supply)
 "rcj" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/misc/mre/emergency,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "rdX" = (
@@ -21042,6 +21294,14 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/lower_cargo)
+"rgZ" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/cable/heavyduty/north_west,
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "rhq" = (
 /obj/structure/platform{
 	dir = 4;
@@ -21376,6 +21636,13 @@
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "sdp" = (
@@ -21451,6 +21718,17 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"sqp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/computer/supply/asrs,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
@@ -21536,6 +21814,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"svN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = -18
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "sxZ" = (
 /obj/structure/machinery/status_display,
 /turf/closed/wall/almayer,
@@ -21592,6 +21880,24 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"sFd" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"sHO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "sIB" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/structure/surface/table/reinforced/black,
@@ -21643,14 +21949,20 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/engineering)
 "sMR" = (
-/obj/structure/machinery/door_control{
-	id = "cargo 3";
-	name = "RO Line 1 Shutters";
-	pixel_x = 5;
-	pixel_y = -2;
-	req_one_access_txt = "1;21"
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/turf/closed/wall/almayer/outer,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door/window/southleft,
+/obj/item/tool/stamp/denied{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/item/tool/stamp/ro{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "sTP" = (
 /obj/effect/decal/warning_stripes{
@@ -21661,8 +21973,18 @@
 /area/golden_arrow/engineering)
 "sUr" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
+"sUE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
 "sXP" = (
 /obj/structure/weightmachine/stacklifter,
 /obj/effect/decal/cleanable/dirt/alt_dirt,
@@ -21827,6 +22149,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"tAv" = (
+/obj/structure/machinery/power/apc/power/east,
+/obj/structure/cable{
+	icon_state = "0-2";
+	layer = 2.36;
+	pixel_y = -3;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "tBe" = (
 /obj/structure/platform{
 	dir = 4;
@@ -21857,6 +22189,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "tDA" = (
@@ -21884,12 +22220,10 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/supply)
 "tJw" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty/north_west_south,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "tNi" = (
@@ -21912,16 +22246,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoonprep)
-"tPk" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Cargo Bay Blast Door";
-	id = "cargo 3";
-	dir = 8
-	},
-/obj/structure/roof/cargocrane_tracks/horizontal{
-	pixel_y = 14
+"tOa" = (
+/obj/structure/cable/heavyduty/north_south,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
 	},
 /turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"tPk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "tPM" = (
 /obj/effect/decal/cleanable/dirt{
@@ -22077,6 +22414,9 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
 "uto" = (
@@ -22248,6 +22588,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"vjO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "vld" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/prop/almayer/computer/PC/large{
@@ -22260,6 +22613,9 @@
 /obj/structure/cable/heavyduty/west_east,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
@@ -22306,12 +22662,10 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "vtI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/cable/heavyduty/north_east_south,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "vtV" = (
@@ -22337,6 +22691,15 @@
 	layer = 2.52
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"vvk" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "vzH" = (
 /obj/structure/prop/almayer/ai_wallmonitor,
@@ -22458,6 +22821,17 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/supply)
+"vIb" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "vIn" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -22473,8 +22847,12 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/vending/coffee,
-/turf/open/floor/almayer,
+/obj/structure/cable/heavyduty/north_west_south,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "vLe" = (
 /obj/effect/decal/warning_stripes{
@@ -22624,6 +23002,17 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"wrH" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty/north_south,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "wuZ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -22635,6 +23024,14 @@
 /obj/structure/bed/stool,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"wzR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/rack,
+/obj/item/ammo_box/magazine/misc/power_cell,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "wAd" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -22667,6 +23064,19 @@
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/platoonarmory)
+"wEE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "wEW" = (
 /turf/open/floor/almayer/greenfull2,
 /area/golden_arrow/prep_hallway)
@@ -22711,24 +23121,20 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "wKQ" = (
-/obj/item/prop/magazine/boots/n067{
-	pixel_x = -3;
-	pixel_y = -1
-	},
-/obj/item/prop/magazine/boots/n056{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/prop/magazine/boots/n055{
-	pixel_x = 8;
-	pixel_y = 9
-	},
-/obj/item/prop/magazine/boots/n054{
-	pixel_x = 8;
-	pixel_y = 0
-	},
+/obj/item/ammo_box/magazine/nade_box/training,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"wLN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty/east_south,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "wMR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -22908,6 +23314,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "xpl" = (
@@ -22948,6 +23355,17 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"xAI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "xAS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/whitefull2,
@@ -23037,12 +23455,16 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "xWn" = (
-/obj/structure/machinery/door/window/eastleft{
-	req_one_access_txt = "2;21";
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
+	},
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo,
 /area/golden_arrow/supply)
 "xXq" = (
 /obj/effect/decal/warning_stripes{
@@ -23077,6 +23499,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"yad" = (
+/obj/structure/pipes/vents/scrubber,
+/obj/structure/cable/heavyduty,
+/obj/structure/cable{
+	icon_state = "0-2";
+	layer = 2.36;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "ydL" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
@@ -23106,15 +23538,11 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "ygB" = (
-/obj/structure/roof/cargocrane_tracks/horizontal/endcap1{
-	pixel_y = 14
+/obj/structure/disposalpipe/down/almayer{
+	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "supply_elevator_railing"
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/supply)
+/turf/open/space/basic,
+/area/space)
 
 (1,1,1) = {"
 aEG
@@ -27989,13 +28417,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-ahl
-ahl
-ahl
-ahl
-ahl
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
 aEG
 aEG
 aEG
@@ -28027,14 +28455,14 @@ auh
 eSc
 aCm
 jgZ
-kYy
-aCm
+yad
+hiW
 aCm
 ctz
 auh
 qKH
 aCm
-tCd
+fkj
 aCm
 ctz
 maN
@@ -28166,13 +28594,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-jRk
-jRk
-jRk
-jRk
-jRk
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aWh
 aWh
 aWh
 aWh
@@ -28203,14 +28631,14 @@ aEG
 nuG
 iOI
 aCm
-tCd
+mZu
 wqb
 faS
 wKQ
 pXa
 auh
-tUr
-aCm
+qVw
+tAv
 tCd
 aCm
 wqb
@@ -28343,13 +28771,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-jRk
-jRk
-jRk
-jRk
-jRk
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aWh
 aWh
 avH
 ael
@@ -28520,13 +28948,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-jRk
-jRk
-aWi
-jRk
-jRk
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aWh
 aWh
 ari
 aOu
@@ -28557,7 +28985,7 @@ aer
 aer
 aCm
 aCm
-tCd
+mZu
 auE
 aYu
 aYu
@@ -28565,7 +28993,7 @@ unq
 aYu
 vrH
 aYu
-auE
+rgZ
 aCm
 qPd
 auh
@@ -28697,13 +29125,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-jRk
-jRk
-jRk
-jRk
-jRk
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aWh
 aWh
 aeF
 aQw
@@ -28874,13 +29302,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-jRk
-jRk
-jRk
-jRk
-jRk
-ahl
+aEG
+aEG
+aEG
+aEG
+aEG
+aEG
+aWh
 aWh
 afI
 aaJ
@@ -29051,13 +29479,13 @@ aEG
 aEG
 aEG
 aEG
-ahl
-bmD
-iPf
+aEG
+aEG
+aEG
 ygB
-iPf
-ash
-ahl
+aEG
+aEG
+aWh
 aWh
 aaN
 aaJ
@@ -29219,21 +29647,21 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
 ahl
-sMR
 ahl
-myB
-myB
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
 tPk
-myB
-myB
+ahl
+ahl
 ahl
 ahl
 ahl
@@ -29396,21 +29824,21 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-dgn
-pdN
+jRk
+jRk
+jRk
+jRk
+jRk
+myB
+vve
+aAu
 xWn
 bHc
-ayn
+dYj
 abN
-ayn
-ayn
+aAu
+aAu
 aYm
 xjq
 fKS
@@ -29573,19 +30001,19 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-afz
-afz
-gUM
+jRk
+jRk
+jRk
+jRk
+jRk
+pdN
+vve
 aAu
 aAu
-abG
+bzK
+aAu
+hRX
 afz
 aAu
 uzJ
@@ -29750,21 +30178,21 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-ahl
-ahl
-ahl
+jRk
+jRk
+aWi
+jRk
+jRk
+oNB
+ofZ
+svN
+svN
 mxV
 afz
-abG
-afz
-aAu
+gUM
+orD
+xAI
 tGd
 afz
 aRI
@@ -29927,18 +30355,18 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-aAu
-afz
+jRk
+jRk
+jRk
+jRk
+jRk
+pdN
+sFd
+egL
+wrH
+vKw
+tOa
 abG
 afz
 afz
@@ -30104,19 +30532,19 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-vKw
+jRk
+jRk
+jRk
+jRk
+jRk
+lVN
+sUE
+vvk
+aAu
+aAu
 afz
-scX
+qsu
 afz
 afz
 tGd
@@ -30281,19 +30709,19 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
+ash
+ash
+ash
+ash
+ash
+ahl
+joO
+vjO
+jAd
 otk
-afz
-abG
+otk
+fdR
 afz
 afz
 rFo
@@ -30458,17 +30886,17 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
 ahl
-uXB
+iPf
+aAu
+ooH
+aAu
+hiB
+sMR
+sHO
+vvk
+aAu
+aAu
 aAu
 scX
 aAu
@@ -30632,20 +31060,20 @@ aEG
 aEG
 aEG
 aEG
+gLX
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+guK
 ahl
-ahl
-ahl
+fGG
+aAu
+wLN
+qAj
+vIb
+qvq
+bmD
+wEE
+uXB
+dcn
 avi
 iKm
 ana
@@ -30812,14 +31240,14 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+ahl
+wzR
+aAu
+omw
+aAu
+dgn
+ahl
+ahl
 ahl
 ahl
 ahl
@@ -30989,14 +31417,14 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+ahl
+cnW
+aAu
+aAu
+dcn
+sqp
+ahl
+ahl
 ahl
 ahl
 ahl

@@ -2,6 +2,9 @@
 	name = "M56D Heavy Machine Gun (x1)"
 	contains = list(
 		/obj/item/storage/box/guncase/m56d,
+		/obj/item/ammo_magazine/m56d,
+		/obj/item/ammo_magazine/m56d,
+		/obj/item/ammo_magazine/m56d,
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/weapon
@@ -12,10 +15,23 @@
 	name = "M2C Heavy Machine Gun (x1)"
 	contains = list(
 		/obj/item/storage/box/guncase/m2c,
+		/obj/item/ammo_magazine/m2c,
+		/obj/item/ammo_magazine/m2c,
+		/obj/item/ammo_magazine/m2c,
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "M2C Machine Gun Crate"
+	group = "Weapons"
+
+/datum/supply_packs/sentry_gun
+	name = "UA 571-C Sentry Gun (x1)"
+	contains = list(
+		/obj/item/storage/box/guncase/heavy/sentry
+	)
+	cost = 60
+	containertype = /obj/item/storage/box/guncase/heavy/sentry
+	containername = "UA 571-C Sentry Gun"
 	group = "Weapons"
 
 /datum/supply_packs/flamethrower
@@ -113,7 +129,7 @@
 		/obj/item/weapon/gun/drg_gunner_minigun,
 		/obj/item/ammo_magazine/drg_gunner_minigun,
 	)
-	cost = 500
+	cost = 700
 	containertype = /obj/structure/closet/crate/weapon
 	containername = "M90 Minigun crate"
 	group = "Weapons"

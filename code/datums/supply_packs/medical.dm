@@ -37,7 +37,7 @@
 		/obj/item/storage/pill_bottle/imialk,
 		/obj/item/storage/pill_bottle/imialk,
 	)
-	cost = 170
+	cost = 250
 	containertype = /obj/structure/closet/crate/medical
 	containername = "upgraded medical equipment crate"
 	group = "Medical"

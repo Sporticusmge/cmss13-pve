@@ -264,3 +264,16 @@
 	pen_armor_punch = 0
 	shell_speed = 2*AMMO_SPEED_TIER_6
 	accuracy = HIT_ACCURACY_TIER_5
+
+/datum/ammo/bullet/drg_gunner_minigun
+	name = "minigun bullet"
+
+	damage = 80
+	penetration = ARMOR_PENETRATION_TIER_8
+	accurate_range = 18
+	accuracy = HIT_ACCURACY_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_9
+	shell_speed = AMMO_SPEED_TIER_3
+	effective_range_max = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	max_range = 24

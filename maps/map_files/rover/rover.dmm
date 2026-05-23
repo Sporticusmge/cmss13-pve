@@ -80,41 +80,8 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/cryo_cells)
 "ak" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	dir = 4;
-	pixel_y = 19;
-	pixel_x = 2
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	dir = 4;
-	pixel_y = 19;
-	pixel_x = -2
-	},
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = -13;
-	pixel_y = -13
-	},
-/obj/item/clothing/mask/cigarette/weed{
-	pixel_x = -12;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/cigarette/weed{
-	pixel_x = -10;
-	pixel_y = 1
-	},
-/obj/item/tool/lighter/zippo/blue{
-	pixel_x = 10;
-	pixel_y = -6
-	},
-/obj/structure/curtain/red{
-	pixel_y = 6
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
@@ -1421,6 +1388,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_one)
+"dJ" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "dL" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -2003,6 +1976,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
+"in" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "io" = (
 /obj/structure/ladder{
 	height = -1;
@@ -2614,6 +2593,10 @@
 "om" = (
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/golden_arrow/medical)
+"oq" = (
+/obj/structure/fence/slim/door,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "or" = (
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
 	req_access = list()
@@ -3260,9 +3243,8 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/platoonarmory)
 "tm" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 2;
-	name = "\improper Hangar Lockdown Blast Door"
+/obj/structure/fence/slim{
+	icon_state = "fence12"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -3725,6 +3707,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
+"xx" = (
+/obj/structure/punching_bag,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "xC" = (
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake,
 /turf/open/floor/almayer/plate,
@@ -3946,6 +3932,33 @@
 /obj/structure/foamed_metal,
 /turf/open/space/basic,
 /area/golden_arrow/briefing)
+"zw" = (
+/obj/structure/surface/rack,
+/obj/item/tool/dumbbell,
+/obj/item/tool/dumbbell,
+/obj/item/tool/dumbbell,
+/obj/item/tool/dumbbell{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/tool/dumbbell/alt{
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/obj/item/tool/dumbbell/alt{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/obj/item/tool/dumbbell/alt{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/obj/item/tool/dumbbell/alt{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "zz" = (
 /obj/structure/machinery/shower{
 	dir = 1
@@ -4193,7 +4206,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "BH" = (
-/obj/structure/machinery/computer/supply_drop_console/limited/alternate,
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
 	light_color = "#dae2ff";
@@ -5300,6 +5312,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"Lo" = (
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "Lz" = (
 /obj/structure/surface/table/almayer,
 /obj/item/facepaint/sniper{
@@ -5357,6 +5373,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"LM" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "LR" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/small/blue{
@@ -8366,8 +8386,8 @@ aA
 ar
 ai
 TX
-YB
-YB
+zw
+dJ
 TX
 Sn
 Sn
@@ -8469,8 +8489,8 @@ zo
 nR
 tm
 YB
-YB
-tm
+in
+TX
 Sn
 Sn
 Sn
@@ -8570,9 +8590,9 @@ Za
 as
 al
 tm
+LM
 YB
-YB
-tm
+TX
 Sn
 Sn
 Sn
@@ -8671,10 +8691,10 @@ af
 YB
 YB
 ak
-tm
+oq
 YB
 YB
-tm
+TX
 Sn
 Sn
 Sn
@@ -8774,8 +8794,8 @@ aC
 YB
 am
 TX
-YB
-YB
+Lo
+xx
 TX
 Sn
 Sn

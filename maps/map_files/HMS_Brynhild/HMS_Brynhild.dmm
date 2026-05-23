@@ -1078,11 +1078,6 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 2;
-	name = "\improper Hangar Lockdown Blast Door";
-	id = "hangarlockdownwest"
-	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/dorms)
 "cd" = (
@@ -6607,11 +6602,6 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 2;
-	name = "\improper Hangar Lockdown Blast Door";
-	id = "hangarlockdownwest"
-	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/dorms)
 "no" = (
@@ -10014,6 +10004,11 @@
 /obj/item/clothing/head/beret/cm/green{
 	pixel_x = -11;
 	pixel_y = 9
+	},
+/obj/item/storage/box/handcuffs,
+/obj/item/reagent_container/spray/pepper{
+	pixel_x = 10;
+	pixel_y = 3
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/dorms)
@@ -13998,6 +13993,12 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/lower_hangar)
+"Eu" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Ev" = (
 /turf/open/floor/kutjevo/tan/alt_inner_edge/north,
 /area/hms_brynhild/colour_office)
@@ -14623,6 +14624,13 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
+"Gj" = (
+/obj/effect/decal/hybrisa/dirt_2,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Gk" = (
 /obj/item/tool/mop{
 	pixel_x = -9;
@@ -15019,10 +15027,6 @@
 	name = "Maintenance Access";
 	req_one_access_txt = "300"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 2;
-	name = "\improper Hangar Lockdown Blast Door"
-	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/hms_brynhild/dorms)
 "Hw" = (
@@ -15058,13 +15062,6 @@
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/hms_brynhild/armoury_station)
 "Hz" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
-	name = "Maintenance Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3
-	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/prep_hallway)
 "HA" = (
@@ -15796,6 +15793,13 @@
 "Jv" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_cargo)
+"Jw" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Jx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -16513,6 +16517,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/lower_cargo)
+"Lt" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Lu" = (
 /turf/open/floor/plating/prison,
 /area/hms_brynhild/supply)
@@ -16607,13 +16615,6 @@
 "LL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
-	name = "Maintenance Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/prep_hallway)
@@ -16803,6 +16804,12 @@
 /obj/item/stool,
 /turf/open/floor/prison,
 /area/hms_brynhild/supply)
+"Ml" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Mm" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -17014,6 +17021,12 @@
 /obj/structure/cargo_container/horizontal/blue/bottom,
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
+"MS" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "MU" = (
 /turf/open/space/basic,
 /area/hms_brynhild/supply)
@@ -17186,6 +17199,10 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
+"NC" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "NE" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17232,6 +17249,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/supply)
+"NK" = (
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "NL" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
@@ -17983,6 +18004,10 @@
 /obj/effect/decal/strata_decals/grime/grime2,
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/briefing)
+"PR" = (
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "PS" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/prison,
@@ -18170,6 +18195,11 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
+"Qu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Qw" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/effect/decal/cleanable/dirt{
@@ -18635,6 +18665,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
+"RX" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "RY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4-8"
@@ -18921,6 +18955,12 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/prison,
 /area/hms_brynhild/synthcloset)
+"SV" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "SW" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_box/magazine/nsg23/large{
@@ -19015,6 +19055,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
+"Tq" = (
+/obj/effect/decal/hybrisa/dirt_2,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Tr" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -19523,6 +19567,12 @@
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/hms_brynhild/canteen)
+"Va" = (
+/obj/structure/machinery/treadmill{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Vb" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalbottomleft";
@@ -19641,6 +19691,11 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/hms_brynhild/synthcloset)
+"Vp" = (
+/obj/structure/weightmachine/stacklifter,
+/obj/effect/decal/cleanable/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "Vq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -20123,6 +20178,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
+"WM" = (
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/dorms)
 "WN" = (
 /obj/structure/barricade/handrail/type_b{
 	dir = 4
@@ -27156,15 +27215,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
 Cq
 Cq
 ut
@@ -27298,14 +27357,14 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+SV
+mv
+Vp
+Jw
+PR
+WM
+Qu
 Cq
 Cq
 Cq
@@ -27440,14 +27499,14 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Eu
+mv
+PR
+mv
+PR
+mv
+mv
 mv
 nn
 vR
@@ -27582,14 +27641,14 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Tq
+mv
+NK
+mv
+mv
+mv
+mv
 mv
 cc
 vR
@@ -27724,14 +27783,14 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Gj
+Tq
+mv
+mv
+mv
+Tq
+Lt
 Cq
 Cq
 Cq
@@ -27866,15 +27925,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+mv
+Tq
+NC
+WM
+NC
+mv
+mv
+Cq
 BP
 BP
 BP
@@ -28008,15 +28067,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Va
+mv
+RX
+mv
+mv
+mv
+mv
+Cq
 BP
 BP
 BP
@@ -28150,15 +28209,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+MS
+mv
+NC
+Ml
+NC
+mv
+RX
+Cq
 BP
 BP
 BP
@@ -28292,15 +28351,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
+Cq
 BP
 BP
 iw

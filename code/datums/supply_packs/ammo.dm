@@ -340,7 +340,7 @@
 		/obj/item/ammo_magazine/sentry,
 		/obj/item/ammo_magazine/sentry,
 	)
-	cost = 70
+	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
 	containername = "\improper sentry ammo crate"
 	group = "Ammo"
@@ -388,7 +388,7 @@
 	group = "Ammo"
 
 /datum/supply_packs/ammo_minigun
-	name = "M90 Minigun ammo drum (x2)"
+	name = "M90 Minigun ammo drum (x4)"
 	contains = list(
 			/obj/item/ammo_magazine/drg_gunner_minigun,
 			/obj/item/ammo_magazine/drg_gunner_minigun,

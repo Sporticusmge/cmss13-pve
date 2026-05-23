@@ -1379,10 +1379,8 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "adS" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "F-range"
-	},
-/turf/open/space/basic,
+/obj/structure/sign/poster/hunk,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/cafeteria)
 "adT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1604,6 +1602,9 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/hangar)
 "aeB" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4
+	},
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
 "aeE" = (
@@ -1691,13 +1692,9 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "aeT" = (
-/obj/structure/machinery/door_control/brbutton{
-	id = "frange_w_s_s";
-	name = "hangar blast door control";
-	req_one_access_txt = "19;12"
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "aeU" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/training,
@@ -4743,6 +4740,7 @@
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/computer/supply/asrs,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "amU" = (
@@ -4814,6 +4812,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/firefly/cafeteria)
 "ane" = (
@@ -5504,10 +5505,9 @@
 	dir = 1;
 	name = "\improper Epsilon Wing Firing Range"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Blast Door";
-	id = "F-range2";
-	dir = 4
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "F-range2"
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
@@ -7268,11 +7268,8 @@
 /turf/open/space/basic,
 /area/firefly/cafeteria)
 "atv" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Blast Door";
-	id = "F-range"
-	},
-/turf/open/floor/corsat/marked,
+/obj/structure/punching_bag,
+/turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "atw" = (
 /obj/structure/platform/strata/metal{
@@ -8096,8 +8093,11 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avr" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/apesuit,
-/turf/open/floor/corsat/squares,
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/whitefull2,
 /area/firefly/cafeteria)
 "avs" = (
 /obj/item/clothing/suit/marine/veteran/pmc/apesuit,
@@ -8844,8 +8844,6 @@
 /area/firefly/cafeteria)
 "axv" = (
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
-/obj/item/clothing/head/cmcap/pmc
-/obj/item/clothing/under/marine/veteran/pmc/leader,
 /obj/item/clothing/shoes/veteran/pmc/knife,
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /turf/open/floor/corsat/cargo,
@@ -8968,8 +8966,12 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "axM" = (
-/obj/structure/machinery/door/poddoor/almayer/blended,
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/firefly/cafeteria)
 "axN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9078,6 +9080,16 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/greenwhitecorner/west,
 /area/firefly/supply)
+"aAT" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "aBx" = (
 /obj/structure/machinery/door/airlock/almayer/security/colony{
 	name = "\improper Brig Cell 1";
@@ -9119,6 +9131,9 @@
 	},
 /turf/open/floor/corsat/theta,
 /area/firefly/cryo_cell)
+"aDa" = (
+/turf/open/floor/almayer/greenfull2,
+/area/firefly/cafeteria)
 "aDE" = (
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/cafeteria)
@@ -9150,6 +9165,19 @@
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/supply)
+"aFl" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = -4;
+	pixel_y = 3;
+	dir = 1
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "aFn" = (
 /obj/structure/machinery/power/apc/almayer/hardened,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
@@ -9333,6 +9361,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"aUf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/firefly/cafeteria)
 "aUE" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 9;
@@ -9484,6 +9522,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/hangar)
+"bbv" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "bbA" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -10084,6 +10128,9 @@
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/floor/almayer_hull,
 /area/space)
+"bGY" = (
+/turf/open/floor/almayer/orangefull2,
+/area/firefly/cafeteria)
 "bIv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -10201,6 +10248,15 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_plates,
 /area/firefly/ares)
+"bPl" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat/white/east,
+/area/firefly/cafeteria)
 "bPp" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/corsat/greenwhite/east,
@@ -10577,6 +10633,10 @@
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
+"ciN" = (
+/obj/structure/sign/poster/wylogo,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/firefly/cafeteria)
 "cje" = (
 /obj/structure/machinery/computer3/server/rack,
 /turf/open/floor/tdome/tcomms,
@@ -11748,6 +11808,10 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
+"dHK" = (
+/obj/structure/sign/poster/ad,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/firefly/cafeteria)
 "dHO" = (
 /obj/structure/window/framed/corsat/indestructible/security,
 /turf/open/floor/corsat/squares,
@@ -12046,6 +12110,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
+"dTD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/cafeteria)
 "dUa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -12203,10 +12274,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Blast Door";
-	id = "F-range2";
-	dir = 4
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "F-range2"
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
@@ -12510,17 +12580,27 @@
 "evp" = (
 /turf/open/floor/almayer/test_floor5,
 /area/firefly/supply)
+"ewO" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "ewY" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/cargo_container/seegson/mid,
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "exG" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Blast Door";
-	id = "frange_w_s_s"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
 	},
-/turf/open/floor/corsat/marked,
+/turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "exW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -13953,6 +14033,7 @@
 	pixel_x = -7;
 	pixel_y = -2
 	},
+/obj/item/storage/box/zipcuffs,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
 "gbs" = (
@@ -14069,6 +14150,12 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/firefly/cafeteria)
 "ghb" = (
@@ -14835,10 +14922,13 @@
 /turf/open/floor/corsat/red/southwest,
 /area/firefly/cafeteria)
 "gVg" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Blast Door";
-	id = "F-range"
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	name = "\improper Mess Hall Wing";
+	req_access = null;
+	dir = 1
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
@@ -15786,6 +15876,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/medical)
+"hPl" = (
+/obj/structure/sign/poster/corporate,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/firefly/cafeteria)
 "hPA" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -16288,6 +16382,20 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
+"ioR" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	name = "\improper Mess Hall Wing";
+	req_access = null;
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/cafeteria)
 "irg" = (
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/briefing)
@@ -16413,6 +16521,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/engineer)
+"izV" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "izW" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -17115,6 +17227,14 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
+"jnv" = (
+/obj/structure/machinery/power/apc/power/south,
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "joU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -17474,6 +17594,17 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
+"jDY" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = 5;
+	pixel_y = 3;
+	dir = 1
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "jEu" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/plate,
@@ -17627,6 +17758,12 @@
 	},
 /turf/open/floor/corsat/retrosquareslight,
 /area/firefly/supply)
+"jQt" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "jRe" = (
 /obj/structure/surface/rack,
 /obj/item/storage/pill_bottle/inaprovaline{
@@ -17663,6 +17800,9 @@
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/supply)
+"jRw" = (
+/turf/open/floor/almayer/redfull2,
+/area/firefly/cafeteria)
 "jUo" = (
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
@@ -17725,6 +17865,16 @@
 	},
 /turf/open/floor/corsat/spiralplate,
 /area/firefly/supply)
+"jWc" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "jXi" = (
 /obj/structure/machinery/recharge_station{
 	pixel_x = -1;
@@ -17800,6 +17950,14 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
+"jZX" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = -4;
+	pixel_y = 3;
+	dir = 1
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "kan" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/north,
@@ -17899,6 +18057,13 @@
 /obj/structure/blocker/invisible_wall/water,
 /turf/open/floor/tdome/tcomms,
 /area/firefly/cryo_cell)
+"keY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/firefly/cafeteria)
 "kfg" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -18126,6 +18291,12 @@
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
+"knl" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "knx" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/reagent_container/spray/cleaner{
@@ -18521,11 +18692,6 @@
 /obj/structure/sign/safety/synth_storage{
 	pixel_y = 28
 	},
-/obj/structure/machinery/computer/supply_drop_console/limited/alternate{
-	layer = 7;
-	pixel_y = 7;
-	name = "Engineering Console"
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
@@ -18779,6 +18945,12 @@
 	},
 /turf/open/floor/corsat/green/southeast,
 /area/firefly/cafeteria)
+"lgN" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "lgS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -18824,6 +18996,14 @@
 "liu" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/red/southwest,
+/area/firefly/cafeteria)
+"liF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/vending/cola{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
 "ljG" = (
 /obj/item/device/radio/intercom{
@@ -18875,6 +19055,12 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
+"lld" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 4
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "llj" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/bookcase{
@@ -20083,6 +20269,16 @@
 /obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
+"mIg" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "mIE" = (
 /turf/open/floor/carpet11_12,
 /area/firefly/briefing)
@@ -20314,6 +20510,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
+"mWL" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/firefly/cafeteria)
 "mXl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -20338,6 +20541,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/firefly/co)
+"mYh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/firefly/cafeteria)
 "mYk" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/emails{
@@ -21042,6 +21257,13 @@
 	},
 /turf/open/floor/corsat/lightplate,
 /area/firefly/cafeteria)
+"nRc" = (
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	pixel_x = 0;
+	pixel_y = 22
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "nRB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -21194,6 +21416,15 @@
 	pixel_x = -8
 	},
 /turf/open/floor/corsat/white/west,
+/area/firefly/cafeteria)
+"nYf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/punching_bag,
+/turf/open/floor/plating/plating_catwalk/shiva,
 /area/firefly/cafeteria)
 "nYl" = (
 /turf/open/floor/corsat/yellow/west,
@@ -21393,6 +21624,17 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
 /area/firefly/hangar)
+"ojj" = (
+/obj/structure/cable/heavyduty,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/punching_bag,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "ojk" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = 1;
@@ -22049,6 +22291,16 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
+"pcQ" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/boxing_ring{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "pcZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -24302,6 +24554,14 @@
 	},
 /turf/open/floor/corsat/yellowcorner/west,
 /area/firefly/supply)
+"rlj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/firefly/cafeteria)
 "rlG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -24577,10 +24837,6 @@
 /turf/open/floor/corsat/lightplate,
 /area/firefly/cafeteria)
 "rJp" = (
-/obj/structure/machinery/computer/ordercomp{
-	density = 0;
-	pixel_y = 14
-	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
@@ -24649,6 +24905,9 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc,
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
+"rQy" = (
+/turf/open/floor/almayer/bluefull2,
+/area/firefly/cafeteria)
 "rQA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -25184,6 +25443,13 @@
 	},
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/supply)
+"svU" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "sxs" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/prop/flower_vase/redwhiteflowers{
@@ -25303,6 +25569,9 @@
 	desc = "This is a shooting target in the shape of some form of alien creature painted gray. At least it's not running at you."
 	},
 /turf/open/floor/corsat/plate,
+/area/firefly/cafeteria)
+"sHb" = (
+/turf/open/floor/prison/whitefull2,
 /area/firefly/cafeteria)
 "sHi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -25789,6 +26058,10 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"sYx" = (
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "sYA" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 1;
@@ -26945,9 +27218,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5
-	},
+/obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/cafeteria)
 "uuK" = (
@@ -27587,6 +27858,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
+"vhg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "vhI" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -28028,6 +28310,12 @@
 	},
 /turf/open/floor/corsat/green/north,
 /area/firefly/cryo_cell)
+"vIR" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "vJR" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1,
 /obj/structure/cargo_container/grant/rightmid,
@@ -28194,6 +28482,13 @@
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /turf/open/floor/mech_bay_recharge_floor/shuttle_landing_lights,
 /area/firefly/hangar)
+"vTt" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "vUv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -28236,6 +28531,12 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/supply)
+"vWJ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "vWV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -28343,6 +28644,20 @@
 	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/supply)
+"wbk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/firefly/cafeteria)
 "wbD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -28436,11 +28751,13 @@
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
 "whI" = (
-/obj/structure/machinery/computer{
-	pixel_y = -14
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
-/turf/closed/wall/almayer/outer,
-/area/firefly/hangar)
+/turf/open/floor/corsat/plate,
+/area/firefly/cafeteria)
 "wiX" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light/double/blue/golden_arrow,
@@ -28815,6 +29132,15 @@
 	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
+"wAs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/disposal{
+	pixel_x = 0;
+	pixel_y = 10
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/open/floor/corsat/plate,
+/area/firefly/cafeteria)
 "wAZ" = (
 /obj/structure/largecrate/supply,
 /obj/structure/largecrate/random/mini/wooden{
@@ -28823,6 +29149,15 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
+"wBk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/firefly/cafeteria)
 "wBm" = (
 /obj/structure/barricade/handrail,
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -28863,6 +29198,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purplewhite/northwest,
 /area/firefly/supply)
+"wFF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/corsat/arrow_south,
+/area/firefly/cafeteria)
 "wFP" = (
 /obj/structure/machinery/door/airlock/almayer/research/reinforced{
 	dir = 2
@@ -30067,6 +30410,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/brown/east,
 /area/firefly/briefing)
+"ydS" = (
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/prison/whitefull2,
+/area/firefly/cafeteria)
 "yek" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -36377,7 +36730,7 @@ fDZ
 acQ
 avw
 avs
-avr
+adk
 avn
 avo
 acQ
@@ -39023,13 +39376,13 @@ aeO
 acQ
 acQ
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+ciN
+acQ
+adS
+acQ
+adS
+acQ
 fDZ
 fDZ
 fDZ
@@ -39185,13 +39538,13 @@ amY
 amY
 acQ
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+bbv
+bbv
+mIg
+bbv
+bbv
+bbv
+acQ
 fDZ
 fDZ
 fDZ
@@ -39346,14 +39699,14 @@ amY
 afj
 amY
 aeN
+adS
+ewO
+jQt
+jQt
+jQt
+jQt
+jQt
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
 fDZ
 fDZ
 fDZ
@@ -39496,7 +39849,7 @@ aqG
 gwc
 acQ
 acQ
-adS
+adI
 acQ
 acQ
 axz
@@ -39509,19 +39862,19 @@ acQ
 amN
 aeN
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+svU
+adk
+adk
+adk
+adk
+jnv
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -39671,19 +40024,19 @@ acQ
 acQ
 acQ
 acQ
+wAs
+whI
+atv
+adk
+atv
+vWJ
+jDY
+vIR
+vIR
+aAT
+vIR
+jWc
 acQ
-acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
 fDZ
 fDZ
 fDZ
@@ -39819,7 +40172,7 @@ aoV
 aqG
 aeq
 kSC
-atv
+gVg
 amX
 anP
 amX
@@ -39831,21 +40184,21 @@ jOD
 jOD
 anc
 amX
-exG
-asP
-aeB
-axM
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+amY
+acQ
+liF
+dTD
+adk
+adk
+adk
+vWJ
+jZX
+jRw
+sHb
+sHb
+aDa
+avr
+acQ
 fDZ
 fDZ
 fDZ
@@ -39981,33 +40334,33 @@ anq
 aqL
 aeq
 asR
-atv
-asP
-anq
+mid
+keY
+wBk
 and
 ggX
-amY
-adk
-adk
-anq
-anq
-and
-asH
+vhg
+vTt
+vTt
+aUf
+aUf
+wbk
+wFF
 exG
-asP
-aeB
+rlj
+mWL
+mYh
+nYf
 axM
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+ojj
+knl
+jZX
+sHb
+sHb
+sHb
+sHb
+avr
+acQ
 fDZ
 fDZ
 fDZ
@@ -40143,8 +40496,8 @@ aoW
 aoW
 uvu
 icK
-gVg
-okN
+ioR
+bPl
 aon
 okN
 ygB
@@ -40155,21 +40508,21 @@ qMx
 amZ
 ane
 amZ
-exG
+amY
 asP
 aeB
-axM
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+amN
+adk
+adk
+avf
+adk
+jZX
+sHb
+sHb
+sHb
+sHb
+avr
+acQ
 fDZ
 fDZ
 fDZ
@@ -40321,17 +40674,17 @@ acQ
 acQ
 acQ
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+nRc
+adk
+adk
+adk
+jZX
+sHb
+sHb
+sHb
+sHb
+avr
+acQ
 fDZ
 fDZ
 fDZ
@@ -40482,18 +40835,18 @@ jpD
 sNb
 acQ
 aeT
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+adk
+aeT
+adk
+sYx
+adk
+jZX
+sHb
+sHb
+sHb
+sHb
+avr
+acQ
 fDZ
 fDZ
 fDZ
@@ -40642,20 +40995,20 @@ lfH
 anf
 amN
 amN
+ciN
+izV
+adk
+adk
+adk
+sYx
+adk
+jZX
+rQy
+sHb
+sHb
+bGY
+avr
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
 fDZ
 fDZ
 fDZ
@@ -40805,19 +41158,19 @@ adl
 adl
 asF
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+aeT
+adk
+aeT
+lgN
+sYx
+adk
+aFl
+lld
+lld
+ydS
+lld
+pcQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -40968,18 +41321,18 @@ acQ
 bvg
 acQ
 acQ
+hPl
+acQ
+dHK
 acQ
 acQ
 acQ
 acQ
 acQ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -48254,7 +48607,7 @@ iZm
 acR
 acR
 acR
-whI
+acR
 amT
 amL
 amI

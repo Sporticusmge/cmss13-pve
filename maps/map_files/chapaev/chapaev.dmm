@@ -3695,6 +3695,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
+"hy" = (
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "hz" = (
 /obj/structure/machinery/disposal{
 	density = 0;
@@ -4351,6 +4355,14 @@
 	name = "teacup";
 	desc = "A small chipped teacup.";
 	pixel_x = 11
+	},
+/obj/item/reagent_container/spray/pepper{
+	pixel_x = -3;
+	pixel_y = 1
+	},
+/obj/item/storage/box/zipcuffs{
+	pixel_x = 9;
+	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -8235,7 +8247,7 @@
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
 "sv" = (
-/obj/structure/cargo_container/canc/left,
+/obj/structure/largecrate/random/case,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "sx" = (
@@ -8656,6 +8668,10 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"wE" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "wF" = (
 /obj/structure/machinery/vending/sovietsoda{
 	icon_state = "sovietsoda-broken";
@@ -8731,9 +8747,8 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "xl" = (
-/obj/structure/cargo_container/canc/right{
-	opacity = 0
-	},
+/obj/structure/machinery/light/double,
+/obj/structure/cargo_container/upp/mk6/right,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "xp" = (
@@ -8858,11 +8873,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "yr" = (
-/obj/structure/largecrate/random,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
+/obj/structure/cargo_container/upp/mk6/mid,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "yu" = (
@@ -9126,6 +9137,16 @@
 "zN" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"zU" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1
+	},
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "Ac" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -9198,6 +9219,10 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
+"AD" = (
+/obj/structure/largecrate/random/barrel/brown,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "AE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9339,6 +9364,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
+"CJ" = (
+/obj/structure/cargo_container/upp/mk6/left,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "CK" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -9406,10 +9435,9 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "Dh" = (
-/obj/structure/largecrate/random/barrel/red,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
+/obj/structure/machinery/vending/sovietsoda{
+	pixel_x = 0;
+	pixel_y = 11
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -9446,11 +9474,11 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/medical)
 "DJ" = (
-/obj/structure/largecrate/random/case/double,
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
 	pixel_x = 1
 	},
+/obj/structure/weightmachine/stacklifter,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "DL" = (
@@ -9552,7 +9580,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/hangar)
 "Fa" = (
-/obj/structure/cargo_container/canc/mid,
+/obj/structure/largecrate/random,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Fd" = (
@@ -9618,11 +9646,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/dorms)
 "FZ" = (
-/obj/structure/largecrate/random/barrel/medical,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
+/obj/structure/punching_bag,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Ge" = (
@@ -10088,6 +10112,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/platoon_sergeant)
+"KE" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "KP" = (
 /obj/structure/prop/static_tank/water,
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -10122,6 +10150,16 @@
 /obj/structure/girder/displaced,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/prep_hallway)
+"Lj" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1
+	},
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "Lk" = (
 /obj/structure/machinery/power/reactor{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
@@ -10386,6 +10424,10 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
+"Oc" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "Od" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -10593,6 +10635,12 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
+"PU" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "PV" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -10828,6 +10876,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"Sr" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "SA" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -11100,11 +11154,11 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/dorms)
 "UY" = (
-/obj/structure/largecrate/machine,
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
 	pixel_x = 1
 	},
+/obj/structure/weightmachine/weightlifter,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Vb" = (
@@ -11222,11 +11276,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "Wk" = (
-/obj/structure/largecrate/random/barrel/green,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo";
-	pixel_x = 1
-	},
+/obj/structure/largecrate/random/case/double,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Wl" = (
@@ -11393,6 +11443,12 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"XU" = (
+/obj/structure/machinery/treadmill/console{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
 "XW" = (
 /obj/item/tool/warning_cone{
 	pixel_x = 4;
@@ -22586,13 +22642,13 @@ mV
 mV
 mV
 mH
+Oc
+Fa
+AD
 Jf
-Jf
-Jf
-Jf
-Jf
-Jf
-Jf
+XU
+wE
+XU
 Jf
 Fv
 Lv
@@ -22738,14 +22794,14 @@ mV
 mV
 mV
 mH
-AA
+Lj
 DJ
-yr
-Wk
+ol
+DJ
+PU
 Jf
-Ib
+PU
 Jf
-sv
 Jr
 mH
 AA
@@ -22890,15 +22946,15 @@ mV
 mV
 mV
 mH
+KE
+ol
+ol
+ol
 Jf
-FZ
-Dh
-yr
 Jf
-Xo
 Jf
 Fa
-Jf
+Fa
 mH
 Jf
 Jf
@@ -23042,15 +23098,15 @@ mV
 mV
 mH
 mH
+Dh
+ol
+ol
+ol
 Jf
-Wk
-DJ
-UY
 Jf
-Yo
+FZ
 Jf
-xl
-Jf
+CJ
 mH
 QG
 Jf
@@ -23194,15 +23250,15 @@ mV
 mH
 mH
 mH
+Fa
+ol
+ol
+ol
 Jf
-Dh
-FZ
+Jf
+Jf
+Jf
 yr
-Jf
-Jf
-Jf
-Jf
-Jf
 mH
 Jf
 Jf
@@ -23346,15 +23402,15 @@ mH
 mH
 mH
 mH
-AA
+zU
 UY
-yr
 ol
+UY
 Jf
 Jf
+FZ
 Jf
-Jf
-Jr
+xl
 mH
 AA
 Jf
@@ -23498,15 +23554,15 @@ mH
 mH
 mH
 mH
+hy
 Jf
 Jf
 Jf
 Jf
 Jf
-Jf
-Jf
-Jf
-Jf
+Wk
+sv
+Wk
 mH
 MZ
 Jf
@@ -23650,15 +23706,15 @@ mH
 mH
 mH
 mH
-Tc
-Tc
-Tc
-Tc
-Tc
-Tc
-Tc
-Tc
-Tc
+Sr
+Sr
+Sr
+Sr
+Sr
+Sr
+Sr
+Sr
+Sr
 mH
 cK
 cK
