@@ -46,7 +46,6 @@
 	if(user.get_active_hand() != src)
 		return ..()
 
-	// Создаём аксессуар
 	var/obj/item/clothing/accessory/m5packed/P = new(get_turf(user))
 	user.temp_drop_inv_item(src)
 	qdel(src)
