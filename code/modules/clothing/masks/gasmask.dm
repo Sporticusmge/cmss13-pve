@@ -21,7 +21,9 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	siemens_coefficient = 0.9
-	vision_impair = VISION_IMPAIR_NONE
+	vision_impair = VISION_IMPAIR_HIGH // putting them on for their benefits should have a drawback and feel more immersive
+	var/vision_impair_on_store = VISION_IMPAIR_NONE
+	var/ignore_zoom_tint_on_store = TRUE
 	var/gas_filter_strength = 1 //For gas mask filters
 	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide")
 
@@ -39,21 +41,19 @@
 	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 
+
 /obj/item/clothing/mask/gas/military/attack_self(mob/user)
 	if(user.get_active_hand() != src)
 		return ..()
 
 	// Создаём аксессуар
 	var/obj/item/clothing/accessory/m5packed/P = new(get_turf(user))
-	user.temp_drop_inv_item(src)	// убираем маску из руки
-	qdel(src)				// удаляем старый объект
-	user.put_in_active_hand(P)	// даём упакованный вариант в руку
+	user.temp_drop_inv_item(src)
+	qdel(src)
+	user.put_in_active_hand(P)
 
 	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
 	to_chat(user, SPAN_NOTICE("You fold and pack the M5 gasmask."))
-	// --- конец нового кода ---
-
-// ... остальные ваши методы on_enter_storage/on_exit_storage остаются без изменений
 
 /obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()

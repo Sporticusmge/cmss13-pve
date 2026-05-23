@@ -617,7 +617,6 @@
 	if(user.get_active_hand() != src)
 		return ..()
 
-	// Распаковываем обратно в маску
 	var/obj/item/clothing/mask/gas/military/M = new(get_turf(user))
 	user.temp_drop_inv_item(src)
 	qdel(src)

@@ -1114,6 +1114,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper Mk16 tactical helmet"
 	desc = "Standard issue high molecular density polymer enclosed combat helmet of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet_enclosed"
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
@@ -1124,6 +1126,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper Mk16 tactical helmet"
 	desc = "Standard issue high molecular density polymer enclosed combat helmet of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_helmet_enclosed"
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc
 
@@ -1908,6 +1912,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/upp/heavy
 	name = "\improper 6B83 heavy helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles. Usually carried alongside with 6B99-2 heavy assault armor."
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
