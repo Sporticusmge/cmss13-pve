@@ -289,6 +289,25 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 
+/obj/item/clothing/mask/gas/upp_pfb
+    name = "\improper ShMB/4 gasmask"
+    desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+    icon_state = "pfb"
+    item_state = "pfb"
+    flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+    flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
+/obj/item/clothing/mask/gas/upp_pfb/attack_self(mob/user)
+    if(user.get_active_hand() != src)
+        return ..()
+
+    var/obj/item/clothing/accessory/pfbpacked/P = new(get_turf(user))
+    user.temp_drop_inv_item(src)
+    qdel(src)
+    user.put_in_active_hand(P)
+
+    playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
+    to_chat(user, SPAN_NOTICE("You fold and pack the ShMB/4 gasmask."))
 //= CLF =\\
 
 /obj/item/clothing/mask/gas/riot
