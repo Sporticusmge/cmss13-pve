@@ -144,17 +144,29 @@
 	anti_hug = 3
 	vision_impair = VISION_IMPAIR_WEAK // best in the biz
 	ignore_zoom_tint = TRUE // they can use scopes
-	armor_melee = CLOTHING_ARMOR_LOW
+	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_LOW
-	armor_bio = CLOTHING_ARMOR_HIGH
-	armor_rad = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEFACE
 	flags_equip_slot = SLOT_FACE
+
+/obj/item/clothing/mask/gas/pmc/attack_self(mob/user)
+    if(user.get_active_hand() != src)
+        return ..()
+
+    var/obj/item/clothing/accessory/pmcpacked/P = new(get_turf(user))
+    user.temp_drop_inv_item(src)
+    qdel(src)
+    user.put_in_active_hand(P)
+
+    playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
+    to_chat(user, SPAN_NOTICE("You fold and pack the tactical filtration mask."))
 
 /obj/item/clothing/mask/gas/pmc/balaclava
 	name = "\improper M7 pattern armored balaclava"
@@ -270,14 +282,26 @@
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/mask/gas/pmc/royal_marine
-	name = "\improper L7 gasmask"
-	desc = "The L7 Gasmask used by members of the three world empires royal marines commando."
-	icon_state = "rmc_mask"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	vision_impair = VISION_IMPAIR_MED // not as good as PMC but good
-	ignore_zoom_tint = TRUE // they can use scopes
+    name = "\improper L7 gasmask"
+    desc = "The L7 Gasmask used by members of the three world empires royal marines commando."
+    icon_state = "rmc_mask"
+    flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+    flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+    flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+    vision_impair = VISION_IMPAIR_MED
+    ignore_zoom_tint = TRUE
+
+/obj/item/clothing/mask/gas/pmc/royal_marine/attack_self(mob/user)
+    if(user.get_active_hand() != src)
+        return ..()
+
+    var/obj/item/clothing/accessory/rmcpacked/P = new(get_turf(user))
+    user.temp_drop_inv_item(src)
+    qdel(src)
+    user.put_in_active_hand(P)
+
+    playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
+    to_chat(user, SPAN_NOTICE("You fold and pack the L7 gasmask."))
 
 //= UPP =\\
 
