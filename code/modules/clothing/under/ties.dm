@@ -609,7 +609,6 @@
 	name = "Packed M5 gasmask"
 	desc = "Packed gas mask, can be strapped into armor."
 	icon_state = "m5_packed"
-	item_state = "m5_suit"
 	w_class = SIZE_SMALL
 	slot = ACCESSORY_SLOT_GASMASK
 
