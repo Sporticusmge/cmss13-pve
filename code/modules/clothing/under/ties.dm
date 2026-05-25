@@ -624,6 +624,26 @@
 	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
 	to_chat(user, SPAN_NOTICE("You unpack the M5 gasmask."))
 
+/obj/item/clothing/accessory/gaspacked
+	name = "Packed gasmask"
+	desc = "Packed gas mask, can be strapped into armor."
+	icon_state = "gas_packed"
+	item_state = "gas_packed"
+	w_class = SIZE_SMALL
+	slot = ACCESSORY_SLOT_GASMASK
+
+/obj/item/clothing/accessory/gaspacked/attack_self(mob/user)
+	if(user.get_active_hand() != src)
+		return ..()
+
+	var/obj/item/clothing/mask/gas/M = new(get_turf(user))
+	user.temp_drop_inv_item(src)
+	qdel(src)
+	user.put_in_active_hand(M)
+
+	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
+	to_chat(user, SPAN_NOTICE("You unpack the gas mask."))
+
 /obj/item/clothing/accessory/rmcpacked
     name = "Packed l7 gasmask"
     desc = "Packed gas mask, can be strapped into armor."

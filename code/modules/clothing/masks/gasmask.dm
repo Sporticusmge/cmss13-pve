@@ -25,7 +25,19 @@
 	var/vision_impair_on_store = VISION_IMPAIR_NONE
 	var/ignore_zoom_tint_on_store = TRUE
 	var/gas_filter_strength = 1 //For gas mask filters
-	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide")
+	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide", "condensedcapsaicin")
+
+/obj/item/clothing/mask/gas/attack_self(mob/user)
+	if(user.get_active_hand() != src)
+		return ..()
+
+	var/obj/item/clothing/accessory/gaspacked/P = new(get_turf(user))
+	user.temp_drop_inv_item(src)
+	qdel(src)
+	user.put_in_active_hand(P)
+
+	playsound(user, 'sound/handling/armorequip_2.ogg', 25, TRUE)
+	to_chat(user, SPAN_NOTICE("You fold and pack the gas mask."))
 
 /obj/item/clothing/mask/gas/kutjevo
 	name = "kutjevo respirator"
