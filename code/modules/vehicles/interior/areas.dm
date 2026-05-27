@@ -77,6 +77,10 @@
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
 
+/area/interior/vehicle/blackfoot
+	name = "blackfoot interior"
+	ambience_exterior = 'sound/vehicles/vtol/interior.ogg'
+
 /area/interior/vehicle/uppapc
 	name = "\improper UPP ZSL-68 interior"
 	icon_state = "upp_apc"

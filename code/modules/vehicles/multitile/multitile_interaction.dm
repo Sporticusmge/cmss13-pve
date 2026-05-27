@@ -407,7 +407,7 @@
 /obj/vehicle/multitile/proc/crew_mouseup(datum/source, atom/object, turf/location, control, params)
 	SIGNAL_HANDLER
 	var/obj/item/hardpoint/hardpoint = get_mob_hp(source)
-	if(!hardpoint)
+	if(!hardpoint && notify_no_hardpoint_selected)
 		return
 
 	hardpoint.stop_fire(source, object, location, control, params)

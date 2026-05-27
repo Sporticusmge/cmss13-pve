@@ -51,6 +51,7 @@
 
 // Attempt to get the turf below the provided one according to Z traits
 /datum/controller/subsystem/mapping/proc/get_turf_below(turf/T)
+	RETURN_TYPE(/turf)
 	if (!T)
 		return
 	var/offset = level_trait(T.z, ZTRAIT_DOWN)
@@ -60,12 +61,41 @@
 
 // Attempt to get the turf above the provided one according to Z traits
 /datum/controller/subsystem/mapping/proc/get_turf_above(turf/T)
+	RETURN_TYPE(/turf)
 	if (!T)
 		return
 	var/offset = level_trait(T.z, ZTRAIT_UP)
 	if (!offset)
 		return
 	return locate(T.x, T.y, T.z + offset)
+
+// Same as get_turf_below, but for multiple turfs from the same z level
+/datum/controller/subsystem/mapping/proc/get_same_z_turfs_below(list/turf/turfs)
+	if (turfs.len < 1)
+		return list()
+	var/turf/first_turf = turfs[1]
+	var/offset = level_trait(first_turf.z, ZTRAIT_DOWN)
+	if(!offset)
+		return list()
+	var/new_z = first_turf.z + offset
+	var/list/turf/new_turfs = list()
+	for(var/turf/T as anything in turfs)
+		new_turfs += locate(T.x, T.y, new_z)
+	return new_turfs
+
+// Same as get_turf_above, but for multiple turfs from the same z level
+/datum/controller/subsystem/mapping/proc/get_same_z_turfs_above(list/turf/turfs)
+	if (turfs.len < 1)
+		return list()
+	var/turf/first_turf = turfs[1]
+	var/offset = level_trait(first_turf.z, ZTRAIT_UP)
+	if(!offset)
+		return list()
+	var/new_z = first_turf.z + offset
+	var/list/turf/new_turfs = list()
+	for(var/turf/T as anything in turfs)
+		new_turfs += locate(T.x, T.y, new_z)
+	return new_turfs
 
 // Prefer not to use this one too often
 /datum/controller/subsystem/mapping/proc/get_station_center()
@@ -76,6 +106,11 @@
 /datum/controller/subsystem/mapping/proc/get_mainship_center()
 	var/mainship_z = levels_by_trait(ZTRAIT_MARINE_MAIN_SHIP)[1]
 	return locate(round(world.maxx * 0.5, 1), round(world.maxy * 0.5, 1), mainship_z)
+
+// Prefer not to use this one too often
+/datum/controller/subsystem/mapping/proc/get_ground_center()
+	var/ground_z = levels_by_trait(ZTRAIT_GROUND)[1]
+	return locate(round(world.maxx * 0.5, 1), round(world.maxy * 0.5, 1), ground_z)
 
 // Returns true if they are on the same map if the map is multiz
 /datum/controller/subsystem/mapping/proc/same_z_map(z1, z2)
