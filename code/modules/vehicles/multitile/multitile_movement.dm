@@ -72,8 +72,6 @@
 	if(!can_move(direction))
 		return FALSE
 
-before_move(direction)
-
 	if(!force)
 		var/should_move = update_momentum(direction)
 		update_next_move()
@@ -95,9 +93,6 @@ before_move(direction)
 	last_move_dir = direction
 
 	return TRUE
-
-/obj/vehicle/multitile/proc/before_move(direction)
-	return
 
 // Rotates the vehicle by deg degrees if possible
 /obj/vehicle/multitile/proc/try_rotate(deg)

@@ -264,8 +264,7 @@
 
 	for(var/obj/effect/landmark/interior/spawn/entrance/E in entrance_markers)
 		if(E.tag == entrance_used)
-			var/turf/entrance_turf = locate(E.x + E.offset_x, E.y + E.offset_y, E.z)
-			A.forceMove(entrance_turf)
+			A.forceMove(get_turf(E))
 			return TRUE
 
 	return FALSE

@@ -138,8 +138,7 @@
 /obj/vis_contents_holder/Initialize(mapload, vis, offset, backdrop = TRUE)
 	. = ..()
 	plane -= offset
-	if(backdrop)
-		vis_contents += GLOB.openspace_backdrop_one_for_all
+	vis_contents += GLOB.openspace_backdrop_one_for_all
 	vis_contents += vis
 	name = null // Makes it invisible on right click
 
@@ -347,13 +346,15 @@
 		if ((!fd1 || blocking_dir & fd1) && (!fd2 || blocking_dir & fd2))
 			if(!mover.Collide(A))
 				return FALSE
-	if(!additional_enter_checks(mover))
+	if(mover.move_intentionally && istype(src, /turf/open_space) && istype(mover,/mob/living))
+		var/turf/open_space/space = src
+		var/mob/living/climber = mover
+		if(climber.a_intent == INTENT_HARM)
+			return TRUE
+		space.climb_down(climber)
 		return FALSE
 
 	return TRUE //Nothing found to block so return success!
-
-/turf/proc/additional_enter_checks(atom/movable/mover)
-	return TRUE
 
 /turf/Entered(atom/movable/A)
 	if(!istype(A))

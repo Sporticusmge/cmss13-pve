@@ -227,8 +227,7 @@
 	set name = "Look Up"
 	set category = "IC"
 
-	var/turf/above_hologram = SSmapping.get_turf_above(observed_atom)
-	if(observed_atom && (!above_hologram || !istransparentturf(above_hologram)))
+	if(observed_atom)
 		QDEL_NULL(observed_atom)
 		return
 
@@ -248,14 +247,12 @@
 		to_chat(src, SPAN_WARNING("You cannot look up here."))
 		return
 
-	var/turf/above = SSmapping.get_turf_above(locate(x, y, z))
+	var/turf/above = locate(x, y, z+1)
 
 	if(!istransparentturf(above))
 		to_chat(src, SPAN_WARNING("You cannot look up here."))
 		return
 
-	if(observed_atom)
-		observed_atom.forceMove(SSmapping.get_turf_above(observed_atom))
-	else
-		var/mob/hologram/look_up/observed_hologram = new(above, src)
-		observed_atom = observed_hologram
+	var/mob/hologram/look_up/observed_hologram = new(above, src)
+
+	observed_atom = observed_hologram

@@ -91,7 +91,7 @@
 /obj/item/device/walkman/proc/pause(mob/user)
 	if(!current_song) return
 	paused = TRUE
-	update_song(current_song, current_listener, SOUND_PAUSED | SOUND_UPDATE)
+	update_song(current_song,current_listener, SOUND_PAUSED | SOUND_UPDATE)
 
 /obj/item/device/walkman/proc/play()
 	if(!current_song)
@@ -100,15 +100,15 @@
 			current_song.status = SOUND_STREAM
 		else
 			return
-	if(current_song.status & SOUND_PAUSED || paused)
+	paused = FALSE
+	if(current_song.status & SOUND_PAUSED)
 		to_chat(current_listener,SPAN_INFO("Resuming [pl_index] of [length(current_playlist)]"))
 		update_song(current_song,current_listener)
 	else
 		to_chat(current_listener,SPAN_INFO("Now playing [pl_index] of [length(current_playlist)]"))
 		update_song(current_song,current_listener,0)
-	paused = FALSE
 
-	update_song(current_song, current_listener)
+	update_song(current_song,current_listener)
 
 /obj/item/device/walkman/proc/insert_tape(obj/item/device/cassette_tape/CT)
 	if(tape || !istype(CT)) return

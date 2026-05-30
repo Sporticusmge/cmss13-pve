@@ -371,9 +371,8 @@
 /datum/ammo/grenade_container/proc/drop_nade(obj/projectile/P)
 	var/turf/T = get_turf(P)
 	var/obj/item/explosive/grenade/G = new nade_type(T)
-	T.on_throw_end(G)
 	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
-	G.det_time = min(10, G.det_time)
+	G.det_time = 0.5 SECONDS
 	G.cause_data = P.weapon_cause_data
 	G.activate()
 
@@ -396,14 +395,6 @@
 
 /datum/ammo/grenade_container/tank_glauncher
 	max_range = 8
-
-/datum/ammo/grenade_container/chimera_launcher
-	name = "40mm HEDP cannon"
-	nade_type = /obj/item/explosive/grenade/high_explosive/impact
-
-/datum/ammo/grenade_container/doorgun
-	name = "40mm HEDP grenades"
-	nade_type = /obj/item/explosive/grenade/high_explosive/impact
 
 /datum/ammo/hugger_container
 	name = "hugger shell"
