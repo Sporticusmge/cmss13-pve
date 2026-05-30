@@ -170,6 +170,8 @@
 			stop_pulling()
 	var/turf/T = loc
 	. = ..()
+	if(.)
+		handle_run_stamina()
 	if(. && pulling && pulling == pullee) //we were pulling a thing and didn't lose it during our move.
 		var/data = SEND_SIGNAL(pulling, COMSIG_MOVABLE_PULLED, src)
 		if(!(data & COMPONENT_IGNORE_ANCHORED) && pulling.anchored)
