@@ -144,3 +144,6 @@ endmap
 
 map binhai_supply_station
 endmap
+
+map lv624_deep_jungle
+endmap

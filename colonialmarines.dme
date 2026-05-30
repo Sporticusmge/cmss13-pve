@@ -786,6 +786,7 @@
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_map_holders\lv522_lukes_landing.dm"
 #include "code\datums\weather\weather_map_holders\lv624.dm"
+#include "code\datums\weather\weather_map_holders\lv624_deep_jungle.dm"
 #include "code\datums\weather\weather_map_holders\lv624_lazarus_landing.dm"
 #include "code\datums\weather\weather_map_holders\lv759_hybrisa_prospera.dm"
 #include "code\datums\weather\weather_map_holders\navalis_platform_13.dm"
@@ -2804,4 +2805,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+#include "maps\map_files\LV624_deep_jungle\lv624_deep_jungle.dmm"
 // END_INCLUDE
