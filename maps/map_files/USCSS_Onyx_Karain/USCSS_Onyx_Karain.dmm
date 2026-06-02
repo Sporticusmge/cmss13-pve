@@ -8100,7 +8100,7 @@
 /turf/open/floor/prison/whitefull2,
 /area/firefly/cafeteria)
 "avs" = (
-/obj/item/clothing/suit/marine/veteran/pmc/apesuit,
+/obj/item/clothing/suit/marine/veteran/smartgun/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avw" = (
